@@ -1,0 +1,144 @@
+@import "styles/mixins";
+
+%commonPaddings {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.card {
+  padding-bottom: 64px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+  transition: border-color 0.24s ease, background-color 0.24s ease;
+  background-color: white;
+  color: black;
+  overflow: hidden;
+
+  @include box-shadow(level-2);
+  .cardHeader {
+    width: 100%;
+    padding-top: 1.5rem;
+    @extend %commonPaddings;
+    background-color: var(--secondary);
+    height: auto;
+    color: white;
+    
+    @include breakpoint(tab-landscape-up) {
+      height: 11rem;
+    }
+  }
+  .cardBody {
+    @extend %commonPaddings;
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .mainTitle {
+    font-weight: bold;
+    line-height: 1.5;
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    color: white !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    p,
+    b,
+    span {
+      font-size: 1.5rem;
+      color: white !important;
+
+      @include breakpoint(mobile) {
+        font-size: 1.25rem;
+      }
+  
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.25rem;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    color: var(--primary);
+  }
+
+  h2 {
+    font-size: 36px;
+    color: var(--primary);
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    @include breakpoint(mobile) {
+      font-size: 1rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0px;
+    width: 100%;
+    li {
+      font-size: 15px;
+      line-height: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+      padding-top: 0.25rem;
+      svg {
+        color: var(--primary);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    margin-left: calc((-100% + 3rem) / 2);
+    width: calc(100% - 3rem);
+  }
+}
+.amountText {
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 36px;
+  color: var(--primary);
+  @include breakpoint(mobile) {
+    font-size: 1.5rem;
+  }
+}
+
+.mainDescription {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  padding-top: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 1rem;
+  }
+}

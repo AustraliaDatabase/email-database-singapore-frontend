@@ -1,0 +1,152 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.card {
+  border-radius: 0.5rem;
+  background-color: $white;
+  width: 100%;
+  padding: 1.5rem;
+  @include box-shadow(level-1-1);
+  border-color: var(--fill);
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.25rem;
+    line-height: 1.25;
+
+    svg {
+      margin-right: 0.5rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+  }
+
+  &.shadow {
+    @include box-shadow(level-3);
+  }
+
+  &.line {
+    &::before {
+      content: "";
+      display: block;
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: var(--primary);
+    }
+  }
+}
+
+.cardH6Title {
+  font-size: 20px;
+  color: var(--primary);
+  font-family: var(--title-font);
+  font-weight: 500;
+  line-height: 1.2;
+
+  h6,
+  h5,
+  h4,
+  h3,
+  h2,
+  h1,
+  p {
+    margin: 0;
+  }
+}
+
+.whyTitle {
+  align-self: center;
+  font-size: 2rem;
+  max-width: 900px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 2rem;
+  }
+  @include breakpoint(mobile) {
+    font-size: 1.5rem;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    h6,
+    p,
+    b,
+    span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.whyDescription {
+  font-size: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 1rem;
+  }
+}
+
+.cardTitle {
+  font-size: 20px;
+  padding-left: 8px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 20px;
+  }
+}
+
+.cardDescription {
+  font-size: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 1rem;
+  }
+}
+
+@include breakpoint(mobile) {
+  .cardDescription {
+    text-align: center;
+  }
+}

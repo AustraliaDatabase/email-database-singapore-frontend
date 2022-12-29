@@ -1,0 +1,119 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.card {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  // border: 1px solid var(--fill);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+  transition: border-color 0.24s ease, background-color 0.24s ease;
+  @include box-shadow(level-5);
+
+  p {
+    margin: 0;
+  }
+
+  &.info {
+    padding-bottom: 2rem;
+    &:hover {
+      border-color: var(--primary);
+      // .circle {
+      //   border-color: var(--secondary);
+      // }
+    }
+  }
+
+  &.action {
+    background-color: white;
+    border-color: var(--primary);
+    padding-bottom: calc(3rem + 40px);
+
+    &:hover {
+      background-color: lighten($color: $primary, $amount: 45);
+    }
+  }
+
+  h3 {
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 48px;
+      max-height: 48px;
+    }
+    &.circle {
+      border-radius: 50%;
+      border: 1px solid var(--primary);
+      background-color: var(--fill);
+      color: var(--primary);
+      padding: 1rem;
+      transition: border-color 0.24s ease;
+      svg,
+      img {
+        max-width: 32px;
+        max-height: 32px;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 1.5rem;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // &:hover {
+    //   transform: translate(-50%, -2px);
+    // }
+  }
+}
+
+.h4Text {
+  text-align: center;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.cardText {
+  text-align: center;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.height {
+  padding-top: 4px;
+  height: 20px;
+  color: var(--primary) !important;
+}
+
+.header {
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.fetureBtnWrapper {
+  @include breakpoint(mobile) {
+    a {
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

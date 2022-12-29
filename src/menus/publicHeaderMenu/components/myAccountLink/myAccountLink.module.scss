@@ -1,0 +1,49 @@
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+.wrapper {
+  background-color: $white;
+  width: 150px;
+  position: absolute;
+  border-radius: 5px;
+  @include box-shadow(level-2);
+  z-index: 3;
+  top: 40px;
+  left: 0px;
+}
+
+.listItem {
+  padding: 0px 15px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $fill;
+
+    &:first-child {
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  }
+}
+
+.picture {
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.username {
+  max-width: 182px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

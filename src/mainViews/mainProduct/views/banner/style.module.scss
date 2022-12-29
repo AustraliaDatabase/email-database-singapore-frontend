@@ -1,0 +1,99 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.hero {
+  .breadcrumb {
+    z-index: 2;
+    position: relative;
+  }
+
+  .breadcrumb > a,
+  .breadcrumb > svg {
+    color: $white;
+  }
+
+  .breadcrumb {
+    display: grid;
+    grid: 24px / repeat(4, max-content);
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    align-items: center;
+
+    a {
+      cursor: pointer;
+      display: block;
+    }
+
+    span {
+      color: rgba($color: #ffffff, $alpha: 0.6);
+    }
+  }
+}
+
+.fromUsd {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: white;
+}
+
+.bannerFont {
+  background-color: green;
+  font-size: 3rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 2rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 1rem;
+  }
+}
+
+.scrollLink {
+  min-width: 300px;
+  @include breakpoint(mobile) {
+    min-width: 70% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.offerNote {
+  color: #FCD535;
+  font-size: 16px;
+  span {
+    color: #FCD535;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  color: #FCD535;
+}

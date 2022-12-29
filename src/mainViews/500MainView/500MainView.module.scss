@@ -1,0 +1,19 @@
+@import "styles/mixins";
+
+.error {
+  margin-bottom: 2rem;
+  h2 {
+    @include breakpoint(mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  p {
+    font-size: 18px;
+    @include breakpoint(tab-up) {
+      font-size: 20px;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1rem;
+    }
+  }
+}

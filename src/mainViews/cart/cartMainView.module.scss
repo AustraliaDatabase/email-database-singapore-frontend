@@ -1,0 +1,29 @@
+@import "styles/variables";
+
+.item {
+  border-bottom: 1px solid rgba($color: $primary, $alpha: .16);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+
+  svg {
+    color: var(--danger);
+    cursor: pointer;
+  }
+}
+
+.total {
+  font-size: 1.25rem;
+}
+
+.totalRow {
+  border-top: 1px solid rgba($color: $primary, $alpha: .16);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.cost {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: right;
+}

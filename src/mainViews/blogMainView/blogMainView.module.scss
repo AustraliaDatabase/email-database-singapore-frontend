@@ -1,0 +1,47 @@
+@import "styles/variables";
+
+.card {
+  display: flex;
+  max-height: 200px;
+  border: none;
+  overflow: hidden;
+  .thumbnail {
+    width: 100%;
+    flex: 0 0 150px;
+    max-width: 150px;
+    border-radius: 1rem 0 0 1rem;
+    overflow: hidden;
+  }
+
+  .action {
+    background-color: $white;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 1rem 1rem;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    button {
+      height: auto;
+    }
+  }
+
+  .shade {
+    background: rgba(255,255,255,0);
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+    position: absolute;
+    width: 100%;
+    bottom: 45px;
+    left: 0;
+    height: 60px;
+  }
+}

@@ -1,0 +1,70 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.faqs {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: $white;
+  @include box-shadow(level-2);
+  @include breakpoint(tab-up) {
+    padding: 3rem;
+  }
+
+  & > h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
+
+.faqTitle {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-family: var(--title-font);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--title-font);
+    max-width: 800px;
+  }
+  @include breakpoint(mobile) {
+    font-size: 1.5rem;
+    display: inline-block;
+    padding-bottom: .5rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    h6,
+    p,
+    b,
+    span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.questionTitle {
+  font-size: 2rem;
+  font-family: var(--title-font);
+  @include breakpoint (mobile){
+    font-size: 1.5rem;
+  }
+}

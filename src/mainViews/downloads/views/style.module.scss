@@ -1,0 +1,29 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+
+%title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: block;
+  line-height: 1.5;
+}
+
+.table {
+  background-color: $white;
+  border-radius: 0.5rem;
+  @include box-shadow(level-1-1);
+  padding: 1rem;
+  margin-top: 1rem;
+
+  h4 {
+    @extend %title;
+  }
+
+  button {
+    background-color: transparent;
+    color: var(--primary);
+    border: none;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,58 @@
+@import "styles/mixins";
+.sourceTitle {
+  font-size: 2rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 2rem;
+  }
+}
+
+.sourceDescription {
+  font-size: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 1rem;
+  }
+}
+
+@include breakpoint(mobile) {
+  .sourceTitle {
+    font-size: 1.5rem;
+    text-align: center;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    h6,
+    p,
+    b,
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  .sourceDescription {
+    text-align: center;
+  }
+}

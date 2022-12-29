@@ -1,0 +1,530 @@
+import {
+  Desktop,
+  Wallet,
+  Gift,
+  Target,
+  CircleWavyQuestion,
+  TreeStructure,
+  ListChecks,
+  Briefcase,
+  Envelope,
+  Database,
+  ShieldStar,
+  ShoppingCartSimple,
+} from "phosphor-react";
+import Image from "next/image";
+
+const HomeSeed = {
+  floatingMenu: [
+    {
+      link: "#productType",
+      label: "Buy List",
+      icon: <ShoppingCartSimple size={24} />,
+    },
+    {
+      link: "#why-us",
+      label: "Why us?",
+      icon: <CircleWavyQuestion size={24} />,
+    },
+    { link: "#source", label: "Source?", icon: <TreeStructure size={24} /> },
+    { link: "#faqs", label: "F.A.Q", icon: <ListChecks size={24} /> },
+    { link: "#reviews", label: "Reviews", icon: <ShieldStar size={24} /> },
+  ],
+  banner: {
+    caption: "Fuel Your Business with Our Quality Company Database",
+    title: `2022 Accurate & Fresh <span className="text-highlight">USA Business Database Provider </span>`,
+    description:
+      "Our Company’s business lists, email lists, industry’s contact list, Job title’s database, Realtors, doctors, and many other databases are more than 95% accurate and regularly verified (all contacts – phone, email, fax, current Company, and office addresses are regularly verified). We validate our all of our contacts every two to three months.",
+  },
+  second_banner: {
+    title: (
+      <>
+        Accurate Business Lists to{" "}
+        <span className="text-highlight">Skyrocket Your ROI</span>
+      </>
+    ),
+    description: (
+      <>
+        <p>
+          Our company info database of business lists, email lists, and B2B
+          lists is accurate and regularly verified (regular verification of all
+          contacts – phone, email address, fax numbers, current company, and
+          office addresses). We validate our business list databases every two
+          to three months.
+        </p>
+        <p>
+          We make sure each record is genuine by using different verification
+          approaches, including end-to-end verification and cross-referencing.
+        </p>
+        <p className="mb-4">
+          A dedicated team updates and monitors our databases regularly. That is
+          to make sure that we remove outdated data and provide the latest info
+          about the business of your interest.
+        </p>
+        <p className="mb-4">
+          We guarantee 95% deliverability for all email databases listed for
+          sale. Your marketing team is 95% sure that their emails will reach
+          their target customer&apos;s inbox and their message is delivered and
+          read.
+        </p>
+        <p className="mb-4">
+          Remember to keep your bounce rate below 5%. Also, make sure to only
+          send emails to highly engaged recipients with a high click rate and
+          avoid a sudden increase in the volume of emails sent.
+        </p>
+      </>
+    ),
+  },
+  featureCards: [
+    {
+      title: "Premium Full Contacts",
+      description:
+        "Contact from every fields by Contact Name, email address , phone number, postal address,NAICS,SIC ,Industry and much more.",
+      icon: <Desktop size={32} weight="duotone" />,
+      circle: true,
+    },
+    {
+      title: "Affordable Pricing",
+      description:
+        "Quality and Company lists enable businesses to make business connections for lowest price.",
+      icon: <Wallet size={32} weight="duotone" />,
+      circle: true,
+    },
+    {
+      title: "1 year Free Updates",
+      description:
+        "You will get free updates for 1 year .We clean all our contacts every three month.",
+      icon: <Gift size={32} weight="duotone" />,
+      circle: true,
+    },
+    {
+      title: "95% Email Deliverability Guaranteed ",
+      description:
+        "We guarantee 95% deliverability for all email databases listed for sale.",
+      icon: <Target size={32} weight="duotone" />,
+      circle: true,
+    },
+  ],
+  actionCards: [
+    {
+      title: "46 Million United State Business Database",
+      description:
+        "2022 updated unique 46 million direct B2B contacts available with title,Company , phone ,fax number and etc.",
+      icon: (
+        <Image
+          layout="fixed"
+          width={50}
+          height={50}
+          src="/icon-1.png"
+          alt="usa"
+        />
+      ),
+      label: "View Details",
+      link: "/list-of-all-us-companies",
+      asTag: "div",
+    },
+    {
+      title: "2 Million USA Realtors",
+      description:
+        "More than 96% Accurate unique 2 million realtors available with contact name,email ,phone , fax ,address , License number and etc.",
+      icon: (
+        <Image
+          width={50}
+          height={50}
+          layout="fixed"
+          src="/real-estate.png"
+          alt="Real Estate"
+        />
+      ),
+      label: "View Details",
+      link: "/real-estate-agent-email-list",
+      asTag: "div",
+    },
+    {
+      title: "Database USA By Professions",
+      description:
+        "There are many databases available for varieties of professions. All are 2022 Updated and unique contacts.",
+      icon: (
+        <Image
+          width={50}
+          height={50}
+          src="/businessman.png"
+          layout="fixed"
+          alt="Business Man"
+        />
+      ),
+      label: "View Details",
+      link: "/usa-job-titles",
+      asTag: "h4",
+    },
+    {
+      title: "Database by Industry Categories",
+      description:
+        "Industries such as Architects & Building designers , Backers , General Contractors & Home Builders ,Cryptocurrency and many more available.",
+      icon: (
+        <Image
+          layout="fixed"
+          width={50}
+          height={50}
+          src="/real-estate.png"
+          alt="usa"
+        />
+      ),
+      label: "View Details",
+      link: "/special-databases",
+      asTag: "div",
+    },
+    {
+      title: "Worldwide Business Lists",
+      description:
+        "Global B2B lists available – Covered in Asia, Europe, Middle East, Australia & NZ, Africa, and South America.",
+      icon: (
+        <Image
+          layout="fixed"
+          width={50}
+          height={50}
+          src="/gear-1.png"
+          alt="Settings"
+        />
+      ),
+      onClick: () => {
+        alert("Hi");
+      },
+      label: "View Details",
+      link: "/other-countries",
+      asTag: "div",
+    },
+    {
+      title: "Global Consumer Emails",
+      description:
+        "Millions of Consumer emails are available worldwide – All are up to date and valid emails.",
+      icon: (
+        <Image
+          width={50}
+          layout="fixed"
+          height={50}
+          src="/email-marketing.png"
+          alt="Email Marketing"
+        />
+      ),
+      label: "View Details",
+      link: "/consumer-emails",
+      asTag: "div",
+    },
+  ],
+  collapsibleList: [
+    {
+      title: "Valid and Unique Contacts",
+      element: (
+        <>
+          While other providers selling many years old database with duplicate
+          contacts .We are selling 2022 Updated VALID AND UNIQUE CONTACTS at
+          lowest cost than any other providers on internet today and We are
+          updating our database every two month.
+        </>
+      ),
+    },
+    {
+      title: "Most Accurate Sources",
+      element: (
+        <>
+          All business contacts were mined from wide variety of sources, such as
+          : Business directories ,New business fillings , Daily utility
+          connections , Press releases , Corporate websites and many other
+          sources .
+        </>
+      ),
+    },
+    {
+      title: "Million of Contacts at An Affordable Price",
+      element: (
+        <>
+          We are Offering million of business contacts at a very cost effecting
+          price for small businesses that can not afford our competitor’s price.
+          Therefore you don’t need to pay thousands of dollars while you can
+          purchase our businesses databases at an affordable price.
+        </>
+      ),
+    },
+    {
+      title: "One Year Free Updates & Database Accuracy Guarantee",
+      element: (
+        <>
+          <p>
+            We offer updates on your listing for one year free of charge and
+            update our listings every two to three months. Your business will
+            not have an extra expense for such a privilege. If you cannot afford
+            our competitor&apos;s price, you can always turn to us for a lower
+            expense while you acquire better service. With our company database,
+            you can reach your prospects directly to lead them into the sales
+            funnel. Close your deals faster. In these pandemic days, cell phone
+            calls and emails are the best ways to reach your prospects fast.
+          </p>
+
+          <p>
+            We offer the best quality leads at cost-effective prices. With us,
+            you have only three steps for success: identify your market, invest
+            in a B2B leads database, and get results.
+          </p>
+        </>
+      ),
+    },
+  ],
+  collapsibleList_2: [
+    {
+      title: "Genuine leads",
+      element: (
+        <>
+          <p>
+            Acquiring verified B2B business leads lists generate a whole lot of
+            sales. With these lists, you can reach your target audience without
+            spending a huge amount of time and resources.
+          </p>
+          <p>
+            To this end, we endeavor to provide you with genuine lead lists that
+            can help you reach your desire prospects with your business&apos;s
+            ideal persona at the lowest price in the industry.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Million of Contacts than other providers at an affordable price",
+      element: (
+        <>
+          <p>
+            The goal is achievable for your business with our customized
+            pricing. Buy your email list at an affordable price based on your
+            budget and marketing targets.
+          </p>
+          <p>
+            We provide a higher number of contacts than other providers offering
+            lists at the same price. Also, we will update your company list
+            database for one full year with no further expense on your part.
+          </p>
+        </>
+      ),
+    },
+  ],
+  sideTabList: [
+    {
+      title: "Business Data Solutions: Benefits of Buying Company Database",
+      childElement: (
+        <div>
+          <p>
+            Our United State business directory is a user-friendly directory. We
+            categorize our lists, so you can easily find the most suitable
+            businesses or customers to target. In terms of territories, we have
+            listings under Cities, Counties, States, Zip Codes, etc. If you are
+            targeting local markets, these are the easiest to use listings for
+            your business.
+          </p>
+          <p>
+            Check out our premium digital marketing list that includes data
+            fields, such as contact names, email, phone, company name, SIC,
+            NAICS, industry, and more.
+          </p>
+          <p>
+            You can use these lists in different components of your marketing
+            campaign:
+          </p>
+          <ul>
+            <li>Email Marketing Campaign</li>
+            <li>Telemarketing Campaign</li>
+            <li>Direct Mail Campaign</li>
+            <li>Campaigns via Consumer Mailing and Email Lists</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title:
+        "Company Information Database that Boosts Your Email Database Marketing",
+      childElement: (
+        <div>
+          <p>
+            Power up your marketing with uscompanydata.com database listings!
+            Today, marketing campaigns are not effective without email
+            marketing. Despite the growing popularity of online approaches, such
+            as social media and SEO, businesses cannot do away with email
+            marketing altogether.
+          </p>
+          <p>
+            The best part of email marketing is it allows you to have a
+            personalized approach right from the start, and you have access to
+            your target audience at the tip of your fingers. Your
+            prospect&apos;s inbox is available for you to use as the
+            communication channel for a more personalized messaging and
+            marketing pitch.
+          </p>
+          <p>
+            Even big businesses use email marketing. Facebook and Twitter use
+            email marketing to bring their users back when they notice a lack of
+            engagement in their platform. That strategy does not only allow an
+            expression of genuine interest.
+          </p>
+          <p>
+            For these giant online platforms, the strategy also works for
+            regaining trust and providing value. If your past customers or
+            visitors failed to reconnect with you, re-target them through an
+            email that reminds them of their importance to you.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Company List Database Service that Goes the Extra Mile",
+      childElement: (
+        <div>
+          <p>
+            At uscompanydata.com, we put a premium on building strong
+            relationships with customers. We will work with you through and
+            through or until you see the results of your partnership with us. We
+            understand you will not see results overnight. That is why we will
+            continue working with you to identify leads that do not convert and
+            why they do not convert.
+          </p>
+          <p>
+            We can identify 98% of your target audience that does not convert.
+            Then you can profile these people and plan how you can retarget them
+            to achieve the best result.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Customized Company List Database",
+      childElement: (
+        <div>
+          <p>
+            Buying a company database for marketing can be challenging. You need
+            to verify the authenticity and accuracy of the data set, which can
+            prolong your search and make you waste resources.
+          </p>
+          <p>
+            We can help you avoid such difficulty by providing you a sample data
+            that match your targeting criterion.
+          </p>
+          <p>
+            With our customer-focused services, we will not provide you a sample
+            with random data. We will give you a customized set to give you an
+            idea about what data you can get from us once you place an order.
+          </p>
+          <p>Customize your database based on these parameters:</p>
+          <ul>
+            <li>Company size</li>
+            <li>Industry</li>
+            <li>Job roles of decision-makers</li>
+            <li>
+              Technology that your target market is using (Shopify, WordPress,
+              Magento, etc.). With our state-of-the-art software, you can
+              seamlessly feed our listings into your existing platform.
+            </li>
+            <li>Location</li>
+            <li>Niche categories (SaaS company, Fintech, etc.)</li>
+            <li>
+              Target customers that have raised or received funding recently
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Data-Driven Marketing Insights and Business Intelligence",
+      childElement: (
+        <div>
+          <p>
+            Strategizing is essential in marketing campaigns. So, you ask
+            questions:
+          </p>
+          <ul>
+            <li>What is my goal?</li>
+            <li>Who is my target audience?</li>
+            <li>How can I measure success?</li>
+          </ul>
+          <p>
+            There is only one answer to all these questions: data. Use
+            strategies backed up by data. And data is what we can provide you.
+            And not just random data. We offer you a genuine and accurate
+            database to help your team avoid launching a lackluster campaign.
+          </p>
+          <p>
+            In addition to your updated list, we also help you with a market
+            analysis to help you with your campaigns. For instance, we know that
+            87% of online sales happen through desktops, and 62% of online
+            buyers buy products through their mobile devices. That can give you
+            an idea about where you can best engage your target email audience.
+          </p>
+          <p>
+            We understand that company resources are often limited, so we try to
+            help your marketing efforts by providing stats that matter to your
+            campaigns. It is, after all, a partnership that we are building with
+            our clients.
+          </p>
+        </div>
+      ),
+    },
+  ],
+  bottom_cards: [
+    {
+      icon: <Briefcase size={24} />,
+      title: "Business Lists for Sale",
+      element: (
+        <p>
+          At our USA Company Database Service, we offer the most extensive and
+          updated business lists on our website. You can find the extensive
+          business database in the business market as we totally understand that
+          it is the current global economy. Here, on our website, we provide you
+          the most comprehensive US Company Database lists. Our goal is to
+          provide you the largest directory and complete business listings for
+          your operational needs and to grow your business successfully.{" "}
+        </p>
+      ),
+      asTag: "h3",
+    },
+    {
+      icon: <Envelope size={24} />,
+      title: "Email Lists",
+      element: (
+        <p>
+          If you are looking for the best email contact details, then you are at
+          the right place as we are the best email list provider in the USA, and
+          you cannot find anything better than our list from any other provider.
+          We are honored to say that we provide largest, complete, precise, and
+          up-to-date direct email lists at a very reasonable price. <br />
+          <br /> We offer thousands of email addresses that have been
+          meticulously verified, and we guarantee you that we provide only
+          reliable and up-to-date contact information where you cannot find any
+          duplicate or bad emails on our lists. Also, we assure you that you
+          cannot locate ‘no blank’ entries on our email lists.
+        </p>
+      ),
+      asTag: "div",
+    },
+    {
+      icon: <Database size={24} />,
+      title: <>List of US Companies</>,
+      element: (
+        <>
+          <p>
+            No matter where your business is based, we will provide you the
+            unique company email database where you can get reliable and
+            up-to-date business database lists. You can take complete advantage
+            of the various business marketing opportunities that are obtainable
+            in the United States of America.
+          </p>
+          <p>
+            Our US business directory is always available at a very affordable
+            price, and you can always expect the updated and precise information
+            on our website. Our extensive database provides details on a large
+            range of businesses throughout the US, which could offer you with
+            probable marketing opportunities.{" "}
+          </p>
+        </>
+      ),
+      asTag: "h3",
+    },
+  ],
+};
+
+export default HomeSeed;

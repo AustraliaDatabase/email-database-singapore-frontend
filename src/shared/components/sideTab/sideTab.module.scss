@@ -1,0 +1,47 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.tab {
+  display: flex;
+  font-size: 1rem;
+  .menu {
+    display: grid;
+    grid: auto / 1fr;
+    grid-auto-flow: row;
+    gap: 1rem;
+    flex: 0 0 25%;
+    max-width: 100%;
+    width: auto;
+    & > div {
+      padding: 1rem 1.25rem;
+      border-radius: 0.25rem;
+      background-color: var(--fill);
+      transition: background-color 0.24s ease;
+      transition: all 0.24s ease;
+      display: flex;
+      align-items: center;
+      h3{
+        margin-bottom: 0px;
+      }
+      cursor: pointer;
+      &:hover {
+        background-color: lighten($color: $secondary, $amount: 85);
+      }
+      &.active {
+        background-color: var(--secondary);
+        color: $white;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        transform: translateX(3px);
+      }
+    }
+  }
+  .panel {
+    flex-grow: 1;
+    padding: 1.5rem;
+    background-color: $white;
+    word-break: break-all;
+    @include box-shadow(level-3);
+    z-index: 1;
+  }
+}

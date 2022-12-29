@@ -1,0 +1,154 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.custom-accordion {
+  .accordion-item {
+    background-color: $white;
+    border-radius: 0px;
+    border-color: var(--border) !important;
+    border-left: 0px;
+    border-right: 0px;
+
+    button {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &:first-of-type {
+      border-radius: 0px;
+
+      button {
+        border-radius: 0px;
+      }
+    }
+
+    &:last-of-type {
+      border-radius: 0px;
+
+      button {
+        border-radius: 0px;
+      }
+    }
+
+    .accordion-header {
+      button {
+        &[aria-expanded="true"] {
+          background-color: var(--fill);
+          box-shadow: none;
+          color: var(--secondary);
+        }
+      }
+    }
+
+    .accordion-collapse {
+      .accordion-body {
+        transition: background-color 0.24s ease;
+      }
+
+      &.show {
+        .accordion-body {
+          background-color: var(--fill);
+        }
+      }
+    }
+  }
+}
+.table {
+  font-size: 16px;
+  @include breakpoint(tab-landscape-up) {
+    font-size: 14px;
+  }
+
+  & > :not(caption) > * > * {
+    padding: 0.5rem 1rem;
+  }
+
+  thead {
+    th {
+      color: var(--primary);
+      position: sticky;
+      background-color: #fff;
+      top: 0;
+
+      @include breakpoint(tab-landscape-up) {
+        top: 135px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background-color: $fill;
+      }
+    }
+  }
+}
+.responsive-table {
+  @include breakpoint(mobile-landscape) {
+    overflow: auto;
+  }
+
+  .table thead th {
+    top: 0px;
+  }
+}
+.td-field-inc {
+  min-width: 220px;
+}
+.td-field-inc-mobile {
+  @include breakpoint(tablet) {
+    min-width: 175px;
+  }
+}
+.form-control[readonly] {
+  background-color: $white;
+}
+
+.custom-select {
+  &:hover {
+    .custom-select__control {
+      border-color: var(--primary);
+    }
+  }
+  &__control {
+    height: 40px;
+    border-color: var(--border);
+    border-radius: 2px !important;
+    transition: border-color 0.24s ease;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &__indicator-separator {
+    display: none;
+  }
+}
+
+.search-select {
+  max-width: 400px;
+
+  &:hover {
+    .search-select {
+      border-color: var(--primary);
+    }
+  }
+  &__control {
+    height: 40px;
+    border-color: var(--border);
+    border-radius: 10px !important;
+    transition: border-color 0.24s ease;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &__indicator-separator {
+    display: none;
+  }
+}

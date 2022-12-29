@@ -1,0 +1,99 @@
+@import "styles/mixins";
+.beneifitTitle {
+  font-size: 2rem;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 2rem;
+  }
+  @include breakpoint (mobile){
+    text-align: center;
+    font-size: 1.5rem;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  }
+}
+
+.beneifitDescription {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 1rem;
+  }
+  
+  @include breakpoint(mobile){
+    text-align: center;
+  }
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.cardDescription {
+  font-size: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  h6,
+  p,
+  b,
+  span {
+    font-size: 1rem;
+  }
+}
+
+@include breakpoint(mobile){
+  .cardTitle {
+    text-align: center;
+  }
+  
+  .cardDescription {
+    text-align: center;
+  }
+}

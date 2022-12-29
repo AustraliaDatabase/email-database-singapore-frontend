@@ -1,0 +1,203 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.content {
+  color: var(--text);
+  width: 100%;
+  margin: 0 auto;
+  @include breakpoint(tab-up) {
+    max-width: 680px;
+  }
+
+  @include breakpoint(large-display-up) {
+    max-width: 900px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    font-weight: 500;
+  }
+
+  strong {
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  p~ul,
+  p~ol {
+    padding-left: 1rem;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    padding: 0rem;
+    margin-bottom: 1rem;
+
+    li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.75rem;
+
+      &::before {
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  ul {
+    li {
+      &::before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--primary);
+        top: 10px;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: section;
+
+    li {
+      &::before {
+        counter-increment: section;
+        content: counter(section);
+        color: var(--primary);
+        top: 0;
+      }
+    }
+  }
+
+  img {
+    padding: 1.5rem 0;
+    width: auto;
+    max-width: 100%;
+  }
+
+  img + i {
+    line-height: 13px;
+    display: block;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    font-size: 13px;
+    padding-right: 20px;
+    text-align: right;
+    color: lighten($color: $text, $amount: 20);
+  }
+
+  hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .responses {
+    h3 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .response {
+      display: grid;
+      grid-template-areas:
+      'icon comment'
+      'icon time';
+      column-gap: 1rem;
+      row-gap: 0.5rem;
+      justify-content: left;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &.hasReplies {
+        grid-template-areas:
+        'icon comment'
+        'icon time'
+        'icon replies';
+      }
+
+      .icon {
+        display: grid;
+        place-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: rgba($color: $primary, $alpha: .1);
+        border-radius: 50%;
+        grid-area: icon;
+
+        svg {
+          color: var(--primary);
+        }
+      }
+
+      .comment {
+        padding: 0.75rem 1rem 1rem;
+        background-color: var(--fill);
+        grid-area: comment;
+        border-radius: 2px 2px 1rem 2px;
+        .name {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .time {
+        grid-area: time;
+        span {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        button {
+          font-size: 80%;
+        }
+      }
+
+      .replies {
+        grid-area: replies;
+        margin-top: 1rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--border);
+        display: grid;
+        grid-auto-rows: auto;
+        grid-auto-flow: row;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .response {
+          margin-bottom: 0px;
+          &::before {
+            content: "";
+            display: block;
+            width: 1rem;
+            height: 1px;
+            background-color: var(--border);
+            top: 1rem;
+            left: -1rem;
+            position: absolute;
+          }
+
+          .time {
+            span, button {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

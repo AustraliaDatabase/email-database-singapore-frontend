@@ -1,0 +1,50 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.reviewTopLeft {
+  .shortReview {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .userName {
+    font-weight: 600;
+    color: rgba($color: #000000, $alpha: 0.5);
+    & > span {
+      color: $secondary;
+    }
+  }
+
+  .buyerStatus {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+
+    svg {
+      color: #00c100;
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.reviewsTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.reviewDate {
+  text-align: right;
+  color: rgba($color: #000000, $alpha: 0.8);
+  font-weight: 400;
+}
+
+.review {
+  padding-bottom: 1rem;
+}
+
+.reviewRow {
+  padding: 0.5rem 0;
+}

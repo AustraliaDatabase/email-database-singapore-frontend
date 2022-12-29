@@ -1,0 +1,36 @@
+@import "styles/variables";
+
+.wrapper {
+  margin-bottom: 90px;
+  //   height: 2rem;
+  //   width: 2rem;
+}
+
+.spinnerClass {
+  border: 1px solid black;
+  border-top: 1px solid white;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.wrap {
+  border-radius: 15px;
+  .buttonList {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $fill;
+    padding: 1rem 0;
+    border-radius: 0.4rem;
+
+    button {
+      height: 45px !important;
+      margin-right: 1rem;
+      border-radius: 0.4rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

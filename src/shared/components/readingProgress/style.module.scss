@@ -1,0 +1,24 @@
+@import "styles/mixins.scss";
+
+.wrap {
+  position: sticky;
+  height: 3px;
+  z-index: 100;
+  top: 190px;
+  @include breakpoint(tab-landscape-up) {
+    top: 138px;
+  }
+  .bar {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: var(--primary);
+    transition: opacity 0.75s ease;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+}

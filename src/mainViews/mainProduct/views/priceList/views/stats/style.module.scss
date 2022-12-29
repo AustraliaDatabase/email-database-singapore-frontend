@@ -1,0 +1,47 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.structure {
+  margin-top: 30px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  @include box-shadow(level-2);
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-radius: 2px;
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      background-color: var(--fill);
+    }
+  }
+}
+
+.structureTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: var(--title-font);
+}
+
+.viewPricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: underline;
+  margin-top: 1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,95 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+  .response {
+    // display: grid;
+    flex-wrap: wrap;
+    grid-template-areas:
+    'icon comment'
+    'icon time';
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    justify-content: left;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &.hasReplies {
+      grid-template-areas:
+      'icon comment'
+      'icon time'
+      'icon replies';
+    }
+
+    .icon {
+      display: grid;
+      place-content: center;
+      width: 32px;
+      height: 32px;
+      background-color: rgba($color: $primary, $alpha: .1);
+      border-radius: 50%;
+      grid-area: icon;
+
+      svg {
+        color: var(--primary);
+      }
+    }
+
+    .comment {
+      padding: 0.75rem 1rem 1rem;
+      margin-left: 1rem;
+      background-color: var(--fill);
+      grid-area: comment;
+      border-radius: 2px 2px 1rem 2px;
+      .name {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .time {
+      grid-area: time;
+      margin-left: 3rem;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      button {
+        font-size: 80%;
+      }
+    }
+
+    .replies {
+      grid-area: replies;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      border-left: 1px solid var(--border);
+      display: grid;
+      grid-auto-rows: auto;
+      grid-auto-flow: row;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      .response {
+        margin-bottom: 0px;
+        &::before {
+          content: "";
+          display: block;
+          width: 1rem;
+          height: 1px;
+          background-color: var(--border);
+          top: 1rem;
+          left: -1rem;
+          position: absolute;
+        }
+
+        .time {
+          span, button {
+            display: none;
+          }
+        }
+      }
+    }
+}
+
+.deleteButton {
+  margin-left: 10px;
+}

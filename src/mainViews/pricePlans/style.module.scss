@@ -1,0 +1,75 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.wrap {
+  h4 {
+    // color: $text-light;
+  }
+
+  .buttonList {
+    background-color: red;
+  }
+}
+
+.tableWrapperRow {
+  gap: 1.5rem;
+
+  table {
+    thead {
+      tr {
+        th {
+          &:first-child {
+            width: 65%;
+          }
+
+          &:last-child {
+            width: 40%;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          // color: $text-light;
+
+          &:first-child {
+            width: 65%;
+          }
+
+          &:last-child {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+
+  .priceInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+  }
+}
+
+.tryFreebutton {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.buildListButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+.buildListInfoWrapper {
+  background-color: var(--pale-background);
+  border-radius: 15px;
+}

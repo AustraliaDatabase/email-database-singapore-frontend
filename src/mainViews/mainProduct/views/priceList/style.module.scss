@@ -1,0 +1,134 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.price {
+  padding-top: 60px;
+}
+
+.priceCardTitle {
+  position: relative;
+  top: 0;
+  background-color: white;
+  padding: 10px 0;
+  font-size: 2rem;
+  z-index: 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  p,
+  b,
+  span {
+    font-size: 2rem;
+  }
+
+  @include breakpoint(tab-landscape-up) {
+    position: sticky;
+    top: 140px;
+    z-index: 10;
+    font-size: 2rem;
+  }
+  @include breakpoint(mobile) {
+    font-size: 1.5rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    p,
+    b,
+    span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.priceCardDescription {
+  font-size: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5,
+  p,
+  b,
+  span {
+    font-size: 1rem;
+  }
+}
+
+.structure {
+  margin-top: 30px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  @include box-shadow(level-2);
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-radius: 2px;
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      background-color: var(--fill);
+    }
+  }
+}
+
+.structureTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: var(--title-font);
+}
+
+.priceCardAlone {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.statsCardAlone {
+  min-width: 600px;
+
+  @include breakpoint(mobile) {
+    min-width: auto;
+  }
+}
+
+.statsTitle {
+  font-family: var(--title-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  font-size: 2rem;
+}
+
+
+.viewPricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: underline;
+  margin-top: 2rem;
+  cursor: pointer;
+}
