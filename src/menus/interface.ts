@@ -15,3 +15,10 @@ export interface IMainPublicMenuItem {
 export interface IGetIcon {
     [key: string]: ReactNode;
 }
+
+export interface IHeaderLinks {
+    name: string;
+    route: string;
+    index?: number;
+    subMenu?: IHeaderLinks[];
+}

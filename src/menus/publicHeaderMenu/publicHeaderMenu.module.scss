@@ -211,3 +211,289 @@
   border: 1px solid var(--primary);
   border-top: 1px solid var(--fill);
 }
+
+$navMenuCount: 3; // Increase number count here if want to add a one.
+$withFraction: 1 / $navMenuCount;
+
+.header {
+  position: fixed;
+  height: 60px;
+  background-color: $white;
+  z-index: 13;
+  border-radius: 4px;
+  transition: top 0.3s, width 0.3s, margin 0.3s;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  @include box-shadow(level-1-1);
+
+  @include breakpoint(tab-landscape-up) {
+    top: 60px;
+    height: 100px;
+    width: calc(100% - 100px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .toggle {
+    display: flex;
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    border: none;
+    border-right: 1px solid var(--border-color);
+    @include breakpoint(tab-landscape-up) {
+      display: none;
+    }
+  }
+
+  .main {
+    position: fixed;
+    height: 300px;
+    max-height: 0px;
+    width: 100%;
+    background-color: var(--card-background);
+    top: 58px;
+    left: 0;
+    list-style: none;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    @include box-shadow(level-2);
+    &.show {
+      max-height: 100vh;
+    }
+
+    @include breakpoint(tab-landscape-up) {
+      position: relative;
+      width: auto;
+      max-width: $navMenuCount * 190px;
+      display: block;
+      padding-bottom: 0px;
+      height: 100%;
+      max-height: none;
+      top: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    & > li {
+      display: flex;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 1rem 1.25rem;
+      line-height: 19px;
+      cursor: pointer;
+      min-height: 60px;
+      align-items: center;
+      @include breakpoint(tab-landscape-up) {
+        overflow: hidden;
+        text-align: center;
+        justify-content: center;
+        display: inline-flex;
+        padding: 0rem 1.25rem;
+        height: 100%;
+      }
+
+      &.selected {
+        color: var(--primary-light);
+      }
+
+      &:hover {
+        background: rgba(242, 79, 15, 0.06);
+        overflow: visible;
+        a {
+          & > ul {
+            opacity: 1;
+          }
+          & > svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &.bar:before {
+        content: "";
+        transition: all 0.3s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: var(--primary);
+        display: none;
+        @include breakpoint(tab-landscape-up) {
+          display: block;
+        }
+      }
+
+      a {
+        position: relative;
+        @include breakpoint(tab-landscape-up) {
+          flex-grow: 1;
+          display: inline-flex;
+          align-items: center;
+          height: 100%;
+          max-height: 100px;
+        }
+
+        svg {
+          margin-left: 8px;
+          transition: transform 0.24s ease;
+        }
+      }
+
+      .sub {
+        position: relative;
+        padding: 1rem;
+        @include breakpoint(tab-landscape-up) {
+          position: absolute;
+          width: calc(100% + 40px);
+          display: block;
+          background-color: white;
+          top: 100%;
+          transform: translateY(-5px);
+          left: -20px;
+          padding: 0.5rem 0;
+          @include box-shadow(level-2);
+          border-radius: 4px;
+          opacity: 0;
+          transition-property: opacity;
+          transition: 0.24s ease;
+        }
+
+        li {
+          list-style: none;
+          display: block;
+          padding: 0.5rem 1rem;
+          &:hover {
+            background: rgba(242, 79, 15, 0.06);
+          }
+        }
+      }
+    }
+  }
+}
+
+.normal {
+  top: 0;
+  width: 100%;
+  margin: 0;
+  transition: top 0.3s, width 0.3s, margin 0.3s;
+}
+
+// TODO: find a way to do this dynamic
+@for $i from 1 through $navMenuCount {
+  li:nth-child(#{$i}) {
+    &.selected ~ .bar:before,
+    &.elm:hover ~ .bar:before,
+    &.selected.bar:before,
+    &.elm.bar:hover:before {
+      @if $i == 1 {
+        width: 89px;
+        left: 0;
+      } @else if $i == 2 {
+        left: 89px;
+        width: 129px;
+      } @else if $i == 3 {
+        left: 218px;
+        width: 180px;
+      } @else {
+        width: 0;
+      }
+    }
+
+    &.bar:before {
+      width: 91px;
+    }
+  }
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+
+  &.guest {
+    flex: 1;
+    max-width: 100%;
+    @include breakpoint(tab-landscape-up) {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  @include breakpoint(tab-landscape-up) {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.left {
+  display: flex;
+  width: auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+
+  &.user {
+    flex: 0 0 auto;
+    max-width: 100%;
+    @include breakpoint(tab-landscape-up) {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  @include breakpoint(tab-landscape-up) {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+}
+
+.logo {
+  border-right: 1px solid var(--border-color);
+  width: auto;
+  max-width: 280px;
+  padding: 0 1rem;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+
+  @include breakpoint(tab-landscape-up) {
+    padding: 0 1.5rem;
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &.mobile {
+    display: flex;
+    @include breakpoint(tab-landscape-up) {
+      display: none;
+    }
+  }
+}
+
+.active {
+  background-color: var(--primary);
+  color: white;
+
+  &:hover {
+    color: var(--primary);
+    background-color: var(--primary);
+  }
+}

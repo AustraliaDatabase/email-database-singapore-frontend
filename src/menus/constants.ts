@@ -1,8 +1,32 @@
 import { JOB_INDUSTRIES } from "../shared/seeds/jobIndustry";
 import { JOB_TITLES } from "../shared/seeds/jobTitles";
 import { TARGETS } from "../shared/seeds/targets";
+import { IHeaderLinks } from "./interface";
 // import { COUNTRIES_DATABASE } from "../shared/seeds/countries";
 // import { CONSUMER_EMAIL_DATABASE } from "../shared/seeds/consumers";
+
+export const HEADER_LINKS: IHeaderLinks[] = [
+  {
+    name: "Home",
+    route: "/",
+  },
+  {
+    name: "Price plans",
+    route: "/price-plans",
+  },
+  {
+    name: "Pre-Made Lists",
+    route: "/pre-made-list",
+    subMenu: [
+      { name: "Job Title", route: "/pre-made-list/job-titles" },
+      { name: "Industries", route: "/pre-made-list/industries" },
+      { name: "Cities", route: "/pre-made-list/cities" },
+      { name: "States", route: "/pre-made-list/states" },
+      // { name: "International", route: "/pre-made-list/international" },
+    ],
+  },
+];
+
 
 export const MENU_SET = [
   {
