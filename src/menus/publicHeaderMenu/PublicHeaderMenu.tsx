@@ -267,7 +267,12 @@ import { useRouter } from "next/router";
 // } from "../../../redux/auth/authSlice";
 // import useUser from "../../../shared/hooks/UseUser";
 // import styles from "./style.module.scss";
-import { CaretDown, List } from "phosphor-react";
+import {
+  CaretDown,
+  List,
+  ShoppingCart,
+  ShoppingCartSimple,
+} from "phosphor-react";
 import Image from "next/image";
 import { IHeaderLinks } from "../interface";
 import { HEADER_LINKS } from "../constants";
@@ -275,6 +280,7 @@ import { HEADER_LINKS } from "../constants";
 import styles from "./publicHeaderMenu.module.scss";
 import NavButton from "./components/navButton/NavButton";
 import { useRoot } from "../../shared/contexts/RootProvider";
+import { setUser } from "../../services/helpers/tokenService";
 
 const NavigationLink: React.FC<IHeaderLinks> = ({
   name,
@@ -336,12 +342,11 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
 };
 
 const PublicHeaderMenu = () => {
-  // const dispatch = useDispatch();
   const [toTop, setToTop] = useState(false);
-  // const user = useUser();
-
-  const [logoutVisible, setLogoutVisible] = useState(false);
+  const [islogedin, setIslogedin] = useState(false);
+  const [totalCartItemCount, setTotalCartItemCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+
   const {
     setAuthEnable,
     setCartEnable,
@@ -349,6 +354,7 @@ const PublicHeaderMenu = () => {
     setLoggedInUser,
     currentCartItem,
     authLoading,
+    setAuthLoading,
   } = useRoot();
 
   const toggleSideBar = () => {
@@ -371,24 +377,38 @@ const PublicHeaderMenu = () => {
     };
   }, []);
 
-  // const pressButton = () => {
-  //   dispatch(updateAuthTypeState(LOGIN_OR_SIGNUP.LOGIN));
-  //   dispatch(updateModalVisible(true));
-  // };
-  const pressButton = () => {};
-
   const pressLogin = () => {
     setAuthEnable(true);
+    setAuthLoading(true);
   };
+
+  const pressLogout = () => {
+    setUser(null);
+    setLoggedInUser(null);
+  };
+
+  const pressCart = () => {
+    setCartEnable(true);
+  };
+
+  useEffect(() => {
+    if (loggedInUser?.email) {
+      setIslogedin(true);
+    } else {
+      setIslogedin(false);
+    }
+  }, [loggedInUser?.email]);
+
+  useEffect(() => {
+    setTotalCartItemCount(currentCartItem.length);
+  }, [currentCartItem]);
 
   return (
     <>
       <header className={classNames(styles.header, { [styles.normal]: toTop })}>
         <div
           className={classNames(styles.left, {
-            [styles.user]:
-              // !user
-              false,
+            [styles.user]: !islogedin,
           })}
         >
           <Link href="/" passHref>
@@ -436,41 +456,51 @@ const PublicHeaderMenu = () => {
         </div>
         <div
           className={classNames(styles.right, {
-            [styles.guest]:
-              // !user
-              false,
+            [styles.guest]: !islogedin,
           })}
         >
           {
-            // !user
-            true && (
-              <NavButton
-                toTop={toTop}
-                // url={`${process.env.BASE_URL}/build-custom-list`}
-                title="Login"
-                isPrimary={false}
-                pressButton={pressLogin}
-              />
-            )
+            <div onClick={pressCart} className={styles.cart}>
+              <div>
+                <ShoppingCartSimple size={26} />
+                <span className={styles.cartItemCount}>
+                  {totalCartItemCount}
+                </span>
+              </div>
+            </div>
           }
-          {
-            // user
-            true ? (
-              <NavButton
-                toTop={toTop}
-                url={`${process.env.BASE_URL}/build-custom-list`}
-                title="Build a List"
-                description="Custom B2B List"
-              />
-            ) : (
-              <NavButton
-                toTop={toTop}
-                url={`${process.env.BASE_URL}/build-custom-list`}
-                title="Free Trial"
-                description="Let’s check it out"
-              />
-            )
-          }
+          {!islogedin && (
+            <NavButton
+              toTop={toTop}
+              // url={`${process.env.BASE_URL}/build-custom-list`}
+              title={`${authLoading ? "Loading..." : "Login"}`}
+              isPrimary={false}
+              pressButton={pressLogin}
+            />
+          )}
+          {islogedin && (
+            <NavButton
+              toTop={toTop}
+              title="Logout"
+              isPrimary={false}
+              pressButton={pressLogout}
+            />
+          )}
+          {islogedin ? (
+            <NavButton
+              toTop={toTop}
+              url={`${process.env.BASE_URL}/build-custom-list`}
+              title="Build a List"
+              description="Custom B2B List"
+            />
+          ) : (
+            <NavButton
+              toTop={toTop}
+              url={`${process.env.BASE_URL}/build-custom-list`}
+              title="Free Trial"
+              description="Let’s check it out"
+            />
+          )}
         </div>
       </header>
     </>
