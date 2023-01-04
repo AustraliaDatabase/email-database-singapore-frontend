@@ -3,7 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
 import { useRouter } from "next/router";
-import { CaretDown, List, ShoppingCartSimple } from "phosphor-react";
+import {
+  CaretDown,
+  CaretRight,
+  List,
+  ShoppingCartSimple,
+} from "phosphor-react";
 
 import { IHeaderLinks } from "../interface";
 import { HEADER_LINKS } from "../constants";
@@ -59,7 +64,31 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
                         [styles.active]: router.pathname === link.route,
                       })}
                     >
-                      {link.name}
+                      {link.subMenu ? (
+                        <div className={styles.subMenu}>
+                          <span>
+                            {link.name} <CaretRight size={20} />
+                          </span>
+                          <ul>
+                            {link.subMenu.map((link, index) => {
+                              return (
+                                <Link passHref key={index} href={link.route}>
+                                  <li
+                                    className={classNames({
+                                      [styles.active]:
+                                        router.pathname === link.route,
+                                    })}
+                                  >
+                                    {link.name}
+                                  </li>
+                                </Link>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      ) : (
+                        link.name
+                      )}
                     </li>
                   </Link>
                 );
