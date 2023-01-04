@@ -16,6 +16,15 @@
   @extend %gradient;
   margin-bottom: 40px;
   z-index: 1;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 25rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 15rem;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -28,6 +37,11 @@
     background-position: right 55%;
     background-size: 38%;
     z-index: -1;
+
+    @include breakpoint(tablet) {
+      background-position: center 98%;
+      background-size: 60%;
+    }
   }
 
   .heroCaption {
