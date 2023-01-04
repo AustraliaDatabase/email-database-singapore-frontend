@@ -59,8 +59,6 @@ const FeatureCard: React.FC<IFeatureCard> = (props) => {
   const backgroundStyle = getBackgroundStyle[cardType];
 
   return (
-    // <Link passHref href={`${process.env.NEXT_PUBLIC_BASE_URL}${link}`}>
-    // </Link>
     <div
       onClick={() => {
         setLoading(true);
@@ -109,8 +107,8 @@ const FeatureCard: React.FC<IFeatureCard> = (props) => {
                 </Button>
               </a>
             )}
-            {backgroundStyle}
           </div>
+          {backgroundStyle}
         </Col>
       </Row>
     </div>

@@ -184,7 +184,7 @@ const HomeMainView = () => {
             {CURRENT_OBJECT_HOME.actionCards.map((card, index) => {
               return (
                 <Col
-                  className={classNames("mb-4 cursor", styles.productTypes)}
+                  className={classNames("mb-4", styles.productTypes)}
                   key={index}
                   md={4}
                   lg={3}

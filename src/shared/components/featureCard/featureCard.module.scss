@@ -36,11 +36,13 @@
     padding-bottom: calc(3rem + 40px);
     overflow: hidden;
     height: 500px;
+    z-index: 1;
     p,
     .cardText {
       color: $white;
     }
     %commonStyles {
+      z-index: -1;
       height: 100%;
       width: 100%;
       position: absolute;
