@@ -33,7 +33,7 @@ class MyDocument extends Document {
             media="screen"
           /> */}
 
-          <link rel="icon" href="/email-datas-favicon-32x32.png" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />
