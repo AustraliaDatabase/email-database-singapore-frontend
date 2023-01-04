@@ -5,12 +5,12 @@ import {
   Target,
   CircleWavyQuestion,
   TreeStructure,
-  ListChecks,
   Briefcase,
   Envelope,
   Database,
   ShieldStar,
   ShoppingCartSimple,
+  Info,
 } from "phosphor-react";
 import Image from "next/image";
 
@@ -27,7 +27,7 @@ const HomeSeed = {
       icon: <CircleWavyQuestion size={24} />,
     },
     { link: "#source", label: "Source?", icon: <TreeStructure size={24} /> },
-    { link: "#faqs", label: "F.A.Q", icon: <ListChecks size={24} /> },
+    { link: "#faqs", label: "F.A.Q", icon: <Info size={24} /> },
     { link: "#reviews", label: "Reviews", icon: <ShieldStar size={24} /> },
   ],
   banner: {

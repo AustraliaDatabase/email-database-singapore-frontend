@@ -1,3 +1,4 @@
+@import "styles/variables";
 @import "styles/mixins";
 
 .wrapper {
@@ -27,7 +28,9 @@
     }
 
     button {
-      border-radius: 20px;
+      border-radius: 35px;
+      height: 45px;
+      padding: 0 1.5rem;
       @include box-shadow(level-1);
       font-size: 16px;
       text-align: left;
@@ -40,4 +43,8 @@
 
 .menuLink {
   margin: 5px 0;
+  border: 0px !important;
+  border-color: none !important;
+  transform: none !important;
+  transform: translateY(-2px) !important;
 }

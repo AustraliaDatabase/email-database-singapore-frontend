@@ -22,7 +22,7 @@
   }
 
   &:hover {
-    background-color: var(--background-fill-lighter);
+    background-color: rgba($color: $secondary, $alpha: 0.03);
   }
 
   span {
