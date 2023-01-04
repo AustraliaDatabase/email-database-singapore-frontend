@@ -530,3 +530,12 @@ $withFraction: 1 / $navMenuCount;
     }
   }
 }
+
+.myAccountLinks {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  gap: 10px;
+}

@@ -281,6 +281,7 @@ import styles from "./publicHeaderMenu.module.scss";
 import NavButton from "./components/navButton/NavButton";
 import { useRoot } from "../../shared/contexts/RootProvider";
 import { setUser } from "../../services/helpers/tokenService";
+import MyAccountLink from "./components/myAccountLink/myAccountLink";
 
 const NavigationLink: React.FC<IHeaderLinks> = ({
   name,
@@ -479,12 +480,15 @@ const PublicHeaderMenu = () => {
             />
           )}
           {islogedin && (
-            <NavButton
-              toTop={toTop}
-              title="Logout"
-              isPrimary={false}
-              pressButton={pressLogout}
-            />
+            // <NavButton
+            //   toTop={toTop}
+            //   title="Logout"
+            //   isPrimary={false}
+            //   pressButton={pressLogout}
+            // />
+            <div className={styles.myAccountLinks}>
+              <MyAccountLink />
+            </div>
           )}
           {islogedin ? (
             <NavButton
