@@ -181,11 +181,11 @@ const PublicFooterMenu = () => {
           </Col>
           <Col xs={12} className="d-flex justify-content-center">
             <Image
-              width={201}
-              layout="fixed"
-              height={61}
-              src="/jozdata-logo-white.png"
-              alt="usdata logo"
+              width={250}
+              height={90}
+              src="/email-data-logo-white.png"
+              alt="Email Data logo"
+              objectFit="scale-down"
             />
           </Col>
           <Col xs={12}>
