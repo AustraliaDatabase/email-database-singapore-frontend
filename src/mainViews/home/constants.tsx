@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PRODUCT_MAIN_TYPE_ENUM } from "../../shared/enums";
 
 export const CURRENT_OBJECT_HOME = {
   banner: {
@@ -18,7 +19,8 @@ export const CURRENT_OBJECT_HOME = {
         title: "Accurate premium contacts of leads",
         description:
           "<p>The contacts we provide come from every data field: Contact Name, email address, postal address, phone number, industry, and many more. You will get a complete list so that you can contact the leads just the way you want. The leads will be accurate and will be from the people who are interested in working with you.</p>",
-        contentTitle: "<h2>Real Estate Agents Email List with accurate full contacts</h2>",
+        contentTitle:
+          "<h2>Real Estate Agents Email List with accurate full contacts</h2>",
         content: `<p>You can obtain a 95% email deliverability rate with our real estate database. We will provide you with access to an up-to-date, accurate, and human-verified database that belongs to a real estate agent. You will be able to get the outcomes you want with the assistance of the high-quality list that will be provided.
         </p><p>You will be able to promote your goods and services efficiently if you take advantage of our specialist realtor leads. The real estate agent database will have various contact information types, including names, fax numbers, email addresses, phone numbers, and types of licenses. You'll be able to start networking and receive a better answer on that matter if you have our comprehensive real estate list.
         </p><p>Joz Data provides access to millions of lists of realtors in the United States. This means that you will not have to browse anyplace or hunt for information since we will offer you with everything you need, which will be continually updated. It will save your marketing team time in multiple ways.
@@ -28,8 +30,7 @@ export const CURRENT_OBJECT_HOME = {
         title: "Skyrocket your ROI",
         description:
           "<p>With the information of our company's database, email lists, B2B lists, and business lists. We provide you with a genuine database with records that have gone through several verification approaches. It even includes cross-referencing and end-to-end verifications. When you get better data then, that will improve your business and increase your ROI.</p>",
-        contentTitle:
-          "<h3>Boost up your ROI with the B2B Email Database</h3>",
+        contentTitle: "<h3>Boost up your ROI with the B2B Email Database</h3>",
         content: `<p>The company data and information you offer are accurate and regularly verified. The regular verification of the contacts such as email address, fax number, name, current company, and everything else is verified. We keep a record of each thing and remove the outdated data, and will provide you with the latest information about the business.
         </p><p>With all the data, you can contact more customers and make better contact that will help improve sales. Therefore, it will enhance the ROI of the company and help in growing your business more.
         </p><p>Our dedicated team will be there, ensuring you get accurate and reliable information that is double verified manually. It means you will not have to worry about your marketing of products and services and make things so much better. The USA database offered to you will be available for various professionals, and all the contacts will be unique.
@@ -80,52 +81,28 @@ export const CURRENT_OBJECT_HOME = {
       title: "Over 50 Million B2B Emails in USA",
       description:
         "2022 updated unique 50 million direct B2B contacts available with title,Company , phone ,fax number and etc.",
-      icon: (
-        <Image
-          layout="fixed"
-          width={50}
-          height={50}
-          src="/b2b-icon.png"
-          alt="usa"
-        />
-      ),
       label: "B2B Pricing starting at $98",
       link: "/us-company-database-by-state",
       asTag: "div",
+      cardType: PRODUCT_MAIN_TYPE_ENUM.BY_B2B_EMAILS,
     },
     {
       title: "More than 2 Million USA Realtors",
       description:
         "More than 96% Accurate unique 2 million realtors available with contact name,email ,phone , fax ,address , License number and etc.",
-      icon: (
-        <Image
-          width={50}
-          height={50}
-          layout="fixed"
-          src="/real-estate.png"
-          alt="Real Estate"
-        />
-      ),
       label: "Realtor Pricing Starts at $89",
       link: "/real-estate-agent-email-list",
       asTag: "div",
+      cardType: PRODUCT_MAIN_TYPE_ENUM.BY_REALTORS,
     },
     {
       title: "Database USA By Professions",
       description:
         "There are many databases available for varieties of professions. All are 2022 Updated and unique contacts.",
-      icon: (
-        <Image
-          width={50}
-          height={50}
-          src="/businessman.png"
-          layout="fixed"
-          alt="Business Man"
-        />
-      ),
       label: "Pricing of Professions Starts at $116",
       link: "/usa-job-titles",
       asTag: "div",
+      cardType: PRODUCT_MAIN_TYPE_ENUM.BY_PROFESSION,
     },
     // {
     //   title: "Worldwide Business Lists",

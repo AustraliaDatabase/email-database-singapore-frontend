@@ -31,12 +31,47 @@
   }
 
   &.action {
-    background-color: white;
+    background-color: $text;
     border-color: var(--primary);
     padding-bottom: calc(3rem + 40px);
+    overflow: hidden;
+    height: 500px;
+    p,
+    .cardText {
+      color: $white;
+    }
+    %commonStyles {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
-    &:hover {
-      background-color: lighten($color: $primary, $amount: 45);
+    .b2bBgStyle {
+      @extend %commonStyles;
+      background-image: url("/job-title-style.png");
+    }
+
+    .realtorBgStyle {
+      @extend %commonStyles;
+      background-image: url("/industry-and-field-style.png");
+    }
+
+    .professionBgStyle {
+      @extend %commonStyles;
+      background-image: url("/location-style.png");
+    }
+
+    button {
+      border-radius: 30px;
+      width: 80%;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
     }
   }
 

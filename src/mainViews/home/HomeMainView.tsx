@@ -164,30 +164,30 @@ const HomeMainView = () => {
           })}
         </section>
       )}
-      <section id="#productType" className={classNames("secondayColor")}>
+      <section id="#productType" className={styles.mainProductType}>
         <Container>
           <Row>
             <Col
               md={12}
               className="d-flex flex-column justify-content-center mb-5"
             >
-              <p className="text-highlight mb-1 text-center text-md-start">
+              {/* <p className="text-highlight mb-1 text-center text-md-start">
                 <b className="me-3">JozData</b>
                 <ArrowRight size={18} />
-              </p>
+              </p> */}
               <div className={styles.whatTypeOfProduct}>
-                Check the <span className="text-highlight">Prices </span>
-                of the products we provide
+                Check the Prices of the products we provide
               </div>
             </Col>
           </Row>
-          <Row>
+          <Row className="justify-content-center">
             {CURRENT_OBJECT_HOME.actionCards.map((card, index) => {
               return (
                 <Col
                   className={classNames("mb-4 cursor", styles.productTypes)}
                   key={index}
                   md={4}
+                  lg={3}
                 >
                   <FeatureCard AsTag={card.asTag} type="action" {...card} />
                 </Col>

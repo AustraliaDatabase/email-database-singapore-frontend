@@ -55,3 +55,9 @@ export enum STATUS {
   Success = "success",
   Failed = "failed",
 }
+
+export enum PRODUCT_MAIN_TYPE_ENUM {
+  BY_B2B_EMAILS = "BY_B2B_EMAILS",
+  BY_REALTORS = "BY_REALTORS",
+  BY_PROFESSION = "BY_PROFESSION",
+}
