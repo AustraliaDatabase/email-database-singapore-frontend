@@ -25,7 +25,7 @@ const MyAccountLink = () => {
   };
 
   return (
-    <>
+    <div onClick={pressAccount} className={styles.myAccountWrapper}>
       <div className={styles.picture}>
         <Image
           src="/profile_dummy.jpg"
@@ -35,7 +35,7 @@ const MyAccountLink = () => {
           alt="Profile picture"
         />
       </div>
-      <div className="d-flex align-items-center" onClick={pressAccount}>
+      <div className="d-flex align-items-center">
         <span
           className={classNames(
             "d-md-inline-block d-none pe-1",
@@ -44,7 +44,10 @@ const MyAccountLink = () => {
         >
           {loggedInUser?.displayName || loggedInUser?.email?.split("@")[0]}
         </span>
-        <CaretDown size={20} />
+        <CaretDown
+          className={classNames({ [styles.iconActive]: logoutVisible })}
+          size={20}
+        />
       </div>
 
       {logoutVisible && (
@@ -66,7 +69,7 @@ const MyAccountLink = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
