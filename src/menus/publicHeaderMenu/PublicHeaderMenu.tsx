@@ -232,7 +232,6 @@ const PublicHeaderMenu = () => {
           {!islogedin && (
             <NavButton
               toTop={toTop}
-              // url={`${process.env.BASE_URL}/build-custom-list`}
               title={`${authLoading ? "Loading..." : "Login"}`}
               isPrimary={false}
               pressButton={pressLogin}

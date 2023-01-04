@@ -126,6 +126,10 @@ section {
   box-sizing: border-box;
 }
 
+.sectiontopfix {
+  padding-top: 12rem;
+}
+
 input {
   &[type="text"],
   &[type="search"],

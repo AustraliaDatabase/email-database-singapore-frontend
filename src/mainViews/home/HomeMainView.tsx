@@ -39,12 +39,12 @@ const HomeMainView = () => {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section className={classNames(styles.hero, "sectiontopfix")}>
         <Container>
           <Row>
             <Col
               md={12}
-              lg={6}
+              lg={7}
               className={classNames(
                 styles.titles,
                 "text-center",
@@ -57,6 +57,9 @@ const HomeMainView = () => {
                   xs={{ order: 1, span: 12 }}
                   lg={{ order: 1, span: 12 }}
                 >
+                  <div className={styles.heroCaption}>
+                    96% Email Accuracy guarantee
+                  </div>
                   <div
                     className={styles.heroTitle}
                     dangerouslySetInnerHTML={{
@@ -112,7 +115,7 @@ const HomeMainView = () => {
                 </Col>
               </Row>
             </Col>
-            <Col
+            {/* <Col
               md={12}
               lg={6}
               className={classNames(styles.banner, "mt-5 mt-lg-0")}
@@ -126,7 +129,7 @@ const HomeMainView = () => {
                 src="/dashboard.png"
                 alt="dashboard"
               />
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>
@@ -151,7 +154,7 @@ const HomeMainView = () => {
           })}
         </section>
       )}
-      <section id="#productType" className={classNames('secondayColor')}>
+      <section id="#productType" className={classNames("secondayColor")}>
         <Container>
           <Row>
             <Col
@@ -171,7 +174,11 @@ const HomeMainView = () => {
           <Row>
             {CURRENT_OBJECT_HOME.actionCards.map((card, index) => {
               return (
-                <Col className={classNames("mb-4 cursor", styles.productTypes)} key={index} md={4}>
+                <Col
+                  className={classNames("mb-4 cursor", styles.productTypes)}
+                  key={index}
+                  md={4}
+                >
                   <FeatureCard AsTag={card.asTag} type="action" {...card} />
                 </Col>
               );
@@ -184,7 +191,11 @@ const HomeMainView = () => {
       </section>
 
       <section
-        className={classNames("secondayColor", "secondayColor", styles.sourceSection)}
+        className={classNames(
+          "secondayColor",
+          "secondayColor",
+          styles.sourceSection
+        )}
         id="#source"
       >
         <Container>

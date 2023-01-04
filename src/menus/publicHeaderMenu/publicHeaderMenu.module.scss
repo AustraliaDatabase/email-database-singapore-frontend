@@ -166,6 +166,15 @@ $withFraction: 1 / $navMenuCount;
           padding: 0.5rem 1rem;
           &:hover {
             background: rgba(242, 79, 15, 0.06);
+            span {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
+
+            ul {
+              display: block;
+            }
           }
           position: relative;
           & > div {
@@ -181,11 +190,6 @@ $withFraction: 1 / $navMenuCount;
               padding: 0.6rem 0;
               li {
                 width: 100%;
-              }
-            }
-            &:hover {
-              ul {
-                display: block;
               }
             }
           }
