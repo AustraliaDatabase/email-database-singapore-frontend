@@ -1,0 +1,42 @@
+@import "styles/mixins.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  overflow: auto;
+  justify-content: flex-start;
+  padding: 0 1.5rem 1rem;
+  top: 84px;
+  position: fixed;
+  z-index: 4;
+  transition: top 0.3s;
+  @include breakpoint(tab-landscape-up) {
+    justify-content: center;
+    top: 183px;
+  }
+
+  & > a {
+    margin-right: 1rem;
+    flex-shrink: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include breakpoint(tab-landscape-up) {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.toTop {
+  top: 84px;
+  transition: top 0.3s;
+  @include breakpoint(tab-landscape-up) {
+    top: 123px;
+  }
+}
+
+.hideMainMenu {
+  display: none;
+  transition: visibility 0.3s;
+}

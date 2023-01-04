@@ -4,28 +4,20 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 // import Card from "react-bootstrap/Card";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import classNames from "classnames";
 import { Link as ScrollLink } from "react-scroll";
+import { ArrowRight, Buildings, CaretRight, HouseLine } from "phosphor-react";
 
-import styles from "./homeMainView.module.scss";
 import Button from "../../shared/components/button/Button";
 import FeatureCard from "../../shared/components/featureCard/FeatureCard";
 // import SideTab from "../../shared/components/sideTab/SideTab";
 import HomeSeed from "./homeSeeds";
 // import CollapsibleList from "../../shared/components/collapsibleList/CollapsibleList";
-import FloatingMenu from "../../menus/floatingMenu/FloatingMenu";
-import {
-  ArrowRight,
-  Buildings,
-  Butterfly,
-  CaretRight,
-  EnvelopeSimple,
-  Handshake,
-  HouseLine,
-  ShoppingCart,
-} from "phosphor-react";
-import classNames from "classnames";
+// import FloatingMenu from "../../menus/floatingMenu/FloatingMenu";
+
 import Faqs from "../../shared/components/faqs/Faqs";
-import { useRouter } from "next/router";
+import FloatingMenu from "./views/floatingMenu/FloatingMenu";
 import TrustPilot from "../../shared/components/trustPilot/TrustPilot";
 import MainWhyDetailCard from "../mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
 import WhyListDetailCardView from "../mainProduct/views/whyListDetailCard/WhyListDetailCard";
@@ -33,6 +25,7 @@ import { CURRENT_OBJECT_HOME } from "./constants";
 import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../shared/enums";
+import styles from "./homeMainView.module.scss";
 
 const HomeMainView = () => {
   const router = useRouter();
@@ -133,7 +126,8 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
-      <FloatingMenu menuList={HomeSeed.floatingMenu} />
+      <FloatingMenu maxTopAgain={200} floatingMenus={HomeSeed.floatingMenu} />
+      {/* <FloatingMenu menuList={HomeSeed.floatingMenu} /> */}
       <section className="pb-0">
         <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />
       </section>
