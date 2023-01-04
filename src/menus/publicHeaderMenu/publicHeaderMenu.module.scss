@@ -143,9 +143,10 @@ $withFraction: 1 / $navMenuCount;
       .sub {
         position: relative;
         padding: 1rem;
+        z-index: 2;
         @include breakpoint(tab-landscape-up) {
           position: absolute;
-          width: calc(100% + 40px);
+          width: calc(100% + 80px);
           display: block;
           background-color: white;
           top: 100%;
@@ -169,6 +170,7 @@ $withFraction: 1 / $navMenuCount;
           position: relative;
           & > div {
             ul {
+              @include box-shadow(level-2);
               display: none;
               position: absolute;
               left: 95%;
