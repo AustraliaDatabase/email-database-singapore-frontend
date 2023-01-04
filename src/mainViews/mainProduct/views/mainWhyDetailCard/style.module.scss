@@ -42,9 +42,18 @@
   }
 }
 
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  svg {
+    font-size: 5rem;
+  }
+}
+
 .cardH6Title {
   font-size: 20px;
-  color: var(--primary);
+  color: var(--secondary);
   font-family: var(--title-font);
   font-weight: 500;
   line-height: 1.2;

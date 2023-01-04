@@ -11,6 +11,12 @@ import {
   ShieldStar,
   ShoppingCartSimple,
   Info,
+  PresentationChart,
+  Copyright,
+  IdentificationCard,
+  ClockClockwise,
+  ShieldCheck,
+  AddressBook,
 } from "phosphor-react";
 import Image from "next/image";
 
@@ -75,6 +81,57 @@ const HomeSeed = {
       </>
     ),
   },
+  solutionFactList: [
+    {
+      title: "Affordable Price",
+      description:
+        "B2B connections made through high quality and verified email lists available, at a budget-friendly price.",
+      icon: <PresentationChart size={48} />,
+    },
+    {
+      title: "Direct Contacts Only",
+      description:
+        "We are providing only direct email  of real contact person . you don’t need to worry about contacting generic (such as contact@ ,sales@ ) ",
+      icon: <Copyright size={48} />,
+    },
+    {
+      title: "CRM Ready Files",
+      description:
+        "Our lists can be downloaded as .csv/excel files, ready to be integrated into your CRM so that you can start networking ASAP.",
+      icon: <Wallet size={48} />,
+    },
+    {
+      title: "Highest Accuracy",
+      description:
+        "Our databases are validated and updated every three months. As a result, Our List is more than 96% accurate. It outperforms all of our competitors.",
+      icon: <IdentificationCard size={48} />,
+    },
+    {
+      title: "96 % Email Deliverability Guarantee",
+      description:
+        "2022 updated ,fresh & verified. If More than 4% bounce back We will provide credits for more contacts.",
+      icon: <Target size={48} />,
+    },
+
+    {
+      title: "Premium Contact Database",
+      description:
+        "Every contact lists are included company,contact name ,direct email,title ,direct phone number and many more.",
+      icon: <ClockClockwise size={48} />,
+    },
+    {
+      title: "Unlimited Usage Rights",
+      description:
+        "Our clients enjoy instant ownership of our data and lists upon purchase. We don’t charge extra fees or limit your usage.",
+      icon: <ShieldCheck size={48} />,
+    },
+    {
+      title: "Free Updates for a Year",
+      description:
+        "You will receive one year of free updates from the date of purchase, so you will not have to pay extra money .",
+      icon: <AddressBook size={48} />,
+    },
+  ],
   featureCards: [
     {
       title: "Premium Full Contacts",

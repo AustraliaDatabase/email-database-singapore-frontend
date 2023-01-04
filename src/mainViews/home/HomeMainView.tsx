@@ -26,6 +26,7 @@ import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../shared/enums";
 import styles from "./homeMainView.module.scss";
+import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 
 const HomeMainView = () => {
   const router = useRouter();
@@ -128,11 +129,26 @@ const HomeMainView = () => {
       </section>
       <FloatingMenu maxTopAgain={200} floatingMenus={HomeSeed.floatingMenu} />
       {/* <FloatingMenu menuList={HomeSeed.floatingMenu} /> */}
-      <section className="pb-0">
+      {/* <section className="pb-0">
         <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />
-      </section>
-      <section id="#why-us" className="ghost">
+      </section> */}
+      {/* <section id="#why-us">
         <MainWhyDetailCard whyInfo={CURRENT_OBJECT_HOME.why} />
+      </section> */}
+
+      <section id="#why-us">
+        <Container className={styles.facts}>
+          <Row>
+            {HomeSeed.solutionFactList.map((option: any, index: number) => (
+              <GenericFactCard
+                key={index}
+                title={option.title}
+                icon={option.icon}
+                description={option.description}
+              />
+            ))}
+          </Row>
+        </Container>
       </section>
       {CURRENT_OBJECT_HOME?.why?.list && (
         <section className="ghost">
