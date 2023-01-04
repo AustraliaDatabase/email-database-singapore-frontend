@@ -196,7 +196,7 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
-      <section className="ghost">
+      <section className={styles.benefits}>
         <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
       </section>
 

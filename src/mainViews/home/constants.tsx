@@ -3,7 +3,7 @@ import { PRODUCT_MAIN_TYPE_ENUM } from "../../shared/enums";
 
 export const CURRENT_OBJECT_HOME = {
   banner: {
-    title: `<h1>2022 <span class="text-highlight">Real Estate Agent </span> Email List & <span class="text-highlight"> B2B Email </span> Marketing Database with over 95% Email Deliverability Guaranteed </h1>`,
+    title: `<h1>2022 Real Estate Agent Email List &  B2B Email Marketing Database with over 95% Email Deliverability Guaranteed </h1>`,
     description: `<p>Get your business fueled up with the quality database of our company. We provide you with email lists, business lists, job title databases, doctors, Realtors, and many other databases, which will provide you with more than 95% of verified and accurate data. In addition, our contact information consists of phone, fax, email, office address, and current company, which is verified regularly.
     </p><p>Every three months, all our contacts are validated to ensure that our clients get fresh data verified by professionals. With our accurate bulk contact database, our clients can boost sales. Select your location to start networking with our business database
     </p>
@@ -143,7 +143,7 @@ export const CURRENT_OBJECT_HOME = {
     // },
   ],
   beneifits: {
-    title: `<h3>How can you <span class="text-highlight">benefit</span> from using Our <span class="text-highlight">business database </span>lists?</h3>`,
+    title: `<h3>How can you benefit from using Our business database lists?</h3>`,
     description:
       "<p>Our USA Business directory is a user-friendly database categorized in our lists. It makes it easy for the person to choose the most suitable business and target the customers.</p><p> The users can get the digital marketing list which includes the data field such as name, email ID, phone number, name of the company, address of the office, and other details. With our list of email marketing, fax number, and phone numbers, you can get in contact with several businesses and promote your brand accurately.</p>",
     list: [
