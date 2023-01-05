@@ -34,7 +34,7 @@ const HomeMainView = () => {
 
   return (
     <>
-      <section className={classNames(styles.hero, "sectiontopfix")}>
+      <section className={styles.hero}>
         <Container>
           <Row>
             <Col

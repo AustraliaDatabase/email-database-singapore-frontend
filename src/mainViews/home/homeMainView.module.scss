@@ -13,11 +13,13 @@
 }
 
 .hero {
+  padding-top: 17rem;
   @extend %gradient;
   margin-bottom: 40px;
   z-index: 1;
 
   @include breakpoint(tablet) {
+    padding-top: 10rem;
     padding-bottom: 25rem;
   }
 

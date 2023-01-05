@@ -128,9 +128,12 @@ section {
 }
 
 .sectiontopfix {
-  padding-top: 17rem;
+  padding-top: 11rem;
   @include breakpoint(tablet) {
-    padding-top: 10rem;
+    padding-top: 6rem;
+  }
+  @include breakpoint(tablet) {
+    padding-top: 5.5rem;
   }
 }
 
