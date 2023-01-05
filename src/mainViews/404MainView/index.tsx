@@ -16,11 +16,11 @@ const MainView404 = () => {
           <Col xs={12} className="d-flex justify-content-center">
             <Image
               layout="fixed"
-              src="/undraw_page_not_found_re_e9o6.svg"
+              src="/email-datas-404.webp"
               alt="404"
-              width={400}
+              width={480}
               height={300}
-              objectFit="contain"
+              objectFit="scale-down"
               objectPosition="center"
             />
           </Col>
