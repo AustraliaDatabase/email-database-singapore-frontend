@@ -13,6 +13,13 @@ const CollapsibleList = (props: ICollapsibleList) => {
 
   const [activeKey, setActiveKey] = useState("");
 
+  const [isActive, setIsActive] = useState(false);
+
+  const activeFunc = () => {
+    setIsActive(true);
+    setActiveKey("active");
+  };
+
   const CollapsibleComponent = collapsibleList?.map(
     (element: ICollapsibleItem, index: number) => {
       return (
@@ -26,6 +33,7 @@ const CollapsibleList = (props: ICollapsibleList) => {
             onClick={() => {
               setActiveKey(`${index}`);
             }}
+            // onClick={activeFunc}
             className={styles.header}
           >
             {element.title}

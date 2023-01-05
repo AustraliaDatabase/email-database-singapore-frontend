@@ -277,7 +277,7 @@ const HomeMainView = () => {
           <Row>
             <Col xs={12}>
               <Faqs
-                title={`Frequently Asked <span class="text-highlight">Questions</span>`}
+                title="Frequently Asked Questions"
                 faqsList={FaqsSeed[DATABASE_MAIN_TYPES.COMPANY_DATABASE]}
                 hideContactUs
               />

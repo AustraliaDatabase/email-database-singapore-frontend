@@ -3,14 +3,7 @@
 
 .faqs {
   width: 100%;
-  padding: 1rem;
   border-radius: 2px;
-  background-color: $white;
-  @include box-shadow(level-2);
-  @include breakpoint(tab-up) {
-    padding: 3rem;
-  }
-
   & > h2 {
     margin-bottom: 3rem;
     text-align: center;
@@ -44,7 +37,7 @@
   @include breakpoint(mobile) {
     font-size: 1.5rem;
     display: inline-block;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 
     h1,
     h2,
@@ -64,7 +57,7 @@
 .questionTitle {
   font-size: 2rem;
   font-family: var(--title-font);
-  @include breakpoint (mobile){
+  @include breakpoint(mobile) {
     font-size: 1.5rem;
   }
 }

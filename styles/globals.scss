@@ -11,6 +11,7 @@
   --secondary: #{$secondary};
   --text: #{$text};
   --border: #{$border};
+  --background-fill-lighter: #{$background-fill-lighter};
   --fill: #{$fill};
   --danger: #{$danger};
   --primary-font: #{$primary-font};
@@ -60,7 +61,7 @@ section {
   }
 
   &.ghost {
-    background-color: var(--fill);
+    background-color: var(--background-fill-lighter);
   }
 
   // &.angel {

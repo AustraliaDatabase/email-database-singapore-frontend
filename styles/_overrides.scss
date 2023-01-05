@@ -2,20 +2,46 @@
 @import "styles/mixins";
 
 .custom-accordion {
+  height: 456px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(181, 181, 181);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: gray;
+  }
+
   .accordion-item {
+    border-color: var(--primary) !important;
     background-color: $white;
-    border-radius: 0px;
-    border-color: var(--border) !important;
-    border-left: 0px;
-    border-right: 0px;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    border: 0;
+    @include box-shadow(level-2);
+    overflow: hidden;
 
     button {
       font-size: 20px;
       font-weight: bold;
+      color: var(--primary);
     }
 
     &:first-of-type {
-      border-radius: 0px;
+      // border-radius: 0px;
 
       button {
         border-radius: 0px;
@@ -23,7 +49,7 @@
     }
 
     &:last-of-type {
-      border-radius: 0px;
+      // border-radius: 0px;
 
       button {
         border-radius: 0px;
@@ -33,9 +59,9 @@
     .accordion-header {
       button {
         &[aria-expanded="true"] {
-          background-color: var(--fill);
+          background-color: $white;
           box-shadow: none;
-          color: var(--secondary);
+          // color: var(--primary);
         }
       }
     }
@@ -47,12 +73,26 @@
 
       &.show {
         .accordion-body {
-          background-color: var(--fill);
+          background-color: $white;
         }
       }
     }
   }
+  .active {
+    border: 1px solid;
+  }
 }
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+.accordion-button:focus {
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+}
+
 .table {
   font-size: 16px;
   @include breakpoint(tab-landscape-up) {
