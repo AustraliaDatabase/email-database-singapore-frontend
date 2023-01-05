@@ -670,6 +670,195 @@ const HomeSeed = {
           </div>
         ),
       },
+      {
+        title: `VP - LEVEL`,
+        content: (
+          <div>
+            <h5 className="mb-4">
+              <a href="#">
+                Get Accurate VP Email Lists for Your B2b Campaigns.
+              </a>{" "}
+            </h5>
+            <p>
+              With the help of robust data solutions from Leads Library, you can
+              network with most company vice presidents all over the US and
+              across the world. Build connections with people who are second in
+              command in leading companies across industries.
+            </p>
+            <p>
+              We can help you target these highly influential people and
+              establish a connection with them. Our VP 
+              <b>email marketing lists for sale</b> are the best resource that
+              can help boost your data-driven campaigns with their relevant,
+              accurate, and valid contact details.
+            </p>
+            <p>
+              Because we can provide you direct access to your target VP
+              prospects via email, mail address, or phone, you can skip
+              lower-level executives that can hinder you from getting connected
+              to decision-makers. You go straight to top-tier executives and
+              close a deal with them fast.
+            </p>
+            <p>
+              As regards reliability, we can vouch for our VP email and contact
+              lists that are over a 96% email accuracy rate. We make thousands
+              of calls and send millions of verification emails to keep our data
+              error-free. We also make sure that our database does contain
+              redundant entries.
+            </p>
+            <p>
+              Further, we offer customizable VP listing, although you can also
+              use it in its prepackaged format. You can easily segment entries
+              based on your requirements – company revenue, geo-location, NAICS
+              code, SIC code, etc.
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `DIRECTOR LEVEL`,
+        content: (
+          <div>
+            <h5 className="mb-4">
+              <a href="#">
+                Valid Director Contacts Email List to increase your sales
+              </a>{" "}
+            </h5>
+            <p>
+              Purchase email lists of directors from top companies in different
+              industries and localities from Leads Library. We can make sure
+              that you will be sending emails to valid director email addresses
+              using a cleaned list for optimal deliverability.
+            </p>
+            <p>
+              Directly engaging directors with your messages is the best way to
+              shorten the sales cycle. You will engage with directors to close
+              lucrative deals, sign contracts, earn streaks of profits, and beat
+              the competition.
+            </p>
+            <p>
+              Before you hire a director email list provider, make sure to check
+              first for reviews, credibility, service history, rating, and
+              reviews of the companies you are considering.
+            </p>
+            <p>
+              At Leads Library, we will provide you with a sample listing of
+              company directors for free, so you can have a taste of our service
+              and check how the system works before paying anything.
+            </p>
+            <p>
+              The sample listing can show you if your requirements have been met
+              and prove how effective our services can be in the long run.
+            </p>
+            <p>
+              Ensure that you read our service agreement and check the details
+              about refund and replacement policies before buying a directors’
+              list from Leads Library. Our service includes free editing of the
+              list we will provide you based on the performance of your email or
+              phone marketing campaigns targeting company directors.
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `MANAGER LEVEL`,
+        content: (
+          <div>
+            <h6 className="mb-4" style={{ fontSize: "1.25rem" }}>
+              <a href="#">Buy Managers Lead List to grow your business</a>{" "}
+            </h6>
+            <p>
+              Are you targeting company managers with your campaigns? Buy email
+              database from Leads Library to get manager details, such as
+              emails, phone numbers, office addresses, and departments.
+            </p>
+            <p>
+              High-level managers are in charge of departments and are under
+              busier top executives. As such, they can also make choices about
+              the profitability of the department they head.
+            </p>
+            <p>
+              On the other hand, low-level managers that run stores or outlets
+              also make decisions for the shops they operate. They can influence
+              whole stores, departments, or any areas within their company.
+            </p>
+            <p>
+              You sure want to get connected to these influential people in
+              their company. You want to introduce yourself to them and start
+              talking business with them.
+            </p>
+            <p>
+              Fortunately, Leads Library has quality pre-built manager listings
+              that you can download and use right away. Whether it is a list of
+              marketing managers, brand managers, or digital marketing managers,
+              we can provide you with an accurate, updated, and reliable
+              database of the managers that you are looking for.
+            </p>
+            <p>
+              Our accurate and verified database can help you get in touch with
+              managers looking to grow their areas of operation. With our
+              downloadable managers’ list, you can network and foster business
+              relations with them.
+            </p>
+            <p>
+              Surfing the internet or LinkedIn cannot give you fast information
+              about Leads Library listings<span>&#39;</span> general managers.
+              The ideal way to do it is to acquire a permission-based manager
+              list from us to get your products and solutions in front of your
+              target audience fast.
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `STAFF LEVEL`,
+        content: (
+          <div>
+            <div className="mb-4">
+              <a href="#">
+                Start your marketing campaign with Staff Level Email List
+              </a>{" "}
+            </div>
+            <p>
+              Leads Library also has a collection of contact information of
+              people at the staff level of companies in the US and abroad. We
+              feel that these people are essential in influencing
+              decision-makers who need to come up with effective solutions for
+              challenges companies are facing.
+            </p>
+            <p>
+              Nowadays, companies involve their staff in decision-making, as it
+              is a healthy practice for improving performance and relationships
+              in the workplace.
+            </p>
+            <p>
+              Employees who can share their opinions in work matters feel that
+              their contribution is valued. The privilege to be involved in
+              decision-making can help build a sense of teamwork and improve
+              relationships among staff members.
+            </p>
+            <p>
+              Thus, Leads Library offers <b>email lists for sales</b> containing
+              emails of staff working at the lower tiers of organizations.
+              Together with our listing of CEOs, managers, vice presidents, use
+              our staff listing to increase your influence in the companies you
+              are targeting.
+            </p>
+            <p>
+              With this list, you can connect with staff members by inboxing a
+              personalized message or setting up cold calls. The more people you
+              get connected to, the higher is the chance of getting noticed and
+              scheduling meetings.
+            </p>
+            <p>
+              With the comprehensive data that our staff listings offer, you can
+              draw the attention of your desired audience using email and mail
+              marketing campaigns. In addition, you can engage with them through
+              social media platforms.
+            </p>
+          </div>
+        ),
+      },
     ],
   },
 };
