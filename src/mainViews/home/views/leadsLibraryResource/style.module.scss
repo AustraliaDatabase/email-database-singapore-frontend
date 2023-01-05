@@ -64,3 +64,10 @@
   height: 988px;
   overflow: hidden;
 }
+// style={{ fontSize: "2.25rem", fontWeight: 500, lineHeight: 1.5 }}
+
+.resourceTitle {
+  font-size: 2.5rem;
+  font-family: var(--title-font);
+  color: var(--text);
+}

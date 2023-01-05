@@ -10,8 +10,7 @@ const LeadsLibraryResource = () => {
         <Row className="justify-content-center">
           <Col xs="12" md="10">
             <div
-              className="mb-3 text-center"
-              style={{ fontSize: "2.25rem", fontWeight: 700, lineHeight: 1.5 }}
+              className={classNames("mb-3 text-center", styles.resourceTitle)}
             >
               Lead Library’s Reliable Sources
             </div>
