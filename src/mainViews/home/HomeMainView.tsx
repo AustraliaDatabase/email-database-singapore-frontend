@@ -29,6 +29,7 @@ import styles from "./homeMainView.module.scss";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import TargetView from "./views/targetView/TargetView";
 import LeadsLibraryResource from "./views/leadsLibraryResource/LeadsLibraryResource";
+import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsExplain";
 
 const HomeMainView = () => {
   const router = useRouter();
@@ -198,6 +199,14 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
+
+      <ProductDetailsExplain
+        subCategoy={true}
+        title={HomeSeed?.jobTitleAndJobLevelsTopic?.title}
+        description={HomeSeed?.jobTitleAndJobLevelsTopic?.description}
+        list={HomeSeed?.jobTitleAndJobLevelsTopic?.list}
+      />
+
       <section className={styles.benefits}>
         <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
       </section>

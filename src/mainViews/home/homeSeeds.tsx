@@ -17,6 +17,8 @@ import {
   ClockClockwise,
   ShieldCheck,
   AddressBook,
+  Asterisk,
+  ArrowRight,
 } from "phosphor-react";
 import Image from "next/image";
 
@@ -582,6 +584,94 @@ const HomeSeed = {
       asTag: "h3",
     },
   ],
+  jobTitleAndJobLevelsTopic: {
+    title: `Buy Lead Lists by Profession`,
+    description: (
+      <p>
+        Leads Library services allow users to access a business database
+        containing thousands of entries. Our database covers hundreds of
+        job-specific titles. Thus, you can have a successful marketing campaign
+        because we can provide you with a highly targeted list.{" "}
+        <span>
+          <a href="#">
+            View All Job Titles <ArrowRight size={24} />
+          </a>
+        </span>
+      </p>
+    ),
+    list: [
+      {
+        title: `C - LEVEL`,
+        content: (
+          <div>
+            <h5 className="mb-4">
+              <a href="#">
+                Accurate & Trustworthy C-level Executives Email List
+              </a>{" "}
+            </h5>
+            <p>
+              We at Leads Library provide C-level executive data so that you
+              have more information to use when emailing these people.
+              Parameters in our C-level listing include:
+            </p>
+            <p>
+              <div>
+                <Asterisk /> <span>The industry they belong to</span>
+              </div>
+              <div>
+                <Asterisk />{" "}
+                <span>Company size (large, midsized, or young startup)</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Location</span>
+              </div>
+              <div>
+                <Asterisk />{" "}
+                <span>
+                  Social handles so you can connect with them socially (LinkedIn
+                  )
+                </span>
+              </div>
+              <div>
+                <Asterisk /> <span>Verified email and direct number</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Number of Employees</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Location (Zip Code , State, and City)</span>
+              </div>
+            </p>
+            <p>
+              With your highly targeted listing, you can easily cut through the
+              red tape and speak directly to C-level executives who are likely
+              the decision-makers in their companies.
+            </p>
+            <p>
+              We can also provide you with an extensive list of highly
+              sought-after contacts in one downloadable database that you can
+              easily integrate into your CRM and start using today.
+            </p>
+            <p>
+              It is a Herculean task for businesses to access accurate
+              information about organizational decision-makers.
+            </p>
+            <p>
+              Fortunately, Leads Library is here to provide the information you
+              need on a silver platter. Our expert researchers will collate,
+              verify, and segment the data according to your business and
+              campaign requirements.
+            </p>
+            <p>
+              Get connected to C-Suite executives from IT, telecommunication,
+              banking and finance, real estate, healthcare, engineering, mining,
+              and more with our reliable B2B databases!
+            </p>
+          </div>
+        ),
+      },
+    ],
+  },
 };
 
 export default HomeSeed;
