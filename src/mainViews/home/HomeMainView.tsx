@@ -28,6 +28,7 @@ import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../shared/enums";
 import styles from "./homeMainView.module.scss";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import TargetView from "./views/targetView/TargetView";
+import LeadsLibraryResource from "./views/leadsLibraryResource/LeadsLibraryResource";
 
 const HomeMainView = () => {
   const router = useRouter();
@@ -272,6 +273,9 @@ const HomeMainView = () => {
         <TargetView />
       </section>
 
+      <section>
+        <LeadsLibraryResource />
+      </section>
       <section className="ghost" id="#faqs">
         <Container>
           <Row>

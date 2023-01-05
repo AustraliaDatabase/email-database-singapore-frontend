@@ -1,0 +1,66 @@
+@import "styles/mixins.scss";
+@import "styles/variables";
+
+.resource {
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--text);
+  padding: 1.5rem 1rem 0;
+  @include breakpoint(tab-landscape-up) {
+    padding: 2rem;
+    @include box-shadow(level-1-1);
+    border-radius: 0px 15px 15px 0px;
+  }
+}
+
+.resourceList {
+  background: $text;
+  background: linear-gradient(180deg, #212529 0%, #b53604 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 15px;
+  padding: 1rem 0rem;
+  @include breakpoint(tab-landscape-up) {
+    border-radius: 15px 0px 0px 15px;
+    padding: 0;
+  }
+
+  ul {
+    margin-bottom: 0;
+    li {
+      color: $white !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 54px;
+      color: var(--white);
+    }
+  }
+}
+
+.resourceListTitle {
+  text-align: center;
+  margin: 0 auto;
+  width: 851px;
+  margin-bottom: 3rem;
+}
+
+.row {
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  /* $shadow */
+
+  box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.16);
+}
+
+.styleImage {
+  top: -100px;
+  left: -100px;
+  position: absolute;
+  background-image: url("/leadsLibraryResource.png");
+  width: 712px;
+  height: 988px;
+  overflow: hidden;
+}
