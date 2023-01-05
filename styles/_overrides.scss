@@ -4,13 +4,9 @@
 .custom-accordion {
   height: 456px;
   overflow-y: scroll;
-  position: relative;
-  
+
   &::-webkit-scrollbar {
     width: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
   }
 
   &:hover {
