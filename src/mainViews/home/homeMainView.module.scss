@@ -355,11 +355,19 @@
   }
 }
 
-.benefits {
+%leftToRightGradient {
   background: linear-gradient(
     235.5deg,
     #212529 29.63%,
     #000000 62.24%,
     #b53604 100%
   );
+}
+
+.benefits {
+  @extend %leftToRightGradient;
+}
+
+.target {
+  @extend %leftToRightGradient;
 }

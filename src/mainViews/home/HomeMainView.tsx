@@ -27,6 +27,7 @@ import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../shared/enums";
 import styles from "./homeMainView.module.scss";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
+import TargetView from "./views/targetView/TargetView";
 
 const HomeMainView = () => {
   const router = useRouter();
@@ -266,6 +267,11 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
+
+      <section className={styles.target}>
+        <TargetView />
+      </section>
+
       <section className="ghost" id="#faqs">
         <Container>
           <Row>
