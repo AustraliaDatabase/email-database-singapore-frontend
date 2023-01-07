@@ -206,6 +206,7 @@ const HomeMainView = () => {
         title={HomeSeed?.jobTitleAndJobLevelsTopic?.title}
         description={HomeSeed?.jobTitleAndJobLevelsTopic?.description}
         list={HomeSeed?.jobTitleAndJobLevelsTopic?.list}
+        bg="white"
       />
 
       <ProductDetailsExplain
@@ -213,6 +214,7 @@ const HomeMainView = () => {
         id=""
         title={HomeSeed?.listByIndustryTopic?.title}
         description={HomeSeed?.listByIndustryTopic?.description}
+        bg="ghost"
       />
 
       <ProductDetailsExplain
@@ -221,12 +223,14 @@ const HomeMainView = () => {
         title={HomeSeed?.listByLocationTopic?.title}
         description={HomeSeed?.listByLocationTopic?.description}
         list={HomeSeed?.listByLocationTopic?.list}
+        bg="white"
       />
       <ProductDetailsExplain
         subCategoy={false}
         id=""
         title={HomeSeed?.internationalListTopic?.title}
         description={HomeSeed?.internationalListTopic?.description}
+        bg="ghost"
       />
 
       <section className={styles.benefits}>

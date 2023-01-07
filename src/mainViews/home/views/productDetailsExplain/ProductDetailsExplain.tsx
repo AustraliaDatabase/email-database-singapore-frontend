@@ -11,12 +11,15 @@ interface IProductDetailsExplain {
   list?: any[];
   id?: string;
   customClass?: string;
+  bg?: "ghost" | "white";
 }
 
 const ProductDetailsExplain = (props: IProductDetailsExplain) => {
-  const { id, customClass, title, description, list, subCategoy } = props;
+  const { id, customClass, title, description, list, subCategoy, bg } = props;
 
   const [listData, setListData] = useState<any[]>([]);
+
+  const [isTitleBgFill, setIsTitleBgFill] = useState(false);
 
   useEffect(() => {
     if (list?.length) {
@@ -24,14 +27,29 @@ const ProductDetailsExplain = (props: IProductDetailsExplain) => {
     }
   }, [list]);
 
+  useEffect(() => {
+    if (bg == "ghost") {
+      setIsTitleBgFill(true);
+    } else if (bg == "white") {
+      setIsTitleBgFill(false);
+    } else {
+      setIsTitleBgFill(true);
+    }
+  }, [bg]);
+  console.log(isTitleBgFill);
   return (
-    <section id={id} className={classNames(styles.wrapper, `${customClass}`)}>
+    <section
+      id={id}
+      className={classNames(styles.wrapper, `${customClass} ${bg}`)}
+    >
       <Container>
         <Row className="justify-content-center">
           <Col lg={8}>
             {title && (
               <div
-                className={styles.title}
+                className={classNames(styles.title, {
+                  [styles.bgFill]: isTitleBgFill,
+                })}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             )}
