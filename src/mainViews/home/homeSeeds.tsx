@@ -814,7 +814,10 @@ const HomeSeed = {
         title: `STAFF LEVEL`,
         content: (
           <div>
-            <div className="mb-4">
+            <div
+              className="mb-4"
+              style={{ fontSize: "1.25rem", fontWeight: 600 }}
+            >
               <a href="#">
                 Start your marketing campaign with Staff Level Email List
               </a>{" "}
