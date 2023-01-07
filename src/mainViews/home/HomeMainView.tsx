@@ -206,6 +206,10 @@ const HomeMainView = () => {
         description={HomeSeed?.jobTitleAndJobLevelsTopic?.description}
         list={HomeSeed?.jobTitleAndJobLevelsTopic?.list}
       />
+      <ProductDetailsExplain
+        title={HomeSeed?.listByIndustryTopic?.title}
+        description={HomeSeed?.listByIndustryTopic?.description}
+      />
 
       <section className={styles.benefits}>
         <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />

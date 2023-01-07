@@ -864,6 +864,35 @@ const HomeSeed = {
       },
     ],
   },
+  listByIndustryTopic: {
+    title: `Buy email lists by industry`,
+    description: (
+      <>
+        <p>
+          Leads Library covers all industry-specific B2B contacts. Connect with
+          the right people through our verified and accurate mailing lists and
+          market your products to relevant industries.
+        </p>
+        <p>
+          All industries are covered in construction, hospitality, marketing,
+          education, finance, manufacturing, and more. When you buy a targeted
+          email list from us, you are assured of a premium, industry-specified
+          marketing, and sales leads. Our databases are very easy to use and do
+          not require advanced computer skills and experience.
+        </p>
+        <p>
+          The secret to effective B2B marketing is getting the correct business
+          data to ensure that you have the right prospects to target, whether by
+          direct mail, telemarketing, or electronic mails.
+          <span>
+            <a href="#">
+              View All Job Titles <ArrowRight size={24} />
+            </a>
+          </span>
+        </p>
+      </>
+    ),
+  },
 };
 
 export default HomeSeed;
