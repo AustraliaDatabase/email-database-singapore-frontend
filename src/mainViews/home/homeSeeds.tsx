@@ -1039,6 +1039,40 @@ const HomeSeed = {
       },
     ],
   },
+  internationalListTopic: {
+    title: `International Email List`,
+    description: (
+      <>
+        <p>
+          To sell in the US, you will need our comprehensive American listings
+          that offer precise information for successful marketing on American
+          soil. However, our services can help you market beyond the borders of
+          America and reach prospects in different countries and continents.
+        </p>
+        <p>
+          Selling products and services across millions of miles is easier now
+          than ever. With our downloadable listings, you can market your
+          products abroad with contact details that you need – names, job
+          titles, postal addresses, phone numbers, email addresses, and many
+          more.
+        </p>
+        <p>
+          You can buy an email list of all professionals and B2B businesses
+          operating in Canada if that is the country you are targeting. We can
+          make it easy for you to communicate with business leaders in the True
+          North with all the trusted information you need to boost your
+          campaign.
+        </p>
+        <p>
+          Similarly, you can get all the information you need if your business
+          is targeting Australian businesses, African businesses, and leading
+          companies across Asia. Buy b2b email list that can help you reach out
+          across seas to new prospects in other countries today!
+          <a href="/pre-made-list/international">View All countries</a>
+        </p>
+      </>
+    ),
+  },
 };
 
 export default HomeSeed;
