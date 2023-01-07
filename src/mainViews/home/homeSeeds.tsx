@@ -893,6 +893,152 @@ const HomeSeed = {
       </>
     ),
   },
+  listByLocationTopic: {
+    title: `USA Quality Email List Based on Location`,
+    description: (
+      <>
+        <p>
+          Researching everything you need to know about your prospective clients
+          will mean a lot of effort to exert and time to spend. It will be an
+          endless combing of the web to get contact details.
+        </p>
+        <p>
+          Here at Leads Library, you can skip such a difficult task. Aside from
+          the industry-specific listings, you may also opt to buy lead
+          lists based on locations.
+        </p>
+        <p>
+          If a location-based list can help you better, we can provide you with
+          USA listings by zip codes, cities, or states. Such a listing will
+          allow you to connect with businesses in the same area in one marketing
+          campaign.
+        </p>
+      </>
+    ),
+
+    list: [
+      {
+        title: `USA Email list by state`,
+        content: (
+          <div>
+            <p>
+              We provide email and mail lists covering all the states in the
+              USA. If you need to target New York companies, you can download
+              our wide-ranging directory of professionals located in this state.
+            </p>
+            <p>
+              Such a list will help you put your product in front of your target
+              audience in New York. Download a pre-built New York list and have
+              all the contact information your business needs from this state to
+              succeed.
+            </p>
+            <p>
+              Likewise, for businesses that target the state of Washington, our
+              Washington listing will open new doors of business opportunities
+              for you. Leads Library verifies our Washington B2B listing
+              regularly, so our customers can always have reliable contact
+              details with a high level of deliverability and high accuracy of
+              contact information.
+            </p>
+            <p>
+              Our system allows your team to work instantly and get started
+              making connections right away. We can send you the list you need
+              in a matter of time, and you can integrate it into your CRM
+              application hassle-free.
+              <a href="/pre-made-list/states">View All states</a>
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `Email List By Cities in USA`,
+        content: (
+          <div>
+            <p>
+              With our email and mailing lists organized by cities, you have a
+              great way to keep the sales pipeline flowing. If you can
+              categorize your market by city, you will know the demographics of
+              businesses in that area and their needs.
+            </p>
+            <p>
+              Such a strategy can save your business time and money. With our
+              business listing by cities, you will have the right audience to
+              target without wasting resources on businesses that no longer
+              operate or addresses that are listed incorrectly.
+            </p>
+            <p>
+              With our city-based business listings, you will be able to
+              identify decision-makers from thousands of verified B2B companies,
+              set filters to identify the best accounts, and connect with
+              hundreds of multiple account holders.
+            </p>
+            <p>
+              You would want a list that is highly targeted to obtain from us.
+              Make sure that you provide us with your ideal customer persona. We
+              will give you the businesses that fit that persona, whether
+              located in New York, Los Angeles, or Washington DC.
+              <a href="/pre-made-list/cities">View All Cities</a>
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `US zip codes`,
+        content: (
+          <div>
+            <p>
+              Designing a direct mail campaign using a zip code listing will
+              allow you to zero in on a group of businesses with one thing in
+              common: they are located near one another. Leads Library listings
+              can help you get connected with every business in one zip code and
+              can even customize your list using your target demographics.
+            </p>
+            <p>
+              With our zip-code-based mailing lists, you will not chase
+              incorrect or incomplete lists. Our database will allow you to
+              reach the perfect audience with many search selections to target
+              the right people for all your research, marketing, and sales
+              efforts.
+            </p>
+            <p>
+              Suggested users of zip code mailings are businesses that target
+              the following customers:
+            </p>
+            <p>
+              <div>
+                <Asterisk /> <span>Hospitals and clinics</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Cable and phone companies</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Roofing and phone contractors</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Home remodelers</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Landscaping services</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Security companies</span>
+              </div>
+            </p>
+            <p>
+              These are examples of listings that we provide for every business
+              that wants a better return on investment. Customize your message
+              to the right people to help you improve your business’s ROI.
+              <span>
+                <a href="/build-custom-list">
+                  Click Here to Build Email List by Zip Code
+                </a>
+              </span>
+            </p>
+          </div>
+        ),
+      },
+    ],
+  },
 };
 
 export default HomeSeed;

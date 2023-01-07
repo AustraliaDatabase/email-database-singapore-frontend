@@ -202,13 +202,24 @@ const HomeMainView = () => {
 
       <ProductDetailsExplain
         subCategoy={true}
+        id=""
         title={HomeSeed?.jobTitleAndJobLevelsTopic?.title}
         description={HomeSeed?.jobTitleAndJobLevelsTopic?.description}
         list={HomeSeed?.jobTitleAndJobLevelsTopic?.list}
       />
+
       <ProductDetailsExplain
+        id=""
         title={HomeSeed?.listByIndustryTopic?.title}
         description={HomeSeed?.listByIndustryTopic?.description}
+      />
+
+      <ProductDetailsExplain
+        subCategoy={true}
+        id=""
+        title={HomeSeed?.listByLocationTopic?.title}
+        description={HomeSeed?.listByLocationTopic?.description}
+        list={HomeSeed?.listByLocationTopic?.list}
       />
 
       <section className={styles.benefits}>
