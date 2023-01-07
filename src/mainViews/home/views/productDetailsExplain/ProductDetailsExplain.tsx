@@ -8,7 +8,7 @@ interface IProductDetailsExplain {
   title: string;
   description: ReactNode;
   subCategoy?: boolean | false;
-  list?: any;
+  list?: any[];
   id?: string;
   customClass?: string;
 }
