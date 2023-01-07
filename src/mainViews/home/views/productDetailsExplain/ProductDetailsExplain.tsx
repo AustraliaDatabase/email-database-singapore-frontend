@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 import styles from "./styles.module.scss";
@@ -8,14 +8,22 @@ interface IProductDetailsExplain {
   title: string;
   description: ReactNode;
   subCategoy?: boolean | false;
-  list?: any[];
+  list?: any;
   id?: string;
   customClass?: string;
 }
 
 const ProductDetailsExplain = (props: IProductDetailsExplain) => {
   const { id, customClass, title, description, list, subCategoy } = props;
-  console.log(list);
+
+  const [listData, setListData] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (list?.length) {
+      setListData(list);
+    }
+  }, [list]);
+
   return (
     <section id={id} className={classNames(styles.wrapper, `${customClass}`)}>
       <Container>
@@ -34,7 +42,7 @@ const ProductDetailsExplain = (props: IProductDetailsExplain) => {
         </Row>
         {subCategoy && (
           <div className="mt-4">
-            {list?.map((element, index) => {
+            {listData?.map((element: any, index: number) => {
               return (
                 <div className={styles.subCategoyWrapper} key={index}>
                   <div
