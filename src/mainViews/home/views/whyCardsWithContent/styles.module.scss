@@ -21,7 +21,10 @@
     }
   }
   .cardsWrapper {
-    margin-bottom: 2.5rem;
+    margin: 2.5rem 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
     .titleCard {
       width: 579px;
       height: 250px;
@@ -35,6 +38,12 @@
       border-radius: 5px;
       position: relative;
       z-index: -1;
+
+      @include breakpoint(mobile) {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
       .titleInnerContainer {
         padding: 1.5rem 2rem;
         .title {
@@ -42,6 +51,9 @@
           font-size: 2rem;
           text-align: left;
           line-height: 2.25rem;
+          @include breakpoint(mobile) {
+            font-size: 1.5rem;
+          }
         }
         .titleCount {
           color: $white;
@@ -49,6 +61,10 @@
           font-size: 5rem;
           font-weight: 700;
           opacity: 0.4;
+          @include breakpoint(mobile) {
+            line-height: 3.5rem;
+            font-size: 3rem;
+          }
         }
       }
     }
@@ -58,6 +74,12 @@
       margin-left: auto;
       border-radius: 0.5rem;
       max-width: 90%;
+      @include breakpoint(tablet) {
+        max-width: 100%;
+      }
+      @include breakpoint(tablet) {
+        margin-top: -80px;
+      }
     }
   }
 }
