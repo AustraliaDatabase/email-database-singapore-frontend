@@ -3,7 +3,7 @@ import BillingView from "./views/BillingView";
 
 const BillingsMainView = () => (
   <div>
-    <h3>Billing</h3>
+    {/* <h3>Billing</h3> */}
     <BillingView />
   </div>
 );

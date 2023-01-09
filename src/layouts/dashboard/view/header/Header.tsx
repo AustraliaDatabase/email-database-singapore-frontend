@@ -1,17 +1,28 @@
 import classNames from "classnames";
-import { CaretDown, ShoppingCartSimple, SignOut } from "phosphor-react";
-import React, { ReactNode, useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import {
+  CaretDown,
+  DownloadSimple,
+  ListChecks,
+  Money,
+  PresentationChart,
+  Question,
+  ShoppingCartSimple,
+  SignOut,
+  User,
+} from "phosphor-react";
+import React, { useEffect, useState } from "react";
+import {
+  DASHBOARD_MENU_SET,
+  DASHBOARD_MENU_SET_PUBLIC,
+} from "../../../../menus/constants";
+import { IGetIcon } from "../../../../menus/interface";
 import { setUser } from "../../../../services/helpers/tokenService";
 import Button from "../../../../shared/components/button/Button";
 import { useRoot } from "../../../../shared/contexts/RootProvider";
 import styles from "./styles.module.scss";
 
-interface IHeader {
-  breadCrumb: ReactNode;
-}
-
-const Header = (props: IHeader) => {
-  const { breadCrumb } = props;
+const Header = () => {
   const [totalCartItemCount, setTotalCartItemCount] = useState(0);
   const [islogedin, setIslogedin] = useState(false);
   const [showLogout, setShowLogout] = useState(false);
@@ -22,6 +33,9 @@ const Header = (props: IHeader) => {
     setLoggedInUser,
     currentCartItem,
   } = useRoot();
+
+  const menuSet = loggedInUser ? DASHBOARD_MENU_SET : DASHBOARD_MENU_SET_PUBLIC;
+  const router = useRouter();
 
   useEffect(() => {
     setTotalCartItemCount(currentCartItem?.length);
@@ -41,9 +55,29 @@ const Header = (props: IHeader) => {
     setIslogedin(false);
   };
 
+  const getIcon: IGetIcon = {
+    dashboard: <PresentationChart size={24} />,
+    downloads: <DownloadSimple size={24} />,
+    myaccount: <User size={24} />,
+    support: <Question size={24} />,
+    billing: <Money size={24} />,
+    orders: <ListChecks size={24} />,
+  };
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.breadCrumb}>{breadCrumb}</div>
+      <div className={styles.breadCrumb}>
+        {menuSet.map((element, index) => {
+          if (element.url === router.pathname) {
+            return (
+              <div key={index}>
+                {getIcon[element.url.substring(1).replace("-", "")]}
+                {element.name}
+              </div>
+            );
+          }
+        })}
+      </div>
       <div className={styles.headerRight}>
         <Button className={styles.cartButton}>
           <span className={styles.cartItemCount}>{totalCartItemCount}</span>

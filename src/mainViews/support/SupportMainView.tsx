@@ -180,7 +180,7 @@ const SupportMainView = () => {
 
   return (
     <>
-      <h3>Support</h3>
+      {/* <h3>Support</h3> */}
       <div className="dashboard-card p-4">
         <h4>Please let us know how we may help you</h4>
         <Row className="pt-3">
