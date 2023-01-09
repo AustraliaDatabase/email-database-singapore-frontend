@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { CaretRight } from "phosphor-react";
 import React, { ReactNode, useState } from "react";
 
 import DashboardMenu from "../../menus/dashboardMenu/DashboardMenu";
@@ -29,9 +30,7 @@ const DashboardLayout = (props: IDashboardLayout) => {
         })}
         onClick={toggleSideBar}
       >
-        <span />
-        <span />
-        <span />
+        <CaretRight size={25} />
       </button>
       <div className={classNames(styles.menu, { [styles.active]: menuOpen })}>
         <DashboardMenu />

@@ -13,6 +13,9 @@
     padding-top: 6rem;
     padding-right: 1.5rem;
   }
+  @include breakpoint(tablet) {
+    padding-top: 5rem;
+  }
 
   h3 {
     &:first-of-type {
@@ -60,53 +63,47 @@
     }
 
     @include breakpoint(tab-landscape-up) {
-      // height: calc(100% - 4rem);
       height: 100%;
-      // top: 2rem;
-      // left: 2rem;
       @include box-shadow(level-5);
       transform: translateX(0);
     }
   }
 
   .toggle {
-    padding: 0.75rem 0.75rem 1rem 1rem;
-    background-color: var(--fill);
+    background-color: transparent;
+    position: relative;
+    &::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      background-color: var(--primary);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      border-radius: 100%;
+      left: -0.1rem;
+      @include box-shadow(level-1-1);
+    }
+    overflow: hidden;
     border: none;
     position: fixed;
-    top: 0rem;
-    right: 0rem;
-    border-radius: 0 0 0 50%;
-    @include box-shadow(level-1-1);
+    top: 50%;
+    left: 0rem;
+    transform: translateY(-50%);
+    border-radius: 0 100% 100% 0;
+    padding: 3rem 0.5rem;
     z-index: 4;
-    display: grid;
-    grid: 2px / 24px;
-    grid-auto-flow: row;
-    gap: 5px;
-
-    & > span {
-      width: 24px;
-      height: 2px;
-      background-color: black;
-      border-radius: 1.5px;
-      transition: transform 0.24s ease, background-color 0.36s ease;
+    svg {
+      color: $white;
     }
 
+    transition: margin 0.24s ease;
     &.active {
-      & > span {
-        &:first-child {
-          transform: rotate(45deg);
-          margin-top: 5px;
-        }
-
-        &:nth-child(2) {
-          transform: rotate(-45deg);
-          margin-top: -2px;
-        }
-
-        &:last-child {
-          opacity: 0;
-        }
+      margin-left: 236px;
+      svg {
+        transition: transform 0.24s ease;
+        transform: rotate(180deg);
       }
     }
   }

@@ -12,6 +12,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
+  @include breakpoint(tablet) {
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+  }
   .breadCrumb {
     display: flex;
     align-items: center;
