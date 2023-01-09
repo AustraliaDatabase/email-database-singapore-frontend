@@ -94,6 +94,8 @@ button:focus:not(:focus-visible) {
 
 .table {
   font-size: 16px;
+  border-collapse: separate;
+  border-spacing: 0 12px;
   @include breakpoint(tab-landscape-up) {
     font-size: 14px;
   }
@@ -103,8 +105,14 @@ button:focus:not(:focus-visible) {
   }
 
   thead {
+    user-select: none;
+    position: sticky;
+    top: 100px;
+    @include breakpoint(mobile) {
+      display: none;
+    }
     th {
-      color: var(--primary);
+      color: var(--text);
       position: sticky;
       background-color: #fff;
       top: 0;
@@ -112,13 +120,83 @@ button:focus:not(:focus-visible) {
       @include breakpoint(tab-landscape-up) {
         top: 135px;
       }
+      input {
+        border-radius: 2rem;
+      }
     }
   }
 
   tbody {
+    @include breakpoint(mobile) {
+      display: block;
+    }
     tr {
+      // cursor: pointer;
+      border: 1px solid $border-light;
+      box-sizing: border-box;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out;
+      @include box-shadow(level-1-1);
+      @include breakpoint(mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+
+      td {
+        padding: 0.75rem 1rem;
+        overflow-wrap: break-word;
+        white-space: initial;
+
+        a {
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+        svg {
+          display: none;
+          color: var(--primary);
+          margin-right: 0.5rem;
+        }
+        &:first-child {
+          max-width: 300px;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+          color: #fe7728;
+        }
+
+        small {
+          display: none;
+        }
+
+        @include breakpoint(mobile) {
+          width: auto;
+          height: auto;
+          font-weight: 500;
+          text-align: center;
+          padding: 0.75rem 1.5rem;
+          small {
+            display: block;
+            font-weight: 400;
+            color: var(--text-light);
+          }
+          svg {
+            display: inline;
+            flex-shrink: 0;
+            margin-top: -2px;
+          }
+        }
+      }
+
       &:hover {
-        background-color: $fill;
+        background-color: $background-fill-lighter;
+
+        .priceButton {
+          background-color: $primary;
+          color: $white;
+        }
       }
     }
   }
