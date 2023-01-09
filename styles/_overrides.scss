@@ -114,8 +114,11 @@ button:focus:not(:focus-visible) {
     th {
       color: var(--text);
       position: sticky;
-      background-color: #fff;
+      background: #fe772840 !important;
       top: 0;
+      tr {
+        border: transparent;
+      }
 
       @include breakpoint(tab-landscape-up) {
         top: 135px;
