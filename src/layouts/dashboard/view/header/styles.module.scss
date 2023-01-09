@@ -65,6 +65,7 @@
       cursor: pointer;
     }
     svg {
+      transition: transform 0.24s ease;
       &.active {
         transform: rotate(180deg);
       }

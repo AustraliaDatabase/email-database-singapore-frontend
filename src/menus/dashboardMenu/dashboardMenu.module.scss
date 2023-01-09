@@ -35,9 +35,6 @@
     &:first-of-type {
       margin-top: 1rem;
     }
-    &:last-of-type {
-      margin-top: auto;
-    }
 
     &.active {
       background-color: rgba($color: $white, $alpha: 0.2);
@@ -46,39 +43,6 @@
       p {
         color: $white;
       }
-    }
-  }
-}
-
-.switch {
-  position: absolute;
-  bottom: 24px;
-  width: calc(100% - 48px);
-  left: 50%;
-  transform: translateX(-50%);
-  border: 1px solid var(--primary);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-
-  & > button {
-    border: 0;
-    background-color: transparent;
-    flex-grow: 1;
-    color: white;
-    // transition: background-color $transition;
-    padding: 8px;
-
-    &:first-child {
-      border-radius: 4px 0px 0px 4px;
-    }
-
-    &:last-child {
-      border-radius: 0px 4px 4px 0px;
-    }
-
-    &.active {
-      background-color: var(--primary);
     }
   }
 }

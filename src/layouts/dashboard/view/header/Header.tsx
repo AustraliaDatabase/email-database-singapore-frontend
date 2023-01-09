@@ -78,7 +78,7 @@ const Header = (props: IHeader) => {
               })}
               onClick={pressLogout}
             >
-              logout <SignOut size={16} />
+              logout <SignOut size={18} />
             </div>
           </div>
         ) : (

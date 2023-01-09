@@ -73,7 +73,6 @@ const DashboardMenu = () => {
             objectFit="scale-down"
             alt="Logo"
             src="/lead-dashboard.png"
-            // layout="fixed"
             width={144}
             height={92}
           />
@@ -93,29 +92,6 @@ const DashboardMenu = () => {
           </div>
         );
       })}
-      {/* <div
-        className={styles.link}
-        onClick={loggedInUser ? pressLogout : pressLogin}
-      >
-        <SignOut size={24} />
-        {loggedInUser ? <p>Log out</p> : <p> Log In</p>}
-      </div> */}
-      <div className={styles.switch} onClick={() => {}}>
-        <button
-          className={classNames(styles.active, {
-            // [styles.active]: theme === THEME_MODE_ENUM.LIGHT,
-          })}
-        >
-          <Moon size={24} />
-        </button>
-        <button
-          className={classNames({
-            // [styles.active]: theme === THEME_MODE_ENUM.DARK,
-          })}
-        >
-          <SunDim size={24} />
-        </button>
-      </div>
     </div>
   );
 };
