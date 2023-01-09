@@ -4,9 +4,11 @@ import {
   DownloadSimple,
   ListChecks,
   Money,
+  Moon,
   PresentationChart,
   Question,
   SignOut,
+  SunDim,
   User,
 } from "phosphor-react";
 import React, { useEffect, useState } from "react";
@@ -42,7 +44,7 @@ const DashboardMenu = () => {
   const pressLogout = () => {
     // signOut(auth)
     setUser(null);
-    setLoggedInUser(null)
+    setLoggedInUser(null);
   };
 
   const pressLogin = () => {
@@ -64,16 +66,16 @@ const DashboardMenu = () => {
     <div className={styles.wrap}>
       <div
         className="d-flex align-items-center justify-content-center"
-        style={{ cursor: "pointer", marginBottom: 20 }}
+        style={{ cursor: "pointer", marginBottom: 55 }}
       >
         <Link href="/" passHref={true}>
           <Image
             objectFit="scale-down"
-            src="/usdata-logo-icon.png"
-            alt="usdata logo"
-            layout="fixed"
-            width={50}
-            height={42}
+            alt="Logo"
+            src="/lead-dashboard.png"
+            // layout="fixed"
+            width={144}
+            height={92}
           />
         </Link>
       </div>
@@ -91,12 +93,28 @@ const DashboardMenu = () => {
           </div>
         );
       })}
-      <div
+      {/* <div
         className={styles.link}
         onClick={loggedInUser ? pressLogout : pressLogin}
       >
         <SignOut size={24} />
         {loggedInUser ? <p>Log out</p> : <p> Log In</p>}
+      </div> */}
+      <div className={styles.switch} onClick={() => {}}>
+        <button
+          className={classNames(styles.active, {
+            // [styles.active]: theme === THEME_MODE_ENUM.LIGHT,
+          })}
+        >
+          <Moon size={24} />
+        </button>
+        <button
+          className={classNames({
+            // [styles.active]: theme === THEME_MODE_ENUM.DARK,
+          })}
+        >
+          <SunDim size={24} />
+        </button>
       </div>
     </div>
   );

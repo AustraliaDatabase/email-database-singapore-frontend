@@ -1,9 +1,11 @@
 import classNames from "classnames";
+import { Database } from "phosphor-react";
 import React, { ReactNode, useState } from "react";
 
 import DashboardMenu from "../../menus/dashboardMenu/DashboardMenu";
 import { useRoot } from "../../shared/contexts/RootProvider";
 import styles from "./dashboardLayout.module.scss";
+import Header from "./view/header/Header";
 
 interface IDashboardLayout {
   children: ReactNode;
@@ -35,7 +37,18 @@ const DashboardLayout = (props: IDashboardLayout) => {
       <div className={classNames(styles.menu, { [styles.active]: menuOpen })}>
         <DashboardMenu />
       </div>
-      <div className={styles.rightWrapper}>{children}</div>
+      <div className={styles.rightWrapper}>
+        <Header
+          breadCrumb={
+            <>
+              <div>
+                <Database size={25} /> Build Custom List
+              </div>
+            </>
+          }
+        />
+        {children}
+      </div>
     </div>
   );
 };
