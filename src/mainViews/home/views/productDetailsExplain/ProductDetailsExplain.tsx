@@ -36,28 +36,38 @@ const ProductDetailsExplain = (props: IProductDetailsExplain) => {
       setIsTitleBgFill(true);
     }
   }, [bg]);
-  console.log(isTitleBgFill);
+
   return (
     <section
       id={id}
       className={classNames(styles.wrapper, `${customClass} ${bg}`)}
     >
-      <Container>
+      <Container
+        className={classNames(styles.sticky, {
+          [styles.bgFill]: isTitleBgFill,
+        })}
+      >
         <Row className="justify-content-center">
           <Col lg={8}>
             {title && (
               <div
-                className={classNames(styles.title, {
-                  [styles.bgFill]: isTitleBgFill,
-                })}
+                className={classNames(styles.title)}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             )}
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row className="justify-content-center">
+          <Col lg={8}>
             {description && (
               <div className={styles.description}>{description}</div>
             )}
           </Col>
         </Row>
+      </Container>
+      <Container>
         {subCategoy && (
           <div className="mt-4">
             {listData?.map((element: any, index: number) => {

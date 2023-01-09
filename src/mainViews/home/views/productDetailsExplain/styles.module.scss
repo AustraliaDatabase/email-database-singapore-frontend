@@ -9,12 +9,6 @@
     text-align: center;
     margin-bottom: 1rem;
     color: var(--text);
-    position: sticky;
-    top: 200px;
-    background-color: white;
-  }
-  & .bgFill {
-    background-color: var(--background-fill-lighter);
   }
   .description {
     color: var(--text);
@@ -84,5 +78,19 @@
         color: $primary;
       }
     }
+  }
+}
+.wrapper {
+  .sticky {
+    position: sticky;
+    top: 190px;
+    z-index: 3;
+    background-color: white;
+    @include breakpoint(tablet) {
+      top: 150px;
+    }
+  }
+  & .bgFill {
+    background-color: var(--background-fill-lighter);
   }
 }
