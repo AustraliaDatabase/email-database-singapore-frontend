@@ -30,6 +30,7 @@ import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import TargetView from "./views/targetView/TargetView";
 import LeadsLibraryResource from "./views/leadsLibraryResource/LeadsLibraryResource";
 import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsExplain";
+import WhyCardsWithContent from "./views/whyCardsWithContent/WhyCardsWithContent";
 
 const HomeMainView = () => {
   const router = useRouter();
@@ -232,6 +233,13 @@ const HomeMainView = () => {
         description={HomeSeed?.internationalListTopic?.description}
         bg="ghost"
       />
+      <section id="">
+        <WhyCardsWithContent
+          title={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.title}
+          description={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.description}
+          lists={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.lists}
+        />
+      </section>
 
       <section className={styles.benefits}>
         <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
