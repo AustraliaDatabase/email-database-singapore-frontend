@@ -54,3 +54,44 @@
     }
   }
 }
+.userWrappre {
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    span {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    svg {
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  position: relative;
+
+  .logout {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: $white;
+    width: 150px;
+    padding: 0.5rem 1em;
+    @include box-shadow(level-1-1);
+    display: none;
+    margin-top: 5px;
+    svg {
+      margin-left: 4px;
+    }
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      cursor: pointer;
+    }
+    &.active {
+      display: block;
+    }
+  }
+}
