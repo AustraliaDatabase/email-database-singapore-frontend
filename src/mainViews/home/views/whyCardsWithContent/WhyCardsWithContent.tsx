@@ -36,7 +36,9 @@ const WhyCardsWithContent = (props: IWhyCards) => {
                 <div className={styles.titleInnerContainer}>
                   <div
                     className={styles.titleCount}
-                    dangerouslySetInnerHTML={{ __html: "0" + (index + 1) }}
+                    dangerouslySetInnerHTML={{
+                      __html: `${index < 10 && "0"}` + (index + 1),
+                    }}
                   />
                   <div
                     className={styles.title}

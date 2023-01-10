@@ -27,7 +27,7 @@
     }
     .titleCard {
       width: 579px;
-      height: 250px;
+      height: 195px;
       background: linear-gradient(
         102.25deg,
         #ff4800 -23.38%,
@@ -46,18 +46,21 @@
 
       .titleInnerContainer {
         padding: 1.5rem 2rem;
+        display: flex;
         .title {
           color: $white;
           font-size: 2rem;
           text-align: left;
           line-height: 2.25rem;
+          margin-bottom: 0;
+          margin-left: 1rem;
           @include breakpoint(mobile) {
             font-size: 1.5rem;
           }
         }
         .titleCount {
           color: $white;
-          line-height: 5rem;
+          line-height: 4rem;
           font-size: 5rem;
           font-weight: 700;
           opacity: 0.4;
@@ -70,7 +73,7 @@
     }
     .contentCard {
       z-index: 1;
-      margin-top: -50px;
+      margin-top: -80px;
       margin-left: auto;
       border-radius: 0.5rem;
       max-width: 90%;
