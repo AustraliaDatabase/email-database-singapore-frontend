@@ -1,5 +1,3 @@
-import { PRODUCT_MAIN_TYPE_ENUM } from "../../shared/enums";
-
 export const PRE_MADE_LIST_OBJECT = {
   title: `<h1>Check the products we provide</h1>`,
   description: `<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo quia deleniti iure inventore error nostrum? Soluta consectetur ab maxime quibusdam? Distinctio enim quas, nisi accusamus recusandae cum, impedit odit beatae earum reprehenderit, mollitia ex maxime praesentium natus est facere suscipit.</p>`,
@@ -11,7 +9,6 @@ export const PRE_MADE_LIST_OBJECT = {
       label: "B2B Pricing starting at $98",
       link: "/job-titles",
       asTag: "div",
-      cardType: PRODUCT_MAIN_TYPE_ENUM.BY_B2B_EMAILS,
     },
     {
       title: "More than 2 Million USA Realtors",
@@ -20,7 +17,6 @@ export const PRE_MADE_LIST_OBJECT = {
       label: "Realtor Pricing Starts at $89",
       link: "/industries",
       asTag: "div",
-      cardType: PRODUCT_MAIN_TYPE_ENUM.BY_REALTORS,
     },
     {
       title: "Database USA By Professions",
@@ -29,7 +25,6 @@ export const PRE_MADE_LIST_OBJECT = {
       label: "Pricing of Professions Starts at $116",
       link: "/locations",
       asTag: "div",
-      cardType: PRODUCT_MAIN_TYPE_ENUM.BY_PROFESSION,
     },
   ],
 };
