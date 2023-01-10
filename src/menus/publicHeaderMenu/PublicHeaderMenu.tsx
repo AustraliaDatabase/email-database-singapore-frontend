@@ -106,6 +106,7 @@ const PublicHeaderMenu = () => {
   const [islogedin, setIslogedin] = useState(false);
   const [totalCartItemCount, setTotalCartItemCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [logoutVisible, setLogoutVisible] = useState(false);
 
   const {
     setAuthEnable,
@@ -229,12 +230,22 @@ const PublicHeaderMenu = () => {
               </div>
             </div>
           }
+          <div className={styles.myAccountLinks}>
+            <MyAccountLink />
+          </div>
           {islogedin ? (
             <>
               {islogedin && (
-                <div className={styles.myAccountLinks}>
-                  <MyAccountLink />
-                </div>
+                <NavButton
+                  toTop={toTop}
+                  description="B2B Email List"
+                  isPrimary={true}
+                  pressButton={() => {
+                    setLogoutVisible(!logoutVisible);
+                  }}
+                  isUserMenu={true}
+                  logoutVisible={logoutVisible}
+                />
               )}
             </>
           ) : (
@@ -243,6 +254,7 @@ const PublicHeaderMenu = () => {
                 <NavButton
                   toTop={toTop}
                   title="Login"
+                  description="Let's check it out"
                   isPrimary={true}
                   pressButton={pressLogin}
                 />

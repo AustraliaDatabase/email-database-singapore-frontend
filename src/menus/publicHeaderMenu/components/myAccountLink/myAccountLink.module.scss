@@ -6,6 +6,9 @@
   width: 150px;
   position: absolute;
   border-radius: 5px;
+  // left: 50%;
+  // right: 50%;
+  // transform: translateX(-50%);
   @include box-shadow(level-2);
   z-index: 3;
   top: 40px;
@@ -18,7 +21,8 @@
   line-height: 40px;
   cursor: pointer;
   font-size: 16px;
-
+  color: $secondary;
+  font-weight: 500;
   &:hover {
     background-color: lighten($color: $primary, $amount: 45);
 
