@@ -1,0 +1,23 @@
+@import "styles/mixins.scss";
+
+.listWrapper {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-bottom: 1rem;
+  @include breakpoint(tab-landscape-up) {
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}
+
+.linkWrapper {
+  color: var(--white);
+  &:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

@@ -30,6 +30,7 @@
     "react-rangeslider": "^2.2.0",
     "react-scroll": "^1.8.7",
     "react-select": "^5.3.2",
+    "react-share": "^4.4.1",
     "react-stars": "^2.2.5",
     "reaptcha": "^1.12.1",
     "sass": "^1.49.9",

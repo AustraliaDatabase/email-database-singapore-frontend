@@ -1,32 +1,18 @@
 @import "styles/variables";
+@import "styles/mixins";
 
 .footer {
   background-color: var(--secondary);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   color: $white;
-
-  .header {
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    font-size: 1.125rem;
-    font-weight: bold;
-    line-height: 1.5;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    li {
-      line-height: 1.5;
-      margin-bottom: 1rem;
-      font-size: 0.875rem;
+  max-width: 100vw;
+  overflow: hidden;
+  .firstRows {
+    @include breakpoint(tab-landscape-up) {
+      min-height: 248px;
     }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-
-  .privacy {
-    text-align: center;
-    font-size: 0.875rem;
-    margin-bottom: 1.5rem;
+  .lastRows {
+    height: 68px;
   }
 }
