@@ -168,7 +168,7 @@ $withFraction: 1 / $navMenuCount;
           padding: 0.5rem 1rem;
           color: $secondary;
           &:hover {
-            color: $primary;
+            color: $primary !important;
             background: rgba(242, 79, 15, 0.06);
             span {
               svg {
@@ -321,11 +321,11 @@ $withFraction: 1 / $navMenuCount;
 
 .active {
   background-color: var(--primary);
-  color: white;
+  color: $white !important;
 
   &:hover {
+    background-color: transparent;
     color: var(--primary);
-    background-color: var(--primary);
   }
 }
 
