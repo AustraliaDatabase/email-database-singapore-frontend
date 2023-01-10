@@ -36,7 +36,7 @@ const CompanyByStatePage = (props: any) => {
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/us-company-database-by-state`}
       />
       <PublicLayout>
-        <section className="pt-5 pb-3">
+        <section className="sectiontopfix pb-3">
           <Container>
             <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
             <div

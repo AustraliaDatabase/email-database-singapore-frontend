@@ -21,7 +21,7 @@ import BeneifitView from "./views/beneifit/Beneifit";
 import { IMainProductInfo } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import Table from "../../shared/components/table/Table";
-import { COMPANY_SET_ATTRIBUTES } from "../../pages/us-company-database-by-state";
+import { COMPANY_SET_ATTRIBUTES } from "../../pages/industries";
 import { Col, Container } from "react-bootstrap";
 
 interface IMainProductViewListOfEmail {
