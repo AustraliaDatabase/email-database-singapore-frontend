@@ -1,0 +1,32 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  background: $white;
+  border: 1px solid var(--border-color);
+  @include box-shadow(level-1-1);
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem 0.75rem 1.125rem;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary);
+  height: 40px;
+  cursor: pointer;
+
+  @include breakpoint(tab-landscape-up) {
+    height: 50px;
+    padding: 0.75rem 1.25rem;
+  }
+
+  &:hover {
+    border: 1px solid var(--border-color);
+    background: lighten($color: $primary, $amount: 46);
+  }
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}

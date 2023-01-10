@@ -9,7 +9,9 @@
   @include box-shadow(level-2);
   z-index: 3;
   top: 40px;
-  left: 0px;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .listItem {
@@ -20,7 +22,7 @@
   font-size: 16px;
 
   &:hover {
-    background-color: $fill;
+    background-color: lighten($color: $primary, $amount: 45);
 
     &:first-child {
       border-top-right-radius: 5px;
@@ -46,4 +48,20 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.myAccountWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  gap: 10px;
+  cursor: pointer;
+  svg {
+    transition: transform 0.24s ease;
+    &.iconActive {
+      transform: rotate(180deg);
+    }
+  }
 }

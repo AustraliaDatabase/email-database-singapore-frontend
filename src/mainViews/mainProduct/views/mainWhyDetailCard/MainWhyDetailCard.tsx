@@ -14,7 +14,7 @@ import { IWhy, IWhyList } from "../../../../shared/interface";
 import styles from "./style.module.scss";
 
 const icon: any = {
-  0: <CurrencyDollarSimple size={24} />,
+  0: <CurrencyDollarSimple size={40} />,
   1: <ShieldCheck size={24} />,
   2: <CheckCircle size={24} />,
   3: <ThumbsUp size={24} />,
@@ -31,13 +31,16 @@ const MainWhyDetailCard = (props: IMainWhyDetailCard) => {
   return (
     <Container>
       <Row>
-        <Col xs={10} className="d-flex flex-column mb-5 mx-auto align-items-center justify-content-center">
+        <Col
+          xs={10}
+          className="d-flex flex-column mb-5 mx-auto align-items-center justify-content-center"
+        >
           <div
-            className={classNames('mb-4 text-center', styles.whyTitle)}
+            className={classNames("mb-4 text-center", styles.whyTitle)}
             dangerouslySetInnerHTML={{ __html: whyInfo?.title }}
           ></div>
           <div
-            className={classNames('text-center', styles.whyDescription)}
+            className={classNames("text-center", styles.whyDescription)}
             dangerouslySetInnerHTML={{ __html: whyInfo?.description }}
           ></div>
         </Col>
@@ -45,16 +48,17 @@ const MainWhyDetailCard = (props: IMainWhyDetailCard) => {
           return (
             <Col md={4} className="mb-3 mb-md-4" key={index}>
               <div className={classNames(styles.card, styles.shadow, "h-100")}>
-                <div
-                  className={classNames(
-                    "mb-3 d-flex align-items-center justify-content-center justify-content-md-start",
-                    styles.cardH6Title
-                  )}
-                >
-                  {icon[index]}{" "}
-                  <span className={styles.cardTitle} dangerouslySetInnerHTML={{ __html: card.title }} />
+                <div className={styles.cardIcon}>{icon[index]}</div>
+                <div className={classNames("mb-3", styles.cardH6Title)}>
+                  <div
+                    className={styles.cardTitle}
+                    dangerouslySetInnerHTML={{ __html: card.title }}
+                  />
                 </div>
-                <div className={styles.cardDescription} dangerouslySetInnerHTML={{ __html: card.description }} />
+                <div
+                  className={styles.cardDescription}
+                  dangerouslySetInnerHTML={{ __html: card.description }}
+                />
               </div>
             </Col>
           );

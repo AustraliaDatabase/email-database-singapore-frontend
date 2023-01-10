@@ -20,6 +20,7 @@ import { triggerForm } from "../../services/internalServices";
 import axios from "axios";
 import Reaptcha from "reaptcha";
 import instance from "../../services/baseServices";
+import classNames from "classnames";
 
 var utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
@@ -37,7 +38,7 @@ const ContactUsMainViewMainView = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <section className={classNames(styles.wrapper, "sectiontopfix")}>
       <Container className="py-4">
         <Row className="justify-content-center">
           <Col md={8}>
@@ -235,7 +236,7 @@ const ContactUsMainViewMainView = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 

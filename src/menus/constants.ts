@@ -1,8 +1,65 @@
 import { JOB_INDUSTRIES } from "../shared/seeds/jobIndustry";
 import { JOB_TITLES } from "../shared/seeds/jobTitles";
 import { TARGETS } from "../shared/seeds/targets";
+import { IHeaderLinks } from "./interface";
 // import { COUNTRIES_DATABASE } from "../shared/seeds/countries";
 // import { CONSUMER_EMAIL_DATABASE } from "../shared/seeds/consumers";
+
+export const HEADER_LINKS: IHeaderLinks[] = [
+  {
+    name: "Home",
+    route: "/",
+  },
+  {
+    name: "Price plans",
+    route: "/price-plans",
+  },
+  {
+    name: "Pre-Made Lists",
+    route: "/pre-made-list",
+    subMenu: [
+      {
+        name: "B2B Email Database", route: "", subMenu: [
+          { name: 'Complete Email Database', route: '/list-of-all-us-companies' },
+          { name: 'By State', route: '/us-company-database-by-state' },
+        ]
+      },
+      {
+        name: "Realtors", route: "", subMenu: [
+          { name: 'All Realtors', route: '/real-estate-agent-email-list' },
+          { name: 'By State', route: '/realtors-by-state' },
+        ]
+      },
+      {
+        name: "Job Titles", route: "", subMenu: [
+          { name: 'Accounts Receivable', route: '/accounts-receivable' },
+          { name: 'Accounts Payable', route: '/accounts-payable' },
+          { name: 'CFO', route: '/cfo' },
+          { name: 'CEO', route: '/ceo' },
+          { name: 'Office Manager', route: '/office-manager' },
+          { name: 'Controllers', route: '/controller' },
+          { name: 'Chairman', route: '/business-owners' },
+          { name: 'Business Owner', route: '/accounts-payable' },
+          { name: 'Architects', route: '/architects' },
+        ]
+      },
+      {
+        name: "Target", route: "", subMenu: [
+          { name: 'General Contractors and Home Builders', route: '/general-contractors-and-home-builders' },
+          { name: 'Cryptocurrency Users', route: '/cryptocurrency' },
+          { name: 'Super Backers Database', route: '/super-backers-email-database' },
+          { name: 'Crowd Funding  Backer Database', route: '/crowdfunding-backer-database' },
+        ]
+      },
+      // { name: "Industries", route: "/pre-made-list/industries" },
+      // { name: "Cities", route: "/pre-made-list/cities" },
+      // { name: "States", route: "/pre-made-list/states" },
+      // { name: "International", route: "/pre-made-list/international" },
+    ],
+  },
+  { name: "Contact Us", route: "/contact-us" }
+];
+
 
 export const MENU_SET = [
   {

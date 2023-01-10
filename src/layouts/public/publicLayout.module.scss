@@ -9,17 +9,16 @@
 }
 
 .reviews {
-    margin-top: -348px;
-    margin-bottom: 48px;
-    height: 400px;
+  margin-top: -348px;
+  margin-bottom: 48px;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  @include breakpoint(tab-landscape-up) {
+    height: 300px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     width: 100%;
     position: relative;
-    @include breakpoint(tab-landscape-up) {
-      height: 300px;
-      margin-top: 60px;
-      margin-bottom: 60px;
-      width: 100%;
-      position: relative;
-    }
   }
-  
+}

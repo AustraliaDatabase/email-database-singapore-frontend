@@ -1,13 +1,22 @@
-$primary: #FF4800;
-$secondary: #010F35;
-$text: #222222;
-$fill: #F2F5F9;
-$border: #E5E5E5;
+// $primary: #FF4800;
+$primary: #f24f0f;
+$primary-dark: darken(
+  $color: $primary,
+  $amount: 20,
+);
+// $secondary: #010F35;
+$secondary: #212529;
+// $text: #222222;
+$text: #212529;
+$fill: #f2f5f9;
+$border-light: #e5e5e5;
+$background-fill-lighter: #f8f8f8;
+$border: #e5e5e5;
 $danger: #cc2000;
 $placeholder: #c4c4c4;
 $coolBlue: #0d6efd;
 $white: white;
 $success: #28a745;
 
-$primary-font: 'Open Sans', sans-serif;
-$title-font: 'Raleway', sans-serif;
+$primary-font: "Open Sans", sans-serif;
+$title-font: "Raleway", sans-serif;

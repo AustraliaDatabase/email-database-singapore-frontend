@@ -21,7 +21,7 @@ interface IFloatingMenu {
 }
 
 const FloatingMenuLink: React.FC<IFloatingMenuLink> = ({ link, icon, label }) => {
-  return <Link offset={-200} to={link} href={link}><Button className={styles.menuLink} variant="tertiary">{label} {icon}</Button></Link>;
+  return <Link offset={-200} to={link} href={link}><Button className={styles.menuLink} variant="tertiary">{icon} {label}</Button></Link>;
 }
 
 const FloatingMenu: React.FC<IFloatingMenu> = ({ menuList, className }) => {

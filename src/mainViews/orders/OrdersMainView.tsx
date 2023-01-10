@@ -3,7 +3,7 @@ import OrderView from "./views/OrderView";
 
 const OrdersMainView = () => (
   <>
-    <h3>Orders</h3>
+    {/* <h3>Orders</h3> */}
     <OrderView />
   </>
 );

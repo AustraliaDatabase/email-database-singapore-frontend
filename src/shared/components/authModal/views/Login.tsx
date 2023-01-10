@@ -24,7 +24,7 @@ const Login = () => {
     setLoading(false);
     setAuthLoading(false);
     setLoggedInUser(user);
-    setUser(user)
+    setUser(user);
   };
 
   const loginCallBackFail = () => {

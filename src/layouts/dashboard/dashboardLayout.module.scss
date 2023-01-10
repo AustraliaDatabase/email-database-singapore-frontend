@@ -1,18 +1,20 @@
 @import "styles/mixins";
 @import "styles/variables";
 
-
 .wrapper {
-  background-color: var(--fill);
+  background-color: var(--background-fill-lighter);
   min-height: 100vh;
   padding-left: 1rem;
   padding-top: 1rem;
   padding-right: 1rem;
 
   @include breakpoint(tab-landscape-up) {
-    padding-left: calc(2rem + 100px + 2rem);
-    padding-top: 2rem;
-    padding-right: 2rem;
+    padding-left: calc(1.25rem + 220px + 1.25rem);
+    padding-top: 6rem;
+    padding-right: 1.5rem;
+  }
+  @include breakpoint(tablet) {
+    padding-top: 5rem;
   }
 
   h3 {
@@ -45,69 +47,64 @@
 
   .menu {
     position: fixed;
-    width: 100px;
-    background-color: $white;
+    width: calc(220px + 1rem);
+    background-color: var(--secondary);
     top: 0;
     left: 0;
     height: 100%;
-    border-radius: 0 0.5rem 0.5rem 0px;
     z-index: 3;
     transform: translateX(-100%);
     transition: transform 0.24s ease, box-shadow 0.24s ease;
+    padding: 1rem 0;
 
     &.active {
       transform: translateX(0);
-      box-shadow: 0px 0px 0px 400px rgba($color: #000000, $alpha: .90);
+      box-shadow: 0px 0px 0px 400px rgba($color: #000000, $alpha: 0.9);
     }
 
     @include breakpoint(tab-landscape-up) {
-      border-radius: .5rem;
-      height: calc(100% - 4rem);
-      top: 2rem;
-      left: 2rem;
+      height: 100%;
       @include box-shadow(level-5);
       transform: translateX(0);
     }
   }
 
   .toggle {
-    padding: 0.75rem 0.75rem 1rem 1rem;
-    background-color: var(--fill);
+    background-color: transparent;
+    position: relative;
+    &::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      background-color: var(--primary);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      border-radius: 100%;
+      left: -0.1rem;
+      @include box-shadow(level-1-1);
+    }
+    overflow: hidden;
     border: none;
     position: fixed;
-    top: 0rem;
-    right: 0rem;
-    border-radius: 0 0 0 50%;
-    @include box-shadow(level-1-1);
+    top: 50%;
+    left: 0rem;
+    transform: translateY(-50%);
+    border-radius: 0 100% 100% 0;
+    padding: 3rem 0.5rem;
+    padding-left: 0;
     z-index: 4;
-    display: grid;
-    grid: 2px / 24px;
-    grid-auto-flow: row;
-    gap: 5px;
-
-    &>span {
-      width: 24px;
-      height: 2px;
-      background-color: black;
-      border-radius: 1.5px;
-      transition: transform 0.24s ease, background-color 0.36s ease;
+    svg {
+      color: $white;
     }
 
+    transition: margin 0.24s ease;
     &.active {
-      &>span {
-        &:first-child {
-          transform: rotate(45deg);
-          margin-top: 5px;
-        }
-
-        &:nth-child(2) {
-          transform: rotate(-45deg);
-          margin-top: -2px;
-        }
-
-        &:last-child {
-          opacity: 0;
-        }
+      margin-left: 238px;
+      svg {
+        transition: transform 0.24s ease;
+        transform: rotate(180deg);
       }
     }
   }

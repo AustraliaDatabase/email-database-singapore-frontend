@@ -33,9 +33,7 @@ const DashboardMainView = () => {
 
   return (
     <Row>
-      <Col xs={12}>
-        <h3>Dashboard</h3>
-      </Col>
+      <Col xs={12}>{/* <h3>Dashboard</h3> */}</Col>
       <Col xs={12}>
         <div className={styles.welcome}>
           <Row>

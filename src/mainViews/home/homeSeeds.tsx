@@ -5,12 +5,20 @@ import {
   Target,
   CircleWavyQuestion,
   TreeStructure,
-  ListChecks,
   Briefcase,
   Envelope,
   Database,
   ShieldStar,
   ShoppingCartSimple,
+  Info,
+  PresentationChart,
+  Copyright,
+  IdentificationCard,
+  ClockClockwise,
+  ShieldCheck,
+  AddressBook,
+  Asterisk,
+  ArrowRight,
 } from "phosphor-react";
 import Image from "next/image";
 
@@ -27,7 +35,7 @@ const HomeSeed = {
       icon: <CircleWavyQuestion size={24} />,
     },
     { link: "#source", label: "Source?", icon: <TreeStructure size={24} /> },
-    { link: "#faqs", label: "F.A.Q", icon: <ListChecks size={24} /> },
+    { link: "#faqs", label: "F.A.Q", icon: <Info size={24} /> },
     { link: "#reviews", label: "Reviews", icon: <ShieldStar size={24} /> },
   ],
   banner: {
@@ -75,6 +83,57 @@ const HomeSeed = {
       </>
     ),
   },
+  solutionFactList: [
+    {
+      title: "Affordable Price",
+      description:
+        "B2B connections made through high quality and verified email lists available, at a budget-friendly price.",
+      icon: <PresentationChart size={48} />,
+    },
+    {
+      title: "Direct Contacts Only",
+      description:
+        "We are providing only direct email  of real contact person . you don’t need to worry about contacting generic (such as contact@ ,sales@ ) ",
+      icon: <Copyright size={48} />,
+    },
+    {
+      title: "CRM Ready Files",
+      description:
+        "Our lists can be downloaded as .csv/excel files, ready to be integrated into your CRM so that you can start networking ASAP.",
+      icon: <Wallet size={48} />,
+    },
+    {
+      title: "Highest Accuracy",
+      description:
+        "Our databases are validated and updated every three months. As a result, Our List is more than 96% accurate. It outperforms all of our competitors.",
+      icon: <IdentificationCard size={48} />,
+    },
+    {
+      title: "96 % Email Deliverability Guarantee",
+      description:
+        "2022 updated ,fresh & verified. If More than 4% bounce back We will provide credits for more contacts.",
+      icon: <Target size={48} />,
+    },
+
+    {
+      title: "Premium Contact Database",
+      description:
+        "Every contact lists are included company,contact name ,direct email,title ,direct phone number and many more.",
+      icon: <ClockClockwise size={48} />,
+    },
+    {
+      title: "Unlimited Usage Rights",
+      description:
+        "Our clients enjoy instant ownership of our data and lists upon purchase. We don’t charge extra fees or limit your usage.",
+      icon: <ShieldCheck size={48} />,
+    },
+    {
+      title: "Free Updates for a Year",
+      description:
+        "You will receive one year of free updates from the date of purchase, so you will not have to pay extra money .",
+      icon: <AddressBook size={48} />,
+    },
+  ],
   featureCards: [
     {
       title: "Premium Full Contacts",
@@ -525,6 +584,495 @@ const HomeSeed = {
       asTag: "h3",
     },
   ],
+  jobTitleAndJobLevelsTopic: {
+    title: `Buy Lead Lists by Profession`,
+    description: (
+      <p>
+        Leads Library services allow users to access a business database
+        containing thousands of entries. Our database covers hundreds of
+        job-specific titles. Thus, you can have a successful marketing campaign
+        because we can provide you with a highly targeted list.{" "}
+        <span>
+          <a href="#">
+            View All Job Titles <ArrowRight size={24} />
+          </a>
+        </span>
+      </p>
+    ),
+    list: [
+      {
+        title: `C - LEVEL`,
+        content: (
+          <div>
+            <h5 className="mb-4">
+              <a href="#">
+                Accurate & Trustworthy C-level Executives Email List
+              </a>{" "}
+            </h5>
+            <p>
+              We at Leads Library provide C-level executive data so that you
+              have more information to use when emailing these people.
+              Parameters in our C-level listing include:
+            </p>
+            <p>
+              <div>
+                <Asterisk /> <span>The industry they belong to</span>
+              </div>
+              <div>
+                <Asterisk />{" "}
+                <span>Company size (large, midsized, or young startup)</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Location</span>
+              </div>
+              <div>
+                <Asterisk />{" "}
+                <span>
+                  Social handles so you can connect with them socially (LinkedIn
+                  )
+                </span>
+              </div>
+              <div>
+                <Asterisk /> <span>Verified email and direct number</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Number of Employees</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Location (Zip Code , State, and City)</span>
+              </div>
+            </p>
+            <p>
+              With your highly targeted listing, you can easily cut through the
+              red tape and speak directly to C-level executives who are likely
+              the decision-makers in their companies.
+            </p>
+            <p>
+              We can also provide you with an extensive list of highly
+              sought-after contacts in one downloadable database that you can
+              easily integrate into your CRM and start using today.
+            </p>
+            <p>
+              It is a Herculean task for businesses to access accurate
+              information about organizational decision-makers.
+            </p>
+            <p>
+              Fortunately, Leads Library is here to provide the information you
+              need on a silver platter. Our expert researchers will collate,
+              verify, and segment the data according to your business and
+              campaign requirements.
+            </p>
+            <p>
+              Get connected to C-Suite executives from IT, telecommunication,
+              banking and finance, real estate, healthcare, engineering, mining,
+              and more with our reliable B2B databases!
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `VP - LEVEL`,
+        content: (
+          <div>
+            <h5 className="mb-4">
+              <a href="#">
+                Get Accurate VP Email Lists for Your B2b Campaigns.
+              </a>{" "}
+            </h5>
+            <p>
+              With the help of robust data solutions from Leads Library, you can
+              network with most company vice presidents all over the US and
+              across the world. Build connections with people who are second in
+              command in leading companies across industries.
+            </p>
+            <p>
+              We can help you target these highly influential people and
+              establish a connection with them. Our VP 
+              <b>email marketing lists for sale</b> are the best resource that
+              can help boost your data-driven campaigns with their relevant,
+              accurate, and valid contact details.
+            </p>
+            <p>
+              Because we can provide you direct access to your target VP
+              prospects via email, mail address, or phone, you can skip
+              lower-level executives that can hinder you from getting connected
+              to decision-makers. You go straight to top-tier executives and
+              close a deal with them fast.
+            </p>
+            <p>
+              As regards reliability, we can vouch for our VP email and contact
+              lists that are over a 96% email accuracy rate. We make thousands
+              of calls and send millions of verification emails to keep our data
+              error-free. We also make sure that our database does contain
+              redundant entries.
+            </p>
+            <p>
+              Further, we offer customizable VP listing, although you can also
+              use it in its prepackaged format. You can easily segment entries
+              based on your requirements – company revenue, geo-location, NAICS
+              code, SIC code, etc.
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `DIRECTOR LEVEL`,
+        content: (
+          <div>
+            <h5 className="mb-4">
+              <a href="#">
+                Valid Director Contacts Email List to increase your sales
+              </a>{" "}
+            </h5>
+            <p>
+              Purchase email lists of directors from top companies in different
+              industries and localities from Leads Library. We can make sure
+              that you will be sending emails to valid director email addresses
+              using a cleaned list for optimal deliverability.
+            </p>
+            <p>
+              Directly engaging directors with your messages is the best way to
+              shorten the sales cycle. You will engage with directors to close
+              lucrative deals, sign contracts, earn streaks of profits, and beat
+              the competition.
+            </p>
+            <p>
+              Before you hire a director email list provider, make sure to check
+              first for reviews, credibility, service history, rating, and
+              reviews of the companies you are considering.
+            </p>
+            <p>
+              At Leads Library, we will provide you with a sample listing of
+              company directors for free, so you can have a taste of our service
+              and check how the system works before paying anything.
+            </p>
+            <p>
+              The sample listing can show you if your requirements have been met
+              and prove how effective our services can be in the long run.
+            </p>
+            <p>
+              Ensure that you read our service agreement and check the details
+              about refund and replacement policies before buying a directors’
+              list from Leads Library. Our service includes free editing of the
+              list we will provide you based on the performance of your email or
+              phone marketing campaigns targeting company directors.
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `MANAGER LEVEL`,
+        content: (
+          <div>
+            <h6 className="mb-4" style={{ fontSize: "1.25rem" }}>
+              <a href="#">Buy Managers Lead List to grow your business</a>{" "}
+            </h6>
+            <p>
+              Are you targeting company managers with your campaigns? Buy email
+              database from Leads Library to get manager details, such as
+              emails, phone numbers, office addresses, and departments.
+            </p>
+            <p>
+              High-level managers are in charge of departments and are under
+              busier top executives. As such, they can also make choices about
+              the profitability of the department they head.
+            </p>
+            <p>
+              On the other hand, low-level managers that run stores or outlets
+              also make decisions for the shops they operate. They can influence
+              whole stores, departments, or any areas within their company.
+            </p>
+            <p>
+              You sure want to get connected to these influential people in
+              their company. You want to introduce yourself to them and start
+              talking business with them.
+            </p>
+            <p>
+              Fortunately, Leads Library has quality pre-built manager listings
+              that you can download and use right away. Whether it is a list of
+              marketing managers, brand managers, or digital marketing managers,
+              we can provide you with an accurate, updated, and reliable
+              database of the managers that you are looking for.
+            </p>
+            <p>
+              Our accurate and verified database can help you get in touch with
+              managers looking to grow their areas of operation. With our
+              downloadable managers’ list, you can network and foster business
+              relations with them.
+            </p>
+            <p>
+              Surfing the internet or LinkedIn cannot give you fast information
+              about Leads Library listings<span>&#39;</span> general managers.
+              The ideal way to do it is to acquire a permission-based manager
+              list from us to get your products and solutions in front of your
+              target audience fast.
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `STAFF LEVEL`,
+        content: (
+          <div>
+            <div
+              className="mb-4"
+              style={{ fontSize: "1.25rem", fontWeight: 600 }}
+            >
+              <a href="#">
+                Start your marketing campaign with Staff Level Email List
+              </a>{" "}
+            </div>
+            <p>
+              Leads Library also has a collection of contact information of
+              people at the staff level of companies in the US and abroad. We
+              feel that these people are essential in influencing
+              decision-makers who need to come up with effective solutions for
+              challenges companies are facing.
+            </p>
+            <p>
+              Nowadays, companies involve their staff in decision-making, as it
+              is a healthy practice for improving performance and relationships
+              in the workplace.
+            </p>
+            <p>
+              Employees who can share their opinions in work matters feel that
+              their contribution is valued. The privilege to be involved in
+              decision-making can help build a sense of teamwork and improve
+              relationships among staff members.
+            </p>
+            <p>
+              Thus, Leads Library offers <b>email lists for sales</b> containing
+              emails of staff working at the lower tiers of organizations.
+              Together with our listing of CEOs, managers, vice presidents, use
+              our staff listing to increase your influence in the companies you
+              are targeting.
+            </p>
+            <p>
+              With this list, you can connect with staff members by inboxing a
+              personalized message or setting up cold calls. The more people you
+              get connected to, the higher is the chance of getting noticed and
+              scheduling meetings.
+            </p>
+            <p>
+              With the comprehensive data that our staff listings offer, you can
+              draw the attention of your desired audience using email and mail
+              marketing campaigns. In addition, you can engage with them through
+              social media platforms.
+            </p>
+          </div>
+        ),
+      },
+    ],
+  },
+  listByIndustryTopic: {
+    title: `Buy email lists by industry`,
+    description: (
+      <>
+        <p>
+          Leads Library covers all industry-specific B2B contacts. Connect with
+          the right people through our verified and accurate mailing lists and
+          market your products to relevant industries.
+        </p>
+        <p>
+          All industries are covered in construction, hospitality, marketing,
+          education, finance, manufacturing, and more. When you buy a targeted
+          email list from us, you are assured of a premium, industry-specified
+          marketing, and sales leads. Our databases are very easy to use and do
+          not require advanced computer skills and experience.
+        </p>
+        <p>
+          The secret to effective B2B marketing is getting the correct business
+          data to ensure that you have the right prospects to target, whether by
+          direct mail, telemarketing, or electronic mails.
+          <span>
+            <a href="#">
+              View All Job Titles <ArrowRight size={24} />
+            </a>
+          </span>
+        </p>
+      </>
+    ),
+  },
+  listByLocationTopic: {
+    title: `USA Quality Email List Based on Location`,
+    description: (
+      <>
+        <p>
+          Researching everything you need to know about your prospective clients
+          will mean a lot of effort to exert and time to spend. It will be an
+          endless combing of the web to get contact details.
+        </p>
+        <p>
+          Here at Leads Library, you can skip such a difficult task. Aside from
+          the industry-specific listings, you may also opt to buy lead
+          lists based on locations.
+        </p>
+        <p>
+          If a location-based list can help you better, we can provide you with
+          USA listings by zip codes, cities, or states. Such a listing will
+          allow you to connect with businesses in the same area in one marketing
+          campaign.
+        </p>
+      </>
+    ),
+
+    list: [
+      {
+        title: `USA Email list by state`,
+        content: (
+          <div>
+            <p>
+              We provide email and mail lists covering all the states in the
+              USA. If you need to target New York companies, you can download
+              our wide-ranging directory of professionals located in this state.
+            </p>
+            <p>
+              Such a list will help you put your product in front of your target
+              audience in New York. Download a pre-built New York list and have
+              all the contact information your business needs from this state to
+              succeed.
+            </p>
+            <p>
+              Likewise, for businesses that target the state of Washington, our
+              Washington listing will open new doors of business opportunities
+              for you. Leads Library verifies our Washington B2B listing
+              regularly, so our customers can always have reliable contact
+              details with a high level of deliverability and high accuracy of
+              contact information.
+            </p>
+            <p>
+              Our system allows your team to work instantly and get started
+              making connections right away. We can send you the list you need
+              in a matter of time, and you can integrate it into your CRM
+              application hassle-free.
+              <a href="/pre-made-list/states">View All states</a>
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `Email List By Cities in USA`,
+        content: (
+          <div>
+            <p>
+              With our email and mailing lists organized by cities, you have a
+              great way to keep the sales pipeline flowing. If you can
+              categorize your market by city, you will know the demographics of
+              businesses in that area and their needs.
+            </p>
+            <p>
+              Such a strategy can save your business time and money. With our
+              business listing by cities, you will have the right audience to
+              target without wasting resources on businesses that no longer
+              operate or addresses that are listed incorrectly.
+            </p>
+            <p>
+              With our city-based business listings, you will be able to
+              identify decision-makers from thousands of verified B2B companies,
+              set filters to identify the best accounts, and connect with
+              hundreds of multiple account holders.
+            </p>
+            <p>
+              You would want a list that is highly targeted to obtain from us.
+              Make sure that you provide us with your ideal customer persona. We
+              will give you the businesses that fit that persona, whether
+              located in New York, Los Angeles, or Washington DC.
+              <a href="/pre-made-list/cities">View All Cities</a>
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: `US zip codes`,
+        content: (
+          <div>
+            <p>
+              Designing a direct mail campaign using a zip code listing will
+              allow you to zero in on a group of businesses with one thing in
+              common: they are located near one another. Leads Library listings
+              can help you get connected with every business in one zip code and
+              can even customize your list using your target demographics.
+            </p>
+            <p>
+              With our zip-code-based mailing lists, you will not chase
+              incorrect or incomplete lists. Our database will allow you to
+              reach the perfect audience with many search selections to target
+              the right people for all your research, marketing, and sales
+              efforts.
+            </p>
+            <p>
+              Suggested users of zip code mailings are businesses that target
+              the following customers:
+            </p>
+            <p>
+              <div>
+                <Asterisk /> <span>Hospitals and clinics</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Cable and phone companies</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Roofing and phone contractors</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Home remodelers</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Landscaping services</span>
+              </div>
+              <div>
+                <Asterisk /> <span>Security companies</span>
+              </div>
+            </p>
+            <p>
+              These are examples of listings that we provide for every business
+              that wants a better return on investment. Customize your message
+              to the right people to help you improve your business’s ROI.
+              <span>
+                <a href="/build-custom-list">
+                  Click Here to Build Email List by Zip Code
+                </a>
+              </span>
+            </p>
+          </div>
+        ),
+      },
+    ],
+  },
+  internationalListTopic: {
+    title: `International Email List`,
+    description: (
+      <>
+        <p>
+          To sell in the US, you will need our comprehensive American listings
+          that offer precise information for successful marketing on American
+          soil. However, our services can help you market beyond the borders of
+          America and reach prospects in different countries and continents.
+        </p>
+        <p>
+          Selling products and services across millions of miles is easier now
+          than ever. With our downloadable listings, you can market your
+          products abroad with contact details that you need – names, job
+          titles, postal addresses, phone numbers, email addresses, and many
+          more.
+        </p>
+        <p>
+          You can buy an email list of all professionals and B2B businesses
+          operating in Canada if that is the country you are targeting. We can
+          make it easy for you to communicate with business leaders in the True
+          North with all the trusted information you need to boost your
+          campaign.
+        </p>
+        <p>
+          Similarly, you can get all the information you need if your business
+          is targeting Australian businesses, African businesses, and leading
+          companies across Asia. Buy b2b email list that can help you reach out
+          across seas to new prospects in other countries today!
+          <a href="/pre-made-list/international">View All countries</a>
+        </p>
+      </>
+    ),
+  },
 };
 
 export default HomeSeed;

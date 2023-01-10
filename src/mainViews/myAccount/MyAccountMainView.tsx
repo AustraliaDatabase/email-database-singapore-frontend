@@ -48,7 +48,7 @@ const MyAccountMainView = () => {
 
   return (
     <>
-      <h3>My Account</h3>
+      {/* <h3>My Account</h3> */}
       <div className={classNames("dashboard-card p-4", styles.card)}>
         <Row>
           <Col md={4} lg={3}>

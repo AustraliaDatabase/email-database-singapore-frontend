@@ -1,0 +1,40 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: relative;
+  padding-bottom: 4px;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 2rem;
+
+  &:hover {
+    .circle {
+      border-color: var(--primary);
+    }
+  }
+
+  .line {
+    background: var(--primary);
+    border-radius: 0px 0px 4px 4px;
+    height: 4px;
+    width: calc(100% - 3rem);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .circle {
+    color: var(--primary);
+    border: 1px solid rgba($color: $secondary, $alpha: 0.1);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto 2rem;
+    transition: border-color 0.24s ease-in-out;
+  }
+}
