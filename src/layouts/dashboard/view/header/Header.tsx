@@ -112,7 +112,9 @@ const Header = () => {
               })}
               onClick={pressLogout}
             >
-              logout <SignOut size={18} />
+              <span>
+                logout <SignOut size={18} />
+              </span>
             </div>
           </div>
         ) : (
