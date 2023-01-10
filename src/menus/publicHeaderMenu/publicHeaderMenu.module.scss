@@ -180,6 +180,11 @@ $withFraction: 1 / $navMenuCount;
           }
           position: relative;
           & > div {
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
             ul {
               @include box-shadow(level-2);
               display: none;
