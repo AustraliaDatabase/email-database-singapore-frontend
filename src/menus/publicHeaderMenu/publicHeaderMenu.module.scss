@@ -166,7 +166,9 @@ $withFraction: 1 / $navMenuCount;
           list-style: none;
           display: block;
           padding: 0.5rem 1rem;
+          color: $secondary;
           &:hover {
+            color: $primary;
             background: rgba(242, 79, 15, 0.06);
             span {
               svg {
