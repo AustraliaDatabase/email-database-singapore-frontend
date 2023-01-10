@@ -14,6 +14,7 @@
     color: var(--text);
     text-align: center;
     a {
+      margin-left: 1rem;
       color: $primary;
       font-weight: 700;
       &:hover {
@@ -22,49 +23,54 @@
     }
   }
   .subCategoyWrapper {
+    background: linear-gradient(
+      180deg,
+      #852601 -16.26%,
+      #040505 48.22%,
+      #040505 76.94%,
+      #22262a 151.17%
+    );
     margin-bottom: 2rem;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    @include breakpoint(mobile) {
+      padding: 1rem 0;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/product-explain-bg.png");
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
     &:last-child {
       margin-bottom: 0;
     }
     .subCategoyTitle {
       width: 100%;
-      height: 200px;
-      background: linear-gradient(
-        180deg,
-        #22262a -41.17%,
-        #040505 18.9%,
-        #040505 56.73%,
-        #852601 103.4%
-      );
-      border-radius: 5px;
       color: $white;
       text-align: center;
       font-size: 2.5rem;
       font-weight: 500;
-      padding-top: 1.5rem;
-      position: relative;
-      z-index: 1;
-      &::after {
-        position: absolute;
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("/product-explain-bg.png");
-        background-position: top center;
-        z-index: -1;
+      padding-bottom: 1.5rem;
+      @include breakpoint(mobile) {
+        padding-bottom: 1rem;
       }
     }
     .subCategoyContent {
-      z-index: 2 !important;
       position: relative;
       background-color: $white;
       width: 95%;
       margin: 0 auto;
-      margin-top: -100px;
       padding: 1.25rem;
 
       @include breakpoint(tablet) {
@@ -80,17 +86,13 @@
     }
   }
 }
-.wrapper {
-  .sticky {
-    position: sticky;
-    top: 190px;
-    z-index: 3;
-    background-color: white;
-    @include breakpoint(tablet) {
-      top: 150px;
-    }
-  }
-  & .bgFill {
-    background-color: var(--background-fill-lighter);
-  }
+
+.bgFill {
+  background: linear-gradient(
+    101.33deg,
+    #22262a -9.5%,
+    #040505 28.98%,
+    #040505 61.61%,
+    #852601 100.79%
+  );
 }

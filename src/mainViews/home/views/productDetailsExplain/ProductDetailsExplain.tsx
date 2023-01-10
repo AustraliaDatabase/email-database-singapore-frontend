@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React, { ReactNode, useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 import styles from "./styles.module.scss";
 
@@ -40,31 +40,31 @@ const ProductDetailsExplain = (props: IProductDetailsExplain) => {
   return (
     <section
       id={id}
-      className={classNames(styles.wrapper, `${customClass} ${bg}`)}
+      className={classNames(styles.wrapper, `${customClass} `, {
+        [styles.bgFill]: isTitleBgFill,
+      })}
     >
-      <Container
-        className={classNames(styles.sticky, {
-          [styles.bgFill]: isTitleBgFill,
-        })}
-      >
-        <Row className="justify-content-center">
-          <Col lg={8}>
-            {title && (
-              <div
-                className={classNames(styles.title)}
-                dangerouslySetInnerHTML={{ __html: title }}
-              />
-            )}
-          </Col>
-        </Row>
-      </Container>
       <Container>
         <Row className="justify-content-center">
-          <Col lg={8}>
-            {description && (
-              <div className={styles.description}>{description}</div>
-            )}
-          </Col>
+          {title && (
+            <div
+              className={classNames(
+                styles.title,
+                isTitleBgFill && "text-white"
+              )}
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+          )}
+          {description && (
+            <div
+              className={classNames(
+                styles.description,
+                isTitleBgFill && "text-white"
+              )}
+            >
+              {description}
+            </div>
+          )}
         </Row>
       </Container>
       <Container>
