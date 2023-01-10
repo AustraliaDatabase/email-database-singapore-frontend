@@ -396,6 +396,38 @@ export const CURRENT_OBJECT_HOME = {
         </p>
       `,
   },
+  targetTopic: {
+    title: `<h3>Target and Build Email List to Boost Your Business</h3>`,
+    description: `<p class="text-center text-white mb-5">
+    emaildatas.com,we provide our customers targeted email lists ,
+    which contains verified and accurate contact name ,job titles ,
+    phone numbers, email addresses, postal addresses,industry ,
+    revenue,number of employees and etc !
+  </p>`,
+    serviceList: `
+      <p class="text-white">
+        We can build an email list for you depending on what you need,
+        may it be per:
+      </p>
+
+      <ul class="text-white">
+        <li>Job type (C-Level ,VP ,Director,Manager and Staff )</li>
+        <li>Job Title (CEO , CFO ,Descion makers or any title )</li>
+        <li>
+          Departments (HR,Sales,Marketing,Finance & Administration
+          ,Support,Engineering & Research,Operations & IT & IS )
+        </li>
+        <li>Industry (Industry Name/SIC Code /NAICS code)</li>
+        <li>Location (State ,City ,Zip Codes)</li>
+        <li>Revenue</li>
+        <li>Number of Employees</li>
+        <li>
+          Location type (Branch,Headquarters and Single Location )
+        </li>
+      </ul>
+  `,
+    caption: `<p>We can ensure the quality of our data because these have been aggressively mined and are thoroughly cleaned by actual, real-life people.</p>`,
+  },
   review: {
     title: `Check Customer Reviews of JozData`,
   },

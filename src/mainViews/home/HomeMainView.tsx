@@ -15,7 +15,6 @@ import FeatureCard from "../../shared/components/featureCard/FeatureCard";
 import HomeSeed from "./homeSeeds";
 // import CollapsibleList from "../../shared/components/collapsibleList/CollapsibleList";
 // import FloatingMenu from "../../menus/floatingMenu/FloatingMenu";
-
 import Faqs from "../../shared/components/faqs/Faqs";
 import FloatingMenu from "./views/floatingMenu/FloatingMenu";
 import TrustPilot from "../../shared/components/trustPilot/TrustPilot";
@@ -27,7 +26,7 @@ import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../shared/enums";
 import styles from "./homeMainView.module.scss";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
-import TargetView from "./views/targetView/TargetView";
+import TargetView from "../../shared/components/targetView/TargetView";
 import LeadsLibraryResource from "../../shared/components/leadsLibraryResource/LeadsLibraryResource";
 import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsExplain";
 import WhyCardsWithContent from "./views/whyCardsWithContent/WhyCardsWithContent";
@@ -306,7 +305,12 @@ const HomeMainView = () => {
       </section>
 
       <section className={styles.target}>
-        <TargetView />
+        <TargetView
+          title={CURRENT_OBJECT_HOME.targetTopic.title}
+          description={CURRENT_OBJECT_HOME.targetTopic.description}
+          serviceList={CURRENT_OBJECT_HOME.targetTopic.serviceList}
+          caption={CURRENT_OBJECT_HOME.targetTopic.caption}
+        />
       </section>
 
       <section>
