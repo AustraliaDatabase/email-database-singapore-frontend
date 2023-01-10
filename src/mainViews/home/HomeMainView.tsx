@@ -245,19 +245,12 @@ const HomeMainView = () => {
         <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
       </section>
 
-      <section
-        className={classNames(
-          "secondayColor",
-          "secondayColor",
-          styles.sourceSection
-        )}
-        id="#source"
-      >
+      <section className={classNames(styles.sourceSection)} id="#source">
         <Container>
           <Row className="justify-content-center align-items-center">
             <Col md={5}>
               <h4 className={classNames(styles.sourceOfContacts)}>
-                <span className="text-highlight">
+                <span>
                   What is the primary source of Email Lists that we offer?
                 </span>
               </h4>
