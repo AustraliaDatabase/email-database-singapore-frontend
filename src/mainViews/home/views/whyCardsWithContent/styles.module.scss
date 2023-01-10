@@ -53,7 +53,7 @@
           text-align: left;
           margin-bottom: 0;
           margin-left: 0.5rem;
-          @include breakpoint(mobile) {
+          @include breakpoint(tablet) {
             font-size: 1.5rem;
           }
         }
@@ -62,9 +62,8 @@
           font-size: 2rem;
           font-weight: 700;
           opacity: 0.5;
-          @include breakpoint(mobile) {
-            line-height: 3.5rem;
-            font-size: 3rem;
+          @include breakpoint(tablet) {
+            font-size: 1.5rem;
           }
         }
       }
@@ -79,6 +78,9 @@
         max-width: 100%;
       }
       @include breakpoint(tablet) {
+        margin-top: -100px;
+      }
+      @include breakpoint(mobile) {
         margin-top: -80px;
       }
     }
