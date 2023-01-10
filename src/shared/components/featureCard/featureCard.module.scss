@@ -30,17 +30,27 @@
     }
   }
 
-  &.action {
+  &.darkCard {
     background-color: $text;
-    border-color: var(--primary);
-    padding-bottom: calc(3rem + 40px);
-    overflow: hidden;
-    height: 500px;
-    z-index: 1;
     p,
     .cardText {
       color: $white;
     }
+  }
+  &.lightCard {
+    background-image: none;
+    background-color: $white;
+    p,
+    .cardText {
+      color: var(--text);
+    }
+  }
+  &.action {
+    border-color: var(--primary);
+    padding-bottom: calc(3rem + 40px);
+    overflow: hidden;
+    min-height: 380px;
+    z-index: 1;
     %commonStyles {
       z-index: -1;
       height: 100%;

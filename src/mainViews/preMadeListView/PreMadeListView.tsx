@@ -2,6 +2,7 @@ import classNames from "classnames";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import FeatureCard from "../../shared/components/featureCard/FeatureCard";
+import { FEATURE_CARD_VARIANT } from "../../shared/enums";
 import { PRE_MADE_LIST_OBJECT } from "./constants";
 
 import styles from "./styles.module.scss";
@@ -47,7 +48,12 @@ const PreMadeListView = () => {
                   md={4}
                   lg={3}
                 >
-                  <FeatureCard AsTag={card.asTag} type="action" {...card} />
+                  <FeatureCard
+                    AsTag={card.asTag}
+                    type="action"
+                    {...card}
+                    variant={FEATURE_CARD_VARIANT.Light}
+                  />
                 </Col>
               );
             })}

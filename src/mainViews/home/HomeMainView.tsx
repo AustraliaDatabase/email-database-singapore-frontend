@@ -23,7 +23,11 @@ import WhyListDetailCardView from "../mainProduct/views/whyListDetailCard/WhyLis
 import { CURRENT_OBJECT_HOME } from "./constants";
 import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
-import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../shared/enums";
+import {
+  BUTTON_VARIANT_ENUM,
+  DATABASE_MAIN_TYPES,
+  FEATURE_CARD_VARIANT,
+} from "../../shared/enums";
 import styles from "./homeMainView.module.scss";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import TargetView from "../../shared/components/targetView/TargetView";
@@ -192,7 +196,12 @@ const HomeMainView = () => {
                   md={4}
                   lg={3}
                 >
-                  <FeatureCard AsTag={card.asTag} type="action" {...card} />
+                  <FeatureCard
+                    AsTag={card.asTag}
+                    type="action"
+                    {...card}
+                    variant={FEATURE_CARD_VARIANT.Dark}
+                  />
                 </Col>
               );
             })}

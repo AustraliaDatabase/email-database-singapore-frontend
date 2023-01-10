@@ -9,6 +9,11 @@ export enum FEATURE_CARD_TYPE {
   Action = "action",
 }
 
+export enum FEATURE_CARD_VARIANT {
+  Dark = "dark",
+  Light = "light",
+}
+
 export enum BUTTON_VARIANT_ENUM {
   Primary = "primary",
   Secondary = "secondary",
