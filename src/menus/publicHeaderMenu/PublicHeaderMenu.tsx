@@ -229,33 +229,25 @@ const PublicHeaderMenu = () => {
               </div>
             </div>
           }
-          {!islogedin && (
-            <NavButton
-              toTop={toTop}
-              title={`${authLoading ? "Loading..." : "Login"}`}
-              isPrimary={false}
-              pressButton={pressLogin}
-            />
-          )}
-          {islogedin && (
-            <div className={styles.myAccountLinks}>
-              <MyAccountLink />
-            </div>
-          )}
           {islogedin ? (
-            <NavButton
-              toTop={toTop}
-              url={`${process.env.BASE_URL}/build-custom-list`}
-              title="Build a List"
-              description="Custom B2B List"
-            />
+            <>
+              {islogedin && (
+                <div className={styles.myAccountLinks}>
+                  <MyAccountLink />
+                </div>
+              )}
+            </>
           ) : (
-            <NavButton
-              toTop={toTop}
-              url={`${process.env.BASE_URL}/build-custom-list`}
-              title="Free Trial"
-              description="Let’s check it out"
-            />
+            <>
+              {!islogedin && (
+                <NavButton
+                  toTop={toTop}
+                  title="Login"
+                  isPrimary={true}
+                  pressButton={pressLogin}
+                />
+              )}
+            </>
           )}
         </div>
       </header>

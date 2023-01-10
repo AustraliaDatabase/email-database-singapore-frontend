@@ -337,9 +337,12 @@ $withFraction: 1 / $navMenuCount;
   justify-content: center;
   gap: 3px;
   padding: 0 1rem;
-  padding-right: 0;
+  padding-right: 1rem;
   cursor: pointer;
   flex-grow: 1;
+  @include breakpoint(tablet) {
+    align-items: end;
+  }
 
   div {
     position: relative;
@@ -365,4 +368,5 @@ $withFraction: 1 / $navMenuCount;
   align-items: center;
   justify-content: center;
   padding: 0 0.5rem;
+  padding-right: 1.5rem;
 }

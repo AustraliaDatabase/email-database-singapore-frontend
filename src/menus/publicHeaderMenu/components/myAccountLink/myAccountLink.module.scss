@@ -9,9 +9,7 @@
   @include box-shadow(level-2);
   z-index: 3;
   top: 40px;
-  right: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;
 }
 
 .listItem {
@@ -55,7 +53,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
   gap: 10px;
   cursor: pointer;
   svg {
