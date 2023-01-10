@@ -28,7 +28,7 @@ import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../shared/enums";
 import styles from "./homeMainView.module.scss";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import TargetView from "./views/targetView/TargetView";
-import LeadsLibraryResource from "./views/leadsLibraryResource/LeadsLibraryResource";
+import LeadsLibraryResource from "../../shared/components/leadsLibraryResource/LeadsLibraryResource";
 import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsExplain";
 import WhyCardsWithContent from "./views/whyCardsWithContent/WhyCardsWithContent";
 
@@ -310,7 +310,14 @@ const HomeMainView = () => {
       </section>
 
       <section>
-        <LeadsLibraryResource />
+        <LeadsLibraryResource
+          title={CURRENT_OBJECT_HOME?.leadsLibraryRecource?.title}
+          description={CURRENT_OBJECT_HOME?.leadsLibraryRecource?.description}
+          sourceList={CURRENT_OBJECT_HOME?.leadsLibraryRecource?.source}
+          sourceExplain={
+            CURRENT_OBJECT_HOME?.leadsLibraryRecource?.sourceExplain
+          }
+        />
       </section>
       <section className="ghost" id="#faqs">
         <Container>
