@@ -93,6 +93,7 @@
     transform: translateY(-50%);
     border-radius: 0 100% 100% 0;
     padding: 3rem 0.5rem;
+    padding-left: 0;
     z-index: 4;
     svg {
       color: $white;
@@ -100,7 +101,7 @@
 
     transition: margin 0.24s ease;
     &.active {
-      margin-left: 236px;
+      margin-left: 238px;
       svg {
         transition: transform 0.24s ease;
         transform: rotate(180deg);

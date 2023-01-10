@@ -1,6 +1,7 @@
+import { useWindowWidth } from "@react-hook/window-size";
 import classNames from "classnames";
 import { CaretRight } from "phosphor-react";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 
 import DashboardMenu from "../../menus/dashboardMenu/DashboardMenu";
 import { useRoot } from "../../shared/contexts/RootProvider";
@@ -15,11 +16,19 @@ const DashboardLayout = (props: IDashboardLayout) => {
   const { children } = props;
 
   const [menuOpen, setMenuOpen] = useState(false);
+  
   const { authLoading } = useRoot();
+  const screenWidth = useWindowWidth();
 
   const toggleSideBar = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    if (screenWidth > 992) {
+      setMenuOpen(false);
+    }
+  }, [screenWidth]);
 
   return (
     <div className={styles.wrapper}>
@@ -30,7 +39,7 @@ const DashboardLayout = (props: IDashboardLayout) => {
         })}
         onClick={toggleSideBar}
       >
-        <CaretRight size={25} />
+        <CaretRight className={styles.toggleIcon} size={25} />
       </button>
       <div className={classNames(styles.menu, { [styles.active]: menuOpen })}>
         <DashboardMenu />
