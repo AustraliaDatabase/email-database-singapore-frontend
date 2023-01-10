@@ -230,9 +230,6 @@ const PublicHeaderMenu = () => {
               </div>
             </div>
           }
-          <div className={styles.myAccountLinks}>
-            <MyAccountLink />
-          </div>
           {islogedin ? (
             <>
               {islogedin && (
