@@ -24,7 +24,17 @@ import classNames from "classnames";
 import { Breadcrumb } from "react-bootstrap";
 import Link from "next/link";
 import { FacebookIcon, LinkedinIcon, TwitterIcon } from "react-share";
-import { ArrowRight, InstagramLogo, MapPin, YoutubeLogo } from "phosphor-react";
+import {
+  ArrowRight,
+  Browser,
+  Buildings,
+  EnvelopeOpen,
+  InstagramLogo,
+  MapPin,
+  PencilLine,
+  User,
+  YoutubeLogo,
+} from "phosphor-react";
 
 var utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
@@ -173,13 +183,19 @@ const ContactUsMainViewMainView = () => {
                           <Col md={12}>
                             <Form.Group className="mb-3">
                               {/* <Form.Label htmlFor="name">Name</Form.Label> */}
-                              <Field
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Ex:- Jhon"
-                                validate={validateRequired}
-                              />
+                              <span className={styles.fieldWrapper}>
+                                <Field
+                                  type="text"
+                                  id="name"
+                                  name="name"
+                                  placeholder="Ex:- Jhon"
+                                  validate={validateRequired}
+                                  icon={<User size={22} />}
+                                />
+                                <span>
+                                  <User size={22} />
+                                </span>
+                              </span>
                               {errors.name && (
                                 <Form.Text className="text-danger">
                                   {errors.name}
@@ -189,13 +205,18 @@ const ContactUsMainViewMainView = () => {
                           </Col>
                           <Form.Group className="mb-3">
                             {/* <Form.Label htmlFor="subject">Subject</Form.Label> */}
-                            <Field
-                              type="text"
-                              id="subject"
-                              name="subject"
-                              placeholder="Subject"
-                              validate={validateRequired}
-                            />
+                            <span className={styles.fieldWrapper}>
+                              <Field
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="Subject"
+                                validate={validateRequired}
+                              />
+                              <span>
+                                <PencilLine size={22} />
+                              </span>
+                            </span>
                             {errors.subject && (
                               <Form.Text className="text-danger">
                                 {errors.subject}
@@ -206,13 +227,18 @@ const ContactUsMainViewMainView = () => {
                         <Col md={12}>
                           <Form.Group className="mb-3">
                             {/* <Form.Label htmlFor="email">Email</Form.Label> */}
-                            <Field
-                              id="email"
-                              name="email"
-                              placeholder="jane@acme.com"
-                              type="email"
-                              validate={validateEmail}
-                            />
+                            <span className={styles.fieldWrapper}>
+                              <Field
+                                id="email"
+                                name="email"
+                                placeholder="Business Email"
+                                type="email"
+                                validate={validateEmail}
+                              />
+                              <span>
+                                <EnvelopeOpen size={22} />
+                              </span>
+                            </span>
                             {errors.email && touched.email && (
                               <Form.Text className="text-danger">
                                 {errors.email}
@@ -225,13 +251,18 @@ const ContactUsMainViewMainView = () => {
                             {/* <Form.Label htmlFor="CompanyName">
                               Company Name
                             </Form.Label> */}
-                            <Field
-                              type="text"
-                              id="companyName"
-                              name="companyName"
-                              placeholder="Company Name"
-                              validate={validateRequired}
-                            />
+                            <span className={styles.fieldWrapper}>
+                              <Field
+                                type="text"
+                                id="companyName"
+                                name="companyName"
+                                placeholder="Company Name"
+                                validate={validateRequired}
+                              />
+                              <span>
+                                <Buildings size={22} />
+                              </span>
+                            </span>
                             {errors.companyName && (
                               <Form.Text className="text-danger">
                                 {errors.companyName}
@@ -244,13 +275,18 @@ const ContactUsMainViewMainView = () => {
                             {/* <Form.Label htmlFor="CompanyName">
                               Company Website
                             </Form.Label> */}
-                            <Field
-                              type="text"
-                              id="companyWebsite"
-                              name="companyWebsite"
-                              placeholder="Company Website"
-                              validate={validURL}
-                            />
+                            <span className={styles.fieldWrapper}>
+                              <Field
+                                type="text"
+                                id="companyWebsite"
+                                name="companyWebsite"
+                                placeholder="Company Website"
+                                validate={validURL}
+                              />
+                              <span>
+                                <Browser size={22} />
+                              </span>
+                            </span>
                             {errors.companyWebsite && (
                               <Form.Text className="text-danger">
                                 {errors.companyWebsite}

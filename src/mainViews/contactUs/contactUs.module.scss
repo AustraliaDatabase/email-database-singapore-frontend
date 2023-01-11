@@ -52,4 +52,20 @@
       border-radius: 2rem;
     }
   }
+  button {
+    border-radius: 2rem;
+  }
+}
+
+.fieldWrapper {
+  position: relative;
+  span {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    svg {
+      color: $primary;
+    }
+  }
 }
