@@ -28,6 +28,7 @@ const CartModal = () => {
   } = useRoot();
 
   // const [totalAmount, setTotalAmount] = useState(0);
+  const [isEmptyCart, setIsEmptyCart] = useState(false);
 
   useEffect(() => {
     if (!currentCartItem?.length) {
@@ -52,6 +53,14 @@ const CartModal = () => {
     setCartEnable(false);
   };
 
+  useEffect(() => {
+    if (currentCartItem?.length < 1) {
+      setIsEmptyCart(true);
+    } else if (currentCartItem?.length > 0) {
+      setIsEmptyCart(true);
+    }
+  }, [currentCartItem?.length]);
+
   return (
     <UCDModal
       bodyClassName="px-4 pb-4 pt-0"
@@ -61,15 +70,17 @@ const CartModal = () => {
       open={cartEnable}
     >
       <Col xs="12">
-        <p className="text-heavy">
+        <p
+          className={classNames("text-heavy", { ["text-center"]: isEmptyCart })}
+        >
           You have {currentCartItem?.length} items in your cart
         </p>
-        {currentCartItem?.length < 1 && (
+        {isEmptyCart && (
           <>
             <CartModalEmpty setCartEnable={setCartEnable} />
           </>
         )}
-        {currentCartItem?.length > 0 && (
+        {!isEmptyCart && (
           <>
             {currentCartItem?.map((element: ICartItem) => {
               return (
@@ -122,7 +133,7 @@ const CartModal = () => {
           </>
         )}
       </Col>
-      {currentCartItem?.length > 1 && (
+      {!isEmptyCart && (
         <>
           <Col xs="12" className="pt-2">
             <Row>
