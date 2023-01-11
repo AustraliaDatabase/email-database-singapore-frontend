@@ -56,7 +56,7 @@ const ContactUsMainViewMainView = () => {
       <div className={styles.wrap}>
         <Container>
           <Row>
-            <Col md={6}>
+            <Col md={12} lg={6}>
               <Breadcrumb>
                 <Link href="/" passHref>
                   <Breadcrumb.Item className={styles.breadcrumbLink}>
@@ -125,7 +125,11 @@ const ContactUsMainViewMainView = () => {
                 </Link>
               </div>
             </Col>
-            <Col md={6} className={styles.fromCard}>
+            <Col
+              md={12}
+              lg={6}
+              className={classNames(styles.fromCard, "mt-4 md-lg-0")}
+            >
               <Card title="Send Us a Message">
                 <Formik
                   initialValues={{
@@ -349,7 +353,7 @@ const ContactUsMainViewMainView = () => {
       <section className="py-4">
         <Container>
           <Row>
-            <Col md={6} className="pe-md-2">
+            <Col md={12} lg={6} className="pe-md-2">
               <iframe
                 className={styles.map}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.2924013497245!2d-116.27283768480865!3d43.6628882598227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aeff3fa94dd9ff%3A0x143d1afda4852270!2sW%20State%20St%2C%20Garden%20City%2C%20ID%2C%20USA!5e0!3m2!1sen!2slk!4v1643467875520!5m2!1sen!2slk"
