@@ -58,9 +58,12 @@ const HomeMainView = () => {
                   xs={{ order: 1, span: 12 }}
                   lg={{ order: 1, span: 12 }}
                 >
-                  <div className={styles.heroCaption}>
-                    96% Email Accuracy guarantee
-                  </div>
+                  <div
+                    className={styles.heroCaption}
+                    dangerouslySetInnerHTML={{
+                      __html: CURRENT_OBJECT_HOME?.banner?.caption,
+                    }}
+                  />
                   <div
                     className={styles.heroTitle}
                     dangerouslySetInnerHTML={{
@@ -183,7 +186,7 @@ const HomeMainView = () => {
                 <ArrowRight size={18} />
               </p> */}
               <div className={styles.whatTypeOfProduct}>
-                Check the Prices of the products we provide
+                Explore the Products of Leads Library
               </div>
             </Col>
           </Row>

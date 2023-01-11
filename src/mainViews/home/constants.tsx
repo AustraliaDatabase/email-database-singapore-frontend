@@ -3,10 +3,10 @@ import { PRODUCT_MAIN_TYPE_ENUM } from "../../shared/enums";
 
 export const CURRENT_OBJECT_HOME = {
   banner: {
-    title: `<h1>2022 Real Estate Agent Email List &  B2B Email Marketing Database with over 95% Email Deliverability Guaranteed </h1>`,
-    description: `<p>Get your business fueled up with the quality database of our company. We provide you with email lists, business lists, job title databases, doctors, Realtors, and many other databases, which will provide you with more than 95% of verified and accurate data. In addition, our contact information consists of phone, fax, email, office address, and current company, which is verified regularly.
-    </p><p>Every three months, all our contacts are validated to ensure that our clients get fresh data verified by professionals. With our accurate bulk contact database, our clients can boost sales. Select your location to start networking with our business database
-    </p>
+    caption: `96% Email Accuracy guarantee`,
+    title: `<h1>Valid B2B Contacts to Reach Your Target Audience</h1>`,
+    description: `<p>Find sales leads with the most accurate B2B email list provider in the USA. Get verified ready-made contact databases based on industry or job title as your requirement. There are over 500 ready-made job titles and B2B Direct contacts available based on SIC industry codes. LeadsLibrary provides targeted email lists containing verified and accurate contact names, job titles, phone, email, postal addresses, industry, revenue, number of employees, LinkedIn profiles, etc.! We can build a customized, targeted b2b contact list if you can't find a relevant database as your requirement with our ready-made list.</p>
+    <p>96% Email Accuracy Guarantee Available We will provide free credits if the bounce back is more than 4%.</p>
     `,
   },
   why: {
@@ -78,29 +78,38 @@ export const CURRENT_OBJECT_HOME = {
   },
   actionCards: [
     {
-      title: "Over 50 Million B2B Emails in USA",
+      title: "Job Titles & Levels",
       description:
-        "2022 updated unique 50 million direct B2B contacts available with title,Company , phone ,fax number and etc.",
+        "You can discover accurate contact information for those with decision-making authority over certain works. Avoid being diverted and misled; Start your B2B marketing campaign with Leads Library today.",
       label: "B2B Pricing starting at $98",
-      link: "/us-company-database-by-state",
+      link: "/job-title",
       asTag: "div",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_B2B_EMAILS,
     },
     {
-      title: "More than 2 Million USA Realtors",
+      title: "By Location in USA",
       description:
-        "More than 96% Accurate unique 2 million realtors available with contact name,email ,phone , fax ,address , License number and etc.",
+        "Are you looking for direct email addresses of Executives and professionals by city, state, zip code, and other criteria? Then you should check out our extensive email lists, which are categorized by location using our list building tool. ",
       label: "Realtor Pricing Starts at $89",
-      link: "/real-estate-agent-email-list",
+      link: "/location",
       asTag: "div",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_REALTORS,
     },
     {
-      title: "Database USA By Professions",
+      title: "Industries",
       description:
-        "There are many databases available for varieties of professions. All are 2022 Updated and unique contacts.",
+        "Use our industry-specific, pre-made contact lists to connect with the relevant individuals. Purchase an industry-specific mailing list that has been verified and is accurate, and market to businesses in that field.",
       label: "Pricing of Professions Starts at $116",
-      link: "/usa-job-titles",
+      link: "/industries",
+      asTag: "div",
+      cardType: PRODUCT_MAIN_TYPE_ENUM.BY_PROFESSION,
+    },
+    {
+      title: "International",
+      description:
+        "Purchase email lists that contain only the contact data of the Countries you wish to market. Build connections only with people with decision-making capacity to make changes and find your leads by their Job Level.",
+      label: "Pricing of Professions Starts at $116",
+      link: "/international",
       asTag: "div",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_PROFESSION,
     },
