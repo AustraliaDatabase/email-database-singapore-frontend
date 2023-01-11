@@ -1,9 +1,6 @@
 @import "styles/variables";
 @import "styles/mixins";
 
-// .wrapper {
-//   background-image: url("/bg-pattern.jpg");
-// }
 .wrap {
   padding-top: 160px;
   padding-bottom: 60px;
@@ -23,10 +20,6 @@
   .breadcrumbLink {
     color: $primary;
   }
-}
-.header {
-  font-size: 1.5rem;
-  color: var(--primary);
 }
 
 .map {
@@ -64,6 +57,9 @@
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    @include breakpoint(mobile) {
+      right: 15px;
+    }
     svg {
       color: $primary;
     }
