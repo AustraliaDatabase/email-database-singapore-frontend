@@ -4,8 +4,52 @@
 // .wrapper {
 //   background-image: url("/bg-pattern.jpg");
 // }
+.wrap {
+  padding-top: 160px;
+  padding-bottom: 60px;
+  position: relative;
+  background: linear-gradient(
+    145.72deg,
+    #212529 18.91%,
+    #000000 56.3%,
+    #b53604 89.55%
+  );
 
+  @include breakpoint(tab-landscape-up) {
+    padding-top: 240px;
+    max-height: 720px;
+  }
+
+  .breadcrumbLink {
+    color: $primary;
+  }
+}
 .header {
   font-size: 1.5rem;
   color: var(--primary);
+}
+
+.map {
+  filter: grayscale(75%);
+  width: 100%;
+  height: 308px;
+  margin-bottom: 1.5rem;
+  @include breakpoint(tab-up) {
+    margin-bottom: 60px;
+  }
+}
+.submitBtn {
+  border-radius: 5rem;
+}
+
+.fromCard {
+  z-index: 1;
+  textarea,
+  input {
+    &[type="text"],
+    &[type="password"],
+    &[type="email"] {
+      border-radius: 2rem;
+    }
+  }
 }
