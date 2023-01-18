@@ -84,5 +84,9 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }
