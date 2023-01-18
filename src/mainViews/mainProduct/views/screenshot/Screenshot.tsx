@@ -141,82 +141,82 @@ const ScreenshotView = (props: IScreenshotView) => {
 
   return (
     <Container>
-      <Row>
-        <Col xs={12}>
-          <div
-            className={classNames("mb-4 text-center", styles.screenshotTitle)}
-            dangerouslySetInnerHTML={{ __html: screenshotInfo?.title }}
-          />
-          <Col xs={10} className="mx-auto">
+      <div className={styles.screenshotWrapper}>
+        <Row>
+          <Col xs={12} lg={9} className="mx-auto">
+            <Image
+              src="/data-files.png"
+              width={197}
+              height={194}
+              alt="databse files"
+              objectFit="scale-down"
+            />
+            <div
+              className={classNames("mb-4 text-center", styles.screenshotTitle)}
+              dangerouslySetInnerHTML={{ __html: screenshotInfo?.title }}
+            />
             <div
               className={classNames(
                 "text-center",
                 styles.screenshotDescription
               )}
-              dangerouslySetInnerHTML={{ __html: screenshotInfo?.description }}
+              dangerouslySetInnerHTML={{
+                __html: screenshotInfo?.description,
+              }}
             />
-          </Col>
-          {screenshot[databaseMainType] && (
-            <div
-              onClick={() => {
-                setScreenshotModalEnable(true);
-                setScreenshotInfo({
-                  title: modalScreenshotTitle || name,
-                  attachmentUrl: screenshot[databaseMainType],
-                });
-              }}
-            >
-              <Image
-                src={screenshot[databaseMainType]}
-                width={1874}
-                layout="responsive"
-                height={964}
-                alt="sample data"
-                className={styles.screenshot}
-              />
-            </div>
-          )}
-        </Col>
-        <Col xs={12} className="d-flex flex-column align-items-center">
-          <div
-            className={classNames(
-              "mb-4 mt-4 text-center",
-              styles.screenshotNote
-            )}
-            dangerouslySetInnerHTML={{ __html: screenshotInfo?.note }}
-          />
-          {downloadUrl && (
-            <Button
-              size="large"
-              block
-              onClick={() => {
-                setDownloadLoadModalEnable(true);
-                setDownloadInfo({
-                  title: modalScreenshotTitle || name,
-                  description: (
-                    <>
-                      <p>
-                        Download the free sample to test the quality and
-                        accuracy of our {modalScreenshotTitle || name} list.
-                      </p>
+            <div className={styles.buttonWrappre}>
+              {downloadUrl && (
+                <>
+                  <Button
+                    size="large"
+                    variant="tertiary"
+                    block
+                    onClick={() => {
+                      setScreenshotModalEnable(true);
+                      setScreenshotInfo({
+                        title: modalScreenshotTitle || name,
+                        attachmentUrl: screenshot[databaseMainType],
+                      });
+                    }}
+                  >
+                    Show Free Sample
+                  </Button>
+                  <Button
+                    size="large"
+                    block
+                    onClick={() => {
+                      setDownloadLoadModalEnable(true);
+                      setDownloadInfo({
+                        title: modalScreenshotTitle || name,
+                        description: (
+                          <>
+                            <p>
+                              Download the free sample to test the quality and
+                              accuracy of our {modalScreenshotTitle || name}{" "}
+                              list.
+                            </p>
 
-                      <p>
-                        Entire {modalScreenshotTitle || name} List Quality is
-                        same as this sample. 95% Email Deliverability Guarantee
-                        Available with this list.
-                      </p>
-                    </>
-                  ),
-                  links: databaseMainType && generateLink[databaseMainType],
-                  attachmentUrl: downloadUrl,
-                });
-              }}
-            >
-              Download the sample
-            </Button>
-          )}
-        </Col>
-      </Row>
+                            <p>
+                              Entire {modalScreenshotTitle || name} List Quality
+                              is same as this sample. 95% Email Deliverability
+                              Guarantee Available with this list.
+                            </p>
+                          </>
+                        ),
+                        links:
+                          databaseMainType && generateLink[databaseMainType],
+                        attachmentUrl: downloadUrl,
+                      });
+                    }}
+                  >
+                    Download the sample
+                  </Button>
+                </>
+              )}
+            </div>
+          </Col>
+        </Row>
+      </div>
     </Container>
   );
 };

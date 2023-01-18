@@ -95,7 +95,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
         </section>
       )}
       {currentObject?.screenshot && (
-        <section id="#free-sample">
+        <section id="#free-sample" className="ghost">
           <ScreenshotView
             databaseMainType={databaseMainType}
             screenshotInfo={currentObject?.screenshot}

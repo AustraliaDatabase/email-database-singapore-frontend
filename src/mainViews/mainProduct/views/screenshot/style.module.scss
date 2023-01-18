@@ -1,24 +1,14 @@
+@import "styles/variables";
 @import "styles/mixins";
-.screenshotTitle {
-  font-size: 2rem;
-  font-family: var(--title-font);
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h5,
-  h6,
-  p,
-  b,
-  span {
+.screenshotWrapper {
+  background-color: $white;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  .screenshotTitle {
     font-size: 2rem;
     font-family: var(--title-font);
-
-  }
-  @include breakpoint(mobile) {
-    font-size: 1.5rem;
 
     h1,
     h2,
@@ -30,45 +20,69 @@
     p,
     b,
     span {
+      font-size: 2rem;
+      font-family: var(--title-font);
+    }
+    @include breakpoint(mobile) {
       font-size: 1.5rem;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h5,
+      h6,
+      p,
+      b,
+      span {
+        font-size: 1.5rem;
+      }
     }
   }
-}
 
-.screenshotNote {
-  font-weight: bold;
-  font-size: 1.125rem;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h5,
-  h6,
-  p,
-  b,
-  span {
+  .screenshotNote {
+    font-weight: bold;
     font-size: 1.125rem;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    h6,
+    p,
+    b,
+    span {
+      font-size: 1.125rem;
+    }
   }
-}
 
-.screenshot {
-  cursor: pointer;
-}
+  .screenshot {
+    cursor: pointer;
+  }
 
-.screenshotDescription {
-  font-size: 1rem;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h5,
-  h6,
-  p,
-  b,
-  span {
+  .screenshotDescription {
     font-size: 1rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    h6,
+    p,
+    b,
+    span {
+      font-size: 1rem;
+    }
+  }
+  .buttonWrappre {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
   }
 }
