@@ -33,7 +33,7 @@ import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import TargetView from "../../shared/components/targetView/TargetView";
 import LeadsLibraryResource from "../../shared/components/leadsLibraryResource/LeadsLibraryResource";
 import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsExplain";
-import WhyCardsWithContent from "./views/whyCardsWithContent/WhyCardsWithContent";
+import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
 
 const HomeMainView = () => {
   const router = useRouter();

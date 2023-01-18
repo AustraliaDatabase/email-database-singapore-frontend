@@ -20,6 +20,7 @@ import BeneifitView from "./views/beneifit/Beneifit";
 import { IMainProductInfo, IReviewObject } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import OwnReviews from "./views/ownReviews/OwnReviews";
+import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -39,7 +40,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
       scroller.scrollTo("#buy-now", {});
     }
   }, []);
-
+  console.log(currentObject?.why);
   return (
     <>
       {(currentObject.banner || currentObject.price) && (
@@ -64,11 +65,24 @@ const MainProductMainView = (props: IMainProductMainView) => {
       <div style={{ paddingTop: 150 }}>
         <TrustPilot title={currentObject?.review?.title} />
       </div>
+
       {currentObject?.why && (
+        // <section id="#why-us" className="ghost">
+        //   <MainWhyDetailCard whyInfo={currentObject?.why} />
+        // </section>
+        <section id="#why-us">
+          <WhyCardsWithContent
+            title={currentObject?.why.title}
+            description={currentObject?.why.description}
+            lists={currentObject?.why.list}
+          />
+        </section>
+      )}
+      {/* {currentObject?.why && (
         <section id="#why-us" className="ghost">
           <MainWhyDetailCard whyInfo={currentObject?.why} />
         </section>
-      )}
+      )} */}
       {currentObject?.why?.list && (
         <section className="ghost">
           {currentObject?.why?.list?.map((element, index) => {

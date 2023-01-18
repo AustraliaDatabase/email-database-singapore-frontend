@@ -186,168 +186,156 @@ export const CURRENT_OBJECT_HOME = {
   },
   whyLeadLibraryTopic: {
     title: "Why should you choose Leads Library’s Email Leads?",
-    description: (
-      <>
-        <p>
-          While other business data providers sell outdated databases full of
-          duplicate contacts, Leads Library is careful to sell only updated and
-          valid B2B contacts in 2022 and beyond All contact information we
-          provide is mined from several reliable sources, such as public
-          directories, corporate websites, press releases, annual reports, etc
-        </p>
-        <p>
-          For B2B email addresses, we maintain a high deliverability rate that
-          ensures 96% of the emails you will send will be delivered and received
-          by recipients in their inboxes. We seek to protect the IP reputation
-          of our customers, so regular updates and cleaning of their database is
-          our top priority
-        </p>
-        <p>
-          With the database we provide, we can ensure that customers can obtain
-          data they can use in different types of marketing: direct mail,
-          telemarketing, email marketing, SMS marketing, and fax marketing.
-        </p>
-      </>
-    ),
+    description: `
+      <p>
+        While other business data providers sell outdated databases full of
+        duplicate contacts, Leads Library is careful to sell only updated and
+        valid B2B contacts in 2022 and beyond All contact information we
+        provide is mined from several reliable sources, such as public
+        directories, corporate websites, press releases, annual reports, etc
+      </p>
+      <p>
+        For B2B email addresses, we maintain a high deliverability rate that
+        ensures 96% of the emails you will send will be delivered and received
+        by recipients in their inboxes. We seek to protect the IP reputation
+        of our customers, so regular updates and cleaning of their database is
+        our top priority
+      </p>
+      <p>
+        With the database we provide, we can ensure that customers can obtain
+        data they can use in different types of marketing: direct mail,
+        telemarketing, email marketing, SMS marketing, and fax marketing.
+      </p>
+   `,
     lists: [
       {
         title: "Premium Business Emails List",
-        description: (
-          <div>
-            <p>
-              Leads Library’s B2B contact lists offer several data fields to
-              help you build a highly targeted campaign. These data fields
-              include:
-            </p>
-            <ul>
-              <li>Physical postal address</li>
-              <li>Fax number</li>
-              <li>LinkedIn profile</li>
-              <li>Industry</li>
-              <li>SIC </li>
-              <li>NAICS</li>
-              <li>Company name</li>
-              <li>Phone number</li>
-              <li>Email address</li>
-              <li>Contact names </li>
-            </ul>
-            <p>
-              With all these numerous data fields, you can design different
-              types of marketing campaigns suitable to your requirements. Use
-              our list of postal addresses for your direct mail advertisement
-              and get customer response fast.
-            </p>
-            <p>
-              For your email marketing, we have prepared credible listings to
-              help you target past purchasers as well as potential customers. It
-              can help you advertise new products to those who are already
-              interested in your productstelemarketing, email marketing, SMS
-              marketing, and fax marketing.
-            </p>
-            <p>
-              Our list of phone numbers for telemarketing, on the other hand,
-              will allow you to talk directly with your prospects. Use it to
-              build customer trust and get direct feedback at every stage of the
-              buyer’s cycle
-            </p>
-          </div>
-        ),
+        description: `<div>
+          <p>
+            Leads Library’s B2B contact lists offer several data fields to
+            help you build a highly targeted campaign. These data fields
+            include:
+          </p>
+          <ul>
+            <li>Physical postal address</li>
+            <li>Fax number</li>
+            <li>LinkedIn profile</li>
+            <li>Industry</li>
+            <li>SIC </li>
+            <li>NAICS</li>
+            <li>Company name</li>
+            <li>Phone number</li>
+            <li>Email address</li>
+            <li>Contact names </li>
+          </ul>
+          <p>
+            With all these numerous data fields, you can design different
+            types of marketing campaigns suitable to your requirements. Use
+            our list of postal addresses for your direct mail advertisement
+            and get customer response fast.
+          </p>
+          <p>
+            For your email marketing, we have prepared credible listings to
+            help you target past purchasers as well as potential customers. It
+            can help you advertise new products to those who are already
+            interested in your productstelemarketing, email marketing, SMS
+            marketing, and fax marketing.
+          </p>
+          <p>
+            Our list of phone numbers for telemarketing, on the other hand,
+            will allow you to talk directly with your prospects. Use it to
+            build customer trust and get direct feedback at every stage of the
+            buyer’s cycle
+          </p>
+        </div>`,
       },
       {
         title: "Over 96% Deliverability Guarantee",
-        description: (
-          <div>
-            <p>
-              We update your list every month to remove errant entries and
-              replace them with new ones. That way, you are assured of a high
-              response rate when launching your campaign. With such a high
-              degree of accuracy, we can maintain a validity of 96% or more for
-              all our listings.
-            </p>
-            <p>
-              Today, most data providers brag that their data is current and
-              accurate. To test their claim, request a sample database from them
-              and proceed to verify its accuracy.
-            </p>
-            <p>
-              Request a sample from Leads Library before you commit. Check
-              whether your future database from us will meet your business
-              criteria and marketing demands by requesting a sample list, which
-              we will provide.
-            </p>
-          </div>
-        ),
+        description: `<div>
+          <p>
+            We update your list every month to remove errant entries and
+            replace them with new ones. That way, you are assured of a high
+            response rate when launching your campaign. With such a high
+            degree of accuracy, we can maintain a validity of 96% or more for
+            all our listings.
+          </p>
+          <p>
+            Today, most data providers brag that their data is current and
+            accurate. To test their claim, request a sample database from them
+            and proceed to verify its accuracy.
+          </p>
+          <p>
+            Request a sample from Leads Library before you commit. Check
+            whether your future database from us will meet your business
+            criteria and marketing demands by requesting a sample list, which
+            we will provide.
+          </p>
+        </div>`,
       },
       {
         title: "100% Database Ownership",
-        description: (
-          <div>
-            <p>
-              We offer one-time payment for the list that we will deliver to
-              you, and you will have unlimited access to that database wherever
-              you may be at any time you need such access.
-            </p>
-            <p>
-              Additionally, you maintain 100% ownership of the data after buying
-              it from us, which means we do not have control over that, and you
-              can use it as you please. Your database will be updated and
-              cleaned regularly, although you can only have free updates until
-              one year from the purchase date.
-            </p>
-            <p>
-              Leads Library is a frontrunner in the mailing list industry
-              because we maintain honest business transactions. As such, you pay
-              only one time for the service and will not be troubled by hidden
-              fees.
-            </p>
-          </div>
-        ),
+        description: `<div>
+          <p>
+            We offer one-time payment for the list that we will deliver to
+            you, and you will have unlimited access to that database wherever
+            you may be at any time you need such access.
+          </p>
+          <p>
+            Additionally, you maintain 100% ownership of the data after buying
+            it from us, which means we do not have control over that, and you
+            can use it as you please. Your database will be updated and
+            cleaned regularly, although you can only have free updates until
+            one year from the purchase date.
+          </p>
+          <p>
+            Leads Library is a frontrunner in the mailing list industry
+            because we maintain honest business transactions. As such, you pay
+            only one time for the service and will not be troubled by hidden
+            fees.
+          </p>
+        </div>`,
       },
       {
         title: "Affordable and Competitive Pricing ",
-        description: (
-          <div>
-            <p>
-              Leads Library also maintains competitive and affordable pricing
-              for all our lists. We also offer discounts for bulk orders, so
-              check that out with our customer assistance service.
-            </p>
-            <p>
-              Despite the competitive prices that we offer for our products, we
-              guarantee that you will have a dependable, quality listing. For
-              one, we have only accurate and valid contacts in our listings.
-            </p>
-            <p>
-              Also, B2B contacts in our database are permission-based, so you
-              expect not to run afoul with any of your prospects included in the
-              list. That will help you a lot in the long run.
-            </p>
-            <p>
-              For approaching the right prospects, the deal-breaker is a
-              reliable contact database you can trust.
-            </p>
-          </div>
-        ),
+        description: `<div>
+          <p>
+            Leads Library also maintains competitive and affordable pricing
+            for all our lists. We also offer discounts for bulk orders, so
+            check that out with our customer assistance service.
+          </p>
+          <p>
+            Despite the competitive prices that we offer for our products, we
+            guarantee that you will have a dependable, quality listing. For
+            one, we have only accurate and valid contacts in our listings.
+          </p>
+          <p>
+            Also, B2B contacts in our database are permission-based, so you
+            expect not to run afoul with any of your prospects included in the
+            list. That will help you a lot in the long run.
+          </p>
+          <p>
+            For approaching the right prospects, the deal-breaker is a
+            reliable contact database you can trust.
+          </p>
+        </div>`,
       },
       {
         title: "Zero Duplicates",
-        description: (
-          <div>
-            <p>Duplicate entries create a mess in B2B contact databases.</p>
-            <p>
-              It can cause you to unintentionally send the same email to the
-              same prospects several times, which can annoy them. Also, you can
-              end up with mismatched data for the same business in different
-              places.
-            </p>
-            <p>
-              Here at Leads Library, we maintain zero duplicate contacts with
-              our database by using a tool that eliminates duplicates
-              automatically. Thus, our customers get 100% unique contacts all
-              the time.
-            </p>
-          </div>
-        ),
+        description: `<div>
+          <p>Duplicate entries create a mess in B2B contact databases.</p>
+          <p>
+            It can cause you to unintentionally send the same email to the
+            same prospects several times, which can annoy them. Also, you can
+            end up with mismatched data for the same business in different
+            places.
+          </p>
+          <p>
+            Here at Leads Library, we maintain zero duplicate contacts with
+            our database by using a tool that eliminates duplicates
+            automatically. Thus, our customers get 100% unique contacts all
+            the time.
+          </p>
+        </div>`,
       },
     ],
   },
