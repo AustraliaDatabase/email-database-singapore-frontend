@@ -3,7 +3,6 @@ import Scroll from "react-scroll";
 
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import BannerView from "./views/banner/Banner";
-import styles from "./style.module.scss";
 import PriceListView from "./views/priceList/PriceList";
 import FloatingMenu from "../../menus/floatingMenu/FloatingMenu";
 import { FLOATING_MENU, FLOATING_MENU_OLD } from "../../shared/constants";
@@ -13,14 +12,13 @@ import ScreenshotView from "./views/screenshot/Screenshot";
 import SourceView from "./views/source/Source";
 import FaqsView from "./views/faqs/Faqs";
 import WhyListDetailCardView from "./views/whyListDetailCard/WhyListDetailCard";
-// import { WHY_DETAIL_CARD } from "./dummyText";
-import MainWhyDetailCard from "./views/mainWhyDetailCard/MainWhyDetailCard";
 import OtherStates from "./views/otherStates/OtherStates";
 import BeneifitView from "./views/beneifit/Beneifit";
 import { IMainProductInfo, IReviewObject } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import OwnReviews from "./views/ownReviews/OwnReviews";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
+import styles from "./style.module.scss";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
