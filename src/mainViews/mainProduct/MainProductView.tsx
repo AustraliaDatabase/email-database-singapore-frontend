@@ -90,7 +90,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
       )} */}
 
       {currentObject?.dataFields && (
-        <section className="angel">
+        <section className={styles.dataFields}>
           <DataFields dataFieldsInfo={currentObject?.dataFields} />
         </section>
       )}
