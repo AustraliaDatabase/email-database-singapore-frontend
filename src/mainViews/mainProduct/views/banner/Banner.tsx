@@ -4,7 +4,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { Link as ScrollLink } from "react-scroll";
 
-import Banner from "../../../../shared/components/banner/Banner";
 import { LAST_UPDATE_DATE } from "../../../../shared/constants";
 import Button from "../../../../shared/components/button/Button";
 import styles from "./style.module.scss";
@@ -33,7 +32,7 @@ const BannerView = (props: IBannerView) => {
     <div className={styles.hero}>
       <Container>
         <Row>
-          <Col md xs={12}>
+          <Col md={6} lg={8} xs={12}>
             <div className={styles.breadcrumb}>
               {/* TODO: */}
               <BreadCrumb
@@ -49,39 +48,37 @@ const BannerView = (props: IBannerView) => {
               ref={bannerTitleRef}
               dangerouslySetInnerHTML={{ __html: bannerInfo?.title }}
             />
-            <div className="d-flex flex-column flex-md-row align-items-center mb-3">
+            <div
+              dangerouslySetInnerHTML={{ __html: bannerInfo?.description }}
+              className={classNames(
+                "d-flex text-center text-md-start flex-column mt-4",
+                styles.description
+              )}
+            />
+            <div className="d-flex flex-column flex-md-row align-items-center mb-3 mt-4">
               <ScrollLink to="#buy-now" className={styles.scrollLink}>
                 <Button className="me-md-5 me-0" size="large" block>
-                  Buy Now
+                  See Pricing
                 </Button>
               </ScrollLink>
-              <span className={styles.fromUsd}>
-                From {priceInfo?.list?.[0]?.price} USD
-              </span>
             </div>
-            <p className="mt-5 text-center text-md-start">
-              {LAST_UPDATE_DATE}{" "}
-            </p>
             {/* <span className="text-highlight">35% Discount until 31 </span> */}
           </Col>
 
-          <Col>
-            <Col
-              dangerouslySetInnerHTML={{ __html: bannerInfo?.description }}
-              className={classNames(
-                "d-flex text-center text-md-start pt-md-5 pt-0 flex-column",
-                styles.description
-              )}
-            >
+          <Col md={6} lg={4}>
+            <Col>
+              <div className={styles.dbInfo}>
+                <div className={styles.title}>Database Info</div>
+                <div className={styles.fromUsd}>
+                  From {priceInfo?.list?.[0]?.price} USD
+                </div>
+                <p className={styles.lastUpdate}>{LAST_UPDATE_DATE} </p>
+              </div>
               {/* {getBannerDescription()} */}
             </Col>
           </Col>
         </Row>
       </Container>
-      <Banner
-        image="/dimitry-anikin-ybzpDkfitd8-unsplash.jpg"
-        tint="rgba(1,15,53,0.85)"
-      />
     </div>
   );
 };
