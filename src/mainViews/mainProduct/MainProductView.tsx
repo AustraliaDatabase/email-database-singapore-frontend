@@ -65,9 +65,6 @@ const MainProductMainView = (props: IMainProductMainView) => {
       </div>
 
       {currentObject?.why && (
-        // <section id="#why-us" className="ghost">
-        //   <MainWhyDetailCard whyInfo={currentObject?.why} />
-        // </section>
         <section id="#why-us">
           <WhyCardsWithContent
             title={currentObject?.why.title}
@@ -76,12 +73,8 @@ const MainProductMainView = (props: IMainProductMainView) => {
           />
         </section>
       )}
-      {/* {currentObject?.why && (
-        <section id="#why-us" className="ghost">
-          <MainWhyDetailCard whyInfo={currentObject?.why} />
-        </section>
-      )} */}
-      {currentObject?.why?.list && (
+
+      {/* {currentObject?.why?.list && (
         <section className="ghost">
           {currentObject?.why?.list?.map((element, index) => {
             return (
@@ -94,7 +87,8 @@ const MainProductMainView = (props: IMainProductMainView) => {
             );
           })}
         </section>
-      )}
+      )} */}
+
       {currentObject?.dataFields && (
         <section className="angel">
           <DataFields dataFieldsInfo={currentObject?.dataFields} />
