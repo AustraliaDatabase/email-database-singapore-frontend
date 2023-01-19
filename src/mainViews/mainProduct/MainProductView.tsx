@@ -39,7 +39,6 @@ const MainProductMainView = (props: IMainProductMainView) => {
       scroller.scrollTo("#buy-now", {});
     }
   }, []);
-  console.log(currentObject?.why);
   return (
     <>
       {(currentObject.banner || currentObject.price) && (
@@ -49,6 +48,8 @@ const MainProductMainView = (props: IMainProductMainView) => {
             bannerInfo={currentObject.banner}
             priceInfo={currentObject.price}
             breadCrumb={currentObject.breadCrumb}
+            statsInfo={currentObject.stats}
+            name={currentObject?.name}
           />
         </section>
       )}

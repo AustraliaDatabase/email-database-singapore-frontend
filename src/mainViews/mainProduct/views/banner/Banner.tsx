@@ -8,20 +8,30 @@ import { LAST_UPDATE_DATE } from "../../../../shared/constants";
 import Button from "../../../../shared/components/button/Button";
 import styles from "./style.module.scss";
 import { DATABASE_MAIN_TYPES } from "../../../../shared/enums";
-import { IBanner, IPrice } from "../../../../shared/interface";
+import { IBanner, IPrice, IStats } from "../../../../shared/interface";
 import BreadCrumb from "../../../../shared/components/breadCrumb/BreadCrumb";
 import classNames from "classnames";
 import { useRouter } from "next/router";
+import StatsCard from "../priceList/views/stats/StatsCard";
 
 interface IBannerView {
   databaseMainType: DATABASE_MAIN_TYPES;
   bannerInfo: IBanner;
   priceInfo: IPrice;
   breadCrumb: string;
+  statsInfo?: IStats;
+  name?: string;
 }
 
 const BannerView = (props: IBannerView) => {
-  const { databaseMainType, bannerInfo, priceInfo, breadCrumb } = props;
+  const {
+    databaseMainType,
+    bannerInfo,
+    priceInfo,
+    breadCrumb,
+    statsInfo,
+    name,
+  } = props;
   const bannerTitleRef: any = useRef();
 
   const router = useRouter();
@@ -32,7 +42,7 @@ const BannerView = (props: IBannerView) => {
     <div className={styles.hero}>
       <Container>
         <Row>
-          <Col md={6} lg={8} xs={12}>
+          <Col md={6} lg={7} xs={12}>
             <div className={styles.breadcrumb}>
               {/* TODO: */}
               <BreadCrumb
@@ -65,10 +75,16 @@ const BannerView = (props: IBannerView) => {
             {/* <span className="text-highlight">35% Discount until 31 </span> */}
           </Col>
 
-          <Col md={6} lg={4}>
+          <Col md={6} lg={5}>
             <Col>
               <div className={styles.dbInfo}>
-                <div className={styles.title}>Database Info</div>
+                <div className={styles.title}>{name} Database Info</div>
+                <StatsCard
+                  name={name ? name : ""}
+                  databaseMainType={databaseMainType}
+                  statsInfo={statsInfo}
+                  displayPriceLink={false}
+                />
                 <div className={styles.fromUsd}>
                   From {priceInfo?.list?.[0]?.price} USD
                 </div>
