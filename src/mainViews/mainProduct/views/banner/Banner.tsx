@@ -41,15 +41,15 @@ const BannerView = (props: IBannerView) => {
   return (
     <div className={styles.hero}>
       <Container>
-        <Row>
+        <div className={styles.breadcrumb}>
+          {/* TODO: */}
+          <BreadCrumb
+            databaseMainType={databaseMainType}
+            breadCrumb={breadCrumb}
+          />
+        </div>
+        <Row className="align-items-center">
           <Col md={6} lg={7} xs={12}>
-            <div className={styles.breadcrumb}>
-              {/* TODO: */}
-              <BreadCrumb
-                databaseMainType={databaseMainType}
-                breadCrumb={breadCrumb}
-              />
-            </div>
             <div
               className={classNames(
                 "text-center text-md-start",
