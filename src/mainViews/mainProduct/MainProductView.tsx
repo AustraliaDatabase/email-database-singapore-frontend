@@ -19,6 +19,7 @@ import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import OwnReviews from "./views/ownReviews/OwnReviews";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
 import styles from "./style.module.scss";
+import classNames from "classnames";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -105,7 +106,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
         </section>
       )}
       {(currentObject.price || currentObject.stats) && (
-        <section id="#buy-now" className="pt-0">
+        <section id="#buy-now" className={classNames("pt-0", styles.pricing)}>
           <PriceListView
             databaseMainType={databaseMainType}
             priceInfo={currentObject.price}

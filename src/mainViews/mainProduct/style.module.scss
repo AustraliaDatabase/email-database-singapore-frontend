@@ -1,16 +1,19 @@
 @import "styles/mixins";
 @import "styles/variables";
 
-.hero {
-  padding-bottom: 200px;
-  margin-bottom: -100px;
-
+%sharedBgStyles {
   background: linear-gradient(
     145.72deg,
     #212529 18.91%,
     #000000 56.3%,
     #b53604 89.55%
   );
+}
+
+.hero {
+  padding-bottom: 200px;
+  margin-bottom: -100px;
+  @extend %sharedBgStyles;
   h1,
   h2,
   p,
@@ -37,12 +40,7 @@
   }
 }
 .dataFields {
-  background: linear-gradient(
-    145.72deg,
-    #212529 18.91%,
-    #000000 56.3%,
-    #b53604 89.55%
-  );
+  @extend %sharedBgStyles;
 }
 .otherStateTitle {
   font-size: 2rem;
@@ -59,4 +57,8 @@
   span {
     font-size: 2rem;
   }
+}
+
+.pricing {
+  @extend %sharedBgStyles;
 }
