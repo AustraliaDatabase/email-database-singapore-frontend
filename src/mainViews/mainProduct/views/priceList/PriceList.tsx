@@ -55,7 +55,7 @@ const PriceListView = (props: IPriceListView) => {
           dangerouslySetInnerHTML={{ __html: priceInfo?.description }}
         ></div>
       </Col>
-      <Row className="justify-content-center">
+      <Row className={classNames("justify-content-center", styles.priceRow)}>
         {priceInfo?.list?.length > 2 && (
           <ScrollLink to="#stats" offset={-300}>
             <div className={styles.viewPricing}>View Stats of {name} List</div>
@@ -89,7 +89,7 @@ const PriceListView = (props: IPriceListView) => {
           );
         })}
 
-        {(priceInfo?.list?.length < 3 || !priceInfo?.list?.length) && (
+        {/* {(priceInfo?.list?.length < 3 || !priceInfo?.list?.length) && (
           <Col
             style={{ maxWidth: priceInfo?.list?.length > 1 ? 500 : 700 }}
             className={styles.price}
@@ -101,9 +101,9 @@ const PriceListView = (props: IPriceListView) => {
               displayPriceLink={false}
             />
           </Col>
-        )}
+        )} */}
       </Row>
-      {priceInfo?.list?.length > 2 && (
+      {/* {priceInfo?.list?.length > 2 && (
         <>
           <div className={styles.statsTitle}>Stats of {name} List</div>
           <Col className={classNames(styles.priceCardAlone)}>
@@ -117,7 +117,7 @@ const PriceListView = (props: IPriceListView) => {
             </div>
           </Col>
         </>
-      )}
+      )} */}
     </Container>
   );
 };

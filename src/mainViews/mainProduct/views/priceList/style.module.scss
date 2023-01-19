@@ -128,3 +128,40 @@
   margin-top: 2rem;
   cursor: pointer;
 }
+
+%sharedBgStyles {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.priceRow {
+  div {
+    &:nth-child(2) {
+      & > div {
+        background-image: url("/wave-bg-1.png");
+        @extend %sharedBgStyles;
+        & div {
+          background-image: none;
+        }
+      }
+    }
+    &:nth-child(3) {
+      & > div {
+        background-image: url("/wave-bg-2.png");
+        @extend %sharedBgStyles;
+        & div {
+          background-image: none;
+        }
+      }
+    }
+    &:nth-child(4) {
+      & > div {
+        background-image: url("/wave-bg-3.png");
+        @extend %sharedBgStyles;
+        & div {
+          background-image: none;
+        }
+      }
+    }
+  }
+}
