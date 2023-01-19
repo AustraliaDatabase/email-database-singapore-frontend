@@ -28,13 +28,13 @@ const CartModal = () => {
   } = useRoot();
 
   // const [totalAmount, setTotalAmount] = useState(0);
-  const [isEmptyCart, setIsEmptyCart] = useState(false);
+  const [isEmptyCart, setIsEmptyCart] = useState(true);
 
   useEffect(() => {
     if (!currentCartItem?.length) {
       setCartEnable(false);
     }
-  }, [currentCartItem?.length]);
+  }, [currentCartItem?.length, setCartEnable]);
 
   const pressClose = () => {
     setCartEnable(false);
@@ -57,10 +57,13 @@ const CartModal = () => {
     if (currentCartItem?.length < 1) {
       setIsEmptyCart(true);
     } else if (currentCartItem?.length > 0) {
-      setIsEmptyCart(true);
+      setIsEmptyCart(false);
     }
   }, [currentCartItem?.length]);
 
+  useEffect(() => {
+    console.log("cart items", currentCartItem.length);
+  }, [currentCartItem]);
   return (
     <UCDModal
       bodyClassName="px-4 pb-4 pt-0"
