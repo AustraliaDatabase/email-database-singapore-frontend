@@ -106,7 +106,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
         </section>
       )}
       {(currentObject.price || currentObject.stats) && (
-        <section id="#buy-now" className={classNames("pt-0", styles.pricing)}>
+        <section id="#buy-now" className={styles.pricing}>
           <PriceListView
             databaseMainType={databaseMainType}
             priceInfo={currentObject.price}

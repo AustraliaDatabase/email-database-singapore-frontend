@@ -77,13 +77,14 @@ const PriceCard: React.FC<IPriceCard> = (props) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
+        <div className={styles.amountText}>${amount}</div>
         {databaseMainType && priceListTitleText[databaseMainType] ? (
           <AsTag
             className={classNames("text-center", styles.mainTitle)}
             dangerouslySetInnerHTML={{
-              __html: `${title}<span> - ${convertToMillion(
-                directContacts
-              )} ${priceListTitleText[databaseMainType]}</span> `,
+              __html: `${title}<span> - ${convertToMillion(directContacts)} ${
+                priceListTitleText[databaseMainType]
+              }</span> `,
             }}
           ></AsTag>
         ) : (
@@ -105,11 +106,13 @@ const PriceCard: React.FC<IPriceCard> = (props) => {
         />
       </div>
       <div className={styles.cardBody}>
-        <div className={styles.amountText}>${amount}</div>
         <ul>
           {includes?.split(";")?.map((item, index) => (
-            <li key={index}>
-              <Check size={20} /> {item}
+            <li key={index} className={styles.detailsWrapper}>
+              <span className={styles.cardIcon}>
+                <Check size={20} />
+              </span>{" "}
+              {item}
             </li>
           ))}
         </ul>

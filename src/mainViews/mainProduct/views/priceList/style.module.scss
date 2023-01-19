@@ -7,11 +7,10 @@
 
 .priceCardTitle {
   position: relative;
-  top: 0;
-  background-color: white;
   padding: 10px 0;
   font-size: 2rem;
   z-index: 0;
+  color: $white;
 
   h1,
   h2,
@@ -23,12 +22,10 @@
   b,
   span {
     font-size: 2rem;
+    color: $white;
   }
 
   @include breakpoint(tab-landscape-up) {
-    position: sticky;
-    top: 140px;
-    z-index: 10;
     font-size: 2rem;
   }
   @include breakpoint(mobile) {
@@ -50,7 +47,7 @@
 
 .priceCardDescription {
   font-size: 1rem;
-
+  color: $white;
   h1,
   h2,
   h3,
@@ -120,7 +117,6 @@
   margin-top: 4rem;
   font-size: 2rem;
 }
-
 
 .viewPricing {
   display: flex;
