@@ -117,6 +117,11 @@ const MainProductMainView = (props: IMainProductMainView) => {
           />
         </section>
       )}
+      {currentObject.sources && (
+        <section id="#source">
+          <SourceView sourceInfo={currentObject.sources} />
+        </section>
+      )}
       {(currentObject?.beneifits?.title ||
         currentObject?.beneifits?.description ||
         currentObject?.beneifits?.list?.length) && (
@@ -135,11 +140,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
             />
           </section>
         )}
-      {currentObject.sources && (
-        <section className="secondayColor" id="#source">
-          <SourceView sourceInfo={currentObject.sources} />
-        </section>
-      )}
+
       <section id="#faq" className="ghost">
         {/* @ts-ignore */}
         <FaqsView
