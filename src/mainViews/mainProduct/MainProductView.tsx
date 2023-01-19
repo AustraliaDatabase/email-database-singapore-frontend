@@ -125,7 +125,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
       {(currentObject?.beneifits?.title ||
         currentObject?.beneifits?.description ||
         currentObject?.beneifits?.list?.length) && (
-        <section className="ghost">
+        <section className={styles.beneifits}>
           <BeneifitView beneifitInfo={currentObject?.beneifits} />
         </section>
       )}
