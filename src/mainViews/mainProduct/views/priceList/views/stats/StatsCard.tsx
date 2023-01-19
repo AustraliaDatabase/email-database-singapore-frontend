@@ -37,13 +37,13 @@ const StatsCard = (props: IStatsCard) => {
 
   return (
     <div className={styles.structure} id="#stats">
-      <div>
-        <div className={styles.structureTitle}>
-          {GET_TITLE_VALUE[databaseMainType]}
-        </div>
-        <p>{name}</p>
-      </div>
       <div className={styles.structureWrapper}>
+        <div>
+          <div className={styles.structureTitle}>
+            {GET_TITLE_VALUE[databaseMainType]}
+          </div>
+          <div className={styles.structureValue}>{name}</div>
+        </div>
         {/* @ts-ignore */}
         {STRUCTURE[databaseMainType]?.map((item: any, index: number) => {
           // @ts-ignore
