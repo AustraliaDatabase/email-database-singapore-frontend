@@ -25,6 +25,7 @@ interface IPriceCard {
   AsTag?: any;
   isCompleteDatabase: boolean;
   description?: string;
+  index?: number;
 }
 
 const PriceCard: React.FC<IPriceCard> = (props) => {
@@ -40,6 +41,7 @@ const PriceCard: React.FC<IPriceCard> = (props) => {
     AsTag = "div",
     isCompleteDatabase,
     description,
+    index,
   } = props;
   // @ts-ignore
   const { currentCartItem, setCurrentCartItem, setCartEnable } = useRoot();
@@ -73,9 +75,20 @@ const PriceCard: React.FC<IPriceCard> = (props) => {
     [DATABASE_MAIN_TYPES.TARGET]: "",
     [DATABASE_MAIN_TYPES.OTHERS]: "",
   };
+  const getBgElement = {
+    0: styles.waveBg1,
+    1: styles.waveBg2,
+    2: styles.waveBg3,
+  };
 
   return (
-    <div className={styles.card}>
+    <div
+      className={classNames(
+        styles.card,
+        // @ts-ignore
+        getBgElement[index]
+      )}
+    >
       <div className={styles.cardHeader}>
         <div className={styles.amountText}>${amount}</div>
         {databaseMainType && priceListTitleText[databaseMainType] ? (

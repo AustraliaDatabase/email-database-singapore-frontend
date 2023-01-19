@@ -55,7 +55,7 @@ const PriceListView = (props: IPriceListView) => {
           dangerouslySetInnerHTML={{ __html: priceInfo?.description }}
         ></div>
       </Col>
-      <Row className={classNames("justify-content-center", styles.priceRow)}>
+      <Row className={"justify-content-center"}>
         {priceInfo?.list?.length > 2 && (
           <ScrollLink to="#stats" offset={-300}>
             <div className={styles.viewPricing}>View Stats of {name} List</div>
@@ -84,6 +84,7 @@ const PriceListView = (props: IPriceListView) => {
                     : index == 1
                 }
                 description={element.description}
+                index={index}
               />
             </Col>
           );

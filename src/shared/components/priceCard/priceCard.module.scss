@@ -152,3 +152,20 @@
     font-size: 1rem;
   }
 }
+
+%sharedBgStyles {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.waveBg1 {
+  background-image: url("/wave-bg-1.png");
+  @extend %sharedBgStyles;
+}
+.waveBg2 {
+  background-image: url("/wave-bg-2.png");
+  @extend %sharedBgStyles;
+}
+.waveBg3 {
+  background-image: url("/wave-bg-3.png");
+  @extend %sharedBgStyles;
+}
