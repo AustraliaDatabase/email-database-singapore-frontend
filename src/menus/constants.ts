@@ -10,56 +10,48 @@ export const HEADER_LINKS: IHeaderLinks[] = [
     name: "Home",
     route: "/",
   },
-  {
-    name: "Price plans",
-    route: "/price-plans",
-  },
+  // {
+  //   name: "Price plans",
+  //   route: "/price-plans",
+  // },
   {
     name: "Pre-Made Lists",
     route: "/pre-made-list",
     subMenu: [
       {
-        name: "B2B Email Database", route: "", subMenu: [
-          { name: 'Complete Email Database', route: '/list-of-all-us-companies' },
-          { name: 'By State', route: '/us-company-database-by-state' },
-        ]
+        name: "By States",
+        route: "/by-us-states",
       },
       {
-        name: "Realtors", route: "", subMenu: [
-          { name: 'All Realtors', route: '/real-estate-agent-email-list' },
-          { name: 'By State', route: '/realtors-by-state' },
-        ]
+        name: "Job Titles",
+        route: "/job-titles",
       },
+      { name: "Industries", route: "/industries" },
       {
-        name: "Job Titles", route: "", subMenu: [
-          { name: 'Accounts Receivable', route: '/accounts-receivable' },
-          { name: 'Accounts Payable', route: '/accounts-payable' },
-          { name: 'CFO', route: '/cfo' },
-          { name: 'CEO', route: '/ceo' },
-          { name: 'Office Manager', route: '/office-manager' },
-          { name: 'Controllers', route: '/controller' },
-          { name: 'Chairman', route: '/business-owners' },
-          { name: 'Business Owner', route: '/accounts-payable' },
-          { name: 'Architects', route: '/architects' },
-        ]
+        name: "Target",
+        route: "/target",
+        // subMenu: [
+        //   {
+        //     name: "General Contractors and Home Builders",
+        //     route: "/general-contractors-and-home-builders",
+        //   },
+        //   { name: "Cryptocurrency Users", route: "/cryptocurrency" },
+        //   {
+        //     name: "Super Backers Database",
+        //     route: "/super-backers-email-database",
+        //   },
+        //   {
+        //     name: "Crowd Funding  Backer Database",
+        //     route: "/crowdfunding-backer-database",
+        //   },
+        // ],
       },
-      {
-        name: "Target", route: "", subMenu: [
-          { name: 'General Contractors and Home Builders', route: '/general-contractors-and-home-builders' },
-          { name: 'Cryptocurrency Users', route: '/cryptocurrency' },
-          { name: 'Super Backers Database', route: '/super-backers-email-database' },
-          { name: 'Crowd Funding  Backer Database', route: '/crowdfunding-backer-database' },
-        ]
-      },
-      // { name: "Industries", route: "/pre-made-list/industries" },
-      // { name: "Cities", route: "/pre-made-list/cities" },
-      // { name: "States", route: "/pre-made-list/states" },
-      // { name: "International", route: "/pre-made-list/international" },
+      { name: "International", route: "/international" },
+      { name: "Zip Code", route: "/by-zip-code" },
     ],
   },
-  { name: "Contact Us", route: "/contact-us" }
+  { name: "Contact Us", route: "/contact-us" },
 ];
-
 
 export const MENU_SET = [
   {

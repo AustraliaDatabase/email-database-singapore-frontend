@@ -10,7 +10,7 @@ const GeneralContractorsAndHomeBuildersPage = () => {
     <PublicLayout>
       <NextSeo
         title="List of General Contractors with 95% Email Deliverability"
-        description="Do you want to get in contact with high-quality leads from a General Contractors? If you do, then you are at the right place! at Joz Data"
+        description="Do you want to get in contact with high-quality leads from a General Contractors? If you do, then you are at the right place! at Email Datas"
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/industry/general-contractors-and-home-builders`}
       />
       <MainProductMainView
@@ -29,7 +29,7 @@ const GeneralContractorsAndHomeBuildersPage = () => {
             </p>
 
             <p>
-            The information that we provide here at Joz Data is both accurate and trustworthy. It comes with a comprehensive contact list that you can download and use at your leisure. We have a team of professionals that are responsible for compiling, verifying, and dividing the data in accordance with the needs of the campaign and the business. People may look for various lists, which they can then investigate and save for themselves.
+            The information that we provide here at Email Datas is both accurate and trustworthy. It comes with a comprehensive contact list that you can download and use at your leisure. We have a team of professionals that are responsible for compiling, verifying, and dividing the data in accordance with the needs of the campaign and the business. People may look for various lists, which they can then investigate and save for themselves.
 
             </p>
             `,

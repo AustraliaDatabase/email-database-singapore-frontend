@@ -79,7 +79,7 @@ const TermsMainView = () => {
             <h3>D. Information about how to get in touch</h3>
             <p>Contact the following individuals for resolving disputes and to answer any questions you may have regarding these terms of use:</p>
             <address>
-              Joz Data<br />
+              Email Datas<br />
               1845 Fantages Way.<br />
               North Berwick ,ME 03906<br />
               Phone : +1 (417) 460-7761<br />

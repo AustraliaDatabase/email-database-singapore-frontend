@@ -62,9 +62,9 @@ const MainProductMainView = (props: IMainProductMainView) => {
             : FLOATING_MENU
         }
       />
-      <div style={{ paddingTop: 150 }}>
+      {/* <div style={{ paddingTop: 150 }}>
         <TrustPilot title={currentObject?.review?.title} />
-      </div>
+      </div> */}
 
       {currentObject?.why && (
         <section id="#why-us">

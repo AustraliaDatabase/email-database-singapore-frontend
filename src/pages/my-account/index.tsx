@@ -7,7 +7,7 @@ const MyAccountPage = () => {
   return (
     <>
       <NextSeo
-        title="My Account - JozData"
+        title="My Account - EmailDatas"
         description=""
         nofollow
         noindex

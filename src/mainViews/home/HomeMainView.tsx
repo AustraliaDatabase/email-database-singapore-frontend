@@ -98,20 +98,7 @@ const HomeMainView = () => {
                           variant={BUTTON_VARIANT_ENUM.Primary}
                           icon={<Buildings weight="fill" size={24} />}
                         >
-                          B2B Emails
-                        </Button>
-                      </ScrollLink>
-                      <ScrollLink to="#productType" offset={-200}>
-                        <Button
-                          className={classNames(
-                            "ms-0 ms-md-3 ms-lg-4",
-                            styles.bannerBtn
-                          )}
-                          size="large"
-                          variant={BUTTON_VARIANT_ENUM.Tertiary}
-                        >
-                          <HouseLine weight="fill" size={24} />
-                          Realtors
+                          Explore the Products
                         </Button>
                       </ScrollLink>
                     </Col>
@@ -182,7 +169,7 @@ const HomeMainView = () => {
               className="d-flex flex-column justify-content-center mb-5"
             >
               {/* <p className="text-highlight mb-1 text-center text-md-start">
-                <b className="me-3">JozData</b>
+                <b className="me-3">EmailDatas</b>
                 <ArrowRight size={18} />
               </p> */}
               <div className={styles.whatTypeOfProduct}>

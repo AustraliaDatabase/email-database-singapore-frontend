@@ -11,7 +11,7 @@ const DownloadsPage = () => {
   return (
     <>
       <NextSeo
-        title={`Downloads -  #${router.query.downloadId} - JozData`}
+        title={`Downloads -  #${router.query.downloadId} - EmailDatas`}
         description=""
         nofollow
         noindex

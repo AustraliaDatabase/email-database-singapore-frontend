@@ -6,7 +6,7 @@ import AllDownloadsMainView from "../../mainViews/allDownloads/AllDownloads";
 const DownloadsPage = () => (
   <>
     <NextSeo
-      title="All Downloads - JozData"
+      title="All Downloads - EmailDatas"
       description=""
       nofollow
       noindex

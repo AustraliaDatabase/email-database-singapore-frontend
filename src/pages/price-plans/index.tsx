@@ -6,7 +6,7 @@ import PublicLayout from "../../layouts/public/PublicLayout";
 
 const PricePlans = () => (
   <>
-    <NextSeo title="Pricing - JozData" canonical="https://JozData.com/price-plans"/>
+    <NextSeo title="Pricing - EmailDatas" canonical="https://EmailDatas.com/price-plans"/>
     <PublicLayout>
       <PricePlanMainView />
     </PublicLayout>

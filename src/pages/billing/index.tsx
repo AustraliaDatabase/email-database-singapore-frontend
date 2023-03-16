@@ -7,7 +7,7 @@ const OrdersPage = () => {
   return (
     <>
       <NextSeo
-        title="Billing - JozData"
+        title="Billing - EmailDatas"
         description=""
         nofollow
         noindex

@@ -31,7 +31,7 @@ const OtherCountriesPage = (props: IRealtorsByStatePage) => {
     <>
       <NextSeo
         title="International Email List with over 95% Email Deliverability"
-        description="JozData allows you to create a targeted B2B email list by US state. Simply choose your selected State Email Database with all premium information and download."
+        description="EmailDatas allows you to create a targeted B2B email list by US state. Simply choose your selected State Email Database with all premium information and download."
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/other-countries`}
       />
       <PublicLayout>
@@ -61,9 +61,9 @@ const OtherCountriesPage = (props: IRealtorsByStatePage) => {
         <section id="#why-us" className="ghost">
           <MainWhyDetailCard whyInfo={Seeds.why} />
         </section>
-        <section id="#review">
+        {/* <section id="#review">
           <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />
-        </section>
+        </section> */}
         <section className="ghost">
           <BeneifitView beneifitInfo={Seeds?.beneifits} />
         </section>

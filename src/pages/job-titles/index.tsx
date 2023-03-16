@@ -40,7 +40,7 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/realtors-by-state`}
       />
       <PublicLayout>
-        <section className="pt-5 pb-3">
+        <section className="sectiontopfix pb-3">
           <Container>
             <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
             <div
@@ -68,9 +68,9 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
         <section id="#why-us" className="ghost">
           <MainWhyDetailCard whyInfo={Seeds.why} />
         </section>
-        <section id="#review">
+        {/* <section id="#review">
           <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />
-        </section>
+        </section> */}
       </PublicLayout>
     </>
   );

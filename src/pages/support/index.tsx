@@ -7,7 +7,7 @@ import SupportMainView from "../../mainViews/support/SupportMainView";
 const DashboardPage = () => (
   <>
     <NextSeo
-      title="Support - JozData"
+      title="Support - EmailDatas"
       description=""
       nofollow
       noindex

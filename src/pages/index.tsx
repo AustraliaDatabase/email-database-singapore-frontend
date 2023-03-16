@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <>
       <NextSeo
         title="2022 Real Estate Email List & B2B Email Marketing Database"
-        description="JozData Provide Accurate and up to date valid US Business databases, Realtor emails & all type of B2B emails in USA and Internationally"
+        description="EmailDatas Provide Accurate and up to date valid US Business databases, Realtor emails & all type of B2B emails in USA and Internationally"
         canonical={process.env.NEXT_PUBLIC_BASE_URL}
       />
       <PublicLayout>

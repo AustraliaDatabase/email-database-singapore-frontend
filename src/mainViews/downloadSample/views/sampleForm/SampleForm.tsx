@@ -30,7 +30,7 @@ const SampleForm = () => {
             className="mt-5 mb-5"
           >
             <p className={styles.hereWhy}>
-              Here&apos;s why JozData&apos;s Real Estate Listings are worth
+              Here&apos;s why EmailDatas&apos;s Real Estate Listings are worth
               checking out,
             </p>
             <ul className={styles.bulletPoints}>

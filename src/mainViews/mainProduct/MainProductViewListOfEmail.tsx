@@ -46,9 +46,9 @@ const MainProductViewListOfEmail = (props: IMainProductViewListOfEmail) => {
         </section>
       )}
       <FloatingMenu menuList={FLOATING_MENU_LIST_OF_US_COMPANIES} />
-      <div style={{ paddingTop: 150 }}>
+      {/* <div style={{ paddingTop: 150 }}>
         <TrustPilot title={currentObject?.review?.title} />
-      </div>
+      </div> */}
       {currentObject?.why && (
         <section id="#why-us" className="ghost">
           <MainWhyDetailCard whyInfo={currentObject?.why} />

@@ -66,9 +66,9 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
         <section id="#why-us" className="ghost">
           <MainWhyDetailCard whyInfo={Seeds.why} />
         </section>
-        <section id="#review">
+        {/* <section id="#review">
           <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />
-        </section>
+        </section> */}
       </PublicLayout>
     </>
   );

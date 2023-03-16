@@ -10,7 +10,7 @@ export const CURRENT_OBJECT_HOME = {
     `,
   },
   why: {
-    title: `<h2>Why should you <span class="text-highlight">Buy Database for Email Marketing </span> from JozData.com over other providers?</h2>`,
+    title: `<h2>Why should you <span class="text-highlight">Buy Database for Email Marketing </span> from EmailDatas.com over other providers?</h2>`,
     description: `<p>Our business email database will give you accurate information about various job titles. In addition, you can get premium information about the contact, such as phone, email, fax, office address, and other things, which our professionals will verify regularly.
     </p><p>The list will provide accurate results that will improve your return on investment at an affordable rate. In addition, we will validate the information that will be provided to you every two or three months. Having a list of email databases will help you save a lot of time and money to help your marketing team focus on something else. Let's just discuss the reasons to buy out a business email database in detail.
     </p>`,
@@ -23,7 +23,7 @@ export const CURRENT_OBJECT_HOME = {
           "<h2>Real Estate Agents Email List with accurate full contacts</h2>",
         content: `<p>You can obtain a 95% email deliverability rate with our real estate database. We will provide you with access to an up-to-date, accurate, and human-verified database that belongs to a real estate agent. You will be able to get the outcomes you want with the assistance of the high-quality list that will be provided.
         </p><p>You will be able to promote your goods and services efficiently if you take advantage of our specialist realtor leads. The real estate agent database will have various contact information types, including names, fax numbers, email addresses, phone numbers, and types of licenses. You'll be able to start networking and receive a better answer on that matter if you have our comprehensive real estate list.
-        </p><p>Joz Data provides access to millions of lists of realtors in the United States. This means that you will not have to browse anyplace or hunt for information since we will offer you with everything you need, which will be continually updated. It will save your marketing team time in multiple ways.
+        </p><p>Email Datas provides access to millions of lists of realtors in the United States. This means that you will not have to browse anyplace or hunt for information since we will offer you with everything you need, which will be continually updated. It will save your marketing team time in multiple ways.
         </p>`,
       },
       {
@@ -426,6 +426,6 @@ export const CURRENT_OBJECT_HOME = {
     caption: `<p>We can ensure the quality of our data because these have been aggressively mined and are thoroughly cleaned by actual, real-life people.</p>`,
   },
   review: {
-    title: `Check Customer Reviews of JozData`,
+    title: `Check Customer Reviews of EmailDatas`,
   },
 };

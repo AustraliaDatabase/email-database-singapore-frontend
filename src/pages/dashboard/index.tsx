@@ -6,7 +6,7 @@ import DashboardMainView from "../../mainViews/dashboard/DashboardMainView";
 
 const DashboardPage = () => (
   <>
-    <NextSeo title="Dashboard - JozData" description="" />
+    <NextSeo title="Dashboard - EmailDatas" description="" />
     <DashboardLayout>
       <DashboardMainView />
     </DashboardLayout>

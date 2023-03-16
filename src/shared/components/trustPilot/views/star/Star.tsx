@@ -7,7 +7,7 @@ const Star = ({url}: any) => {
       <Image
         src={url}
         width={23}
-        alt="Trust Index Start - JozData"
+        alt="Trust Index Start - EmailDatas"
         height={20}
         layout="fixed"
       />

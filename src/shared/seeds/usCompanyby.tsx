@@ -3,11 +3,11 @@ import { CircleWavyQuestion, ShieldStar } from "phosphor-react";
 const Seeds = {
   metaTitle: "B2B Email Lists by States with over 95% Email Deliverability",
   metaDescription:
-    "JozData allows you to create a targeted B2B email list by US state. Simply choose your selected State Email Database with all premium information and download.",
+    "EmailDatas allows you to create a targeted B2B email list by US state. Simply choose your selected State Email Database with all premium information and download.",
   mainTitle: `<h1 class="text-center my-3 mt-0" style="font-size: 2.5rem">
   B2B Email Lists <span class="text-highlight">by States</span>
   </h1>`,
-  mainDescription: `<p>The #1 service for the most reliable B2B email lists can help you find email lists by the state if you're looking to sell your products or services in a particular American city or state. JozData Provides B2B Email addresses of businesses for all 51 states in the United States at affordable prices. You may now quickly target your desired location with a high response rate and a great return on investment, all for a minimal cost! </p>`,
+  mainDescription: `<p>The #1 service for the most reliable B2B email lists can help you find email lists by the state if you're looking to sell your products or services in a particular American city or state. EmailDatas Provides B2B Email addresses of businesses for all 51 states in the United States at affordable prices. You may now quickly target your desired location with a high response rate and a great return on investment, all for a minimal cost! </p>`,
   floatingMenu: [
     {
       link: "#why-us",
@@ -22,9 +22,9 @@ const Seeds = {
   ],
 
   why: {
-    title: `<h2><class="text-highlight">Why should you buy an Email list</span> of businesses by state from JozData over other providers ?</h2>`,
+    title: `<h2><class="text-highlight">Why should you buy an Email list</span> of businesses by state from EmailDatas over other providers ?</h2>`,
 
-    description: `<p>You may find the most excellent sales leads in the United States by using our B2B email list by state from Jozdata. We supply you with a verified contact list that will help you increase your business revenue, and you will receive the list based on your specifications. Furthermore, the individual will find it easier to target the audience based on the SIC industry code.</p>
+    description: `<p>You may find the most excellent sales leads in the United States by using our B2B email list by state from EmailDatas. We supply you with a verified contact list that will help you increase your business revenue, and you will receive the list based on your specifications. Furthermore, the individual will find it easier to target the audience based on the SIC industry code.</p>
     
     <p>It even gives you entire ownership of the list, which will be relevant to the demands of the consumers, with new upgrades available at reasonable pricing. Furthermore, you will have the opportunity to enjoy higher than 95 percentage email deliverability; even free credits will be granted if the bounce rate is greater than 5%.</p>
 
@@ -36,7 +36,7 @@ const Seeds = {
       {
         title: "Targeted Email Lists",
         description:
-          "<p>You can buy a targeted B2B email list from Jozdata according to Location (State, city, county or Zip Code), Job title, Industry, Zip code or any of your requirements. Let us know what you need, and we will give you a contact list that includes the contact name, company name, phone number, direct email, and many other details.</p>",
+          "<p>You can buy a targeted B2B email list from EmailDatas according to Location (State, city, county or Zip Code), Job title, Industry, Zip code or any of your requirements. Let us know what you need, and we will give you a contact list that includes the contact name, company name, phone number, direct email, and many other details.</p>",
         contentTitle: "",
         content: ``,
       },

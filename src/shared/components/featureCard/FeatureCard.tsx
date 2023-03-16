@@ -110,7 +110,7 @@ const FeatureCard: React.FC<IFeatureCard> = (props) => {
             {type == FEATURE_CARD_TYPE.Action && (
               <a href={`${process.env.NEXT_PUBLIC_BASE_URL}${link}`}>
                 <Button>
-                  Read More
+                  View All Products
                   <ArrowRight size={24} />
                 </Button>
               </a>

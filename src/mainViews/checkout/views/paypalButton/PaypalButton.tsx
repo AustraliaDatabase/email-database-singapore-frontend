@@ -78,7 +78,7 @@ const ButtonWrapper = ({
           },
         ],
         application_context: {
-          brand_name: "Joz Data",
+          brand_name: "Email Datas",
         },
       })
       .then((orderId: string) => {

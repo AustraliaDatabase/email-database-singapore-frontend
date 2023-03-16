@@ -6,7 +6,7 @@ const Seeds = {
   </h1>`,
   mainDescription: `<p>Purchase a real estate agent email database by the state to connect with the industry's top movers and shakers. Our realtor email list is authentic, human-verified, and dependable. These qualified real estate agent leads can help you sell your services or products more effectively. 
   <br />The realtor database will include contact information such as a realtor's name, fax number, email address, phone number, license type, and many more.  
-  Choose your location to begin networking with Jozdata.com's real estate leads for sale.
+  Choose your location to begin networking with EmailDatas.com's real estate leads for sale.
   </p> 
   `,
   floatingMenu: [
@@ -41,7 +41,7 @@ const Seeds = {
       {
         title: "Increase your ROI",
         description:
-          "<p>You can buy a targeted B2B email list from Jozdata according to Location (State, city, county or Zip Code), Job title, Industry, Zip code or any of your requirements. Let us know what you need, and we will give you a contact list that includes the contact name, company name, phone number, direct email, and many other details.</p>",
+          "<p>You can buy a targeted B2B email list from EmailDatas according to Location (State, city, county or Zip Code), Job title, Industry, Zip code or any of your requirements. Let us know what you need, and we will give you a contact list that includes the contact name, company name, phone number, direct email, and many other details.</p>",
         contentTitle: "",
         content: ``,
       },

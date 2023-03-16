@@ -103,12 +103,12 @@ const Table = (props: ITable) => {
   return (
     <div
       className={classNames(styles.tableViewWrapper, {
-        [styles.tableViewWrapRealtor]: type != DATABASE_MAIN_TYPES.REALTOR,
+        [styles.tableViewWrapRealtor]: type != DATABASE_MAIN_TYPES.COMPANY_DATABASE,
       })}
     >
-      {type === DATABASE_MAIN_TYPES.REALTOR && (
+      {type === DATABASE_MAIN_TYPES.COMPANY_DATABASE && (
         <div className={styles.realtorsMainLink}>
-          <Link href="https://www.jozdata.com/real-estate-agent-email-list">
+          <Link href="https://www.EmailDatas.com/real-estate-agent-email-list">
             <a>
               View Complete 2.28 million Email List of Realtors{" "}
               <ArrowRight className="me-2" />

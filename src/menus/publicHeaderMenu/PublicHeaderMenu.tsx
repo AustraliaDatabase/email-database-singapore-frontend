@@ -87,7 +87,13 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
                           </ul>
                         </div>
                       ) : (
-                        link.name
+                        <>
+                          <div className={styles.subMenu}>
+                            <span>
+                              {link.name} <CaretRight size={20} />
+                            </span>
+                          </div>
+                        </>
                       )}
                     </li>
                   </Link>

@@ -28,18 +28,18 @@ const Seeds = {
   why: {
     title: `<h2><class="text-highlight">Consumer Email List with Highest Email Deliverability</h2>`,
 
-    description: `<p>Are you seeking for consumer mailing lists with a high conversion rate to attract new customers or increase your current clientele? You don't need to go any further since JozData provides high-quality consumer lists that allow you access to more than 100 million customers worldwide with a variety of demographic selections, including age, gender, income, occupation, etc.
+    description: `<p>Are you seeking for consumer mailing lists with a high conversion rate to attract new customers or increase your current clientele? You don't need to go any further since EmailDatas provides high-quality consumer lists that allow you access to more than 100 million customers worldwide with a variety of demographic selections, including age, gender, income, occupation, etc.
     </p>
     
-    <p>All of the opt-in B2C email marketing databases on JozData's databases were compiled lawfully in accordance with each nation's marketing laws.
+    <p>All of the opt-in B2C email marketing databases on EmailDatas's databases were compiled lawfully in accordance with each nation's marketing laws.
     </p>
 
     <p>
-    JozData, an industry pioneer in B2C email campaigns solutions, offers complete & priceless consumer email addresses for lead and revenue creation. Our latest government records, credit reports, and mail respondents are just a few of the data sources we use to generate information for our customized consumer direct email lists. Our lists promise delivery of at least 95%. With complete assurance that your email marketing campaign will have high click-through and open rates, you may send consumer email campaigns.
+    EmailDatas, an industry pioneer in B2C email campaigns solutions, offers complete & priceless consumer email addresses for lead and revenue creation. Our latest government records, credit reports, and mail respondents are just a few of the data sources we use to generate information for our customized consumer direct email lists. Our lists promise delivery of at least 95%. With complete assurance that your email marketing campaign will have high click-through and open rates, you may send consumer email campaigns.
     </p>
 
     <p>
-    Every time you purchase an opt-in consumer mailing list from JozData, you have our complete promise that you will get a positive return on investment and benefit from unrestricted, thorough service. Whether you're a start-up or an established company, if consumers are your target market, our knowledgeable and committed consumer mailing list professionals can help you with every step of creating your account and launching effective customer marketing email campaigns.
+    Every time you purchase an opt-in consumer mailing list from EmailDatas, you have our complete promise that you will get a positive return on investment and benefit from unrestricted, thorough service. Whether you're a start-up or an established company, if consumers are your target market, our knowledgeable and committed consumer mailing list professionals can help you with every step of creating your account and launching effective customer marketing email campaigns.
     </p>
 
     <p>

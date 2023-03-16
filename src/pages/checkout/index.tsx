@@ -7,7 +7,7 @@ import CheckoutMainView from "../../mainViews/checkout/Checkout";
 const CheckoutPage = () => {
   return (
     <>
-      <NextSeo title="Checkout - Joz Data" />;
+      <NextSeo title="Checkout - Email Datas" />;
       <PublicLayout>
         <CheckoutMainView />
       </PublicLayout>

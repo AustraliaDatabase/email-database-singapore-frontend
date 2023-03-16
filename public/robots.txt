@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.jozdata.com/sitemap.xml
+Sitemap: https://www.EmailDatas.com/sitemap.xml

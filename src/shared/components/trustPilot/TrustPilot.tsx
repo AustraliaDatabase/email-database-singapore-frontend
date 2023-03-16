@@ -58,7 +58,7 @@ const TrustPilot = (props: ITrustPilot) => {
                   <span className={classNames(styles.rating, " d-block text-center text-md-start")}>
                     REVIEWS
                   </span>
-                  <div className={styles.title}>Joz Data</div>
+                  <div className={styles.title}>Email Datas</div>
                 </span>
                 <span className={classNames("mb-2", styles.starRow)}>
                   <Star url="/star.svg" />
