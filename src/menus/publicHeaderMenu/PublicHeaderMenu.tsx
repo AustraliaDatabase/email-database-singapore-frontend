@@ -106,6 +106,7 @@ const PublicHeaderMenu = () => {
   const [islogedin, setIslogedin] = useState(false);
   const [totalCartItemCount, setTotalCartItemCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [logoutVisible, setLogoutVisible] = useState(false);
 
   const {
     setAuthEnable,
@@ -229,33 +230,33 @@ const PublicHeaderMenu = () => {
               </div>
             </div>
           }
-          {!islogedin && (
-            <NavButton
-              toTop={toTop}
-              title={`${authLoading ? "Loading..." : "Login"}`}
-              isPrimary={false}
-              pressButton={pressLogin}
-            />
-          )}
-          {islogedin && (
-            <div className={styles.myAccountLinks}>
-              <MyAccountLink />
-            </div>
-          )}
           {islogedin ? (
-            <NavButton
-              toTop={toTop}
-              url={`${process.env.BASE_URL}/build-custom-list`}
-              title="Build a List"
-              description="Custom B2B List"
-            />
+            <>
+              {islogedin && (
+                <NavButton
+                  toTop={toTop}
+                  description="B2B Email List"
+                  isPrimary={true}
+                  pressButton={() => {
+                    setLogoutVisible(!logoutVisible);
+                  }}
+                  isUserMenu={true}
+                  logoutVisible={logoutVisible}
+                />
+              )}
+            </>
           ) : (
-            <NavButton
-              toTop={toTop}
-              url={`${process.env.BASE_URL}/build-custom-list`}
-              title="Free Trial"
-              description="Let’s check it out"
-            />
+            <>
+              {!islogedin && (
+                <NavButton
+                  toTop={toTop}
+                  title="Login"
+                  description="Let's check it out"
+                  isPrimary={true}
+                  pressButton={pressLogin}
+                />
+              )}
+            </>
           )}
         </div>
       </header>

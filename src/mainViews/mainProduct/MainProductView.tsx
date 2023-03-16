@@ -3,7 +3,6 @@ import Scroll from "react-scroll";
 
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import BannerView from "./views/banner/Banner";
-import styles from "./style.module.scss";
 import PriceListView from "./views/priceList/PriceList";
 import FloatingMenu from "../../menus/floatingMenu/FloatingMenu";
 import { FLOATING_MENU, FLOATING_MENU_OLD } from "../../shared/constants";
@@ -13,13 +12,14 @@ import ScreenshotView from "./views/screenshot/Screenshot";
 import SourceView from "./views/source/Source";
 import FaqsView from "./views/faqs/Faqs";
 import WhyListDetailCardView from "./views/whyListDetailCard/WhyListDetailCard";
-// import { WHY_DETAIL_CARD } from "./dummyText";
-import MainWhyDetailCard from "./views/mainWhyDetailCard/MainWhyDetailCard";
 import OtherStates from "./views/otherStates/OtherStates";
 import BeneifitView from "./views/beneifit/Beneifit";
 import { IMainProductInfo, IReviewObject } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import OwnReviews from "./views/ownReviews/OwnReviews";
+import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
+import styles from "./style.module.scss";
+import classNames from "classnames";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -39,7 +39,6 @@ const MainProductMainView = (props: IMainProductMainView) => {
       scroller.scrollTo("#buy-now", {});
     }
   }, []);
-
   return (
     <>
       {(currentObject.banner || currentObject.price) && (
@@ -49,6 +48,8 @@ const MainProductMainView = (props: IMainProductMainView) => {
             bannerInfo={currentObject.banner}
             priceInfo={currentObject.price}
             breadCrumb={currentObject.breadCrumb}
+            statsInfo={currentObject.stats}
+            name={currentObject?.name}
           />
         </section>
       )}
@@ -64,12 +65,18 @@ const MainProductMainView = (props: IMainProductMainView) => {
       <div style={{ paddingTop: 150 }}>
         <TrustPilot title={currentObject?.review?.title} />
       </div>
+
       {currentObject?.why && (
-        <section id="#why-us" className="ghost">
-          <MainWhyDetailCard whyInfo={currentObject?.why} />
+        <section id="#why-us">
+          <WhyCardsWithContent
+            title={currentObject?.why.title}
+            description={currentObject?.why.description}
+            lists={currentObject?.why.list}
+          />
         </section>
       )}
-      {currentObject?.why?.list && (
+
+      {/* {currentObject?.why?.list && (
         <section className="ghost">
           {currentObject?.why?.list?.map((element, index) => {
             return (
@@ -82,14 +89,15 @@ const MainProductMainView = (props: IMainProductMainView) => {
             );
           })}
         </section>
-      )}
+      )} */}
+
       {currentObject?.dataFields && (
-        <section className="angel">
+        <section className={styles.dataFields}>
           <DataFields dataFieldsInfo={currentObject?.dataFields} />
         </section>
       )}
       {currentObject?.screenshot && (
-        <section id="#free-sample">
+        <section id="#free-sample" className="ghost">
           <ScreenshotView
             databaseMainType={databaseMainType}
             screenshotInfo={currentObject?.screenshot}
@@ -99,7 +107,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
         </section>
       )}
       {(currentObject.price || currentObject.stats) && (
-        <section id="#buy-now" className="pt-0">
+        <section id="#buy-now" className={styles.pricing}>
           <PriceListView
             databaseMainType={databaseMainType}
             priceInfo={currentObject.price}
@@ -110,10 +118,15 @@ const MainProductMainView = (props: IMainProductMainView) => {
           />
         </section>
       )}
+      {currentObject.sources && (
+        <section id="#source">
+          <SourceView sourceInfo={currentObject.sources} />
+        </section>
+      )}
       {(currentObject?.beneifits?.title ||
         currentObject?.beneifits?.description ||
         currentObject?.beneifits?.list?.length) && (
-        <section className="ghost">
+        <section className={styles.beneifits}>
           <BeneifitView beneifitInfo={currentObject?.beneifits} />
         </section>
       )}
@@ -128,11 +141,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
             />
           </section>
         )}
-      {currentObject.sources && (
-        <section className="secondayColor" id="#source">
-          <SourceView sourceInfo={currentObject.sources} />
-        </section>
-      )}
+
       <section id="#faq" className="ghost">
         {/* @ts-ignore */}
         <FaqsView

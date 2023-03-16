@@ -3,7 +3,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import classNames from "classnames";
-import { CheckCircle } from "phosphor-react";
+import { CircleWavyCheck } from "phosphor-react";
 
 import styles from "./style.module.scss";
 import { IDataFields } from "../../../../shared/interface";
@@ -32,8 +32,8 @@ const DataFields = (props: IDataFieldView) => {
           <div className={styles.chips}>
             {dataFieldsInfo?.fields?.split(";")?.map((chip, index) => (
               <div key={index}>
-                <div>
-                  <CheckCircle size={24} />
+                <div className={styles.iconWrapper}>
+                  <CircleWavyCheck size={24} />
                 </div>{" "}
                 {chip}
               </div>

@@ -2,6 +2,7 @@
 @import "styles/variables";
 
 .hero {
+  padding-top: 150px;
   .breadcrumb {
     z-index: 2;
     position: relative;
@@ -30,15 +31,7 @@
   }
 }
 
-.fromUsd {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.5;
-  color: white;
-}
-
 .bannerFont {
-  background-color: green;
   font-size: 3rem;
 
   h1,
@@ -86,14 +79,37 @@
 }
 
 .offerNote {
-  color: #FCD535;
+  color: #fcd535;
   font-size: 16px;
   span {
-    color: #FCD535;
+    color: #fcd535;
   }
 }
 
 .link {
   text-decoration: underline;
-  color: #FCD535;
+  color: #fcd535;
+}
+
+.dbInfo {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $secondary;
+  }
+  .fromUsd {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: $primary;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .lastUpdate {
+    color: $secondary;
+    text-align: center;
+  }
 }

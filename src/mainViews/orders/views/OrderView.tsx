@@ -18,7 +18,8 @@ const OrderView = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
 
-  const { loggedInUser, setCoinPaymentInfo, setCryptoInfoModalEnable } = useRoot();
+  const { loggedInUser, setCoinPaymentInfo, setCryptoInfoModalEnable } =
+    useRoot();
   const [orderList, setorderList] = useState<any[]>([]);
 
   const loadOrderList = async () => {
@@ -54,12 +55,12 @@ const OrderView = () => {
   }, [loggedInUser]);
 
   const pressView = (id: string) => {
-    router.push(`/downloads/${id}`);
+    router.push(`/downloads`);
   };
 
   const pressPayment = (coinPaymentInfo: any) => {
-    setCoinPaymentInfo(coinPaymentInfo)
-    setCryptoInfoModalEnable(true)
+    setCoinPaymentInfo(coinPaymentInfo);
+    setCryptoInfoModalEnable(true);
   };
 
   return (

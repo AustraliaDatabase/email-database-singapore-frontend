@@ -36,6 +36,10 @@
       margin-top: 1rem;
     }
 
+    &:nth-child(6) {
+      margin-top: auto;
+    }
+
     &.active {
       background-color: rgba($color: $white, $alpha: 0.2);
       border-left: 2px solid $white;

@@ -23,13 +23,17 @@ import WhyListDetailCardView from "../mainProduct/views/whyListDetailCard/WhyLis
 import { CURRENT_OBJECT_HOME } from "./constants";
 import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
-import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../shared/enums";
+import {
+  BUTTON_VARIANT_ENUM,
+  DATABASE_MAIN_TYPES,
+  FEATURE_CARD_VARIANT,
+} from "../../shared/enums";
 import styles from "./homeMainView.module.scss";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import TargetView from "../../shared/components/targetView/TargetView";
 import LeadsLibraryResource from "../../shared/components/leadsLibraryResource/LeadsLibraryResource";
 import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsExplain";
-import WhyCardsWithContent from "./views/whyCardsWithContent/WhyCardsWithContent";
+import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
 
 const HomeMainView = () => {
   const router = useRouter();
@@ -54,9 +58,12 @@ const HomeMainView = () => {
                   xs={{ order: 1, span: 12 }}
                   lg={{ order: 1, span: 12 }}
                 >
-                  <div className={styles.heroCaption}>
-                    96% Email Accuracy guarantee
-                  </div>
+                  <div
+                    className={styles.heroCaption}
+                    dangerouslySetInnerHTML={{
+                      __html: CURRENT_OBJECT_HOME?.banner?.caption,
+                    }}
+                  />
                   <div
                     className={styles.heroTitle}
                     dangerouslySetInnerHTML={{
@@ -179,7 +186,7 @@ const HomeMainView = () => {
                 <ArrowRight size={18} />
               </p> */}
               <div className={styles.whatTypeOfProduct}>
-                Check the Prices of the products we provide
+                Explore the Products of Leads Library
               </div>
             </Col>
           </Row>
@@ -192,7 +199,12 @@ const HomeMainView = () => {
                   md={4}
                   lg={3}
                 >
-                  <FeatureCard AsTag={card.asTag} type="action" {...card} />
+                  <FeatureCard
+                    AsTag={card.asTag}
+                    type="action"
+                    {...card}
+                    variant={FEATURE_CARD_VARIANT.Dark}
+                  />
                 </Col>
               );
             })}

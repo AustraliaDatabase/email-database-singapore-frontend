@@ -37,35 +37,36 @@ const StatsCard = (props: IStatsCard) => {
 
   return (
     <div className={styles.structure} id="#stats">
-      <div>
-        <div className={styles.structureTitle}>
-          {GET_TITLE_VALUE[databaseMainType]}
-        </div>
-        <p>{name}</p>
-      </div>
-      {/* @ts-ignore */}
-      {STRUCTURE[databaseMainType]?.map((item: any, index: number) => {
-        // @ts-ignore
-        const currentValue = statsInfo?.[item.id];
-
-        if (!currentValue?.trim()) {
-          return;
-        }
-
-        return (
-          <div key={index}>
-            <div className={styles.structureTitle}>{item?.title}</div>
-            <div>
-              {!isNaN(currentValue)
-                ? // @ts-ignore
-                  numberWithCommas(currentValue) +
-                  (index === 0 ? " (Zero Duplicates )" : "")
-                : currentValue}
-            </div>
+      <div className={styles.structureWrapper}>
+        <div>
+          <div className={styles.structureTitle}>
+            {GET_TITLE_VALUE[databaseMainType]}
           </div>
-        );
-      })}
+          <div className={styles.structureValue}>{name}</div>
+        </div>
+        {/* @ts-ignore */}
+        {STRUCTURE[databaseMainType]?.map((item: any, index: number) => {
+          // @ts-ignore
+          const currentValue = statsInfo?.[item.id];
 
+          if (!currentValue?.trim()) {
+            return;
+          }
+
+          return (
+            <div key={index}>
+              <div className={styles.structureTitle}>{item?.title}</div>
+              <div className={styles.structureValue}>
+                {!isNaN(currentValue)
+                  ? // @ts-ignore
+                    numberWithCommas(currentValue) +
+                    (index === 0 ? " (Zero Duplicates )" : "")
+                  : currentValue}
+              </div>
+            </div>
+          );
+        })}
+      </div>
       {displayPriceLink && (
         <ScrollLink to="#buy-now">
           <div className={styles.viewPricing}>View Pricing of {name}</div>

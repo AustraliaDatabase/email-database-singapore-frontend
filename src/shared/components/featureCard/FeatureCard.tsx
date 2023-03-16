@@ -1,6 +1,10 @@
 import React, { ReactNode, useState } from "react";
 import styles from "./featureCard.module.scss";
-import { FEATURE_CARD_TYPE, PRODUCT_MAIN_TYPE_ENUM } from "../../enums";
+import {
+  FEATURE_CARD_TYPE,
+  PRODUCT_MAIN_TYPE_ENUM,
+  FEATURE_CARD_VARIANT,
+} from "../../enums";
 import classNames from "classnames";
 import Button from "../button/Button";
 import {
@@ -24,6 +28,7 @@ interface IFeatureCard {
   link?: string;
   AsTag: any;
   cardType?: PRODUCT_MAIN_TYPE_ENUM;
+  variant: FEATURE_CARD_VARIANT;
 }
 
 const FeatureCard: React.FC<IFeatureCard> = (props) => {
@@ -39,6 +44,7 @@ const FeatureCard: React.FC<IFeatureCard> = (props) => {
     link,
     AsTag,
     cardType,
+    variant,
   } = props;
 
   const [loading, setLoading] = useState(false);
@@ -66,7 +72,9 @@ const FeatureCard: React.FC<IFeatureCard> = (props) => {
       className={classNames(
         styles.card,
         { [styles.action]: type == FEATURE_CARD_TYPE.Action },
-        { [styles.info]: type == FEATURE_CARD_TYPE.Info }
+        { [styles.info]: type == FEATURE_CARD_TYPE.Info },
+        { [styles.darkCard]: variant == FEATURE_CARD_VARIANT.Dark },
+        { [styles.lightCard]: variant == FEATURE_CARD_VARIANT.Light }
       )}
     >
       <AsTag className={styles.cardText}>{title}</AsTag>
