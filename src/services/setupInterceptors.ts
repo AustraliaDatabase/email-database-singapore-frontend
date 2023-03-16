@@ -58,7 +58,7 @@ const setupInterceptors = () => {
           if (res.status === 200) {
             axios.defaults.headers.common["Authorization"] =
               "Bearer " + id_token;
-             
+
             // Refresh page
             window.location.reload();
           }
