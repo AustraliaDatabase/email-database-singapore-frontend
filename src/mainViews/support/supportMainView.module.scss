@@ -2,6 +2,7 @@
 @import "styles/mixins";
 
 .supportMsgCard {
+  width: 100%;
   padding: 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1.5rem;
@@ -9,12 +10,19 @@
   background-color: $secondary;
   color: $white;
   min-height: 250px;
+  display: flex;
   align-items: center;
-
   background-image: url("/support-bg-element.png");
   background-repeat: no-repeat;
   background-position: bottom right;
-
+  div {
+    &:first-child {
+      max-width: 70%;
+    }
+    &:last-child {
+      max-width: 30%;
+    }
+  }
   .msgTitle {
     font-size: 1.85rem;
     margin-bottom: 1rem;

@@ -184,8 +184,8 @@ const SupportMainView = () => {
     <>
       <Row className="pt-3">
         <Col md={8}>
-          <Row className={styles.supportMsgCard}>
-            <Col md={7}>
+          <div className={styles.supportMsgCard}>
+            <div>
               <h4 className={styles.msgTitle}>
                 Please let us know how we may help you
               </h4>
@@ -194,11 +194,8 @@ const SupportMainView = () => {
                 bought, manage your account details and find support for any
                 question you may have.
               </p>
-            </Col>
-            <Col
-              md={5}
-              className="d-flex align-items-center justify-content-center"
-            >
+            </div>
+            <div className="d-flex align-items-center justify-content-center">
               <Image
                 src="/support-illustration.png"
                 width={280}
@@ -206,8 +203,8 @@ const SupportMainView = () => {
                 alt="support welcome image"
                 objectFit="scale-down"
               />
-            </Col>
-          </Row>
+            </div>
+          </div>
           <Card>
             <h2 className="mb-3">Issues List</h2>
             <SupportTable saveLoading={loading} />
