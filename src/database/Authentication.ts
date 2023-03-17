@@ -10,7 +10,8 @@ import axios from "axios";
 //   sendPasswordResetEmail,
 // } from "firebase/auth";
 import { triggerForm } from "../services/internalServices";
-import instance from "../services/baseServices";
+import { createAccount } from "../shared/emailSend";
+import instance, { instanceAuth } from "../services/baseServices";
 
 var utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
@@ -50,7 +51,7 @@ export const registerUser = async (
     //   password
     // );
 
-    const user = await instance.post(
+    const user = await instanceAuth.post(
       `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.NEXT_PUBLIC_API_KEY}`,
       {
         displayName: userName,
@@ -96,12 +97,13 @@ export const registerUser = async (
     });
 
     loginCallBack(user.data);
+    createAccount(userName, email);
 
     return userResponse;
   } catch (error: any) {
     triggerForm({
       title: "",
-      text: error.response.data?.message || error.response.data?.error?.message,
+      text: error.response?.data?.error?.message || "Oops! Something Weng Wrong.",
       icon: "error",
       confirmButtonText: "OK",
     });
@@ -117,7 +119,7 @@ export const loginUser = async (
   loginCallBackFail: Function
 ) => {
   try {
-    const user = await instance.post(
+    const user = await instanceAuth.post(
       `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.NEXT_PUBLIC_API_KEY}`,
       {
         email,

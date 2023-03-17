@@ -9,7 +9,7 @@ const instance = axios.create({
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
-    Website: process.env.SITE_PRE_FIX || ""
+    Website: process.env.SITE_PRE_FIX || "",
   },
 });
 
