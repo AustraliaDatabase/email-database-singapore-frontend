@@ -82,6 +82,9 @@
   background-color: var(--fill);
   padding: 1.5rem;
   border-radius: 0.5rem;
+  @include breakpoint(tablet) {
+    margin-top: 1.5rem;
+  }
 }
 
 .fieldWrapper {
@@ -101,5 +104,5 @@
 }
 
 .input {
-padding-left: 2.25rem !important;
+  padding-left: 2.25rem !important;
 }

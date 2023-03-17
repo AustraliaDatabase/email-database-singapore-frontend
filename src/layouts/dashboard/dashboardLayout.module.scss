@@ -96,14 +96,14 @@
     padding-left: 0;
     z-index: 4;
     svg {
+      transition: transform 0.35s ease-in-out;
       color: $white;
     }
 
     transition: margin 0.24s ease;
     &.active {
-      margin-left: 238px;
+      margin-left: 236px;
       svg {
-        transition: transform 0.24s ease;
         transform: rotate(180deg);
       }
     }

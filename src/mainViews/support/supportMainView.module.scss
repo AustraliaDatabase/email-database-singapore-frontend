@@ -18,7 +18,7 @@
   background-position: bottom right;
 
   @include breakpoint(tablet) {
-    display: block;
+    flex-direction: column;
     text-align: center;
   }
   div {
@@ -26,12 +26,14 @@
       max-width: 70%;
       @include breakpoint(tablet) {
         max-width: 100%;
+        order: 2;
       }
     }
     &:last-child {
       max-width: 40%;
       @include breakpoint(tablet) {
         max-width: 100%;
+        order: 1;
       }
     }
   }
