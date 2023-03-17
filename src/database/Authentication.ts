@@ -101,7 +101,7 @@ export const registerUser = async (
   } catch (error: any) {
     triggerForm({
       title: "",
-      text: error.response.data?.message,
+      text: error.response.data?.message || error.response.data?.error?.message,
       icon: "error",
       confirmButtonText: "OK",
     });

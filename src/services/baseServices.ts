@@ -1,10 +1,10 @@
 import axios from "axios";
 
-export const BASE_URL =  process.env.NEXT_PUBLIC_BACKEND_URL;
+export const NEXT_PUBLIC_BASE_URL =  process.env.NEXT_PUBLIC_BACKEND_URL;
 const REQUEST_TIMEOUT = 40000;
 
 const instance = axios.create({
-  baseURL: BASE_URL,
+  baseURL: NEXT_PUBLIC_BASE_URL,
   timeout: REQUEST_TIMEOUT,
   headers: {
     Accept: "application/json",

@@ -245,16 +245,16 @@ const PublicHeaderMenu = () => {
           {islogedin ? (
             <NavButton
               toTop={toTop}
-              url={`${process.env.BASE_URL}/build-custom-list`}
-              title="Build a List"
-              description="Custom B2B List"
+              url={`${process.env.NEXT_PUBLIC_BASE_URL}/downloads`}
+              title="My Downloads"
+              description="Premium Email List"
             />
           ) : (
             <NavButton
               toTop={toTop}
-              url={`${process.env.BASE_URL}/build-custom-list`}
-              title="Free Trial"
-              description="Let’s check it out"
+              url={`${process.env.NEXT_PUBLIC_BASE_URL}/free-sample`}
+              title="Free Sample"
+              description="Download"
             />
           )}
         </div>
