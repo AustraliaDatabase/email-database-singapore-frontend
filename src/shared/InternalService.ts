@@ -1,15 +1,8 @@
 import dayjs from "dayjs";
 import { htmlToText } from "html-to-text";
 
-import { DATABASE_MAIN_TYPES, PAYMENT_METHOD, PAYMENT_STATUS } from "./enums";
+import { PAYMENT_METHOD, PAYMENT_STATUS } from "./enums";
 import { ICartItem } from "./interface";
-import { COMPLETE_DATABASE_OBJECT } from "./seeds/completeDatabaseObject";
-import { REALTORS_OBJECT } from "./seeds/realtorsObject";
-import { JOB_TITLES } from "./seeds/jobTitles";
-import { JOB_INDUSTRIES } from "./seeds/jobIndustry";
-import { COUNTRIES_DATABASE } from "./seeds/countries";
-import { CONSUMER_EMAIL_DATABASE } from "./seeds/consumers";
-// import { PaymentService } from "../database/DatabaseService";
 import {
   getIpAddress,
   orderCreatedCryptoEmailSend,
@@ -42,6 +35,29 @@ export const validateRequired = (value: string) => {
   return error;
 };
 
+export const emailValidation = (value: string) => {
+  let error;
+  if (!value) {
+    error = "Email is required"
+  } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value)) {
+    error = "Invalid email address"
+  }
+  return error;
+}
+
+export const passwordValidation = (value: any) => {
+  let error;
+  if (!value) {
+    error = "Password is required";
+  } else if (
+    !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(value)
+  ) {
+    error =
+      "Password must be at least 8 characters long, contain at least one letter, one number, and one special character (@$!%*#?&)";
+  }
+  return error;
+};
+
 export const validURL = (str: string) => {
   let error;
 
@@ -69,92 +85,92 @@ export const numberWithCommas = (price: string, appendDecimals = 0) => {
   });
 };
 
-export const getRealtorObject = (currentCompanyDBState?: string) => {
-  if (!currentCompanyDBState) {
-    return null;
-  }
+// export const getRealtorObject = (currentCompanyDBState?: string) => {
+//   if (!currentCompanyDBState) {
+//     return null;
+//   }
 
-  let databaseMainTypes = null;
+//   let databaseMainTypes = null;
 
-  let currentObject =
-    // @ts-ignore
-    COMPLETE_DATABASE_OBJECT[
-      JSON.stringify(currentCompanyDBState.replace(/\//g, ""))
-    ];
+//   let currentObject =
+//     // @ts-ignore
+//     COMPLETE_DATABASE_OBJECT[
+//       JSON.stringify(currentCompanyDBState.replace(/\//g, ""))
+//     ];
 
-  if (currentObject) {
-    databaseMainTypes = DATABASE_MAIN_TYPES.COMPANY_DATABASE;
-  }
+//   if (currentObject) {
+//     databaseMainTypes = DATABASE_MAIN_TYPES.COMPANY_DATABASE;
+//   }
 
-  if (!currentObject) {
-    currentObject =
-      // @ts-ignore
-      REALTORS_OBJECT[JSON.stringify(currentCompanyDBState.replace(/\//g, ""))];
+//   if (!currentObject) {
+//     currentObject =
+//       // @ts-ignore
+//       REALTORS_OBJECT[JSON.stringify(currentCompanyDBState.replace(/\//g, ""))];
 
-    if (currentObject) {
-      databaseMainTypes = DATABASE_MAIN_TYPES.REALTOR;
-    }
-  }
+//     if (currentObject) {
+//       databaseMainTypes = DATABASE_MAIN_TYPES.REALTOR;
+//     }
+//   }
 
-  if (!currentObject) {
-    // @ts-ignore
-    currentObject = JOB_TITLES.filter(
-      (element) =>
-        element.url?.replace(/\//g, "") ===
-        currentCompanyDBState.replace(/\//g, "")
-    )?.[0];
+//   if (!currentObject) {
+//     // @ts-ignore
+//     currentObject = JOB_TITLES.filter(
+//       (element) =>
+//         element.url?.replace(/\//g, "") ===
+//         currentCompanyDBState.replace(/\//g, "")
+//     )?.[0];
 
-    if (currentObject) {
-      databaseMainTypes = DATABASE_MAIN_TYPES.JOB_TITLE;
-    }
-  }
+//     if (currentObject) {
+//       databaseMainTypes = DATABASE_MAIN_TYPES.JOB_TITLE;
+//     }
+//   }
 
-  if (!currentObject) {
-    // @ts-ignore
-    currentObject = JOB_INDUSTRIES.filter(
-      (element) =>
-        element.url?.replace(/\//g, "") ===
-        currentCompanyDBState.replace(/\//g, "")
-    )?.[0];
+//   if (!currentObject) {
+//     // @ts-ignore
+//     currentObject = JOB_INDUSTRIES.filter(
+//       (element) =>
+//         element.url?.replace(/\//g, "") ===
+//         currentCompanyDBState.replace(/\//g, "")
+//     )?.[0];
 
-    if (currentObject) {
-      databaseMainTypes = DATABASE_MAIN_TYPES.INDUSTRY;
-    }
-  }
+//     if (currentObject) {
+//       databaseMainTypes = DATABASE_MAIN_TYPES.INDUSTRY;
+//     }
+//   }
 
-  if (!currentObject) {
-    // @ts-ignore
-    currentObject = COUNTRIES_DATABASE.filter(
-      (element) =>
-        element.url?.replace(/\//g, "") ===
-        currentCompanyDBState.replace(/\//g, "")
-    )?.[0];
+//   if (!currentObject) {
+//     // @ts-ignore
+//     currentObject = COUNTRIES_DATABASE.filter(
+//       (element) =>
+//         element.url?.replace(/\//g, "") ===
+//         currentCompanyDBState.replace(/\//g, "")
+//     )?.[0];
 
-    if (currentObject) {
-      databaseMainTypes = DATABASE_MAIN_TYPES.COUNTRY;
-    }
-  }
+//     if (currentObject) {
+//       databaseMainTypes = DATABASE_MAIN_TYPES.COUNTRY;
+//     }
+//   }
 
-  if (!currentObject) {
-    // @ts-ignore
-    currentObject = CONSUMER_EMAIL_DATABASE.filter(
-      (element) =>
-        element.url?.replace(/\//g, "") ===
-        currentCompanyDBState.replace(/\//g, "")
-    )?.[0];
+//   if (!currentObject) {
+//     // @ts-ignore
+//     currentObject = CONSUMER_EMAIL_DATABASE.filter(
+//       (element) =>
+//         element.url?.replace(/\//g, "") ===
+//         currentCompanyDBState.replace(/\//g, "")
+//     )?.[0];
 
-    if (currentObject) {
-      databaseMainTypes = DATABASE_MAIN_TYPES.CONSUMER;
-    }
-  }
+//     if (currentObject) {
+//       databaseMainTypes = DATABASE_MAIN_TYPES.CONSUMER;
+//     }
+//   }
 
-  if (!currentObject) {
-    // @ts-ignore
-    currentObject = null;
-  }
+//   if (!currentObject) {
+//     // @ts-ignore
+//     currentObject = null;
+//   }
 
-  return { currentObject, databaseMainTypes };
-};
+//   return { currentObject, databaseMainTypes };
+// };
 
 export const makeOrderAction = async (
   currentCartItem: ICartItem[],
