@@ -17,6 +17,8 @@ import { triggerForm } from "../../services/internalServices";
 import { supportEmailSend } from "../../shared/emailSend";
 import SupportTable from "./views/supportTable/SupportTable";
 import instance from "../../services/baseServices";
+import Card from "../../shared/components/card/Card";
+import styles from "./supportMainView.module.scss";
 
 var utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
@@ -181,10 +183,42 @@ const SupportMainView = () => {
   return (
     <>
       {/* <h3>Support</h3> */}
-      <div className="dashboard-card p-4">
-        <h4>Please let us know how we may help you</h4>
-        <Row className="pt-3">
-          <Col md={6}>
+
+      {/* <div className="dashboard-card p-4"> */}
+      <Row className="pt-3">
+        <Col md={8}>
+          <Row className={styles.supportMsgCard}>
+            <Col md={7}>
+              <h4 className={styles.msgTitle}>
+                Please let us know how we may help you
+              </h4>
+              <p>
+                From your account dashboard, you can download the lists you have
+                bought, manage your account details and find support for any
+                question you may have.
+              </p>
+            </Col>
+            <Col
+              md={5}
+              className="d-flex align-items-center justify-content-center"
+            >
+              <Image
+                src="/support-illustration.png"
+                width={280}
+                height={200}
+                alt="support welcome image"
+                objectFit="scale-down"
+              />
+            </Col>
+          </Row>
+          <Card>
+            <h2 className="mb-3">Issues List</h2>
+            <SupportTable saveLoading={loading} />
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card>
+            <h2 className="mb-3">Submit Issue</h2>
             <FormGroup className="mb-3">
               <Form.Label htmlFor="subject">
                 The type of issue you want our support with?
@@ -237,20 +271,10 @@ const SupportMainView = () => {
                 Find Support
               </Button>
             </Form.Group>
-          </Col>
-          <Col className="d-flex align-items-center justify-content-center">
-            <Image
-              width={300}
-              height={300}
-              layout="fixed"
-              src="/undraw_active_support_re_b7sj.svg"
-              alt="Support"
-            />
-          </Col>
-        </Row>
-
-        <SupportTable saveLoading={loading} />
-      </div>
+          </Card>
+        </Col>
+      </Row>
+      {/* </div> */}
     </>
   );
 };
