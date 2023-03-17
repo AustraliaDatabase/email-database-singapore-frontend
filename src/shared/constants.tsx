@@ -180,3 +180,34 @@ export const DATA_TYPE_TO_BREADCRUMB_NAME = {
 };
 
 export const GTM_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID;
+
+const JOB_LIST = [
+  { name: "CEO", url: "/ceo" },
+  { name: "CFO", url: "/cfo" },
+  { name: "Accounts Payable", url: "/Accounts-Payable" },
+  { name: "Accounts Receivable", url: "/accounts-receivable" },
+];
+
+const INDUSTRY_LIST = [
+  { name: "Architects", url: "/architects" },
+];
+
+const BY_STATES = [
+  { name: "California", url: "/california" },
+  { name: "Florida", url: "/florida" },
+  { name: "New York", url: "/new-york" },
+  { name: "Texas", url: "/texas" },
+];
+
+const INTERNATIONAL_LIST = [
+  { name: "Canada", url: "/canada" },
+  { name: "UAE", url: "/uae" },
+  { name: "Europe", url: "/europe" },
+];
+
+export const FOOTER_MENUS = {
+  BY_STATES,
+  JOB_LIST,
+  INDUSTRY_LIST,
+  INTERNATIONAL_LIST,
+}
