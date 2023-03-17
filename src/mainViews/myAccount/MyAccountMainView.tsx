@@ -100,25 +100,34 @@ const MyAccountMainView = () => {
               </div>
               {loggedInUser && (
                 <div>
-                  <div className={styles.infoWrapper}>
-                    {loggedInUser?.companyName && (
-                      <p>
-                        <Buildings size={20} className={styles.icon} />
-                        {loggedInUser?.companyName}
-                      </p>
-                    )}
-                    {loggedInUser?.companyWebsite && (
-                      <p>
-                        <Globe size={20} className={styles.icon} />
-                        {loggedInUser?.companyWebsite}
-                      </p>
-                    )}
-                  </div>
+                  {loggedInUser?.companyName ||
+                    (loggedInUser?.companyWebsite && (
+                      <div className={styles.infoWrapper}>
+                        {loggedInUser?.companyName && (
+                          <p>
+                            <Buildings size={20} className={styles.icon} />
+                            {loggedInUser?.companyName}
+                          </p>
+                        )}
+                        {loggedInUser?.companyWebsite && (
+                          <p>
+                            <Globe size={20} className={styles.icon} />
+                            {loggedInUser?.companyWebsite}
+                          </p>
+                        )}
+                      </div>
+                    ))}
                   <div>
                     <p>
-                      <MapPin size={20} className={styles.icon} />
+                      {loggedInUser?.streetAddress ||
+                        loggedInUser?.streetAddress2 ||
+                        loggedInUser?.zip ||
+                        loggedInUser?.city ||
+                        loggedInUser?.state ||
+                        (loggedInUser?.country?.label && (
+                          <MapPin size={20} className={styles.icon} />
+                        ))}
                       <>
-                        {loggedInUser?.streetAddress}{" "}
                         {loggedInUser?.streetAddress}{" "}
                         {loggedInUser?.streetAddress2} {loggedInUser?.zip}{" "}
                         {loggedInUser?.city} {loggedInUser?.state && ","}{" "}
