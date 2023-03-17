@@ -182,9 +182,6 @@ const SupportMainView = () => {
 
   return (
     <>
-      {/* <h3>Support</h3> */}
-
-      {/* <div className="dashboard-card p-4"> */}
       <Row className="pt-3">
         <Col md={8}>
           <Row className={styles.supportMsgCard}>
@@ -217,7 +214,7 @@ const SupportMainView = () => {
           </Card>
         </Col>
         <Col md={4}>
-          <Card>
+          <Card className={styles.stickyColumn}>
             <h2 className="mb-3">Submit Issue</h2>
             <FormGroup className="mb-3">
               <Form.Label htmlFor="subject">
@@ -266,7 +263,7 @@ const SupportMainView = () => {
                 onClick={pressSupport}
                 disabled={loading}
                 loading={loading}
-                className="mt-3 mb-4"
+                className="mt-3 mb-4 w-100"
               >
                 Find Support
               </Button>
@@ -274,7 +271,6 @@ const SupportMainView = () => {
           </Card>
         </Col>
       </Row>
-      {/* </div> */}
     </>
   );
 };
