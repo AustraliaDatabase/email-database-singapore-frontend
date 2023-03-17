@@ -19,6 +19,7 @@ import SupportTable from "./views/supportTable/SupportTable";
 import instance from "../../services/baseServices";
 import Card from "../../shared/components/card/Card";
 import styles from "./supportMainView.module.scss";
+import { useWindowWidth } from "@react-hook/window-size";
 
 var utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
@@ -33,6 +34,8 @@ const SupportMainView = () => {
   const [sending, setSending] = useState(false);
 
   const { loggedInUser } = useRoot();
+
+  const windowWidth = useWindowWidth();
 
   const sendEmail = async (downloadURL: string) => {
     let userIpInfo = null;
@@ -182,8 +185,8 @@ const SupportMainView = () => {
 
   return (
     <>
-      <Row className="pt-3 justify-content-md-center">
-        <Col md={12}>
+      <Row className="justify-content-md-center">
+        <Col md={8}>
           <div className={styles.supportMsgCard}>
             <div>
               <h4 className={styles.msgTitle}>
@@ -205,23 +208,16 @@ const SupportMainView = () => {
               />
             </div>
           </div>
+          {windowWidth > 992 && (
+            <div>
+              <Card>
+                <h2 className="mb-3">Issues List</h2>
+                <SupportTable saveLoading={loading} />
+              </Card>
+            </div>
+          )}
         </Col>
-        <Col
-          xs={{ order: 3, span: 12 }}
-          md={{ order: 3, span: 12 }}
-          lg={{ order: 2, span: 8 }}
-        >
-          <Card>
-            <h2 className="mb-3">Issues List</h2>
-            <SupportTable saveLoading={loading} />
-          </Card>
-        </Col>
-        <Col
-          xs={{ order: 2, span: 12 }}
-          md={{ order: 2, span: 12 }}
-          lg={{ order: 3, span: 4 }}
-          className="mb-md-4"
-        >
+        <Col md={4} className="mb-md-4">
           <Card className={styles.stickyColumn}>
             <h2 className="mb-3">Submit Issue</h2>
             <FormGroup className="mb-3">
@@ -278,6 +274,14 @@ const SupportMainView = () => {
             </Form.Group>
           </Card>
         </Col>
+        {windowWidth < 992 && (
+          <Col xs={12} className="mt-4">
+            <Card>
+              <h2 className="mb-3">Issues List</h2>
+              <SupportTable saveLoading={loading} />
+            </Card>
+          </Col>
+        )}
       </Row>
     </>
   );

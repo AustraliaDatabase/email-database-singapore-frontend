@@ -27,6 +27,12 @@
       color: $primary;
       margin-right: 0.5rem;
     }
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid $primary;
+    background-color: rgba($color: $primary, $alpha: 0.1);
   }
   @include box-shadow(level-2);
   .headerRight {
