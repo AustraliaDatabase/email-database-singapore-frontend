@@ -1,0 +1,49 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.supportMsgCard {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: none;
+  background-color: $secondary;
+  color: $white;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("/support-bg-element.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @include breakpoint(tablet) {
+    flex-direction: column;
+    text-align: center;
+  }
+  div {
+    &:first-child {
+      max-width: 70%;
+      @include breakpoint(tablet) {
+        max-width: 100%;
+        order: 2;
+      }
+    }
+    &:last-child {
+      max-width: 40%;
+      @include breakpoint(tablet) {
+        max-width: 100%;
+        order: 1;
+      }
+    }
+  }
+  .msgTitle {
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.stickyColumn {
+  position: sticky;
+  top: 90px;
+}

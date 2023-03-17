@@ -17,6 +17,9 @@ import { triggerForm } from "../../services/internalServices";
 import { supportEmailSend } from "../../shared/emailSend";
 import SupportTable from "./views/supportTable/SupportTable";
 import instance from "../../services/baseServices";
+import Card from "../../shared/components/card/Card";
+import styles from "./supportMainView.module.scss";
+import { useWindowWidth } from "@react-hook/window-size";
 
 var utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
@@ -31,6 +34,8 @@ const SupportMainView = () => {
   const [sending, setSending] = useState(false);
 
   const { loggedInUser } = useRoot();
+
+  const windowWidth = useWindowWidth();
 
   const sendEmail = async (downloadURL: string) => {
     let userIpInfo = null;
@@ -180,11 +185,41 @@ const SupportMainView = () => {
 
   return (
     <>
-      {/* <h3>Support</h3> */}
-      <div className="dashboard-card p-4">
-        <h4>Please let us know how we may help you</h4>
-        <Row className="pt-3">
-          <Col md={6}>
+      <Row className="justify-content-md-center">
+        <Col md={8}>
+          <div className={styles.supportMsgCard}>
+            <div>
+              <h4 className={styles.msgTitle}>
+                Please let us know how we may help you
+              </h4>
+              <p>
+                From your account dashboard, you can download the lists you have
+                bought, manage your account details and find support for any
+                question you may have.
+              </p>
+            </div>
+            <div className="d-flex align-items-center justify-content-center">
+              <Image
+                src="/support-illustration.png"
+                width={280}
+                height={200}
+                alt="support welcome image"
+                objectFit="scale-down"
+              />
+            </div>
+          </div>
+          {windowWidth > 992 && (
+            <div>
+              <Card>
+                <h2 className="mb-3">Issues List</h2>
+                <SupportTable saveLoading={loading} />
+              </Card>
+            </div>
+          )}
+        </Col>
+        <Col md={4} className="mb-md-4">
+          <Card className={styles.stickyColumn}>
+            <h2 className="mb-3">Submit Issue</h2>
             <FormGroup className="mb-3">
               <Form.Label htmlFor="subject">
                 The type of issue you want our support with?
@@ -232,25 +267,22 @@ const SupportMainView = () => {
                 onClick={pressSupport}
                 disabled={loading}
                 loading={loading}
-                className="mt-3 mb-4"
+                className="mt-3 mb-4 w-100"
               >
                 Find Support
               </Button>
             </Form.Group>
+          </Card>
+        </Col>
+        {windowWidth < 992 && (
+          <Col xs={12} className="mt-4">
+            <Card>
+              <h2 className="mb-3">Issues List</h2>
+              <SupportTable saveLoading={loading} />
+            </Card>
           </Col>
-          <Col className="d-flex align-items-center justify-content-center">
-            <Image
-              width={300}
-              height={300}
-              layout="fixed"
-              src="/undraw_active_support_re_b7sj.svg"
-              alt="Support"
-            />
-          </Col>
-        </Row>
-
-        <SupportTable saveLoading={loading} />
-      </div>
+        )}
+      </Row>
     </>
   );
 };

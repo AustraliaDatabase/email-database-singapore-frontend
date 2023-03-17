@@ -224,6 +224,11 @@ button:focus:not(:focus-visible) {
   &__indicator-separator {
     display: none;
   }
+  &.my-accounts {
+    div {
+      padding-left: 0.8rem;
+    }
+  }
 }
 
 .search-select {

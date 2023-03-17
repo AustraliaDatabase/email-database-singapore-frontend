@@ -18,9 +18,7 @@ const BillingView = () => {
     setLoading(true);
 
     try {
-      const billingOrderList: any = await instance.post(
-        `billingList`
-      );
+      const billingOrderList: any = await instance.post(`billingList`);
       setBillingOrderList(billingOrderList.data);
       setLoading(false);
     } catch (error) {
@@ -50,7 +48,7 @@ const BillingView = () => {
 
   return (
     <div className="dashboard-card">
-      <h4>Your Payments</h4>
+      <h2 className="mb-3">Your Payments</h2>
       <div className="responsive-table">
         <table className="table table-striped">
           <thead>

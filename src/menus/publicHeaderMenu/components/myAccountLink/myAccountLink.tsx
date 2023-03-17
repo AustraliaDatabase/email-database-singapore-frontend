@@ -10,12 +10,8 @@ import { useRoot } from "../../../../shared/contexts/RootProvider";
 // import { auth } from "../../../../database/firebase";
 import classNames from "classnames";
 
-interface IMyAccount {
-  logoutVisible?: boolean;
-}
-
-const MyAccountLink = (props: IMyAccount) => {
-  const { logoutVisible } = props;
+const MyAccountLink = () => {
+  const [logoutVisible, setLogoutVisible] = useState(false);
   const { loggedInUser, setLoggedInUser } = useRoot();
   const pressLogout = () => {
     setUser(null);
@@ -23,8 +19,12 @@ const MyAccountLink = (props: IMyAccount) => {
     setLoggedInUser(null);
   };
 
+  const pressMyAccount = () => {
+    setLogoutVisible(!logoutVisible);
+  };
+
   return (
-    <div className={styles.myAccountWrapper}>
+    <div className={styles.myAccountWrapper} onClick={pressMyAccount}>
       <div className={styles.picture}>
         <Image
           src="/profile_dummy.jpg"

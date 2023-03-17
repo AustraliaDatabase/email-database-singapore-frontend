@@ -65,6 +65,7 @@ const OrderView = () => {
 
   return (
     <div className="dashboard-card">
+      <h2 className="mb-3">Orders</h2>
       <div className="responsive-table">
         <table className="table table-striped">
           <thead>
@@ -73,6 +74,7 @@ const OrderView = () => {
               <th>Date</th>
               <th>Status</th>
               <th>Total</th>
+              <th></th>
               <th></th>
             </tr>
           </thead>

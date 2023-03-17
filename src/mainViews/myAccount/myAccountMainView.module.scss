@@ -6,30 +6,35 @@
 }
 
 .picture {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 290px;
   overflow: hidden;
-  border-radius: 50%;
+  // border-radius: 50%;
   // border: 2px solid var(--fill);
+  background-color: var(--fill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .upload {
   position: absolute;
-  bottom: 0;
-  right: 1.5rem;
+  // bottom: 0;
+  top: 1rem;
+  right: 1rem;
   label {
     position: relative;
     width: 40px;
     height: 40px;
-  
+
     &:hover {
       button {
         transform: translateY(-2px);
-        
+
         background-color: lighten($color: $primary, $amount: 47);
       }
     }
-  
+
     input {
       opacity: 0;
       width: 40px;
@@ -39,7 +44,7 @@
       top: 0;
       left: 0;
     }
-  
+
     button {
       min-width: auto;
       width: 40px;
@@ -55,8 +60,49 @@
   margin-left: 20px;
 }
 
-.pictureWrapper{
+.pictureWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.icon {
+  color: $primary;
+  margin-right: 0.5rem;
+}
+
+.infoWrapper {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  margin-bottom: 1rem;
+}
+
+.userFormWrapper {
+  background-color: var(--fill);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  @include breakpoint(tablet) {
+    margin-top: 1.5rem;
+  }
+}
+
+.fieldWrapper {
+  position: relative;
+  span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include breakpoint(mobile) {
+      right: 15px;
+    }
+    svg {
+      color: $primary;
+    }
+  }
+}
+
+.input {
+  padding-left: 2.25rem !important;
 }

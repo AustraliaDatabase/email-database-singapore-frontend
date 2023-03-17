@@ -6,13 +6,12 @@
   width: 150px;
   position: absolute;
   border-radius: 5px;
-  // left: 50%;
-  // right: 50%;
-  // transform: translateX(-50%);
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
   @include box-shadow(level-2);
   z-index: 3;
   top: 40px;
-  right: 0;
 }
 
 .listItem {

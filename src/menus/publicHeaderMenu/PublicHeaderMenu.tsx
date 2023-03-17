@@ -232,7 +232,7 @@ const PublicHeaderMenu = () => {
           {!islogedin && (
             <NavButton
               toTop={toTop}
-              title={`${authLoading ? "Loading..." : "Login"}`}
+              title="Login"
               isPrimary={false}
               pressButton={pressLogin}
             />

@@ -23,7 +23,6 @@ const NavButton = (props: INavButton) => {
     toTop,
     pressButton,
     isUserMenu,
-    logoutVisible,
   } = props;
   return (
     <a href={url}>
@@ -39,7 +38,7 @@ const NavButton = (props: INavButton) => {
             <div>{title}</div>
           </>
         )}{" "}
-        {isUserMenu && <>{<MyAccountLink logoutVisible={logoutVisible} />}</>}
+        {isUserMenu && <>{<MyAccountLink />}</>}
         {description && <span>{description}</span>}
       </div>
     </a>
