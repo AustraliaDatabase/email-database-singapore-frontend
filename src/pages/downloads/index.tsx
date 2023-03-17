@@ -12,7 +12,7 @@ const DownloadsPage = () => (
       noindex
     />
     <DashboardLayout>
-      <h3>All Downloads</h3>
+      {/* <h3>All Downloads</h3> */}
       <AllDownloadsMainView />
     </DashboardLayout>
   </>

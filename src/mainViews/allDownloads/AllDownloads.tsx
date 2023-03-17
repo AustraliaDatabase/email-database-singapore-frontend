@@ -64,6 +64,7 @@ const AllDownloadsMainView = () => {
 
   return (
     <div className={styles.table}>
+      <h2 className="mb-3">Downloads</h2>
       <div className="responsive-table">
         <table className="table table-striped">
           <thead>
@@ -71,7 +72,7 @@ const AllDownloadsMainView = () => {
               <th>Name</th>
               <th>Expire Date</th>
               <th></th>
-              <th></th>
+              {/* <th></th> */}
             </tr>
           </thead>
           <tbody>
@@ -96,7 +97,9 @@ const AllDownloadsMainView = () => {
                 (childElement: any, index: number) => {
                   return (
                     <tr key={index}>
-                      <td className="td-field-inc-mobile">{childElement?.name}</td>
+                      <td className="td-field-inc-mobile">
+                        {childElement?.name}
+                      </td>
                       <td className="td-field-inc">
                         {dayjs(childElement?.expireDate).format(
                           "YYYY-MMM-DD / h:mm A"
