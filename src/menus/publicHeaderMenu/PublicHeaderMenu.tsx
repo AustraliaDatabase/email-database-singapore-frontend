@@ -58,7 +58,7 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
             <ul className={styles.sub}>
               {subMenu.map((link, index) => {
                 return (
-                  <Link passHref key={index} href={link.route}>
+                  <a key={index} href={link.route}>
                     <li
                       className={classNames({
                         [styles.active]: router.pathname === link.route,
@@ -87,16 +87,10 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
                           </ul>
                         </div>
                       ) : (
-                        <>
-                          <div className={styles.subMenu}>
-                            <span>
-                              {link.name} <CaretRight size={20} />
-                            </span>
-                          </div>
-                        </>
+                        link.name
                       )}
                     </li>
-                  </Link>
+                  </a>
                 );
               })}
             </ul>
