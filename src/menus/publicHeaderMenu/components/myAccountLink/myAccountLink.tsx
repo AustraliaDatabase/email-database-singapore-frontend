@@ -24,8 +24,8 @@ const MyAccountLink = () => {
   };
 
   return (
-    <div className={styles.myAccountWrapper}>
-      <div className={styles.picture} onClick={pressMyAccount}>
+    <div className={styles.myAccountWrapper} onClick={pressMyAccount}>
+      <div className={styles.picture}>
         <Image
           src="/profile_dummy.jpg"
           width={45}
@@ -34,7 +34,7 @@ const MyAccountLink = () => {
           alt="Profile picture"
         />
       </div>
-      <div className="d-flex align-items-center" onClick={pressMyAccount}>
+      <div className="d-flex align-items-center">
         <span
           className={classNames(
             "d-md-inline-block d-none pe-1",
