@@ -182,8 +182,8 @@ const SupportMainView = () => {
 
   return (
     <>
-      <Row className="pt-3">
-        <Col md={8}>
+      <Row className="pt-3 justify-content-md-center">
+        <Col md={12}>
           <div className={styles.supportMsgCard}>
             <div>
               <h4 className={styles.msgTitle}>
@@ -205,12 +205,23 @@ const SupportMainView = () => {
               />
             </div>
           </div>
+        </Col>
+        <Col
+          xs={{ order: 3, span: 12 }}
+          md={{ order: 3, span: 12 }}
+          lg={{ order: 2, span: 8 }}
+        >
           <Card>
             <h2 className="mb-3">Issues List</h2>
             <SupportTable saveLoading={loading} />
           </Card>
         </Col>
-        <Col md={4}>
+        <Col
+          xs={{ order: 2, span: 12 }}
+          md={{ order: 2, span: 12 }}
+          lg={{ order: 3, span: 4 }}
+          className="mb-md-4"
+        >
           <Card className={styles.stickyColumn}>
             <h2 className="mb-3">Submit Issue</h2>
             <FormGroup className="mb-3">

@@ -9,18 +9,30 @@
   box-shadow: none;
   background-color: $secondary;
   color: $white;
-  min-height: 250px;
+  min-height: 200px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-image: url("/support-bg-element.png");
   background-repeat: no-repeat;
   background-position: bottom right;
+
+  @include breakpoint(tablet) {
+    display: block;
+    text-align: center;
+  }
   div {
     &:first-child {
       max-width: 70%;
+      @include breakpoint(tablet) {
+        max-width: 100%;
+      }
     }
     &:last-child {
-      max-width: 30%;
+      max-width: 40%;
+      @include breakpoint(tablet) {
+        max-width: 100%;
+      }
     }
   }
   .msgTitle {
