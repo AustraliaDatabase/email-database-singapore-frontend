@@ -17,7 +17,7 @@ const CartModalEmpty = (props: ICartModalEmpty) => {
 
   const router = useRouter();
   const pressBuildList = () => {
-    router.push("/price-plans");
+    // router.push("/price-plans");
     setCartEnable(false);
   };
   return (
