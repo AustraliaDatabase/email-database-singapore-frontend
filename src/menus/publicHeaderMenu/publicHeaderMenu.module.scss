@@ -35,29 +35,30 @@ $withFraction: 1 / $navMenuCount;
     align-items: center;
     color: var(--text);
     border: none;
-    border-right: 1px solid var(--border-color);
-    @include breakpoint(tab-landscape-up) {
-      display: none;
+    display: none;
+    @include breakpoint(mobile) {
+      border-right: 1px solid var(--border-color);
+      display: block;
     }
   }
 
   .main {
-    position: fixed;
-    height: 300px;
-    max-height: 0px;
-    width: 100%;
+    // position: fixed;
+    // height: 300px;
+    // max-height: 0px;
+    // width: 100%;
     background-color: var(--card-background);
     top: 58px;
     left: 0;
     list-style: none;
     color: var(--black);
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     padding: 0;
-    overflow: hidden;
+    // overflow: hidden;
     transition: max-height 0.4s ease-in-out;
     border-left: 1px solid rgb(231, 231, 231);
-    @include box-shadow(level-2);
+    // @include box-shadow(level-2);
     &.show {
       max-height: 100vh;
       background-color: $white;
@@ -78,7 +79,7 @@ $withFraction: 1 / $navMenuCount;
     }
 
     & > li {
-      display: flex;
+      display: inline-flex;
       font-weight: 500;
       font-size: 16px;
       padding: 1rem 1.25rem;
@@ -102,6 +103,12 @@ $withFraction: 1 / $navMenuCount;
       &:hover {
         background: rgba(242, 79, 15, 0.06);
         overflow: visible;
+        .sub {
+          @include breakpoint(tablet) {
+            visibility: visible;
+            display: grid;
+          }
+        }
         a {
           & > ul {
             opacity: 1;
@@ -146,16 +153,25 @@ $withFraction: 1 / $navMenuCount;
         position: relative;
         padding: 1.5rem;
         z-index: 2;
+        @include box-shadow(level-2);
+        width: 620px;
+        border-radius: 4px;
+        @include breakpoint(tablet) {
+          position: fixed;
+          display: none;
+          visibility: hidden;
+          background-color: white;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 60px;
+        }
         @include breakpoint(tab-landscape-up) {
           position: absolute;
-          width: 620px;
           background-color: white;
-          top: 100%;
+          top: 90%;
           transform: translateY(-5px);
           left: 50%;
           transform: translateX(-50%);
-          @include box-shadow(level-2);
-          border-radius: 4px;
           opacity: 0;
           transition-property: opacity;
           transition: 0.24s ease;
@@ -169,6 +185,7 @@ $withFraction: 1 / $navMenuCount;
           display: block;
           color: $secondary;
           display: block;
+          // display: none;
           div {
             display: flex;
             align-items: center;
