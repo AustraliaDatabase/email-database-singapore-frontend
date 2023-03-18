@@ -3,7 +3,7 @@
 
 .wrapper {
   background-color: $white;
-  width: 150px;
+  width: 200px;
   position: absolute;
   border-radius: 5px;
   left: 50%;
@@ -12,10 +12,14 @@
   @include box-shadow(level-2);
   z-index: 3;
   top: 40px;
+  padding: 0.5rem;
 }
 
 .listItem {
-  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0px 10px;
   height: 40px;
   line-height: 40px;
   cursor: pointer;
@@ -23,9 +27,13 @@
   color: $secondary;
   font-weight: 500;
   transition: color 0.1s ease;
+  border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.15);
+  &:last-child {
+    border-bottom: none;
+  }
   &:hover {
     color: $primary;
-    background-color: lighten($color: $primary, $amount: 45);
+    // background-color: lighten($color: $primary, $amount: 45);
 
     &:first-child {
       border-top-right-radius: 5px;
