@@ -144,17 +144,16 @@ $withFraction: 1 / $navMenuCount;
 
       .sub {
         position: relative;
-        padding: 1rem;
+        padding: 1.5rem;
         z-index: 2;
         @include breakpoint(tab-landscape-up) {
           position: absolute;
-          width: calc(100% + 80px);
-          display: block;
+          width: 620px;
           background-color: white;
           top: 100%;
           transform: translateY(-5px);
-          left: -20px;
-          padding: 0.5rem 0;
+          left: 50%;
+          transform: translateX(-50%);
           @include box-shadow(level-2);
           border-radius: 4px;
           opacity: 0;
@@ -162,22 +161,47 @@ $withFraction: 1 / $navMenuCount;
           transition: 0.24s ease;
         }
 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1rem;
         li {
           list-style: none;
           display: block;
-          padding: 0.5rem 1rem;
           color: $secondary;
+          display: block;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .menuIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 55px;
+              height: 55px;
+              background-color: rgba($color: $primary, $alpha: 0.1);
+              border-radius: 0.5rem;
+              position: relative;
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: $primary;
+                border-radius: 1rem;
+                right: 5px;
+                top: 10px;
+              }
+            }
+          }
           &:hover {
             color: $primary !important;
-            background: rgba(242, 79, 15, 0.06);
             span {
               svg {
                 transform: rotate(90deg);
               }
-            }
-
-            ul {
-              display: block;
             }
           }
           position: relative;
@@ -320,9 +344,7 @@ $withFraction: 1 / $navMenuCount;
 }
 
 .active {
-  background-color: var(--primary);
-  color: $white !important;
-
+  color: $primary !important;
   &:hover {
     background-color: transparent;
     color: var(--primary);
