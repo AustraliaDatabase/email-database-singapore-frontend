@@ -43,26 +43,34 @@ $withFraction: 1 / $navMenuCount;
   }
 
   .main {
-    // position: fixed;
-    // height: 300px;
-    // max-height: 0px;
-    // width: 100%;
+    @include breakpoint(mobile) {
+      position: fixed;
+      height: 300px;
+      max-height: 0;
+      width: 100%;
+    }
     background-color: var(--card-background);
     top: 58px;
     left: 0;
     list-style: none;
     color: var(--black);
-    // display: flex;
-    // flex-direction: column;
+    @include breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      @include box-shadow(level-2);
+    }
     padding: 0;
-    // overflow: hidden;
     transition: max-height 0.4s ease-in-out;
     border-left: 1px solid rgb(231, 231, 231);
-    // @include box-shadow(level-2);
     &.show {
-      max-height: 100vh;
+      max-height: max-content;
       background-color: $white;
       border-left: none;
+      @include breakpoint(mobile) {
+        min-height: 100vh;
+        max-height: 100vh;
+      }
     }
 
     @include breakpoint(tab-landscape-up) {
@@ -165,6 +173,18 @@ $withFraction: 1 / $navMenuCount;
           transform: translateX(-50%);
           top: 60px;
         }
+        @include breakpoint(mobile) {
+          position: static;
+          display: grid;
+          background-color: transparent;
+          grid-template-columns: repeat(1, 1fr);
+          visibility: visible;
+          box-shadow: none;
+          width: 100%;
+          left: 0;
+          transform: translateX(0);
+          top: 0;
+        }
         @include breakpoint(tab-landscape-up) {
           position: absolute;
           background-color: white;
@@ -185,7 +205,6 @@ $withFraction: 1 / $navMenuCount;
           display: block;
           color: $secondary;
           display: block;
-          // display: none;
           div {
             display: flex;
             align-items: center;
