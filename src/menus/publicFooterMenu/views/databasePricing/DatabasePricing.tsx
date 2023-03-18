@@ -21,7 +21,7 @@ const DatabasePricing = (props: IDatabasePricing) => {
 
   return (
     <Col md xs={6} className={styles.databasePricingWrapper}>
-      <span>{title}</span>
+      <span className={styles.title}>{title}</span>
       <Row className={styles.priceList}>
         <Col className={styles.priceColumnLeft}>
           {list.map((priceListItem: any, index: number) => {
