@@ -124,7 +124,7 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
-      <FloatingMenu maxTopAgain={200} floatingMenus={HomeSeed.floatingMenu} />
+      {/* <FloatingMenu maxTopAgain={200} floatingMenus={HomeSeed.floatingMenu} /> */}
       {/* <FloatingMenu menuList={HomeSeed.floatingMenu} /> */}
       {/* <section className="pb-0">
         <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />

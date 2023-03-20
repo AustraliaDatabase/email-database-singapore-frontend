@@ -53,7 +53,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
           />
         </section>
       )}
-      <FloatingMenu
+      {/* <FloatingMenu
         menuList={
           databaseMainType === DATABASE_MAIN_TYPES.COMPANY_DATABASE_OLD ||
           databaseMainType === DATABASE_MAIN_TYPES.REALTOR_OLD ||
@@ -61,7 +61,7 @@ const MainProductMainView = (props: IMainProductMainView) => {
             ? FLOATING_MENU_OLD
             : FLOATING_MENU
         }
-      />
+      /> */}
       {/* <div style={{ paddingTop: 150 }}>
         <TrustPilot title={currentObject?.review?.title} />
       </div> */}

@@ -51,9 +51,9 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
             />
           </Container>
         </section>
-        <section className="py-0">
+        {/* <section className="py-0">
           <FloatingMenu menuList={Seeds.floatingMenu} />
-        </section>
+        </section> */}
         <section>
           <Container>
             <Table

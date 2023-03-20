@@ -45,7 +45,7 @@ const ConsumerEmailsPage = (props: IConsumerEmailsPage) => {
             />
           </Container>
         </section>
-        <FloatingMenu menuList={Seeds.floatingMenu} />
+        {/* <FloatingMenu menuList={Seeds.floatingMenu} /> */}
         <section>
           <Container>
             <Table

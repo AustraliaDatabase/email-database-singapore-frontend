@@ -35,33 +35,42 @@ $withFraction: 1 / $navMenuCount;
     align-items: center;
     color: var(--text);
     border: none;
-    border-right: 1px solid var(--border-color);
-    @include breakpoint(tab-landscape-up) {
-      display: none;
+    display: none;
+    @include breakpoint(mobile) {
+      border-right: 1px solid var(--border-color);
+      display: block;
     }
   }
 
   .main {
-    position: fixed;
-    height: 300px;
-    max-height: 0px;
-    width: 100%;
+    @include breakpoint(mobile) {
+      position: fixed;
+      height: 300px;
+      max-height: 0;
+      width: 100%;
+    }
     background-color: var(--card-background);
     top: 58px;
     left: 0;
     list-style: none;
     color: var(--black);
-    display: flex;
-    flex-direction: column;
+    @include breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      @include box-shadow(level-2);
+    }
     padding: 0;
-    overflow: hidden;
     transition: max-height 0.4s ease-in-out;
     border-left: 1px solid rgb(231, 231, 231);
-    @include box-shadow(level-2);
     &.show {
-      max-height: 100vh;
+      max-height: max-content;
       background-color: $white;
       border-left: none;
+      @include breakpoint(mobile) {
+        min-height: 100vh;
+        max-height: 100vh;
+      }
     }
 
     @include breakpoint(tab-landscape-up) {
@@ -78,7 +87,7 @@ $withFraction: 1 / $navMenuCount;
     }
 
     & > li {
-      display: flex;
+      display: inline-flex;
       font-weight: 500;
       font-size: 16px;
       padding: 1rem 1.25rem;
@@ -102,6 +111,12 @@ $withFraction: 1 / $navMenuCount;
       &:hover {
         background: rgba(242, 79, 15, 0.06);
         overflow: visible;
+        .sub {
+          @include breakpoint(tablet) {
+            visibility: visible;
+            display: grid;
+          }
+        }
         a {
           & > ul {
             opacity: 1;
@@ -144,40 +159,85 @@ $withFraction: 1 / $navMenuCount;
 
       .sub {
         position: relative;
-        padding: 1rem;
+        padding: 1.5rem;
         z-index: 2;
+        @include box-shadow(level-2);
+        width: 620px;
+        border-radius: 4px;
+        @include breakpoint(tablet) {
+          position: fixed;
+          display: none;
+          visibility: hidden;
+          background-color: white;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 60px;
+        }
+        @include breakpoint(mobile) {
+          position: static;
+          display: grid;
+          background-color: transparent;
+          grid-template-columns: repeat(1, 1fr);
+          visibility: visible;
+          box-shadow: none;
+          width: 100%;
+          left: 0;
+          transform: translateX(0);
+          top: 0;
+        }
         @include breakpoint(tab-landscape-up) {
           position: absolute;
-          width: calc(100% + 80px);
-          display: block;
           background-color: white;
-          top: 100%;
+          top: 90%;
           transform: translateY(-5px);
-          left: -20px;
-          padding: 0.5rem 0;
-          @include box-shadow(level-2);
-          border-radius: 4px;
+          left: 50%;
+          transform: translateX(-50%);
           opacity: 0;
           transition-property: opacity;
           transition: 0.24s ease;
         }
 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1rem;
         li {
           list-style: none;
           display: block;
-          padding: 0.5rem 1rem;
           color: $secondary;
+          display: block;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .menuIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 55px;
+              height: 55px;
+              background-color: rgba($color: $primary, $alpha: 0.1);
+              border-radius: 0.5rem;
+              position: relative;
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: $primary;
+                border-radius: 1rem;
+                right: 5px;
+                top: 10px;
+              }
+            }
+          }
           &:hover {
             color: $primary !important;
-            background: rgba(242, 79, 15, 0.06);
             span {
               svg {
                 transform: rotate(90deg);
               }
-            }
-
-            ul {
-              display: block;
             }
           }
           position: relative;
@@ -320,9 +380,7 @@ $withFraction: 1 / $navMenuCount;
 }
 
 .active {
-  background-color: var(--primary);
-  color: $white !important;
-
+  color: $primary !important;
   &:hover {
     background-color: transparent;
     color: var(--primary);

@@ -45,7 +45,7 @@ const MainProductViewListOfEmail = (props: IMainProductViewListOfEmail) => {
           />
         </section>
       )}
-      <FloatingMenu menuList={FLOATING_MENU_LIST_OF_US_COMPANIES} />
+      {/* <FloatingMenu menuList={FLOATING_MENU_LIST_OF_US_COMPANIES} /> */}
       {/* <div style={{ paddingTop: 150 }}>
         <TrustPilot title={currentObject?.review?.title} />
       </div> */}

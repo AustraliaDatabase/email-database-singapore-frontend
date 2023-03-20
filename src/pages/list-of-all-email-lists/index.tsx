@@ -47,7 +47,7 @@ const CompanyByStatePage = (props: any) => {
             />
           </Container>
         </section>
-        <FloatingMenu menuList={Seeds.floatingMenu} />
+        {/* <FloatingMenu menuList={Seeds.floatingMenu} /> */}
         <section>
           <Container>
             <Table

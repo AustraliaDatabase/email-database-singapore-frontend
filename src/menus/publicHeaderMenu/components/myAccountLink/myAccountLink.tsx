@@ -1,4 +1,11 @@
-import { CaretDown } from "phosphor-react";
+import {
+  CaretDown,
+  CloudArrowDown,
+  Desktop,
+  ListPlus,
+  SignOut,
+  User,
+} from "phosphor-react";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,6 +29,9 @@ const MyAccountLink = () => {
   const pressMyAccount = () => {
     setLogoutVisible(!logoutVisible);
   };
+
+  // my account links icon size
+  const iconSize = 20;
 
   return (
     <div className={styles.myAccountWrapper} onClick={pressMyAccount}>
@@ -52,18 +62,31 @@ const MyAccountLink = () => {
       {logoutVisible && (
         <div className={styles.wrapper}>
           <Link passHref={true} href="/dashboard">
-            <div className={styles.listItem}>Dashboard</div>
+            <div className={styles.listItem}>
+              <Desktop size={iconSize} />
+              Dashboard
+            </div>
           </Link>
           <Link passHref={true} href="/orders">
-            <div className={styles.listItem}>My Orders</div>
+            <div className={styles.listItem}>
+              <ListPlus size={iconSize} />
+              My Orders
+            </div>
           </Link>
           <Link passHref={true} href="/downloads">
-            <div className={styles.listItem}>Downloads</div>
+            <div className={styles.listItem}>
+              <CloudArrowDown size={iconSize} />
+              Downloads
+            </div>
           </Link>
           <Link passHref={true} href="/my-account">
-            <div className={styles.listItem}>Account</div>
+            <div className={styles.listItem}>
+              <User size={iconSize} />
+              Account
+            </div>
           </Link>
           <div className={styles.listItem} onClick={pressLogout}>
+            <SignOut size={iconSize} />
             Logout
           </div>
         </div>
