@@ -21,15 +21,22 @@
     @include breakpoint(tab-landscape-up) {
       margin-bottom: 0px;
     }
+    @include breakpoint(mobile) {
+      margin-top: 1rem;
+    }
   }
 
   .menuWrapper {
     display: flex;
     flex-wrap: wrap;
     padding: 0 2rem;
+    margin-top: 3rem;
     gap: 1.5rem;
-    align-self: flex-end;
+    align-self: flex-start;
     align-items: flex-end;
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
   }
 
   span {

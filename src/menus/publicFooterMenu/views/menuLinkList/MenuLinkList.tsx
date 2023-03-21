@@ -10,11 +10,11 @@ const MenuLinkList = () => (
   <Col className={styles.wrapper}>
     <div className={styles.payments}>
       <Image
-        width={255}
-        height={30}
+        width={191}
+        height={46}
         objectPosition="center"
-        objectFit="contain"
-        src="/payments.png"
+        objectFit="scale-down"
+        src="/coin-payment.png"
         alt="paypal"
       />
     </div>
