@@ -15,7 +15,7 @@ const MenuLinkList = () => (
         objectPosition="center"
         objectFit="scale-down"
         src="/coin-payment.png"
-        alt="paypal"
+        alt="Coin Payment"
       />
     </div>
     <div className={styles.menuWrapper}>
