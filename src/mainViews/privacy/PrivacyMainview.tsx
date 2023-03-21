@@ -1,11 +1,14 @@
 import React from "react";
+import classNames from "classnames";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
+import styles from "./styles.module.scss"
+
 const PrivacyMainView = () => {
   return (
-    <Container className="static-content">
+    <Container className={classNames("static-content", styles.sectionFix)}>
       <Row className="justify-content-center">
         <Col md={10}>
           <h1 className="text-center">
@@ -15,7 +18,7 @@ const PrivacyMainView = () => {
             are outlined in this document
           </h1>
           <p>
-            In our capacity as UsCompanyData (“The Company”), the privacy and
+            In our capacity as EmailDatas (“The Company”), the privacy and
             security of your data are of the utmost importance to us.
           </p>
           <p>
@@ -124,8 +127,8 @@ const PrivacyMainView = () => {
           </section>
           <section>
             <h2>3. Withdrawing your Consent or Request of Deletion</h2>
-            <p><b>For purposes of the GDPR,</b> you may withdraw your permission in whole or in part at any time by notifying us via info@uscompanydata.com or using the contact form on our Website.</p>
-            <p><b>For purposes of the CCPA,</b> you may request that your personal information be deleted by sending an email to data info@uscompanydata.com or by selecting the “Do Not Sell My Personal Information” link and completing the form.</p>
+            <p><b>For purposes of the GDPR,</b> you may withdraw your permission in whole or in part at any time by notifying us via info@EmailDatas.com or using the contact form on our Website.</p>
+            <p><b>For purposes of the CCPA,</b> you may request that your personal information be deleted by sending an email to data info@EmailDatas.com or by selecting the “Do Not Sell My Personal Information” link and completing the form.</p>
           </section>
           <section>
             <h2>4. Your information will only be disclosed to such third parties if and when it is absolutely necessary.</h2>
@@ -273,7 +276,7 @@ const PrivacyMainView = () => {
               <Col md={6}>
                 <div className="dashboard-card p-4">
                   <h2>Contact Us</h2>
-                  <p>All inquiries, complaints, and requests regarding this Privacy Statement should be directed to: <a href="mailto:info@uscompanydata.com">info@uscompanydata.com</a> Phone: <a href="tel:+1 (417) 460-7761">+1 (417) 460-7761</a></p>
+                  <p>All inquiries, complaints, and requests regarding this Privacy Statement should be directed to: <a href="mailto:info@emaildatas.com">info@emaildatas.com</a> Phone: <a href="tel:+1 (417) 460-7761">+1 (417) 460-7761</a></p>
                 </div>
               </Col>
             </Row>
