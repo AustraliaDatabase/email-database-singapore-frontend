@@ -1,0 +1,9 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.faqSection {
+  padding-top: 200px;
+  @include breakpoint(tablet){
+    padding-top: 100px;
+  }
+}
