@@ -13,8 +13,9 @@
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: $title-font;
+    text-decoration: underline;
     line-height: 27px;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -22,7 +23,7 @@
   }
 
   .priceList {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
     a {
       color: white;
@@ -41,5 +42,6 @@
 
   .seeMoreText {
     padding-top: 1.5rem;
+    color: $primary;
   }
 }
