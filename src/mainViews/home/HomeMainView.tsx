@@ -34,94 +34,17 @@ import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/Why
 import HomeSourceView from "./views/sourceView/HomeSourceView";
 import styles from "./homeMainView.module.scss";
 import BottomBanner from "./views/bottomBanner/BottomBanner";
+import HeroBanner from "./views/hero/HeroBanner";
 
 const HomeMainView = () => {
   return (
     <>
-      <section className={styles.hero}>
-        <Container>
-          <Row>
-            <Col
-              md={12}
-              lg={7}
-              className={classNames(
-                styles.titles,
-                "text-center",
-                "text-md-start"
-              )}
-            >
-              <Row>
-                <Col
-                  className="p-lg-0"
-                  xs={{ order: 1, span: 12 }}
-                  lg={{ order: 1, span: 12 }}
-                >
-                  <div
-                    className={styles.heroCaption}
-                    dangerouslySetInnerHTML={{
-                      __html: CURRENT_OBJECT_HOME?.banner?.caption,
-                    }}
-                  />
-                  <div
-                    className={styles.heroTitle}
-                    dangerouslySetInnerHTML={{
-                      __html: CURRENT_OBJECT_HOME.banner.title,
-                    }}
-                  ></div>
-                </Col>
-                <Col
-                  className="p-lg-0"
-                  xs={{ order: 3, span: 12 }}
-                  lg={{ order: 2, span: 12 }}
-                >
-                  <div
-                    className="mt-2 mb-lg-5"
-                    dangerouslySetInnerHTML={{
-                      __html: CURRENT_OBJECT_HOME.banner.description,
-                    }}
-                  />
-                </Col>
-
-                <Col
-                  className="p-lg-0"
-                  xs={{ order: 2, span: 12 }}
-                  lg={{ order: 3, span: 12 }}
-                >
-                  <Row>
-                    <Col>
-                      <ScrollLink to="#productType" offset={-200}>
-                        <Button
-                          className={styles.bannerBtn}
-                          size="large"
-                          variant={BUTTON_VARIANT_ENUM.Primary}
-                          icon={<Buildings weight="fill" size={24} />}
-                        >
-                          Explore the Products
-                        </Button>
-                      </ScrollLink>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Col>
-            {/* <Col
-              md={12}
-              lg={6}
-              className={classNames(styles.banner, "mt-5 mt-lg-0")}
-            >
-              <Image
-                width={650}
-                height={400}
-                objectFit="scale-down"
-                layout="fixed"
-                objectPosition="center"
-                src="/dashboard.png"
-                alt="dashboard"
-              />
-            </Col> */}
-          </Row>
-        </Container>
-      </section>
+      <HeroBanner
+        caption={CURRENT_OBJECT_HOME.banner.caption}
+        title={CURRENT_OBJECT_HOME.banner.title}
+        description={CURRENT_OBJECT_HOME.banner.description}
+      />
+      
       {/* <FloatingMenu maxTopAgain={200} floatingMenus={HomeSeed.floatingMenu} /> */}
       {/* <FloatingMenu menuList={HomeSeed.floatingMenu} /> */}
       {/* <section className="pb-0">
