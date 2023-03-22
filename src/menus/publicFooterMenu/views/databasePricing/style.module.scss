@@ -24,6 +24,7 @@
 
   .priceList {
     margin-top: 1.5rem;
+    height: 135px;
 
     a {
       color: white;
@@ -38,6 +39,9 @@
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
+    div {
+      flex: 0 0;
+    }
   }
 
   .seeMoreText {
