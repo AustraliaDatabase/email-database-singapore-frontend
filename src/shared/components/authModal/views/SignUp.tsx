@@ -13,7 +13,11 @@ import {
 // import Reaptcha from "reaptcha";
 
 import Button from "../../button/Button";
-import { validateRequired } from "../../../InternalService";
+import {
+  validateRequired,
+  emailValidation,
+  passwordValidation,
+} from "../../../InternalService";
 import { useRoot } from "../../../contexts/RootProvider";
 import { createAccount } from "../../../emailSend";
 import { triggerForm } from "../../../../services/internalServices";
@@ -106,7 +110,7 @@ const SignUp = (props: ISignup) => {
                   id="email"
                   name="email"
                   placeholder="Jhon@gmail.com"
-                  validate={validateRequired}
+                  validate={emailValidation}
                   className="ps-5"
                 />
                 <AsTag>
@@ -126,7 +130,7 @@ const SignUp = (props: ISignup) => {
                   id="password"
                   name="password"
                   placeholder="*******"
-                  validate={validateRequired}
+                  validate={passwordValidation}
                   className="ps-5"
                 />
                 <AsTag>
