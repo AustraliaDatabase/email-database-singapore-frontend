@@ -28,9 +28,9 @@ import LeadsLibraryResource from "../../shared/components/leadsLibraryResource/L
 import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsExplain";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
 import HomeSourceView from "./views/sourceView/HomeSourceView";
-import styles from "./homeMainView.module.scss";
 import BottomBanner from "./views/bottomBanner/BottomBanner";
 import HeroBanner from "./views/hero/HeroBanner";
+import styles from "./homeMainView.module.scss";
 
 const HomeMainView = () => {
   return (
