@@ -60,6 +60,9 @@
 
 .fieldWrapper {
   position: relative;
+  svg {
+    color: $primary;
+  }
   span {
     position: absolute;
     left: 10px;
@@ -71,6 +74,9 @@
       left: unset;
       right: 10px;
       cursor: pointer;
+      svg {
+        color: $secondary;
+      }
     }
   }
 }
