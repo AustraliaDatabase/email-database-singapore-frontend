@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 
 import { useRoot } from "../../contexts/RootProvider";
@@ -13,6 +13,8 @@ const AuthModal = () => {
   const { authEnable, setAuthEnable, loginVisible, setLoginVisible } =
     useRoot();
 
+  const [passToggle, setPassToggle] = useState(false);
+
   const pressClose = () => {
     setAuthEnable(false);
   };
@@ -23,6 +25,10 @@ const AuthModal = () => {
 
   const pressSignUpTab = () => {
     setLoginVisible(false);
+  };
+
+  const pressPassToggler = () => {
+    setPassToggle(!passToggle);
   };
 
   return (
@@ -88,7 +94,11 @@ const AuthModal = () => {
           </div>
           <div className="pt-3">
             {loginVisible ? (
-              <Login pressSignUp={pressSignUpTab} />
+              <Login
+                pressToggle={pressPassToggler}
+                toggleValue={passToggle}
+                pressSignUp={pressSignUpTab}
+              />
             ) : (
               <SignUp pressLogin={pressLoginTab} />
             )}

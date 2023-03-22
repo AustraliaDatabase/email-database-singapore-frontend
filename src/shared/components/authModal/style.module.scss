@@ -78,3 +78,20 @@
 .action {
   min-width: 40%;
 }
+
+.fieldWrapper {
+  position: relative;
+  span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.passToggler {
+      position: absolute;
+      left: unset;
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+}
