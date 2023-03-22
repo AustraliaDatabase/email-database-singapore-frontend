@@ -4,10 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 // import Card from "react-bootstrap/Card";
 import classNames from "classnames";
-import { Link as ScrollLink } from "react-scroll";
-import { Buildings } from "phosphor-react";
 
-import Button from "../../shared/components/button/Button";
 import FeatureCard from "../../shared/components/featureCard/FeatureCard";
 // import SideTab from "../../shared/components/sideTab/SideTab";
 import HomeSeed from "./homeSeeds";
@@ -22,7 +19,6 @@ import { CURRENT_OBJECT_HOME } from "./constants";
 import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import {
-  BUTTON_VARIANT_ENUM,
   DATABASE_MAIN_TYPES,
   FEATURE_CARD_VARIANT,
 } from "../../shared/enums";
@@ -44,7 +40,7 @@ const HomeMainView = () => {
         title={CURRENT_OBJECT_HOME.banner.title}
         description={CURRENT_OBJECT_HOME.banner.description}
       />
-      
+
       {/* <FloatingMenu maxTopAgain={200} floatingMenus={HomeSeed.floatingMenu} /> */}
       {/* <FloatingMenu menuList={HomeSeed.floatingMenu} /> */}
       {/* <section className="pb-0">
