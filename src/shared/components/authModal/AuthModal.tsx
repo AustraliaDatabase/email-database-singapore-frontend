@@ -100,7 +100,11 @@ const AuthModal = () => {
                 pressSignUp={pressSignUpTab}
               />
             ) : (
-              <SignUp pressLogin={pressLoginTab} />
+              <SignUp
+                pressToggle={pressPassToggler}
+                toggleValue={passToggle}
+                pressLogin={pressLoginTab}
+              />
             )}
           </div>
         </Col>

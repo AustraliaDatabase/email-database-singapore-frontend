@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
+import { EnvelopeSimpleOpen, Eye, EyeSlash, Password } from "phosphor-react";
 import { Formik, Field, Form as FormikForm } from "formik";
 
 import Button from "../../button/Button";
@@ -9,7 +10,6 @@ import { useRoot } from "../../../contexts/RootProvider";
 import { Col, Row } from "react-bootstrap";
 import { setUser } from "../../../../services/helpers/tokenService";
 import styles from "../style.module.scss";
-import { EnvelopeSimpleOpen, Eye, EyeSlash, Password } from "phosphor-react";
 interface ILogin {
   toggleValue: boolean;
   pressSignUp: () => void;
@@ -97,9 +97,6 @@ const Login = (props: ILogin) => {
                   validate={validateRequired}
                   className="ps-5"
                 />
-                <AsTag>
-                  <Password size={22} />
-                </AsTag>
                 <AsTag>
                   <Password size={22} />
                 </AsTag>

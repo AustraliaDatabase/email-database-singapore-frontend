@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { registerUser } from "../../../../database/Authentication";
 import { Formik, Field, Form as FormikForm } from "formik";
 import Form from "react-bootstrap/Form";
+import {
+  EnvelopeSimpleOpen,
+  Eye,
+  EyeSlash,
+  Password,
+  User,
+} from "phosphor-react";
 // import ReCAPTCHA from "react-google-recaptcha";
 // import Reaptcha from "reaptcha";
 
@@ -12,13 +19,16 @@ import { createAccount } from "../../../emailSend";
 import { triggerForm } from "../../../../services/internalServices";
 // import { ADMIN_EMAILS } from "../../../constants";
 import { setUser } from "../../../../services/helpers/tokenService";
+import styles from "../style.module.scss";
 
 interface ISignup {
   pressLogin: () => void;
+  pressToggle: () => void;
+  toggleValue: boolean;
 }
 
 const SignUp = (props: ISignup) => {
-  const { pressLogin } = props;
+  const { pressLogin, pressToggle, toggleValue } = props;
   const { setAuthLoading, setAuthEnable, setLoggedInUser } = useRoot();
   const [loading, setLoading] = useState(false);
   // const [capchaValue, setCapchaValue] = useState<string | null>("");
@@ -38,6 +48,8 @@ const SignUp = (props: ISignup) => {
   const loginCallBackFail = () => {
     setLoading(false);
   };
+
+  const AsTag = "span";
 
   return (
     <div>
@@ -69,39 +81,61 @@ const SignUp = (props: ISignup) => {
           <FormikForm>
             <Form.Group className="mb-3">
               <Form.Label htmlFor="userName">Name</Form.Label>
-              <Field
-                type="text"
-                id="userName"
-                name="userName"
-                placeholder="Jhon"
-                validate={validateRequired}
-              />
+              <AsTag className={styles.fieldWrapper}>
+                <Field
+                  type="text"
+                  id="userName"
+                  name="userName"
+                  placeholder="Jhon"
+                  validate={validateRequired}
+                  className="ps-5"
+                />
+                <AsTag>
+                  <User size={22} />
+                </AsTag>
+              </AsTag>
               {errors.userName && (
                 <Form.Text className="text-danger">{errors.userName}</Form.Text>
               )}
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label htmlFor="email">Email</Form.Label>
-              <Field
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Jhon@gmail.com"
-                validate={validateRequired}
-              />
+              <AsTag className={styles.fieldWrapper}>
+                <Field
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Jhon@gmail.com"
+                  validate={validateRequired}
+                  className="ps-5"
+                />
+                <AsTag>
+                  <EnvelopeSimpleOpen size={22} />
+                </AsTag>
+              </AsTag>
+
               {errors.email && (
                 <Form.Text className="text-danger">{errors.email}</Form.Text>
               )}
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label htmlFor="password">Password</Form.Label>
-              <Field
-                type="password"
-                id="password"
-                name="password"
-                placeholder="*******"
-                validate={validateRequired}
-              />
+              <AsTag className={styles.fieldWrapper}>
+                <Field
+                  type={toggleValue ? "text" : "password"}
+                  id="password"
+                  name="password"
+                  placeholder="*******"
+                  validate={validateRequired}
+                  className="ps-5"
+                />
+                <AsTag>
+                  <Password size={22} />
+                </AsTag>
+                <AsTag className={styles.passToggler} onClick={pressToggle}>
+                  {toggleValue ? <EyeSlash size={22} /> : <Eye size={22} />}
+                </AsTag>
+              </AsTag>
               {errors.password && (
                 <Form.Text className="text-danger">{errors.password}</Form.Text>
               )}
