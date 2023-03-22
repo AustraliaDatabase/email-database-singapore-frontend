@@ -1,95 +1,107 @@
 import React from "react";
+import classNames from "classnames";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
+import styles from "./styles.module.scss";
+
 const TermsMainView = () => {
   return (
-    <Container className="static-content">
+    <Container className={classNames("static-content", styles.sectionFix)}>
       <Row className="justify-content-center">
         <Col md={10}>
           <h1 className="text-center">Terms and Conditions</h1>
-          <p>This Agreement establishes the legally enforceable terms of your use of the services and facilities provided by UsCompanyData to you (hereafter referred to as “End User,” “You,” or “Buyer”). It may be updated by UsCompanyData at any time, with such revisions taking effect upon publication of the amended Agreement.</p>
-          <p>By obtaining, using, and/or registering for the Service offered by UsCompanyData (hereinafter referred to as the “Service”), you acknowledge that you have learn and comprehend this End User Terms of Service and all of its content and structure (hereinafter referred to as this “Agreement”), intend this Agreement to be the moral equivalent of a signed, written agreement and equally binding, and that you will be subject to terms and conditions outlined in this Contract.</p>
-          <p>You undertake to check the Agreement regularly to stay informed of any such modifications, additions, deletions, or other revisions, and your continuing access, purchase, and/or use of the Service will be considered your acceptance of the updated Agreement.</p>
+          <p>
+            Welcome to EmailDatas, the premier provider of email marketing
+            services to help grow your business. By using our services, you
+            agree to be bound by the following terms and conditions:
+          </p>
           <section>
-            <h2>THE PARTIES</h2>
-            <p><b>A.</b> In all transactions conducted through the Official Site, the User agrees to abide by the Terms and any other provisions published on the Website from time to time and any relevant laws. The User agrees not to act in a manner that may impair the function of the Official site or cause it to become unresponsive. When conducting commercial activities, the User is required to comply with all provisions of the Non-Solicited Pornography and Marketing Act of 2003 (also known as the “Can Spam Act”), the General Data Protection Regulation (“GDPR”), and/or any other applicable legislation (collectively, “Applicable Laws”) that are relevant to his commercial activities.</p>
-            <p><b>B.</b> The User shall be entirely responsible for the use and management of any information obtained from the Site and for protecting the privacy and security of their username and password. Upon learning of any illegal use of their username and password, the User shall immediately notify the Company of such usage. Upon learning of any illegal use of their username and password, the User shall immediately notify the Company of such usage. Anything done through the User&apos;s account will be deemed to have been done by the User. The User will be solely responsible for any damages incurred by the User or third-parties due to the use of such information by anyone other than the User, or as a result of the loss or transfer of such relevant data.</p>
-            <p>Creating an account on behalf of an institute, institution, or Company signifies the User&apos;s acceptance and undertaking that they have been granted the appropriate authorization to represent the institute, institution, or enterprise in question.</p>
-            <p>It is strictly prohibited for the User to transfer or authorize third parties to use the generated username, password, and membership profiles to another user under any circumstances.</p>
-            <p><b>C.</b> The Company makes every effort to maintain compliance with applicable laws in the course of its data gathering and processing operations. As a result of the GDPR&apos;s consequences, the Company has created a “Legitimate Interest Assessment (“LIA”) examination and will be periodically upgrading it.</p>
-            <p>Nevertheless, the Organization shall have no responsibility for the Data&apos;s usage or correctness. The User is personally liable for complying with Relevant Laws, including but not restricted to laws connecting telemarketing, email marketing, fax marketing, consumer soliciting, data security, and privacy in connection with the use of the Data.</p>
-            <p>The User is legally, administratively, and criminally liable for the use of the information. The Organization shall not be accountable, directly or indirectly, for any damages caused by third parties due to the User&apos;s actions on the Site or through the use of the information and/or their violation of these Terms or any relevant legislation.</p>
-            <p>Any complaints made by third parties within such a framework and any damages resulting from the User&apos;s use of the Data or inability to fulfill their obligations under these Terms shall be redirected to the User and must be paid upon the first request. The User agrees to hold the Company harmless from any unlawful use of the Data.</p>
-            <p><b>D.</b> Users are granted a non-exclusive, non-transferable right to use the Data pursuant to the Agreement&apos;s terms and conditions. In addition, the User shall not use any Data for consumer credit applications, consumer insurance underwriting, employment applications, tenant screening applications, or any other purpose(s) prohibited or limited by applicable statute or regulations, and shall not identify the Company or its affiliated companies as a result of its use of the Data. The User is solely responsible for any actions taken in reliance on the Data.</p>
-            <p><b>E.</b> The Company reserves the right to review materials used in promotions by the User to make sure that The Data is used appropriately and in compliance with the Data&apos;s approved uses.</p>
-            <p>Nevertheless, the Company&apos;s failure to examine such materials or to object to their use shall not constitute acceptance of the materials, a waiver of any rights the Company may have, or a limitation of any responsibilities the User may have concerned the Data&apos;s use.</p>
-            <p>Additionally, the Organization may monitor the User&apos;s use of the Data on a random basis (through seeding and other means) to ensure that the User&apos;s usage is consistent with the approved services of the Data.</p>
-            <p><b>F.</b> Reselling and/or publishing the Data, or making the Information or else available to 3rd parties (either wholly or partially) is expressly banned by the Terms and Conditions. The User shall only use the Data following the objective of these Terms and Conditions. The Data shall not be used in any way that would put the Website in direct competition with the Company&apos;s services, and in every other way that would put the Website in direct competition with the Company&apos;s services. Notwithstanding anything to the contrary it is hereby agreed that the User shall be permitted to use the Data (including by combining the Data with additional data points) to create machine learning models for the insurance industry (“Derivatives”). Any such Derivatives shall be owned solely by User and User shall be permitted to us, exploit and commercialize such Data freely, without any restrictions.</p>
-            <p>G. The User understands and agrees that the sale of the Data is final and non-refundable. By submitting their order, the User enters into a legally enforceable purchase transaction. The User grants the Company permission to charge them in full for any Data purchased through the Website.</p>
-            <p><b>For Email Databases:</b> The purchase of these email databases are non-refundable and Final. We provide a deliverability guarantee of 95% for all emails.If your percentage is less than 95 percent and you can provide proof, we will accept your offer. We will replace them with new contacts as soon as possible.Once you have placed an order with us and your payment has been approved. We will send you an email including a link to download the whole product in Excel/CSV file.You will have complete access to the entire product after you have downloaded it. As a result, after the database has been completely downloaded, we will be unable to issue any refunds to our customers. Payments will be collected by an invoice or through the website.</p>
-            <p><b>For Non-email address databases:</b> We specialize in downloadable products which are sent to you directly through emails. So, when you download a product, you will have access to the entire product. (We will send you a download link for the product to your email after completing Payment.) Therefore, we do not offer any refund after a download has been made.</p>
-            <p>The User engages into a binding purchase contract by executing their transaction and purchased credits are non-refundable.</p>
-            <p>All payments are processed by the Company&apos;s third-party payment gateway, storing credit card information. The user knows and agrees that the Company is not responsible for the payment processor&apos;s data storage.</p>
-            <p>The User also confirms that the contact&apos;s name, phone, email, personal contact details, and financial information provided before the sale are authentic and correct. The Company shall not be responsible if the Data is rendered unusable due to its inability to supply the required information on time.</p>
-            <p><b>H.</b> The Company shall own all intellectual property rights in the software, graphics and designs, writings, logos, and illustrations used in connection with the Website.</p>
-            <p>It is strictly forbidden to copy the information and software that was used in the web page and/or to use them for purposes other than those intended by the Website; to copy, distribute, process, or use in any other way the pictures, texts, images, documents, and other materials on the Official site; and to copy, distribute, procedure, or use in any other way the pictures, texts, images, documents, and other materials on the Website.</p>
-            <p>Furthermore, it is completely banned for the Users to engage in Any action taken to interfere with the operation of the software on the Website or the utilization of the Website by other users is prohibited.</p>
-            <p>Loading content onto the Website to place an undue burden on the Website; access to the content on the Website, or the ability to copy, erase or modify such content actionable items that may endanger the general security of the Website and/or cause harm to other Users attempting to use or try to use software that could interfere with the operation of the Website and the software being used, or hindering, resulting in the breaking, reverse engineering, attacking, or otherwise interfering with the operation of any software, hardware, or servers, or making attempts to provide access to the Company&apos;s servers</p>
-            <p><b>I.</b> Company reserves the right to amend unilaterally, add to, or renew these Terms and the Privacy Policy (which is an annex to these Terms) and other terms they publish via the Website at their sole discretion, and to reorganize the Website, change its subject matter, scope, and content; cease the sale of Devices via the Website; or suspend the Website without giving any notice or providing a justification.</p>
-            <p><b>J.</b> The Privacy Policy contains rules on the use of User information. The Company agrees that it will not use or disclose User information outside of the scope outlined in these Terms and the Privacy Policy and that it will not disclose such information to third parties. The Company may use cookies to collect non-personal information in some instances. Information collected in this manner will better understand the User and improve the Website&apos;s utility, performance, and effectiveness.</p>
-            <p>The User acknowledges that they are consenting to the use of their information in this manner.</p>
-            <p>The Company shall also be entitled to utilize the information provided by the User to construct profiles, conduct statistical analyses, and carry out their marketing operations based on the information provided.</p>
-            <p><b>K.</b> The user understands and agrees that access to the Website may be temporarily restricted in order to implement upgrades and other changes to the Site.</p>
+            <h2>Service Description and Use</h2>
+            <p>
+              EmailDatas provides access to a comprehensive database of email
+              addresses for marketing purposes. By using our services, you agree
+              that you will use the email addresses only for legitimate
+              marketing purposes and not for spamming, phishing, or any other
+              illegal activity.
+            </p>
           </section>
           <section>
-            <h2>Liability Limitation:</h2>
-            <p><b>A.</b> The Company shall not be liable, either directly or indirectly, for any damages that may arise as a result of a breach of contract, torts, or for any other reason that may arise from the access or use of the Website or the Data, other data, programs, or other materials available on the Website or any other website linked to the Website.</p>
-            <p>The Company does not accept any liability for issues such as transaction interruptions, data deletion or loss, transaction or communication delays, computer viruses, communication errors, theft, annihilation, or unauthorized access to, change, or use of the records that may occur as a result of a breach of these Terms, torts, omissions, or any other reason, including but not limited to negligence.</p>
-            <p>In consideration of the preceding, it is agreed that the Company shall be held harmless from any liabilities, claims, and damages (including court and other expenses) that may arise from access to the Website or other linked websites, use or visitation of the Website, or the use or misuse of the Data.</p>
-            <p><b>B.</b> As part of the Website, the Legal binding agreement declares that links to third-party websites and/or platforms, files, or contents that the Company does not control may be provided and third-party services may be offered. The User acknowledges and declares that such links shall not be considered as offered to support the Website or its operator, nor as an undertaking or assuring everything concerning the Website or its contents.</p>
-            <p><b>C.</b> To the greatest extent permitted by applicable law, the Company shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages incurred as a result of the use of the Website and Data, including, but not limited to, loss of profit, loss of goodwill, or loss of business reputation.</p>
-            <p>The Company offers no promise that the Data will be beneficial for any specific purpose, and the data is provided “as is.” Data, features, and other content on the Website are provided “AS IS,” and the Company makes no commitment or undertaking regarding their authenticity, correctness, or security.</p>
-            <p>Furthermore, the Company disclaims all express and implied guarantees, including but not limited to implied warranties and conditions of merchantability and fitness for a specific purpose or use, as well as non-breach.</p>
-            <p><b>D.</b> The User acknowledges and declares that the availability and quality of the Website and the contents provided via the Website are heavily reliant on the service quality provided by the relevant Internet Service Provider and that the Company is not responsible for any problems arising from such service quality, that they are aware that the operation of the Website is not error-free, and that malfunction is possible.</p>
-            <p><b>E.</b> When using the Website or transferring data to or from it, the User acknowledges that the Company cannot guarantee the absence of viruses, worms, or other attacks, as well as unauthorized access to or transfers from or to the Website and that the Company is not obligated to provide support, maintenance, updates, or new versions concerning the software.</p>
+            <h2>Subscription and Payment:</h2>
+            <p>
+              To access our database, you must purchase a subscription plan. We
+              offer different plans to suit your needs, and you can cancel your
+              subscription at any time. Payment for your subscription will be
+              processed through our secure payment gateway.
+            </p>
           </section>
           <section>
-            <h2>TERMS SUSPENSION AND TERMINATION</h2>
-            <p><b>A.</b> The Company may temporarily or permanently suspend the User&apos;s use and/or utilization of the Website if the User fails to comply with these Terms and other terms and rules published on the Website, if the User&apos;s activities pose legal, technical, and especially information security risks, or if the User violates the individual and commercial rights of third parties. The User may not make any claims in this regard.</p>
-            <p><b>B.</b> The Company reserves the right to cancel or suspend the Website and/or these Terms at any moment for an indeterminate or fixed length of time.</p>
+            <h2>Intellectual Property:</h2>
+            <p>
+              EmailDatas makes no warranties, express or implied, with respect
+              to the accuracy, completeness, or suitability of the email
+              addresses or other data provided through our services. We cannot
+              guarantee that our data will result in increased sales or
+              conversions.
+            </p>
           </section>
           <section>
-            <h2>EFFECTIVENESS</h2>
-            <p>When the User accesses the Website, these Terms and Conditions, its essential element, the Privacy Policy, and all other terms and conditions indicated on the Website will affect.</p>
+            <h2>Limitation of Liability:</h2>
+            <p>
+              In no event shall EmailDatas be liable for any direct, indirect,
+              incidental, special, or consequential damages arising from the use
+              or inability to use our services, even if we have been advised of
+              the possibility of such damages.
+            </p>
           </section>
           <section>
-            <h2>RESOLUTION OF DISPUTES</h2>
-            <p>CAREFULLY READ THIS SECTION. IT AFFECTS YOUR RIGHTS AND WILL HAVE A SIGNIFICANT IMPACT ON HOW CLAIMS BETWEEN YOU AND THE COMPANY ARE RESOLVED.</p>
-            <p>The User and the Company agree that any claim or dispute at law or in equity that has arisen or may arise between us regarding or arising out of this or previous versions of this Agreement, your use of or access to the services, or any products or services sold or purchased through the services, will be resolved following the provisions outlined in this Legal Disputes Section.</p>
-            <h3>A. Applicable Law</h3>
-            <p>Except as expressly stated in the User Agreement, User agrees that, except to the extent inconsistent with or preempted by federal law, the laws of the State of New York, without regard to principles of conflict of laws, will govern the Terms of Use and any claim or dispute that has arisen or may arise between you and the Company.</p>
-            <h3>B. Agreement to Arbitrate</h3>
-            <p>A binding arbitration agreement between the User and the Company is reached in the event of a dispute or claim that has arisen or may arise between you and the Company in any way relating to or arising from this or previous versions of the Terms of Use, your use or access to the Company’s Services or any products or services sold, offered, or purchased through the Company’s Services will be reached exclusively through binding arbitration.</p>
-            <p>The interpretation and enforcement of Arbitrate are governed by the Federal Arbitration Act (Federal Arbitration Act). The arbitration will be conducted by the American Arbitration Association (“AAA”) following its rules and procedures, including (where applicable) the AAA’s Consumer Arbitration Rules, as modified by this Agreement to Arbitrate. The AAA will appoint the arbitrator.</p>
-            <p>If you have any questions about the AAA’s guidelines, you can contact them at 1-800-778-7879 or visit their website at www.adr.org. However, the use of the word “arbitrator” in this provision should not be construed as a prohibition on more than one arbitrator preside over an arbitration; rather, the rules of the American Arbitration Association will govern the number of arbitrators who may preside over an arbitration performed under this Agreement to Arbitrate.</p>
-            <h3>C. Arbitration Fees and Expenses</h3>
-            <p>The losing party will be responsible for the costs of the arbitration, which include legal fees.</p>
-            <h3>D. Information about how to get in touch</h3>
-            <p>Contact the following individuals for resolving disputes and to answer any questions you may have regarding these terms of use:</p>
-            <address>
-              Email Datas<br />
-              1845 Fantages Way.<br />
-              North Berwick ,ME 03906<br />
-              Phone : +1 (417) 460-7761<br />
-              Email : info@uscompanydata.com
-            </address>
+            <h2>Termination:</h2>
+            <p>
+              EmailDatas may terminate this agreement at any time if we suspect
+              that you are engaging in illegal activity or violating the terms
+              of this agreement. You may terminate this agreement at any time by
+              canceling your subscription.
+            </p>
+          </section>
+          <section>
+            <h2>User Privacy:</h2>
+            <p>
+              EmailDatas respects the privacy of our users and complies with all
+              applicable data protection laws. We collect and use personal data
+              in accordance with our Privacy Policy, which you can access on our
+              website.
+            </p>
+          </section>
+          <section>
+            <h2>Governing Law:</h2>
+            <p>
+              This agreement shall be governed by and construed in accordance
+              with the laws of the jurisdiction in which EmailDatas operates.
+              Any disputes arising from or related to this agreement shall be
+              resolved through arbitration.
+            </p>
+          </section>
+          <section>
+            <h2>Updates to Terms and Conditions</h2>
+            <p>
+              EmailDatas may update these terms and conditions at any time
+              without prior notice. We encourage you to review this page
+              periodically to stay informed of any changes.
+            </p>
+          </section>
+          <section>
+            <p>
+              By accessing or using our services, you acknowledge that you have
+              read, understood, and agree to be bound by these terms and
+              conditions. If you do not agree to these terms and conditions, do
+              not access or use our services.
+            </p>
           </section>
         </Col>
       </Row>
     </Container>
-  )
+  );
 };
 
 export default TermsMainView;
