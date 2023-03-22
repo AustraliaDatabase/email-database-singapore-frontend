@@ -4,29 +4,6 @@
 .title {
   color: $primary;
 }
-// .tabs {
-//   display: flex;
-//   .tab {
-//     flex: 0 0 50%;
-//     width: 100%;
-//     max-width: 50%;
-//     height: 40px;
-//     text-align: center;
-//     border-radius: 2px;
-//     transition: border-color 0.24s ease, background-color 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease;
-//     font-weight: 500;
-//     line-height: 40px;
-//     cursor: pointer;
-//     &:hover {
-//       color: var(--primary);
-//     }
-//     &.active {
-//       background-color: lighten($color: $primary, $amount: 40);
-//       border-color: lighten($color: $primary, $amount: 40);
-//       color: var(--primary);
-//     }
-//   }
-// }
 
 .leftColumn {
   z-index: 1;
@@ -45,7 +22,7 @@
   background-repeat: no-repeat;
 
   @include breakpoint(tab-landscape-up) {
-    padding: 0;
+    padding: 1rem 1rem;
     border-radius: 0;
     background: none;
   }
@@ -72,9 +49,11 @@
     }
   }
 }
+
 .authModal {
   position: static;
 }
+
 .action {
   min-width: 40%;
 }

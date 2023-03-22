@@ -68,25 +68,6 @@ const AuthModal = () => {
           </div>
         </Col>
         <Col xs={12} lg={8}>
-          {/* <div className={styles.tabs}>
-            <div
-              onClick={pressLoginTab}
-              className={classNames(styles.tab, {
-                [styles.active]: loginVisible,
-              })}
-            >
-              Login
-            </div>
-            <div
-              onClick={pressSignUpTab}
-              className={classNames(styles.tab, {
-                [styles.active]: !loginVisible,
-              })}
-            >
-              Sign Up
-            </div>
-          </div> */}
-
           <div>
             <h4 className={styles.title}>
               {loginVisible ? "Login" : "Create Account"}
