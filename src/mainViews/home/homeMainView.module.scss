@@ -259,17 +259,6 @@
   }
 }
 
-.bottomBanner {
-  // background-image: url("/illustration.svg");
-  background-size: contain;
-  background-position: center bottom;
-  background-repeat: repeat-x;
-
-  h2 {
-    font-size: 3rem;
-  }
-}
-
 // custom styles
 .fuelyourBusiness {
   font-size: 22px;
@@ -318,14 +307,7 @@
   }
 }
 
-.ourJob {
-  font-size: 3rem;
-  font-weight: bold;
-  font-family: var(--title-font);
-  @include breakpoint(mobile) {
-    font-size: 1.5rem;
-  }
-}
+
 
 .asTagBottom {
   font-size: 1.25rem;

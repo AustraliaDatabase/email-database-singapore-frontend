@@ -3,7 +3,6 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 // import Card from "react-bootstrap/Card";
-import { useRouter } from "next/router";
 import classNames from "classnames";
 import { Link as ScrollLink } from "react-scroll";
 import { Buildings } from "phosphor-react";
@@ -15,9 +14,9 @@ import HomeSeed from "./homeSeeds";
 // import CollapsibleList from "../../shared/components/collapsibleList/CollapsibleList";
 // import FloatingMenu from "../../menus/floatingMenu/FloatingMenu";
 import Faqs from "../../shared/components/faqs/Faqs";
-import FloatingMenu from "./views/floatingMenu/FloatingMenu";
-import TrustPilot from "../../shared/components/trustPilot/TrustPilot";
-import MainWhyDetailCard from "../mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
+// import FloatingMenu from "./views/floatingMenu/FloatingMenu";
+// import TrustPilot from "../../shared/components/trustPilot/TrustPilot";
+// import MainWhyDetailCard from "../mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
 import WhyListDetailCardView from "../mainProduct/views/whyListDetailCard/WhyListDetailCard";
 import { CURRENT_OBJECT_HOME } from "./constants";
 import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
@@ -34,10 +33,9 @@ import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsE
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
 import HomeSourceView from "./views/sourceView/HomeSourceView";
 import styles from "./homeMainView.module.scss";
+import BottomBanner from "./views/bottomBanner/BottomBanner";
 
 const HomeMainView = () => {
-  const router = useRouter();
-
   return (
     <>
       <section className={styles.hero}>
@@ -279,27 +277,7 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
-      <section className={styles.bottomBanner}>
-        <Container>
-          <Row>
-            <Col xs={12} className="d-flex align-items-center flex-column">
-              <div className={classNames("text-center mb-4", styles.ourJob)}>
-                It&apos;s our Job to{" "}
-                <span className="text-highlight">Grow Your Business</span>
-              </div>
-              <Button
-                size="large"
-                onClick={() => {
-                  router.push("/contact-us");
-                }}
-                block
-              >
-                Have More Questions?
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <BottomBanner />
     </>
   );
 };
