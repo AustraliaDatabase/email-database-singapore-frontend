@@ -1,26 +1,53 @@
 @import "styles/variables";
 
-.tabs {
+.title {
+  color: $primary;
+}
+// .tabs {
+//   display: flex;
+//   .tab {
+//     flex: 0 0 50%;
+//     width: 100%;
+//     max-width: 50%;
+//     height: 40px;
+//     text-align: center;
+//     border-radius: 2px;
+//     transition: border-color 0.24s ease, background-color 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease;
+//     font-weight: 500;
+//     line-height: 40px;
+//     cursor: pointer;
+//     &:hover {
+//       color: var(--primary);
+//     }
+//     &.active {
+//       background-color: lighten($color: $primary, $amount: 40);
+//       border-color: lighten($color: $primary, $amount: 40);
+//       color: var(--primary);
+//     }
+//   }
+// }
+
+.leftColumn {
+  z-index: 1;
+  color: $white;
+  text-align: center;
   display: flex;
-  .tab {
-    flex: 0 0 50%;
-    width: 100%;
-    max-width: 50%;
-    height: 40px;
-    text-align: center;
-    border-radius: 2px;
-    transition: border-color 0.24s ease, background-color 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease;
-    font-weight: 500;
-    line-height: 40px;
-    cursor: pointer;
-    &:hover {
-      color: var(--primary);
-    }
-    &.active {
-      background-color: lighten($color: $primary, $amount: 40);
-      border-color: lighten($color: $primary, $amount: 40);
-      color: var(--primary);
-    }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .textGroup {
+    margin-top: 2rem;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 270px;
+    height: 490px;
+    left: 0;
+    top: -48px;
+    background: linear-gradient(346.73deg, #212529 2.45%, #e64e0d 232.58%);
+    z-index: -1;
   }
 }
 

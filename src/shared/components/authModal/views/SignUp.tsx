@@ -13,7 +13,12 @@ import { triggerForm } from "../../../../services/internalServices";
 // import { ADMIN_EMAILS } from "../../../constants";
 import { setUser } from "../../../../services/helpers/tokenService";
 
-const SignUp = () => {
+interface ISignup {
+  pressLogin: () => void;
+}
+
+const SignUp = (props: ISignup) => {
+  const { pressLogin } = props;
   const { setAuthLoading, setAuthEnable, setLoggedInUser } = useRoot();
   const [loading, setLoading] = useState(false);
   // const [capchaValue, setCapchaValue] = useState<string | null>("");
@@ -101,18 +106,26 @@ const SignUp = () => {
                 <Form.Text className="text-danger">{errors.password}</Form.Text>
               )}
             </Form.Group>
-{/* 
+            {/* 
             <Reaptcha
               sitekey={process.env.NEXT_PUBLIC_CAPTCHA_API_KEY}
               onVerify={onChange}
             /> */}
 
-            <Form.Group className="d-flex justify-content-center pt-3 mb-3">
+            <Form.Group className="pt-3 mb-3">
               <Button
+                onClick={pressLogin}
+                className="w-100 mb-3"
+                size="large"
+                variant="tertiary"
+              >
+                already have an account?
+              </Button>
+              <Button
+                className="w-100"
                 loading={loading}
                 disabled={loading}
                 size="large"
-                block
                 type="submit"
               >
                 Sign Up

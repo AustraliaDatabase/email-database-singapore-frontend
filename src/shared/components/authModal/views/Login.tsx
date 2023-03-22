@@ -9,7 +9,12 @@ import { useRoot } from "../../../contexts/RootProvider";
 import { Col, Row } from "react-bootstrap";
 import { setUser } from "../../../../services/helpers/tokenService";
 
-const Login = () => {
+interface ILogin {
+  pressSignUp: () => void;
+}
+
+const Login = (props: ILogin) => {
+  const { pressSignUp } = props;
   const {
     setAuthEnable,
     setAuthLoading,
@@ -91,10 +96,18 @@ const Login = () => {
               </Col>
               <Col xs="12" className="text-center pb-2 pt-4">
                 <Button
+                  onClick={pressSignUp}
+                  size="large"
+                  className="w-100 mb-3"
+                  variant="tertiary"
+                >
+                  Don’t have any account?
+                </Button>
+                <Button
                   loading={loading}
                   disabled={loading}
+                  className="w-100"
                   size="large"
-                  block
                   type="submit"
                 >
                   Login
