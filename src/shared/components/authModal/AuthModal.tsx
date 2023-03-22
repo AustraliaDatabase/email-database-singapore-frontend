@@ -28,7 +28,7 @@ const AuthModal = () => {
   return (
     <UCDModal
       size="lg"
-      bodyClassName="px-4 pb-4"
+      bodyClassName={classNames("px-4 pb-4", styles.authModal)}
       onHide={pressClose}
       title=" "
       open={authEnable}
@@ -44,7 +44,7 @@ const AuthModal = () => {
           <div className={styles.textGroup}>
             {loginVisible ? (
               <>
-                <h3>Login</h3>
+                <h4>Login</h4>
                 <p>
                   Please log in to your account if you already have one.
                   Otherwise, please sign up.
@@ -52,7 +52,7 @@ const AuthModal = () => {
               </>
             ) : (
               <>
-                <h3>signup</h3>
+                <h4>Signup</h4>
                 <p>
                   If you already have an account, please switch to the login
                   tab.

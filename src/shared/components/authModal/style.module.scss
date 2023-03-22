@@ -37,20 +37,26 @@
   justify-content: center;
   .textGroup {
     margin-top: 2rem;
+    background: url("/auth-bg-element.png");
   }
   &::before {
     content: "";
     display: block;
     position: absolute;
     width: 270px;
-    height: 490px;
+    height: 100%;
     left: 0;
-    top: -48px;
-    background: linear-gradient(346.73deg, #212529 2.45%, #e64e0d 232.58%);
+    top: 0;
+    background: url("/auth-bg-element.png"),
+      linear-gradient(346.73deg, #212529 2.45%, #e64e0d 232.58%);
+    background-position: bottom right;
+    background-repeat: no-repeat;
     z-index: -1;
   }
 }
-
+.authModal {
+  position: static;
+}
 .action {
   min-width: 40%;
 }
