@@ -14,10 +14,27 @@
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
   }
- 
 }
 
 .contactus {
+  color: $primary;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.alertWrapper {
+  background: url("/bg-element-dashboard.png"), $secondary !important;
+  background-size: 100%;
+  position: relative;
+  padding: 1rem;
+
+  box-shadow: none !important;
+  color: $white;
+  position: relative;
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1rem;
+  }
 }
