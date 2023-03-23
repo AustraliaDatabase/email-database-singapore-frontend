@@ -24,6 +24,8 @@ interface ISelectFreeList {
     isEmailVerified: boolean;
   } | null;
   requestLeftCount: number;
+  title: string;
+  mainCategory: string;
 }
 
 const SelectFreeList = (props: ISelectFreeList) => {
@@ -34,21 +36,22 @@ const SelectFreeList = (props: ISelectFreeList) => {
     buildLoading,
     userInfo,
     requestLeftCount,
+    title,
+    mainCategory,
   } = props;
-
   const router = useRouter();
   const { loggedInUser, setAuthEnable } = useRoot();
 
   const [freeSample, setFreeSample] = useState("--Select--");
   const [currentAssignedUrl, setCurrentAssignedUrl] = useState<string>("");
 
+  // const selectedListItem = router.query?.id;
   const selectedListItem = router.query?.id;
-  console.log(selectedListItem, "query id");
-
-  const mainCategory = router?.query?.productId
-    // @ts-ignore
-    ?.replace("-", "_")
-    ?.toUpperCase();
+ 
+  // const mainCategory = router?.query?.productId
+  //   // @ts-ignore
+  //   ?.replace("-", "_")
+  //   ?.toUpperCase();
 
   useEffect(() => {
     if (mainCategory) {
@@ -78,10 +81,10 @@ const SelectFreeList = (props: ISelectFreeList) => {
   };
 
   return (
-    <Col xs={12} md={8} lg={3} className="mb-4">
+    <Col xs={12} md={8} lg={4} className="mb-4">
       <div className={styles.selectCardWrapper}>
         <div className="d-flex align-items-center justify-content-between">
-          <div className={styles.selectTitle}>Select the List</div>
+          <div className={styles.selectTitle}>{title}</div>
           {currentAssignedUrl && (
             <a
               target="_blank"

@@ -62,7 +62,6 @@ const CartModal = () => {
   }, [currentCartItem?.length]);
 
   useEffect(() => {
-    console.log("cart items", currentCartItem.length);
   }, [currentCartItem]);
   return (
     <UCDModal

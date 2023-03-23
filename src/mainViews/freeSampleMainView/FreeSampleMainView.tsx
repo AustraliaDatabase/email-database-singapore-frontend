@@ -8,9 +8,11 @@ import MainCategoryList from "./views/mainCategoryList/MainCategoryList";
 import instance from "../../services/baseServices";
 import Card from "../../shared/components/card/Card";
 import Image from "next/image";
-import { IFreeSampleItemObject } from "../../shared/interface";
+import { IFreeSampleItemObject, ISelectObject } from "../../shared/interface";
 import { useRoot } from "../../shared/contexts/RootProvider";
 import MyOwnList from "./views/myOwnList/MyOwnList";
+import SelectFreeList from "./views/selectFreeList/SelectFreeList";
+import Swal from "sweetalert2";
 
 const FreeSampleMainView = () => {
   const router = useRouter();
@@ -22,6 +24,9 @@ const FreeSampleMainView = () => {
   );
   const [ownListLoading, setOwnListLoading] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
+  const [buildLoading, setBuildLoading] = useState(false);
+  const [sampleSubList, setSampleSubList] = useState<ISelectObject[]>([]);
+  const [currentCategory, setCurrentCategory] = useState<string | null>(null);
 
   useEffect(() => {
     const getOwnList = async () => {
@@ -59,8 +64,89 @@ const FreeSampleMainView = () => {
     getFreeSampleList();
   }, []);
 
+  // console.log(sampleSubList, "sample sub list")
+  const onSelectCategory = async (category: string) => {
+    setCurrentCategory(category);
+    setSampleSubList([]);
+    try {
+      // setLoading(true);
+      const response = await instance.get(
+        `/free-sample-by-name/${category?.toLowerCase()}`
+      );
+
+      const list: any = response.data?.items?.map((element: any) => {
+        return {
+          label: element.fileName,
+          value: element.fileName,
+          assignedUrl: element.assignedUrl,
+        };
+      });
+
+      setSampleSubList(list);
+      // setLoading(false);
+    } catch (error: any) {
+      // setLoading(false);
+    }
+  };
+
+  const buildList = (data: any) => {
+    setMyOwnList(data);
+  };
+
+  const onBuildList = async (freeSample: string) => {
+    if (!loggedInUser) {
+      setAuthEnable(true);
+      return;
+    }
+
+    setBuildLoading(true);
+
+    try {
+      const response = await instance.post(
+        `/update-free-sample-by-name/${currentCategory?.toLowerCase()}`,
+        {
+          fileName: freeSample,
+        }
+      );
+
+      buildList(response?.data);
+      console.log(response?.data, "build list");
+      // setSwitchSelect(false);
+      setBuildLoading(false);
+      Swal.fire("Successfully Created!", "", "success");
+    } catch (error: any) {
+      setBuildLoading(false);
+
+      Swal.fire("Error Message!", `${error?.response?.data}`, "error");
+    }
+  };
+
   const requestLeftCount =
     (currentLimit || 0) - (myOwnList?.items?.length || 0);
+
+  const mainCategories = [
+    {
+      "Company Database": "company-database",
+    },
+    {
+      Realtor: "realtor",
+    },
+    {
+      "Job Title": "job-title",
+    },
+    {
+      Industry: "industry",
+    },
+    {
+      Country: "country",
+    },
+    {
+      Consumer: "consumer",
+    },
+    {
+      Target: "target",
+    },
+  ];
 
   return (
     <>
@@ -112,6 +198,26 @@ const FreeSampleMainView = () => {
               </Col>
             </Row>
           </div>
+          <div className={classNames(styles.title, "my-5")}>
+            Select free sample
+          </div>
+          <Row>
+            {mainCategories.map((element, i) => {
+              return (
+                <SelectFreeList
+                  key={i}
+                  onBuildList={onBuildList}
+                  onSelectCategory={onSelectCategory}
+                  sampleSubList={sampleSubList}
+                  buildLoading={buildLoading}
+                  userInfo={userInfo}
+                  requestLeftCount={requestLeftCount}
+                  title={Object.keys(element)[0]}
+                  mainCategory={Object.values(element)[0]}
+                />
+              );
+            })}
+          </Row>
         </Col>
         <Col lg={5}>
           <div className={styles.unlockedList}>
@@ -123,7 +229,7 @@ const FreeSampleMainView = () => {
           </div>
         </Col>
 
-        <Col xs={12} lg={10}>
+        {/* <Col xs={12} lg={10}>
           <Row className="align-items-center text-center text-md-start">
             <Col xs={12} md={7} lg={7} className="my-4">
               {count && (
@@ -143,10 +249,10 @@ const FreeSampleMainView = () => {
               )}
             </Col>
           </Row>
-        </Col>
+        </Col> */}
       </Row>
 
-      <MainCategoryList />
+      {/* <MainCategoryList /> */}
     </>
   );
 };

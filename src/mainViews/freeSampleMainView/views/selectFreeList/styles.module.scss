@@ -1,0 +1,18 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.selectCardWrapper {
+  background-color: $white;
+  width: 100%;
+  height: max-content;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  .selectTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $text;
+  }
+  .buildButton {
+    border-radius: 0.25rem;
+  }
+}
