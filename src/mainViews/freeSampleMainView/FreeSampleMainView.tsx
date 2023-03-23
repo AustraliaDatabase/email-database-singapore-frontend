@@ -23,28 +23,27 @@ const FreeSampleMainView = () => {
   const [ownListLoading, setOwnListLoading] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
 
-  const getOwnList = async () => {
-    try {
-      setOwnListLoading(true);
-      const response = await instance.get(`/ownFreeSampleList`);
-
-      setMyOwnList(response.data?.ownListByUser);
-      setCurrentLimit(
-        Number(
-          response?.data?.allowedLimit?.limitAccessForUsers?.[
-            loggedInUser.localId
-          ]?.limit || response?.data?.allowedLimit?.limit
-        )
-      );
-
-      setUserInfo(response?.data?.user);
-      setOwnListLoading(false);
-    } catch (error) {
-      setOwnListLoading(false);
-    }
-  };
-
   useEffect(() => {
+    const getOwnList = async () => {
+      try {
+        setOwnListLoading(true);
+        const response = await instance.get(`/ownFreeSampleList`);
+
+        setMyOwnList(response.data?.ownListByUser);
+        setCurrentLimit(
+          Number(
+            response?.data?.allowedLimit?.limitAccessForUsers?.[
+              loggedInUser.localId
+            ]?.limit || response?.data?.allowedLimit?.limit
+          )
+        );
+
+        setUserInfo(response?.data?.user);
+        setOwnListLoading(false);
+      } catch (error) {
+        setOwnListLoading(false);
+      }
+    };
     getOwnList();
   }, [loggedInUser, router?.pathname]);
 
@@ -85,24 +84,23 @@ const FreeSampleMainView = () => {
                         <span className={styles.title}>
                           You have {requestLeftCount} more request left
                         </span>
-
-                        <p>
-                          We currently offer {count} free product samples per
-                          month in any category you select.{" "}
-                          <span
-                            onClick={() => {
-                              router.push("/support");
-                            }}
-                            className={classNames(styles.contactus)}
-                          >
-                            Contact Us
-                          </span>{" "}
-                          for more sample list
-                        </p>
                       </>
                     )}
                   </>
                 )}
+                <p>
+                  We currently offer {count} free product samples per month in
+                  any category you select.{" "}
+                  <span
+                    onClick={() => {
+                      router.push("/support");
+                    }}
+                    className={classNames(styles.contactus)}
+                  >
+                    Contact Us
+                  </span>{" "}
+                  for more sample list
+                </p>
               </Col>
               <Col xs={12} lg={4}>
                 <Image
@@ -120,6 +118,7 @@ const FreeSampleMainView = () => {
             <div className={styles.title}>Your unlocked list</div>
             <Row>
               <MyOwnList myOwnList={myOwnList} />
+              {!myOwnList?.items?.length && <div>No Unlocked List found</div>}
             </Row>
           </div>
         </Col>
