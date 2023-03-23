@@ -188,9 +188,7 @@ const JOB_LIST = [
   { name: "Accounts Receivable", url: "/accounts-receivable" },
 ];
 
-const INDUSTRY_LIST = [
-  { name: "Architects", url: "/architects" },
-];
+const INDUSTRY_LIST = [{ name: "Architects", url: "/architects" }];
 
 const BY_STATES = [
   { name: "California", url: "/california" },
@@ -210,4 +208,45 @@ export const FOOTER_MENUS = {
   JOB_LIST,
   INDUSTRY_LIST,
   INTERNATIONAL_LIST,
-}
+};
+
+export const DATA_TYPE_TO_TITLE: any = {
+  [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: "B2B Emails",
+  [DATABASE_MAIN_TYPES.REALTOR]: "Realtor",
+  [DATABASE_MAIN_TYPES.JOB_TITLE]: "Job Title",
+  [DATABASE_MAIN_TYPES.CONSUMER]: "Consumer",
+  [DATABASE_MAIN_TYPES.COUNTRY]: "",
+  [DATABASE_MAIN_TYPES.INDUSTRY]: "",
+  [DATABASE_MAIN_TYPES.TARGET]: "Targetted Email",
+};
+
+export const MAIN_CATEGORY_PAGE_URLS: any = {
+  [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: {
+    url: "/list-of-all-us-companies",
+    name: "Millions of B2B Email List by US States",
+  },
+  [DATABASE_MAIN_TYPES.REALTOR]: {
+    url: "/real-estate-agent-email-list",
+    name: "Complete 2.28 Million Email List of Realtors",
+  },
+  [DATABASE_MAIN_TYPES.JOB_TITLE]: {
+    url: "/usa-job-titles",
+    name: "Email Database by Job Titles ",
+  },
+  [DATABASE_MAIN_TYPES.CONSUMER]: {
+    url: "/consumer-emails",
+    name: "All Consumer Email Lists",
+  },
+  [DATABASE_MAIN_TYPES.COUNTRY]: {
+    url: "/all-other-countries",
+    name: "All Email List of different Countries",
+  },
+  [DATABASE_MAIN_TYPES.INDUSTRY]: {
+    url: "/special-databases",
+    name: "All Industry Database Lists",
+  },
+  [DATABASE_MAIN_TYPES.TARGET]: {
+    url: "/all-targeted-lists",
+    name: "All Targeted Email List",
+  },
+};

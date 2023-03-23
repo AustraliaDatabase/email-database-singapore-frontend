@@ -352,3 +352,21 @@ export const getIpAddress = async () => {
     return userIpInfo;
   }
 };
+
+export const downloadSampleListEmailSend = async (values: any) => {
+  try {
+    const response = await instance.post("/mail", {
+      templateid: EMAIL_TEMPLATE_IDS.RESPONSE_AFTER_DOWNLOAD_SAMPLE,
+      cc: [
+        {
+          name: "Mike",
+          email: ADMIN_EMAIL,
+        },
+      ],
+      date: dayjs().format("YYYY-MMM-DD / h:mm A"),
+      ...values,
+    });
+
+    return response.data;
+  } catch (error) {}
+};
