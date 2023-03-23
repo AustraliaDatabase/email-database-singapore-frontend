@@ -117,7 +117,7 @@ const FreeSampleMainView = () => {
         </Col>
         <Col lg={5}>
           <div className={styles.unlockedList}>
-            <h2>Your unlocked list</h2>
+            <div className={styles.title}>Your unlocked list</div>
             <Row>
               <MyOwnList myOwnList={myOwnList} />
             </Row>
