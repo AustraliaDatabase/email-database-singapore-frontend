@@ -23,14 +23,14 @@
 }
 
 .alertWrapper {
-  background: url("/bg-element-dashboard.png"), $secondary !important;
-  background-size: 100%;
-  position: relative;
-  padding: 1rem;
-
-  box-shadow: none !important;
+  background: $secondary;
+  background-image: url("/bg-element-dashboard.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
   color: $white;
-  position: relative;
+
   .title {
     font-size: 1.5rem;
     font-weight: 700;
