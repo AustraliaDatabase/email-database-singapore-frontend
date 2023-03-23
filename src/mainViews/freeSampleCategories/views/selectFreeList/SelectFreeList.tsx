@@ -43,7 +43,6 @@ const SelectFreeList = (props: ISelectFreeList) => {
   const [currentAssignedUrl, setCurrentAssignedUrl] = useState<string>("");
 
   const selectedListItem = router.query?.id;
-  console.log(selectedListItem, "query id");
 
   const mainCategory = router?.query?.productId
     // @ts-ignore

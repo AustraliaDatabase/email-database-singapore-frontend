@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import dayjs from "dayjs";
 import { useRouter } from "next/router";
-import { ClockClockwise, UsersThree } from "phosphor-react";
+import { Calendar, ClockClockwise, User, UsersThree } from "phosphor-react";
 import React from "react";
 import { Col } from "react-bootstrap";
 import Button from "../../../../shared/components/button/Button";
@@ -88,31 +88,24 @@ const MyOwnList = (props: IMyOwnList) => {
           <Col xs={12} md={4} lg={6} key={index} className={styles.cardCol}>
             <div className={styles.card}>
               <div className={styles.cardTitle}>
-                <div title={sampleFileName}>
+                <div className={styles.description}>
+                  {sample.category &&
+                    categoryText[sample.category?.toUpperCase()]}
+                </div>
+                <div title={sampleFileName} className={styles.title}>
                   {sampleFileName.length < 20
                     ? sampleFileName
                     : sampleFileName.slice(0, 20) + "..."}
-                </div>
-                <div
-                  className={styles.description}
-                  style={{
-                    backgroundColor: `${
-                      badgeColor[sample.category?.toUpperCase()]
-                    }`,
-                  }}
-                >
-                  {sample.category &&
-                    categoryText[sample.category?.toUpperCase()]}
                 </div>
               </div>
               <div className={styles.cardDetails}>
                 <div className={classNames("mb-3", styles.singleInfo)}>
                   <div className={styles.title}>
                     <span>
-                      <UsersThree size={20} />
+                      <User size={24} />
                     </span>
+                    <span>Total Contacts</span>
                     <div>
-                      <span>Total Contacts</span>
                       <div className={styles.titleText}>
                         {sample.emailContacts} Emails
                       </div>
@@ -122,10 +115,10 @@ const MyOwnList = (props: IMyOwnList) => {
                 <div className={styles.singleInfo}>
                   <div className={styles.title}>
                     <span>
-                      <ClockClockwise size={20} />
+                      <Calendar size={24} />
                     </span>
+                    <span>Expire Date</span>
                     <div>
-                      <span>Expire Date</span>
                       <div className={styles.titleText}>
                         {/* @ts-ignore */}
                         {dayjs(sample.expireDate).fromNow()}
@@ -140,7 +133,7 @@ const MyOwnList = (props: IMyOwnList) => {
                     }}
                     className={styles.cardBtn}
                     size={BUTTON_SIZE_ENUM.Small}
-                    variant={BUTTON_VARIANT_ENUM.Secondary}
+                    variant={BUTTON_VARIANT_ENUM.Primary}
                   >
                     Download
                   </Button>
