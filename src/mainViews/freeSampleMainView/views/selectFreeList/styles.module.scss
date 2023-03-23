@@ -5,10 +5,38 @@
   background-color: $white;
   width: 100%;
   height: max-content;
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: 0.5rem;
+  @include box-shadow(level-1-1);
+  min-height: 100%;
   .selectTitle {
-    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: .5rem;
+    .icon {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      display: block;
+      background-color: rgba($color: $primary, $alpha: 0.15);
+      border-radius: 0.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        background-color: $primary;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 1rem;
+        position: absolute;
+        right: 3px;
+        top: 3px;
+      }
+    }
+    font-size: 1rem;
     font-weight: 700;
     color: $text;
   }

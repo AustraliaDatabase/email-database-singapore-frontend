@@ -14,6 +14,7 @@ import styles from "./styles.module.scss";
 import EmailVerifyTimer from "./emailVerifyTimer/EmailVerifyTimer";
 import { useRoot } from "../../../../shared/contexts/RootProvider";
 import { ISelectObject } from "../../../../shared/interface";
+import Image from "next/image";
 
 interface ISelectFreeList {
   onBuildList: (list: string) => void;
@@ -47,7 +48,7 @@ const SelectFreeList = (props: ISelectFreeList) => {
 
   // const selectedListItem = router.query?.id;
   const selectedListItem = router.query?.id;
- 
+
   // const mainCategory = router?.query?.productId
   //   // @ts-ignore
   //   ?.replace("-", "_")
@@ -80,11 +81,22 @@ const SelectFreeList = (props: ISelectFreeList) => {
     setFreeSample(event.target.value);
   };
 
+  const iconList = {
+    0: "/menu-icons/by-states.png",
+  };
+
   return (
     <Col xs={12} md={8} lg={4} className="mb-4">
       <div className={styles.selectCardWrapper}>
         <div className="d-flex align-items-center justify-content-between">
-          <div className={styles.selectTitle}>{title}</div>
+          <div className={styles.selectTitle}>
+            <span className={styles.icon}>
+              <Image src={iconList[0]} width={30} height={30} alt="Icon" />
+            </span>
+            {title}
+          </div>
+        </div>
+        <div className="mb-2">
           {currentAssignedUrl && (
             <a
               target="_blank"

@@ -229,7 +229,7 @@ const FreeSampleMainView = () => {
           </div>
         </Col>
 
-        {/* <Col xs={12} lg={10}>
+        <Col xs={12} lg={10}>
           <Row className="align-items-center text-center text-md-start">
             <Col xs={12} md={7} lg={7} className="my-4">
               {count && (
@@ -249,10 +249,10 @@ const FreeSampleMainView = () => {
               )}
             </Col>
           </Row>
-        </Col> */}
+        </Col>
       </Row>
 
-      {/* <MainCategoryList /> */}
+      <MainCategoryList />
     </>
   );
 };
