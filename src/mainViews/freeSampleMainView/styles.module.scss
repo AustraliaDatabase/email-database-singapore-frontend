@@ -1,0 +1,23 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.topCardWrapper {
+  background-color: $white;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  @include breakpoint(mobile) {
+    padding: 1rem;
+  }
+
+  .userName {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+ 
+}
+
+.contactus {
+  cursor: pointer;
+  text-decoration: underline;
+}

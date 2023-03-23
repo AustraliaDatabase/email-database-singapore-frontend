@@ -1,8 +1,13 @@
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import {
+  CloudArrowDown,
+  CreditCard,
+  Desktop,
   DownloadSimple,
+  FileArrowDown,
   ListChecks,
+  ListPlus,
   Money,
   Moon,
   PresentationChart,
@@ -52,12 +57,13 @@ const DashboardMenu = () => {
   };
 
   const getIcon: IGetIcon = {
-    dashboard: <PresentationChart size={24} />,
-    downloads: <DownloadSimple size={24} />,
+    dashboard: <Desktop size={24} />,
+    downloads: <CloudArrowDown size={24} />,
+    freesample: <FileArrowDown size={24} />,
     myaccount: <User size={24} />,
     support: <Question size={24} />,
-    billing: <Money size={24} />,
-    orders: <ListChecks size={24} />,
+    billing: <CreditCard size={24} />,
+    orders: <ListPlus size={24} />,
   };
 
   const menuSet = loggedInUser ? DASHBOARD_MENU_SET : DASHBOARD_MENU_SET_PUBLIC;

@@ -1,0 +1,93 @@
+@import "styles/variables";
+@import "styles/mixins";
+.cardsWrapper {
+  .card {
+    background-color: $white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    .cardTitle {
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      max-height: 70px;
+      background-color: $border;
+      color: $white;
+      color: black;
+
+      .description {
+        font-weight: 400;
+        color: $primary;
+      }
+    }
+    .cardDetails {
+      padding: 1rem;
+
+      .singleInfo {
+        .titleText {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: black;
+        }
+        .title {
+          display: flex;
+          color: $primary;
+          font-size: 0.9rem;
+          svg {
+            margin-right: 0.5rem;
+            color: $text;
+          }
+        }
+      }
+    }
+
+    .cardBtn {
+      min-width: 100%;
+      margin-top: 30px;
+      height: 40px;
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+.remainRequst {
+  background-color: $white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.unlockTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  @include breakpoint(mobile){
+    text-align: center;
+  }
+}
+
+.divider {
+  margin: 1.5rem 0;
+  width: 50%;
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+}
+
+.rightCol {
+  margin-left: 1.5rem;
+  position: relative;
+  &::before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: -15px;
+    background-color: rgba($color: $secondary, $alpha: 0.15);
+  }
+  @include breakpoint(tablet) {
+    margin-left: 0;
+    &::before {
+      display: none;
+    }
+  }
+}

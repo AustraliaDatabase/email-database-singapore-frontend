@@ -312,3 +312,9 @@ export interface IReviewObject {
   }
   reviews?: IReviewItem[]
 }
+
+export interface ISelectObject {
+  label: string;
+  value: string;
+  assignedUrl: string;
+}

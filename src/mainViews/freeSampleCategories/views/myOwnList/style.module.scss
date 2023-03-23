@@ -1,0 +1,68 @@
+@import "styles/variables";
+@import "styles/mixins";
+.card {
+  background-color: $white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  .cardTitle {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    max-height: fit-content;
+    background-color: $border;
+    color: $secondary;
+
+    .description {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      padding: 0 1rem;
+      border-radius: 1rem;
+      display: inline-block;
+      color: $white;
+    }
+  }
+  .cardDetails {
+    padding: 1rem;
+
+    .singleInfo {
+      .titleText {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: black;
+      }
+      .title {
+        display: flex;
+        color: $primary;
+        font-size: 0.9rem;
+        svg {
+          margin-right: 0.5rem;
+          color: $text;
+        }
+      }
+    }
+  }
+
+  .cardBtn {
+    min-width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 0.25rem;
+  }
+}
+
+.cardCol {
+  min-width: 262px;
+  margin-bottom: 1.35rem;
+  @include breakpoint(mobile) {
+    margin-bottom: 1rem;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+
+.remainRequst {
+  background-color: $white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}

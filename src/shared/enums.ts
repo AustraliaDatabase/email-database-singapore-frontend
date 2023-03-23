@@ -66,3 +66,8 @@ export enum PRODUCT_MAIN_TYPE_ENUM {
   BY_REALTORS = "BY_REALTORS",
   BY_PROFESSION = "BY_PROFESSION",
 }
+
+export enum EMAIL_VERIFICATION_TYPE {
+  EMAIL_MARKETTING_FREE_SAMPLE = "email_marketting_free_sample",
+  FREE_SAMPLE_ON_EVERY_PRODUCT = "free_sample_on_every_product"
+}

@@ -158,6 +158,10 @@ export const DASHBOARD_MENU_SET = [
     url: "/downloads",
   },
   {
+    name: "Free Sample",
+    url: "/free-sample",
+  },
+  {
     name: "My Account",
     url: "/my-account",
   },
