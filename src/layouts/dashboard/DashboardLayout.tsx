@@ -1,12 +1,12 @@
-import { useWindowWidth } from "@react-hook/window-size";
-import classNames from "classnames";
-import { CaretRight } from "phosphor-react";
 import React, { ReactNode, useEffect, useState } from "react";
+import classNames from "classnames";
+import { useWindowWidth } from "@react-hook/window-size";
+import { CaretRight } from "phosphor-react";
 
-import DashboardMenu from "../../menus/dashboardMenu/DashboardMenu";
 import { useRoot } from "../../shared/contexts/RootProvider";
-import styles from "./dashboardLayout.module.scss";
 import Header from "./view/header/Header";
+import DashboardMenu from "../../menus/dashboardMenu/DashboardMenu";
+import styles from "./dashboardLayout.module.scss";
 
 interface IDashboardLayout {
   children: ReactNode;

@@ -1,32 +1,25 @@
-import classNames from "classnames";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import classNames from "classnames";
 import {
   CloudArrowDown,
   CreditCard,
   Desktop,
-  DownloadSimple,
   FileArrowDown,
-  ListChecks,
   ListPlus,
-  Money,
-  Moon,
-  PresentationChart,
   Question,
-  SignOut,
-  SunDim,
   User,
 } from "phosphor-react";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import Image from "next/image";
 // import { signOut } from "firebase/auth";
 
-import Image from "next/image";
 import { DASHBOARD_MENU_SET, DASHBOARD_MENU_SET_PUBLIC } from "../constants";
 import { IGetIcon } from "../interface";
-import styles from "./dashboardMenu.module.scss";
 import { useRoot } from "../../shared/contexts/RootProvider";
 import { setUser } from "../../services/helpers/tokenService";
 // import { auth } from "../../database/firebase";
+import styles from "./dashboardMenu.module.scss";
 
 const DashboardMenu = () => {
   const router = useRouter();
