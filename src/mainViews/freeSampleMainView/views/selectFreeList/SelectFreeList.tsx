@@ -15,11 +15,12 @@ import EmailVerifyTimer from "./emailVerifyTimer/EmailVerifyTimer";
 import { useRoot } from "../../../../shared/contexts/RootProvider";
 import { ISelectObject } from "../../../../shared/interface";
 import Image from "next/image";
+import instance from "../../../../services/baseServices";
 
 interface ISelectFreeList {
   onBuildList: (list: string) => void;
-  onSelectCategory: Function;
-  sampleSubList: ISelectObject[];
+  // onSelectCategory: Function;
+  // sampleSubList: ISelectObject[];
   buildLoading: boolean;
   userInfo: {
     isEmailVerified: boolean;
@@ -32,8 +33,8 @@ interface ISelectFreeList {
 const SelectFreeList = (props: ISelectFreeList) => {
   const {
     onBuildList,
-    onSelectCategory,
-    sampleSubList,
+    // onSelectCategory,
+    // sampleSubList,
     buildLoading,
     userInfo,
     requestLeftCount,
@@ -42,6 +43,9 @@ const SelectFreeList = (props: ISelectFreeList) => {
   } = props;
   const router = useRouter();
   const { loggedInUser, setAuthEnable } = useRoot();
+  
+  const [sampleSubList, setSampleSubList] = useState<ISelectObject[]>([]);
+  const [currentCategory, setCurrentCategory] = useState<string | null>(null);
 
   const [freeSample, setFreeSample] = useState("--Select--");
   const [currentAssignedUrl, setCurrentAssignedUrl] = useState<string>("");
@@ -53,6 +57,31 @@ const SelectFreeList = (props: ISelectFreeList) => {
   //   // @ts-ignore
   //   ?.replace("-", "_")
   //   ?.toUpperCase();
+
+
+  const onSelectCategory = async (category: string) => {
+    setCurrentCategory(category);
+    setSampleSubList([]);
+    try {
+      // setLoading(true);
+      const response = await instance.get(
+        `/free-sample-by-name/${category?.toLowerCase()}`
+      );
+
+      const list: any = response.data?.items?.map((element: any) => {
+        return {
+          label: element.fileName,
+          value: element.fileName,
+          assignedUrl: element.assignedUrl,
+        };
+      });
+
+      setSampleSubList(list);
+      // setLoading(false);
+    } catch (error: any) {
+      // setLoading(false);
+    }
+  };
 
   useEffect(() => {
     if (mainCategory) {

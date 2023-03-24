@@ -126,19 +126,13 @@ const FreeSampleMainView = () => {
 
   const mainCategories = [
     {
-      "Company Database": "company-database",
+      "Company Database": "company_database",
     },
     {
       Realtor: "realtor",
     },
     {
-      "Job Title": "job-title",
-    },
-    {
       Industry: "industry",
-    },
-    {
-      Country: "country",
     },
     {
       Consumer: "consumer",
@@ -207,8 +201,8 @@ const FreeSampleMainView = () => {
                 <SelectFreeList
                   key={i}
                   onBuildList={onBuildList}
-                  onSelectCategory={onSelectCategory}
-                  sampleSubList={sampleSubList}
+                  // onSelectCategory={onSelectCategory}
+                  // sampleSubList={sampleSubList}
                   buildLoading={buildLoading}
                   userInfo={userInfo}
                   requestLeftCount={requestLeftCount}
