@@ -13,6 +13,7 @@ import { useRoot } from "../../shared/contexts/RootProvider";
 import MyOwnList from "./views/myOwnList/MyOwnList";
 import SelectFreeList from "./views/selectFreeList/SelectFreeList";
 import Swal from "sweetalert2";
+import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 
 const FreeSampleMainView = () => {
   const router = useRouter();
@@ -126,19 +127,19 @@ const FreeSampleMainView = () => {
 
   const mainCategories = [
     {
-      "Company Database": "company_database",
+      "Company Database": DATABASE_MAIN_TYPES.COMPANY_DATABASE,
     },
     {
-      Realtor: "realtor",
+      Realtor: DATABASE_MAIN_TYPES.REALTOR,
     },
     {
-      Industry: "industry",
+      Industry: DATABASE_MAIN_TYPES.INDUSTRY,
     },
     {
-      Consumer: "consumer",
+      Consumer: DATABASE_MAIN_TYPES.CONSUMER,
     },
     {
-      Target: "target",
+      Target: DATABASE_MAIN_TYPES.TARGET,
     },
   ];
 
@@ -207,7 +208,7 @@ const FreeSampleMainView = () => {
                   userInfo={userInfo}
                   requestLeftCount={requestLeftCount}
                   title={Object.keys(element)[0]}
-                  mainCategory={Object.values(element)[0]}
+                  databaseMainTypes={Object.values(element)[0]}
                 />
               );
             })}

@@ -27,7 +27,7 @@ interface ISelectFreeList {
   } | null;
   requestLeftCount: number;
   title: string;
-  mainCategory: string;
+  databaseMainTypes: string;
 }
 
 const SelectFreeList = (props: ISelectFreeList) => {
@@ -39,21 +39,20 @@ const SelectFreeList = (props: ISelectFreeList) => {
     userInfo,
     requestLeftCount,
     title,
-    mainCategory,
+    databaseMainTypes,
   } = props;
-  const router = useRouter();
+  console.log(databaseMainTypes)
   const { loggedInUser, setAuthEnable } = useRoot();
-  
+
   const [sampleSubList, setSampleSubList] = useState<ISelectObject[]>([]);
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
-
   const [freeSample, setFreeSample] = useState("--Select--");
   const [currentAssignedUrl, setCurrentAssignedUrl] = useState<string>("");
 
   // const selectedListItem = router.query?.id;
-  const selectedListItem = router.query?.id;
+  const selectedListItem = databaseMainTypes;
 
-  // const mainCategory = router?.query?.productId
+  // const databaseMainTypes = router?.query?.productId
   //   // @ts-ignore
   //   ?.replace("-", "_")
   //   ?.toUpperCase();
@@ -84,10 +83,10 @@ const SelectFreeList = (props: ISelectFreeList) => {
   };
 
   useEffect(() => {
-    if (mainCategory) {
-      onSelectCategory(mainCategory);
+    if (databaseMainTypes) {
+      onSelectCategory(databaseMainTypes);
     }
-  }, [mainCategory]);
+  }, [databaseMainTypes]);
 
   useEffect(() => {
     if (sampleSubList?.length && selectedListItem) {
