@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Col } from "react-bootstrap";
-import classNames from "classnames";
-import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import classNames from "classnames";
 
 import Button from "../../../../shared/components/button/Button";
 import {
@@ -10,12 +10,11 @@ import {
   BUTTON_VARIANT_ENUM,
   EMAIL_VERIFICATION_TYPE,
 } from "../../../../shared/enums";
-import styles from "./styles.module.scss";
 import EmailVerifyTimer from "./emailVerifyTimer/EmailVerifyTimer";
 import { useRoot } from "../../../../shared/contexts/RootProvider";
 import { ISelectObject } from "../../../../shared/interface";
-import Image from "next/image";
 import instance from "../../../../services/baseServices";
+import styles from "./styles.module.scss";
 
 interface ISelectFreeList {
   onBuildList: (list: string) => void;
@@ -30,6 +29,10 @@ interface ISelectFreeList {
   databaseMainTypes: string;
 }
 
+interface IconList {
+  [key: string]: string;
+}
+
 const SelectFreeList = (props: ISelectFreeList) => {
   const {
     onBuildList,
@@ -41,7 +44,7 @@ const SelectFreeList = (props: ISelectFreeList) => {
     title,
     databaseMainTypes,
   } = props;
-  console.log(databaseMainTypes)
+  console.log(databaseMainTypes);
   const { loggedInUser, setAuthEnable } = useRoot();
 
   const [sampleSubList, setSampleSubList] = useState<ISelectObject[]>([]);
@@ -56,7 +59,6 @@ const SelectFreeList = (props: ISelectFreeList) => {
   //   // @ts-ignore
   //   ?.replace("-", "_")
   //   ?.toUpperCase();
-
 
   const onSelectCategory = async (category: string) => {
     setCurrentCategory(category);
@@ -109,8 +111,12 @@ const SelectFreeList = (props: ISelectFreeList) => {
     setFreeSample(event.target.value);
   };
 
-  const iconList = {
-    0: "/menu-icons/by-states.png",
+  const iconList: IconList = {
+    COMPANY_DATABASE: "/menu-icons/industries.png",
+    REALTOR: "/menu-icons/by-states.png",
+    INDUSTRY: "/menu-icons/industries.png",
+    CONSUMER: "/menu-icons/international.png",
+    TARGET: "/menu-icons/target.png",
   };
 
   return (
@@ -119,7 +125,12 @@ const SelectFreeList = (props: ISelectFreeList) => {
         <div className="d-flex align-items-center justify-content-between">
           <div className={styles.selectTitle}>
             <span className={styles.icon}>
-              <Image src={iconList[0]} width={30} height={30} alt="Icon" />
+              <Image
+                src={iconList[databaseMainTypes]}
+                width={30}
+                height={30}
+                alt="Icon"
+              />
             </span>
             {title}
           </div>
