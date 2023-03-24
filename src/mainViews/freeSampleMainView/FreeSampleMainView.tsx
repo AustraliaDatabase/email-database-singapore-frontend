@@ -64,6 +64,7 @@ const FreeSampleMainView = () => {
     getFreeSampleList();
   }, []);
 
+  // console.log(sampleSubList, "sample sub list")
   const onSelectCategory = async (category: string) => {
     setCurrentCategory(category);
     setSampleSubList([]);
@@ -87,28 +88,6 @@ const FreeSampleMainView = () => {
       // setLoading(false);
     }
   };
-  useEffect(() => {
-    mainCategories.forEach(async (element) => {
-      const category = Object.values(element)[0];
-      try {
-        const response = await instance.get(
-          `/free-sample-by-name/${category?.toLowerCase()}`
-        );
-
-        const list: any = response.data?.items?.map((element: any) => {
-          return {
-            label: element.fileName,
-            value: element.fileName,
-            assignedUrl: element.assignedUrl,
-          };
-        });
-
-        setSampleSubList((prevList) => [...prevList, ...list]);
-      } catch (error: any) {
-        console.log(error);
-      }
-    });
-  }, []);
 
   const buildList = (data: any) => {
     setMyOwnList(data);
@@ -131,6 +110,7 @@ const FreeSampleMainView = () => {
       );
 
       buildList(response?.data);
+      console.log(response?.data, "build list");
       // setSwitchSelect(false);
       setBuildLoading(false);
       Swal.fire("Successfully Created!", "", "success");
@@ -146,13 +126,19 @@ const FreeSampleMainView = () => {
 
   const mainCategories = [
     {
-      "Company Database": "company_database",
+      "Company Database": "company-database",
     },
     {
       Realtor: "realtor",
     },
     {
+      "Job Title": "job-title",
+    },
+    {
       Industry: "industry",
+    },
+    {
+      Country: "country",
     },
     {
       Consumer: "consumer",

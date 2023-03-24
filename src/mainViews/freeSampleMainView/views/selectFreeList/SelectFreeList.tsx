@@ -45,15 +45,9 @@ const SelectFreeList = (props: ISelectFreeList) => {
 
   const [freeSample, setFreeSample] = useState("--Select--");
   const [currentAssignedUrl, setCurrentAssignedUrl] = useState<string>("");
-  const [subList, setSubList] = useState<ISelectObject[]>([]);
-
-  const handleCategorySelect = async (category: string) => {
-    await onSelectCategory(category);
-    setSubList([]);
-  };
 
   // const selectedListItem = router.query?.id;
-  const selectedListItem = mainCategory;
+  const selectedListItem = router.query?.id;
 
   // const mainCategory = router?.query?.productId
   //   // @ts-ignore
@@ -69,7 +63,6 @@ const SelectFreeList = (props: ISelectFreeList) => {
   useEffect(() => {
     if (sampleSubList?.length && selectedListItem) {
       const selectedItemObject = sampleSubList.filter((element) => {
-        console.log(selectedItemObject, "selected itemobj");
         return element.assignedUrl == `/${selectedListItem}`;
       })[0];
 
@@ -103,7 +96,7 @@ const SelectFreeList = (props: ISelectFreeList) => {
             {title}
           </div>
         </div>
-        <div className="mb-2">
+        <div className="mb-3">
           {currentAssignedUrl && (
             <a
               target="_blank"
@@ -120,9 +113,6 @@ const SelectFreeList = (props: ISelectFreeList) => {
           onChange={handleSampleList}
           value={freeSample}
           className="form-select"
-          onFocus={() => {
-            handleCategorySelect(mainCategory);
-          }}
         >
           <option>--Select--</option>
           {sampleSubList?.map((element) => {
