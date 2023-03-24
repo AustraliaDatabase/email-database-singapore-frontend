@@ -25,7 +25,7 @@ const FreeSampleMainView = () => {
   const [ownListLoading, setOwnListLoading] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
   const [buildLoading, setBuildLoading] = useState(false);
-  const [sampleSubList, setSampleSubList] = useState<ISelectObject[]>([]);
+  // const [sampleSubList, setSampleSubList] = useState<ISelectObject[]>([]);
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
 
   useEffect(() => {
@@ -65,29 +65,29 @@ const FreeSampleMainView = () => {
   }, []);
 
   // console.log(sampleSubList, "sample sub list")
-  const onSelectCategory = async (category: string) => {
-    setCurrentCategory(category);
-    setSampleSubList([]);
-    try {
-      // setLoading(true);
-      const response = await instance.get(
-        `/free-sample-by-name/${category?.toLowerCase()}`
-      );
+  // const onSelectCategory = async (category: string) => {
+  //   setCurrentCategory(category);
+  //   setSampleSubList([]);
+  //   try {
+  //     // setLoading(true);
+  //     const response = await instance.get(
+  //       `/free-sample-by-name/${category?.toLowerCase()}`
+  //     );
 
-      const list: any = response.data?.items?.map((element: any) => {
-        return {
-          label: element.fileName,
-          value: element.fileName,
-          assignedUrl: element.assignedUrl,
-        };
-      });
+  //     const list: any = response.data?.items?.map((element: any) => {
+  //       return {
+  //         label: element.fileName,
+  //         value: element.fileName,
+  //         assignedUrl: element.assignedUrl,
+  //       };
+  //     });
 
-      setSampleSubList(list);
-      // setLoading(false);
-    } catch (error: any) {
-      // setLoading(false);
-    }
-  };
+  //     setSampleSubList(list);
+  //     // setLoading(false);
+  //   } catch (error: any) {
+  //     // setLoading(false);
+  //   }
+  // };
 
   const buildList = (data: any) => {
     setMyOwnList(data);
@@ -144,7 +144,7 @@ const FreeSampleMainView = () => {
 
   return (
     <>
-      <Row>
+      <Row className="pb-5">
         <Col xs={12} lg={7}>
           <div className={styles.alertWrapper}>
             <Row className="align-items-center">
@@ -223,7 +223,7 @@ const FreeSampleMainView = () => {
           </div>
         </Col>
 
-        <Col xs={12} lg={10}>
+        {/* <Col xs={12} lg={10}>
           <Row className="align-items-center text-center text-md-start">
             <Col xs={12} md={7} lg={7} className="my-4">
               {count && (
@@ -243,10 +243,10 @@ const FreeSampleMainView = () => {
               )}
             </Col>
           </Row>
-        </Col>
+        </Col> */}
       </Row>
 
-      <MainCategoryList />
+      {/* <MainCategoryList /> */}
     </>
   );
 };
