@@ -44,7 +44,6 @@ const SelectFreeList = (props: ISelectFreeList) => {
     title,
     databaseMainTypes,
   } = props;
-  console.log(databaseMainTypes);
   const { loggedInUser, setAuthEnable } = useRoot();
 
   const [sampleSubList, setSampleSubList] = useState<ISelectObject[]>([]);

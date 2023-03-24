@@ -65,7 +65,6 @@ const FreeSampleMainView = () => {
     getFreeSampleList();
   }, []);
 
-  // console.log(sampleSubList, "sample sub list")
   // const onSelectCategory = async (category: string) => {
   //   setCurrentCategory(category);
   //   setSampleSubList([]);
@@ -111,7 +110,6 @@ const FreeSampleMainView = () => {
       );
 
       buildList(response?.data);
-      console.log(response?.data, "build list");
       // setSwitchSelect(false);
       setBuildLoading(false);
       Swal.fire("Successfully Created!", "", "success");
