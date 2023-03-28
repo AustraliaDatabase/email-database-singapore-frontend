@@ -42,8 +42,7 @@
     z-index: -1;
     @include breakpoint(tab-landscape-up) {
       display: block;
-      background: url("/auth-bg-element.png"),
-        linear-gradient(346.73deg, #212529 2.45%, #e64e0d 232.58%);
+      background: linear-gradient(346.73deg, #212529 2.45%, #00a2e2 232.58%);
       background-position: bottom right;
       background-repeat: no-repeat;
       border-radius: 0.25rem 0 0 0.25rem;
