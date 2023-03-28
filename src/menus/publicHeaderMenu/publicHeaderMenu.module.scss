@@ -109,7 +109,7 @@ $withFraction: 1 / $navMenuCount;
       }
 
       &:hover {
-        background: rgba(242, 79, 15, 0.06);
+        background: rgba(0, 135, 188, 0.074);
         overflow: visible;
         .sub {
           @include breakpoint(tablet) {

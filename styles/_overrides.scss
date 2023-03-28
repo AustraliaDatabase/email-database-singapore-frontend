@@ -92,7 +92,7 @@ button:focus:not(:focus-visible) {
     th {
       color: var(--text);
       position: sticky;
-      background: #ffddc9 !important;
+      background: #d8f2fd !important;
       top: 0;
       tr {
         border: transparent;
@@ -145,7 +145,7 @@ button:focus:not(:focus-visible) {
           font-weight: bold;
           font-size: 18px;
           line-height: 27px;
-          color: #fe7728;
+          color: $primary
         }
 
         small {
