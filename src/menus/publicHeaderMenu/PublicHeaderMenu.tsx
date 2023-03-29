@@ -29,13 +29,12 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
   let active =
     router.pathname === route ||
     (router.pathname === "/pre-made-list" && name === "Pre-Made Lists") ||
-    (router.pathname === "/by-us-states" && name === "List by US States") ||
-    (router.pathname === "/job-titles" && name === "List by Job Titles") ||
-    (router.pathname === "/industries" && name === "List by Industries") ||
-    (router.pathname === "/target" && name === "List by Target") ||
-    (router.pathname === "/by-zip-code" && name === "List by Zip Code") ||
-    (router.pathname === "/international" &&
-      name === "List by International") ||
+    (router.pathname === "/by-us-states" && name === "Pre-Made Lists") ||
+    (router.pathname === "/job-titles" && name === "Pre-Made Lists") ||
+    (router.pathname === "/industries" && name === "Pre-Made Lists") ||
+    (router.pathname === "/target" && name === "Pre-Made Lists") ||
+    (router.pathname === "/by-zip-code" && name === "Pre-Made Lists") ||
+    (router.pathname === "/international" && name === "Pre-Made Lists") ||
     (router.pathname === "/[readyMadeDetail]" && name === "Pre-Made Lists");
 
   const isDisabled =
