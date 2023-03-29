@@ -50,10 +50,10 @@ export const passwordValidation = (value: any) => {
   if (!value) {
     error = "Password is required";
   } else if (
-    !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(value)
+    !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(value)
   ) {
     error =
-      "Password must be at least 8 characters long, contain at least one letter, one number, and one special character (@$!%*#?&)";
+      "Password must be least 6 characters & include 1 letter, 1 number, and 1 special char (@$!%*#?&)";
   }
   return error;
 };
@@ -63,11 +63,11 @@ export const validURL = (str: string) => {
 
   var pattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
-      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-      "(\\#[-a-z\\d_]*)?$",
+    "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+    "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+    "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+    "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+    "(\\#[-a-z\\d_]*)?$",
     "i"
   ); // fragment locator
 
@@ -205,8 +205,8 @@ export const makeOrderAction = async (
       paymentMethod === PAYMENT_METHOD.CRYPTO
         ? PAYMENT_STATUS.REQUESTED
         : paymentMethod === PAYMENT_METHOD.CRYPTO_PLISIO_INITIALIZED
-        ? PAYMENT_STATUS.INITIALIZED
-        : PAYMENT_STATUS.PENDING,
+          ? PAYMENT_STATUS.INITIALIZED
+          : PAYMENT_STATUS.PENDING,
     userIpAddress: ipAddress || "",
     paymentMethod,
     orderId,
@@ -218,11 +218,11 @@ export const makeOrderAction = async (
     const cryptoValueObj: any =
       paymentMethod === PAYMENT_METHOD.CRYPTO
         ? [
-            {
-              coin: currentCoinSelection?.value,
-              network: selectedNetwork?.value,
-            },
-          ]
+          {
+            coin: currentCoinSelection?.value,
+            network: selectedNetwork?.value,
+          },
+        ]
         : [];
 
     // PaymentService.updateWithCustomIdAndAdd(loggedInUser.uid, totalOrder);

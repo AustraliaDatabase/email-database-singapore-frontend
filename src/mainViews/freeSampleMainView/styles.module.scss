@@ -1,0 +1,52 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.topCardWrapper {
+  background-color: $white;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  @include breakpoint(mobile) {
+    padding: 1rem;
+  }
+
+  .userName {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.contactus {
+  color: $primary;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.alertWrapper {
+  background: $secondary;
+  background-image: url("/bg-element-dashboard.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  color: $white;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.unlockedList {
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  background-color: #f0efef;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}

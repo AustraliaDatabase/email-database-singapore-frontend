@@ -1,8 +1,10 @@
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import {
   CaretDown,
   DownloadSimple,
+  FileArrowDown,
   ListChecks,
   Money,
   PresentationChart,
@@ -11,7 +13,7 @@ import {
   SignOut,
   User,
 } from "phosphor-react";
-import React, { useEffect, useState } from "react";
+
 import {
   DASHBOARD_MENU_SET,
   DASHBOARD_MENU_SET_PUBLIC,
@@ -62,6 +64,7 @@ const Header = () => {
     support: <Question size={24} />,
     billing: <Money size={24} />,
     orders: <ListChecks size={24} />,
+    freesample: <FileArrowDown size={24} />,
   };
 
   return (

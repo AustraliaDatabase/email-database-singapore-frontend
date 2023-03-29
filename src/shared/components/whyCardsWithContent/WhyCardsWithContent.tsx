@@ -1,5 +1,6 @@
-import React, { ReactNode, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+
 import Card from "../card/Card";
 import styles from "./styles.module.scss";
 
@@ -25,35 +26,42 @@ const WhyCardsWithContent = (props: IWhyCards) => {
             className={styles.title}
             dangerouslySetInnerHTML={{ __html: title }}
           />
-          <div className={styles.description}>{description}</div>
+          <div
+            className={styles.description}
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </Row>
       </Container>
       <Container>
-        {lists.map((element, index) => {
-          return (
-            <div className={styles.cardsWrapper} key={index}>
-              <div className={styles.titleCard}>
-                <div className={styles.titleInnerContainer}>
-                  <div
-                    className={styles.titleCount}
-                    dangerouslySetInnerHTML={{
-                      __html: `${index < 10 && "0"}` + (index + 1),
-                    }}
-                  />
-                  <div
-                    className={styles.title}
-                    dangerouslySetInnerHTML={{ __html: element?.title }}
-                  />
+        <Row>
+          {lists.map((element, index) => {
+            return (
+              <Col xx={12} lg={6} key={index}>
+                <div className={styles.cardsWrapper}>
+                  <div className={styles.titleCard}>
+                    <div className={styles.titleInnerContainer}>
+                      <div
+                        className={styles.titleCount}
+                        dangerouslySetInnerHTML={{
+                          __html: `${index < 10 && "0"}` + (index + 1),
+                        }}
+                      />
+                      <div
+                        className={styles.title}
+                        dangerouslySetInnerHTML={{ __html: element?.title }}
+                      />
+                    </div>
+                  </div>
+                  <Card className={styles.contentCard}>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: element.description }}
+                    />
+                  </Card>
                 </div>
-              </div>
-              <Card className={styles.contentCard}>
-                <div
-                  dangerouslySetInnerHTML={{ __html: element.description }}
-                />
-              </Card>
-            </div>
-          );
-        })}
+              </Col>
+            );
+          })}
+        </Row>
       </Container>
     </div>
   );

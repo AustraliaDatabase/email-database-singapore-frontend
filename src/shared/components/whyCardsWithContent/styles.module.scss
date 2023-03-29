@@ -36,10 +36,10 @@
     }
     .titleCard {
       width: 650px;
-      height: 180px;
+      height: 130px;
       background: linear-gradient(
         102.25deg,
-        #ff4800 -23.38%,
+        #00A2E2 -23.38%,
         #040505 39.21%,
         #040505 76.31%,
         #22262a 110.96%
@@ -58,7 +58,7 @@
         display: flex;
         .title {
           color: $white;
-          font-size: 2rem;
+          font-size: 1.5rem;
           text-align: left;
           margin-bottom: 0;
           margin-left: 0.5rem;
@@ -68,7 +68,7 @@
         }
         .titleCount {
           color: $white;
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-weight: 700;
           opacity: 0.5;
           @include breakpoint(tablet) {
@@ -79,7 +79,7 @@
     }
     .contentCard {
       z-index: 1;
-      margin-top: -100px;
+      margin-top: -60px;
       margin-left: auto;
       border-radius: 0.5rem;
       max-width: 95%;

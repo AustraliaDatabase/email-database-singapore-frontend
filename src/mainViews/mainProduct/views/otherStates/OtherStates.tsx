@@ -58,7 +58,7 @@ const OtherStates = (props: IOtherStatesView) => {
               style={{ fontWeight: "bold", marginBottom: 10, gap: 5 }}
             >
               <div>
-                <Lightning color="#FF4800" />
+                <Lightning color="#00A2E2" />
               </div>
               <a href={`${process.env.NEXT_PUBLIC_BASE_URL}${element.url?.replaceAll('+', '/')}`}>
                 {element.name}

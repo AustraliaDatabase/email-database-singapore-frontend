@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
+import { EnvelopeSimpleOpen, Eye, EyeSlash, Password } from "phosphor-react";
 import { Formik, Field, Form as FormikForm } from "formik";
 
 import Button from "../../button/Button";
@@ -8,8 +9,15 @@ import { validateRequired } from "../../../InternalService";
 import { useRoot } from "../../../contexts/RootProvider";
 import { Col, Row } from "react-bootstrap";
 import { setUser } from "../../../../services/helpers/tokenService";
+import styles from "../style.module.scss";
+interface ILogin {
+  toggleValue: boolean;
+  pressSignUp: () => void;
+  pressToggle: () => void;
+}
 
-const Login = () => {
+const Login = (props: ILogin) => {
+  const { pressSignUp, pressToggle, toggleValue } = props;
   const {
     setAuthEnable,
     setAuthLoading,
@@ -37,6 +45,8 @@ const Login = () => {
     setForgetPasswordModalVisible(true);
   };
 
+  const AsTag = "span";
+
   return (
     <div>
       <Formik
@@ -59,26 +69,41 @@ const Login = () => {
           <FormikForm>
             <Form.Group className="mb-3">
               <Form.Label htmlFor="email">Email</Form.Label>
-              <Field
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Jhon"
-                validate={validateRequired}
-              />
+              <AsTag className={styles.fieldWrapper}>
+                <Field
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Jhon"
+                  validate={validateRequired}
+                  className="ps-5"
+                />
+                <AsTag>
+                  <EnvelopeSimpleOpen size={22} />
+                </AsTag>
+              </AsTag>
               {errors.email && (
                 <Form.Text className="text-danger">{errors.email}</Form.Text>
               )}
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label htmlFor="name">Password</Form.Label>
-              <Field
-                type="password"
-                id="password"
-                name="password"
-                placeholder="*******"
-                validate={validateRequired}
-              />
+              <AsTag className={styles.fieldWrapper}>
+                <Field
+                  type={toggleValue ? "text" : "password"}
+                  id="password"
+                  name="password"
+                  placeholder="*******"
+                  validate={validateRequired}
+                  className="ps-5"
+                />
+                <AsTag>
+                  <Password size={22} />
+                </AsTag>
+                <AsTag className={styles.passToggler} onClick={pressToggle}>
+                  {toggleValue ? <EyeSlash size={22} /> : <Eye size={22} />}
+                </AsTag>
+              </AsTag>
               {errors.password && (
                 <Form.Text className="text-danger">{errors.password}</Form.Text>
               )}
@@ -91,10 +116,18 @@ const Login = () => {
               </Col>
               <Col xs="12" className="text-center pb-2 pt-4">
                 <Button
+                  onClick={pressSignUp}
+                  size="large"
+                  className="w-100 mb-3"
+                  variant="tertiary"
+                >
+                  Don’t have any account?
+                </Button>
+                <Button
                   loading={loading}
                   disabled={loading}
+                  className="w-100"
                   size="large"
-                  block
                   type="submit"
                 >
                   Login

@@ -1,29 +1,82 @@
 @import "styles/variables";
+@import "styles/mixins";
 
-.tabs {
+.title {
+  color: $primary;
+}
+
+.leftColumn {
+  z-index: 1;
+  color: $white;
+  text-align: center;
   display: flex;
-  .tab {
-    flex: 0 0 50%;
-    width: 100%;
-    max-width: 50%;
-    height: 40px;
-    text-align: center;
-    border-radius: 2px;
-    transition: border-color 0.24s ease, background-color 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease;
-    font-weight: 500;
-    line-height: 40px;
-    cursor: pointer;
-    &:hover {
-      color: var(--primary);
-    }
-    &.active {
-      background-color: lighten($color: $primary, $amount: 40);
-      border-color: lighten($color: $primary, $amount: 40);
-      color: var(--primary);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background: url("/auth-bg-element.png"),
+    linear-gradient(346.73deg, #212529 2.45%, #e64e0d 232.58%);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @include breakpoint(tab-landscape-up) {
+    padding: 1rem 1rem;
+    border-radius: 0;
+    background: none;
+  }
+  .textGroup {
+    margin-top: 2rem;
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    background: none;
+    position: absolute;
+    width: 270px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    @include breakpoint(tab-landscape-up) {
+      display: block;
+      background: linear-gradient(346.73deg, #212529 2.45%, #00a2e2 232.58%);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      border-radius: 0.25rem 0 0 0.25rem;
     }
   }
 }
 
+.authModal {
+  position: static;
+}
+
 .action {
   min-width: 40%;
+}
+
+.fieldWrapper {
+  position: relative;
+  svg {
+    color: $primary;
+  }
+  span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.passToggler {
+      position: absolute;
+      left: unset;
+      right: 10px;
+      cursor: pointer;
+      svg {
+        color: $secondary;
+      }
+    }
+  }
 }

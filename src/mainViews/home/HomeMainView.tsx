@@ -3,127 +3,44 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 // import Card from "react-bootstrap/Card";
-import Image from "next/image";
-import { useRouter } from "next/router";
 import classNames from "classnames";
-import { Link as ScrollLink } from "react-scroll";
-import { ArrowRight, Buildings, CaretRight, HouseLine } from "phosphor-react";
 
-import Button from "../../shared/components/button/Button";
 import FeatureCard from "../../shared/components/featureCard/FeatureCard";
 // import SideTab from "../../shared/components/sideTab/SideTab";
 import HomeSeed from "./homeSeeds";
 // import CollapsibleList from "../../shared/components/collapsibleList/CollapsibleList";
 // import FloatingMenu from "../../menus/floatingMenu/FloatingMenu";
 import Faqs from "../../shared/components/faqs/Faqs";
-import FloatingMenu from "./views/floatingMenu/FloatingMenu";
-import TrustPilot from "../../shared/components/trustPilot/TrustPilot";
-import MainWhyDetailCard from "../mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
+// import FloatingMenu from "./views/floatingMenu/FloatingMenu";
+// import TrustPilot from "../../shared/components/trustPilot/TrustPilot";
+// import MainWhyDetailCard from "../mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
 import WhyListDetailCardView from "../mainProduct/views/whyListDetailCard/WhyListDetailCard";
 import { CURRENT_OBJECT_HOME } from "./constants";
 import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import {
-  BUTTON_VARIANT_ENUM,
   DATABASE_MAIN_TYPES,
   FEATURE_CARD_VARIANT,
 } from "../../shared/enums";
-import styles from "./homeMainView.module.scss";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import TargetView from "../../shared/components/targetView/TargetView";
 import LeadsLibraryResource from "../../shared/components/leadsLibraryResource/LeadsLibraryResource";
 import ProductDetailsExplain from "./views/productDetailsExplain/ProductDetailsExplain";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
+import HomeSourceView from "./views/sourceView/HomeSourceView";
+import BottomBanner from "./views/bottomBanner/BottomBanner";
+import HeroBanner from "./views/hero/HeroBanner";
+import styles from "./homeMainView.module.scss";
 
 const HomeMainView = () => {
-  const router = useRouter();
-
   return (
     <>
-      <section className={styles.hero}>
-        <Container>
-          <Row>
-            <Col
-              md={12}
-              lg={7}
-              className={classNames(
-                styles.titles,
-                "text-center",
-                "text-md-start"
-              )}
-            >
-              <Row>
-                <Col
-                  className="p-lg-0"
-                  xs={{ order: 1, span: 12 }}
-                  lg={{ order: 1, span: 12 }}
-                >
-                  <div
-                    className={styles.heroCaption}
-                    dangerouslySetInnerHTML={{
-                      __html: CURRENT_OBJECT_HOME?.banner?.caption,
-                    }}
-                  />
-                  <div
-                    className={styles.heroTitle}
-                    dangerouslySetInnerHTML={{
-                      __html: CURRENT_OBJECT_HOME.banner.title,
-                    }}
-                  ></div>
-                </Col>
-                <Col
-                  className="p-lg-0"
-                  xs={{ order: 3, span: 12 }}
-                  lg={{ order: 2, span: 12 }}
-                >
-                  <div
-                    className="mt-2 mb-lg-5"
-                    dangerouslySetInnerHTML={{
-                      __html: CURRENT_OBJECT_HOME.banner.description,
-                    }}
-                  />
-                </Col>
+      <HeroBanner
+        caption={CURRENT_OBJECT_HOME.banner.caption}
+        title={CURRENT_OBJECT_HOME.banner.title}
+        description={CURRENT_OBJECT_HOME.banner.description}
+      />
 
-                <Col
-                  className="p-lg-0"
-                  xs={{ order: 2, span: 12 }}
-                  lg={{ order: 3, span: 12 }}
-                >
-                  <Row>
-                    <Col>
-                      <ScrollLink to="#productType" offset={-200}>
-                        <Button
-                          className={styles.bannerBtn}
-                          size="large"
-                          variant={BUTTON_VARIANT_ENUM.Primary}
-                          icon={<Buildings weight="fill" size={24} />}
-                        >
-                          Explore the Products
-                        </Button>
-                      </ScrollLink>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Col>
-            {/* <Col
-              md={12}
-              lg={6}
-              className={classNames(styles.banner, "mt-5 mt-lg-0")}
-            >
-              <Image
-                width={650}
-                height={400}
-                objectFit="scale-down"
-                layout="fixed"
-                objectPosition="center"
-                src="/dashboard.png"
-                alt="dashboard"
-              />
-            </Col> */}
-          </Row>
-        </Container>
-      </section>
       {/* <FloatingMenu maxTopAgain={200} floatingMenus={HomeSeed.floatingMenu} /> */}
       {/* <FloatingMenu menuList={HomeSeed.floatingMenu} /> */}
       {/* <section className="pb-0">
@@ -244,63 +161,7 @@ const HomeMainView = () => {
       </section>
 
       <section className={classNames(styles.sourceSection)} id="#source">
-        <Container>
-          <Row className="justify-content-center align-items-center">
-            <Col md={5}>
-              <h4 className={classNames(styles.sourceOfContacts)}>
-                <span>
-                  What is the primary source of Email Lists that we offer?
-                </span>
-              </h4>
-              <p>
-                With our verification list, you can reach over a million every
-                year. We do proper research on the business can capture new
-                businesses so that our customers will be the first to target
-                them.
-              </p>
-              <p>
-                You can use several different techniques that will fix your
-                error and obsolete entries. Our professional ensures that our
-                data is accurate, current, and relevant.
-              </p>
-            </Col>
-            <Col md={6} className="ps-lg-5 ps-md-0">
-              <p className={styles.sourceItemListTitle}>
-                The information of companies gather comes from various sources
-                that include -
-              </p>
-              {[
-                "Public directories",
-                "New business filing",
-                "Press release",
-                "Corporate websites",
-                "Annual report",
-                "User-generated feedback",
-                "Daily utility connections",
-              ]?.map((element, index: number) => {
-                return (
-                  <Col
-                    key={index}
-                    className="d-flex align-items-start justify-content-center justify-content-md-start"
-                  >
-                    <span className="text-highlight">
-                      <CaretRight size={24} />{" "}
-                    </span>{" "}
-                    <p>{element}</p>
-                  </Col>
-                );
-              })}
-              <Col className="text-center text-md-start">
-                We have provided you with the information about the company in
-                the USA. It will even help you in achieving the marketing needs
-                of the person. The best thing is that we will provide you
-                high-quality list which is reliable. The data provided is
-                accurate, and you will get 100% ownership of the files, and you
-                can use it the way you want.
-              </Col>
-            </Col>
-          </Row>
-        </Container>
+        <HomeSourceView />
       </section>
 
       <section className={styles.target}>
@@ -335,27 +196,7 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
-      <section className={styles.bottomBanner}>
-        <Container>
-          <Row>
-            <Col xs={12} className="d-flex align-items-center flex-column">
-              <div className={classNames("text-center mb-4", styles.ourJob)}>
-                It&apos;s our Job to{" "}
-                <span className="text-highlight">Grow Your Business</span>
-              </div>
-              <Button
-                size="large"
-                onClick={() => {
-                  router.push("/contact-us");
-                }}
-                block
-              >
-                Have More Questions?
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <BottomBanner />
     </>
   );
 };

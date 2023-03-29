@@ -158,6 +158,10 @@ export const DASHBOARD_MENU_SET = [
     url: "/downloads",
   },
   {
+    name: "Free Sample",
+    url: "/free-sample",
+  },
+  {
     name: "My Account",
     url: "/my-account",
   },
@@ -285,5 +289,7 @@ export const EMAIL_TEMPLATE_IDS = {
   ORDER_REJECTED: "d-a630b473fb514df394934ebbaa08b4e6//TODO",
   ORDER_APPROVED: "d-4889eb92422a4cbca846993eec9c0bda//TODO",
   CREATE_ACCOUNT: "d-bd37e0e68ff84728a9b185069eb14ee7//TODO",
+  VERIFY_EMAIL: "d-ee23460bb35e4da58a7e0b7f97afa2bd",
+  RESPONSE_AFTER_DOWNLOAD_SAMPLE: "d-706abbde61a341558300ef71cdc896e4",
   // CREATE_ACCOUNT_ADMIN: "d-e898ec9624854e029e0883e411e22e40",
 };

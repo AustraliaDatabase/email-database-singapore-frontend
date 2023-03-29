@@ -1,27 +1,25 @@
-import classNames from "classnames";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import classNames from "classnames";
 import {
-  DownloadSimple,
-  ListChecks,
-  Money,
-  Moon,
-  PresentationChart,
+  CloudArrowDown,
+  CreditCard,
+  Desktop,
+  FileArrowDown,
+  ListPlus,
   Question,
-  SignOut,
-  SunDim,
   User,
 } from "phosphor-react";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import Image from "next/image";
 // import { signOut } from "firebase/auth";
 
-import Image from "next/image";
 import { DASHBOARD_MENU_SET, DASHBOARD_MENU_SET_PUBLIC } from "../constants";
 import { IGetIcon } from "../interface";
-import styles from "./dashboardMenu.module.scss";
 import { useRoot } from "../../shared/contexts/RootProvider";
 import { setUser } from "../../services/helpers/tokenService";
 // import { auth } from "../../database/firebase";
+import styles from "./dashboardMenu.module.scss";
 
 const DashboardMenu = () => {
   const router = useRouter();
@@ -52,12 +50,13 @@ const DashboardMenu = () => {
   };
 
   const getIcon: IGetIcon = {
-    dashboard: <PresentationChart size={24} />,
-    downloads: <DownloadSimple size={24} />,
+    dashboard: <Desktop size={24} />,
+    downloads: <CloudArrowDown size={24} />,
+    freesample: <FileArrowDown size={24} />,
     myaccount: <User size={24} />,
     support: <Question size={24} />,
-    billing: <Money size={24} />,
-    orders: <ListChecks size={24} />,
+    billing: <CreditCard size={24} />,
+    orders: <ListPlus size={24} />,
   };
 
   const menuSet = loggedInUser ? DASHBOARD_MENU_SET : DASHBOARD_MENU_SET_PUBLIC;

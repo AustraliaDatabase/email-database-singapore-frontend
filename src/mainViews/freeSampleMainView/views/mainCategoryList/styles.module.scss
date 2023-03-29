@@ -1,0 +1,30 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.linksWrapper {
+  max-width: 610px;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  @include breakpoint(mobile) {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  a {
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 600;
+    background-color: $white;
+    color: var(--secondary);
+    border-color: var(--primary);
+    transition: 0.24s all ease-in;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}

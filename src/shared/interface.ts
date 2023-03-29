@@ -312,3 +312,26 @@ export interface IReviewObject {
   }
   reviews?: IReviewItem[]
 }
+
+export interface IFreeSampleItem {
+  expireDate: number;
+  downloadUrl: string;
+  fileName: string;
+  category: string;
+  totalEmails: number;
+  expiredate: number;
+  emailContacts: string;
+  name?: string;
+}
+export interface IFreeSampleItemObject {
+  id: string;
+  email: string;
+  items: IFreeSampleItem[];
+  category: string;
+}
+
+export interface ISelectObject {
+  label: string;
+  value: string;
+  assignedUrl: string;
+}
