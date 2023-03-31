@@ -79,7 +79,7 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
 export default RealtorsByStatePage;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  let response = await instance.post(`/realtorProduct`);
+  let response = await instance.post(`/jobTitleProduct`);
 
   response =
     response.data?.length &&

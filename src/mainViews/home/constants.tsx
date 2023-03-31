@@ -81,7 +81,7 @@ export const CURRENT_OBJECT_HOME = {
         "Find the right decision-makers for your B2B marketing campaign with the accurate job title and level information provided by EmailDatas",
       label: "B2B Pricing starting at $98",
       link: "/job-title",
-      asTag: "div",
+      asTag: "h3",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_B2B_EMAILS,
     },
     {
@@ -90,7 +90,7 @@ export const CURRENT_OBJECT_HOME = {
         "Our email lists can be easily sorted by US City, State, Zip code, and other criteria to ensure that you reach the right audience in the right place. ",
       label: "Realtor Pricing Starts at $89",
       link: "/location",
-      asTag: "div",
+      asTag: "h3",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_REALTORS,
     },
     {
@@ -99,7 +99,7 @@ export const CURRENT_OBJECT_HOME = {
         "Buy verified industry-specific mailing lists to reach relevant contacts and market to businesses in your field. ",
       label: "Pricing of Professions Starts at $116",
       link: "/industries",
-      asTag: "div",
+      asTag: "h3",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_PROFESSION,
     },
     {
@@ -108,7 +108,7 @@ export const CURRENT_OBJECT_HOME = {
         "Buy targeted email lists with country-specific contact data to connect with decision-makers and find leads based on job level.",
       label: "Pricing of Professions Starts at $116",
       link: "/international",
-      asTag: "div",
+      asTag: "h3",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_PROFESSION,
     },
     // {
@@ -150,36 +150,36 @@ export const CURRENT_OBJECT_HOME = {
     // },
   ],
   beneifits: {
-    title: `<h3>Benefits of Our Business Database Lists</h3>`,
+    title: `Benefits of Our Business Database Lists`,
     description:
       "<p>Our USA Business directory is user-friendly, with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively.</p>",
     list: [
       {
-        title: `<h5>Email Marketing</h5>`,
+        title: `Email Marketing`,
         description: `<p>Email marketing is crucial for better brand marketing, with 90% of sales coming from it. Our accurate email marketing lists offer 95% deliverability, ensuring a successful campaign. Target a broad range of customers and improve your brand's value instantly.
         </p>`
       },
       {
-        title: `<h5>Telemarketing</h5>`,
+        title: `Telemarketing`,
         description: `<p>Our company offers high-quality telemarketing lists at an affordable rate for companies in the USA. By utilizing our lists, you can easily obtain the mobile numbers of potential customers and directly contact them for a fast response. Simplify your marketing efforts and enhance your business with our services.</p>`,
       },
       {
-        title: `<h6>Fax Marketing</h6>`,
+        title: `Fax Marketing`,
         description: `<p>With our reliable and accurate list of names, addresses, and fax numbers, you can quickly send information to your target audience without waiting for a response. Our list is affordable and easy to use, helping to streamline your marketing efforts and achieve success.
         </p>`,
       },
       {
-        title: `<h6>SMS Marketing</h6>`,
+        title: `SMS Marketing`,
         description: `<p>With our email lists, you can easily target a broad range of potential customers, increasing the chances of a successful marketing campaign. Our lists include essential data fields such as name, email ID, phone number, company name, and office address.</p>`,
       },
       {
-        title: `<h6>Direct Mailing Lists</h6>`,
+        title: `Direct Mailing Lists`,
         description: `<p> Our Direct Mailing Lists offer a convenient way to reach a vast audience of potential customers. By using our email lists, you can increase the chances of having a successful marketing campaign.</p>`,
       },
     ],
   },
   whyLeadLibraryTopic: {
-    title: "Why choose EmailDatas?",
+    title: "<h2>Why choose EmailDatas?</h2>",
     description: `
       <p>Choose EmailDatas for updated, valid B2B contacts from reliable sources. Enjoy a 96% deliverability rate and protection of your IP reputation with regular database updates and cleaning. Use our data for various marketing methods, including direct mail, telemarketing, email, SMS, and fax.</p>
    `,

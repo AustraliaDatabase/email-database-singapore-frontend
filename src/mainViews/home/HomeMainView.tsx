@@ -48,9 +48,9 @@ const HomeMainView = () => {
               md={12}
               className="d-flex flex-column justify-content-center mb-5"
             >
-              <div className={styles.whatTypeOfProduct}>
+              <h2 className={styles.whatTypeOfProduct}>
                 EmailDatas Pre-Made Lists
-              </div>
+              </h2>
             </Col>
           </Row>
           <Row className="justify-content-center">

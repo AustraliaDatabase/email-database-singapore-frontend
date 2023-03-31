@@ -27,10 +27,10 @@ const Faqs = (props: IFaqsView) => {
   return (
     <div className={styles.faqs}>
       {title && (
-        <div
+        <h2
           className={styles.faqTitle}
           dangerouslySetInnerHTML={{ __html: title }}
-        ></div>
+        ></h2>
       )}
       <Col xs={10} className="mx-auto">
         {description && (

@@ -29,7 +29,7 @@ const CollapsibleList = (props: ICollapsibleList) => {
           eventKey={`${index}`}
         >
           <Accordion.Header
-            as={element.asTag || "div"}
+            as={element.asTag || "h3"}
             onClick={() => {
               setActiveKey(`${index}`);
             }}

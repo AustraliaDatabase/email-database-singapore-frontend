@@ -46,10 +46,11 @@ const WhyCardsWithContent = (props: IWhyCards) => {
                           __html: `${index < 10 && "0"}` + (index + 1),
                         }}
                       />
-                      <div
+                      <h3
                         className={styles.title}
-                        dangerouslySetInnerHTML={{ __html: element?.title }}
-                      />
+                      >
+                        {element?.title}
+                      </h3>
                     </div>
                   </div>
                   <Card className={styles.contentCard}>

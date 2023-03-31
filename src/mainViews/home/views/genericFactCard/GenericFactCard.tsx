@@ -20,12 +20,12 @@ const GenericFactCard = (props: IGenericFactCard) => {
   return (
     <Col md={3} className={styles.wrapper}>
       <div className={styles.circle}>{icon}</div>
-      <div
+      <h3
         className="text-center mb-3"
         style={{ fontSize: "1.25rem", fontWeight: 600, lineHeight: 1.5 }}
       >
         {title}
-      </div>
+      </h3>
       <p className="text-center">{description}</p>
       <div className={styles.line} />
     </Col>
