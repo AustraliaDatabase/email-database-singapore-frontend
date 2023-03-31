@@ -35,8 +35,8 @@
     top: 0;
     background-image: url("/home-banner.png");
     background-repeat: no-repeat;
-    background-position: right 55%;
-    background-size: 38%;
+    background-position: right 5% top 70% ;
+    background-size: 30%;
     z-index: -1;
 
     @include breakpoint(tablet) {

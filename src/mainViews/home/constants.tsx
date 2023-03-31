@@ -5,9 +5,7 @@ export const CURRENT_OBJECT_HOME = {
   banner: {
     caption: `96% Email Accuracy guarantee`,
     title: `<h1>Valid B2B Contacts to Reach Your Target Audience</h1>`,
-    description: `<p>Find sales leads with the most accurate B2B email list provider in the USA. Get verified ready-made contact databases based on industry or job title as your requirement. There are over 500 ready-made job titles and B2B Direct contacts available based on SIC industry codes. LeadsLibrary provides targeted email lists containing verified and accurate contact names, job titles, phone, email, postal addresses, industry, revenue, number of employees, LinkedIn profiles, etc.! We can build a customized, targeted b2b contact list if you can't find a relevant database as your requirement with our ready-made list.</p>
-    <p>96% Email Accuracy Guarantee Available We will provide free credits if the bounce back is more than 4%.</p>
-    `,
+    description: `<p>Find accurate B2B email lists in the USA with EmailDatas. Choose from over 500 ready-made job titles and B2B contacts based on SIC industry codes. Our targeted email lists include verified contact info, job titles, phone, email, postal addresses, industry, revenue, number of employees, LinkedIn profiles, and more. </p>`,
   },
   why: {
     title: `<h2>Why should you <span class="text-highlight">Buy Database for Email Marketing </span> from EmailDatas.com over other providers?</h2>`,
@@ -78,9 +76,9 @@ export const CURRENT_OBJECT_HOME = {
   },
   actionCards: [
     {
-      title: "Job Titles & Levels",
+      title: "By Job Titles & Levels",
       description:
-        "You can discover accurate contact information for those with decision-making authority over certain works. Avoid being diverted and misled; Start your B2B marketing campaign with Leads Library today.",
+        "Find the right decision-makers for your B2B marketing campaign with the accurate job title and level information provided by EmailDatas",
       label: "B2B Pricing starting at $98",
       link: "/job-title",
       asTag: "div",
@@ -89,16 +87,16 @@ export const CURRENT_OBJECT_HOME = {
     {
       title: "By Location in USA",
       description:
-        "Are you looking for direct email addresses of Executives and professionals by city, state, zip code, and other criteria? Then you should check out our extensive email lists, which are categorized by location using our list building tool. ",
+        "Our email lists can be easily sorted by US City, State, Zip code, and other criteria to ensure that you reach the right audience in the right place. ",
       label: "Realtor Pricing Starts at $89",
       link: "/location",
       asTag: "div",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_REALTORS,
     },
     {
-      title: "Industries",
+      title: "By Industries",
       description:
-        "Use our industry-specific, pre-made contact lists to connect with the relevant individuals. Purchase an industry-specific mailing list that has been verified and is accurate, and market to businesses in that field.",
+        "Buy verified industry-specific mailing lists to reach relevant contacts and market to businesses in your field. ",
       label: "Pricing of Professions Starts at $116",
       link: "/industries",
       asTag: "div",
@@ -107,7 +105,7 @@ export const CURRENT_OBJECT_HOME = {
     {
       title: "International",
       description:
-        "Purchase email lists that contain only the contact data of the Countries you wish to market. Build connections only with people with decision-making capacity to make changes and find your leads by their Job Level.",
+        "Buy targeted email lists with country-specific contact data to connect with decision-makers and find leads based on job level.",
       label: "Pricing of Professions Starts at $116",
       link: "/international",
       asTag: "div",
@@ -152,189 +150,68 @@ export const CURRENT_OBJECT_HOME = {
     // },
   ],
   beneifits: {
-    title: `<h3>How can you benefit from using Our business database lists?</h3>`,
+    title: `<h3>Benefits of Our Business Database Lists</h3>`,
     description:
-      "<p>Our USA Business directory is a user-friendly database categorized in our lists. It makes it easy for the person to choose the most suitable business and target the customers.</p><p> The users can get the digital marketing list which includes the data field such as name, email ID, phone number, name of the company, address of the office, and other details. With our list of email marketing, fax number, and phone numbers, you can get in contact with several businesses and promote your brand accurately.</p>",
+      "<p>Our USA Business directory is user-friendly, with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively.</p>",
     list: [
       {
-        title: `<h5>With email marketing list improve the <span class="text-highlight"> brand’s marketing</span></h5>`,
-        description: `<p>Email marketing has gained so much popularity and is quite crucial in the field of marketing. According to the statistics, about ninety percent of sales are crucial for better brand marketing. You can target a broad range of customers with the best and most accurate email marketing list. </p>
-        <p>It is the best way to conduct the best email marketing campaign and improve its value. It is the instant way because nowadays, they check their email daily. In fact, the lists we provide are accurate and offer you 95% deliverability. Now, you won't be sending a random email because now you will have a proper email database of the other person.</p>`,
+        title: `<h5>Email Marketing</h5>`,
+        description: `<p>Email marketing is crucial for better brand marketing, with 90% of sales coming from it. Our accurate email marketing lists offer 95% deliverability, ensuring a successful campaign. Target a broad range of customers and improve your brand's value instantly.
+        </p>`
       },
       {
-        title: `<h5>Use a telemarketing list to <span class="text-highlight">market your product and services</span></h5>`,
-        description: `<p>We gather information about the companies in the USA from different sources and contact information that you can target. It makes your task a lot more simple and effortless because our company offers you high-quality company email and business lists at an affordable rate. With our services, you can quickly enhance the business and earn huge profits.  </p>
-        <p>With a telemarketing list, you can get the mobile number of the users and contact the other person directly with that. It will help in getting a better and fast response from the other person. Therefore, you can make your job easier and compile a list of the companies in the USA.</p>`,
+        title: `<h5>Telemarketing</h5>`,
+        description: `<p>Our company offers high-quality telemarketing lists at an affordable rate for companies in the USA. By utilizing our lists, you can easily obtain the mobile numbers of potential customers and directly contact them for a fast response. Simplify your marketing efforts and enhance your business with our services.</p>`,
       },
       {
-        title: `<h6><span class="text-highlight">Achieve marketing goals</span> with our fax marketing list</h6>`,
-        description: `<p>Get a chance to achieve your company's marketing goals with our fax marketing list. If you think that fax marketing is outdated, then you are wrong. Though it is old, that does not mean it offers better results</p>
-        <p>On the contrary, it will make your job so much easier as when you will send the fax number then that will send your information to the other person in a faster way. You will not have to wait for a long time, and the list that we will provide you will have compiled a list that consists of name, address, fax number, and every other detail which is accurate and reliable for the users.  
+        title: `<h6>Fax Marketing</h6>`,
+        description: `<p>With our reliable and accurate list of names, addresses, and fax numbers, you can quickly send information to your target audience without waiting for a response. Our list is affordable and easy to use, helping to streamline your marketing efforts and achieve success.
         </p>`,
       },
       {
-        title: `<h6><span class="text-highlight">Enhance your business</span> with accurate SMS marketing lists</h6>`,
-        description: `<p>The information we provide you is gathered from the list of companies in the USA from the available contact information and the customer list. You can even enhance your business with accurate SMS marketing lists that will offer you huge profits. </p>
-        <p>SMS marketing is the way through which you can send SMS to the targeted contact and promote your business. With our list, you can target the customers and contact them, customers, through this. The list we provide you is 100% verified and accurate, so you will not have to filter the list or do any other thing.</p>`,
+        title: `<h6>SMS Marketing</h6>`,
+        description: `<p>With our email lists, you can easily target a broad range of potential customers, increasing the chances of a successful marketing campaign. Our lists include essential data fields such as name, email ID, phone number, company name, and office address.</p>`,
       },
       {
-        title: `<h6><span class="text-highlight">Generate more quality leads </span> with direct mailing lists</h6>`,
-        description: `<p>The clients can directly ask for the direct mailing lists of the contact according to their needs. You can choose your city, and we will deliver you the list that will help generate quality leads. In big business, you can use this direct mailing marketing to help you bring back the users whenever there is a lack of engagement.</p>
-        <p>We are here to provide you with a database of the targeting contacts who are interested in your business, and you can promote it there easily. In addition, you can even strategize when you have genuine and accurate data and not just any random data.</p>`,
+        title: `<h6>Direct Mailing Lists</h6>`,
+        description: `<p> Our Direct Mailing Lists offer a convenient way to reach a vast audience of potential customers. By using our email lists, you can increase the chances of having a successful marketing campaign.</p>`,
       },
     ],
   },
   whyLeadLibraryTopic: {
-    title: "Why should you choose Leads Library’s Email Leads?",
+    title: "Why choose EmailDatas?",
     description: `
-      <p>
-        While other business data providers sell outdated databases full of
-        duplicate contacts, Leads Library is careful to sell only updated and
-        valid B2B contacts in 2022 and beyond All contact information we
-        provide is mined from several reliable sources, such as public
-        directories, corporate websites, press releases, annual reports, etc
-      </p>
-      <p>
-        For B2B email addresses, we maintain a high deliverability rate that
-        ensures 96% of the emails you will send will be delivered and received
-        by recipients in their inboxes. We seek to protect the IP reputation
-        of our customers, so regular updates and cleaning of their database is
-        our top priority
-      </p>
-      <p>
-        With the database we provide, we can ensure that customers can obtain
-        data they can use in different types of marketing: direct mail,
-        telemarketing, email marketing, SMS marketing, and fax marketing.
-      </p>
+      <p>Choose EmailDatas for updated, valid B2B contacts from reliable sources. Enjoy a 96% deliverability rate and protection of your IP reputation with regular database updates and cleaning. Use our data for various marketing methods, including direct mail, telemarketing, email, SMS, and fax.</p>
    `,
     lists: [
       {
         title: "Premium Business Emails List",
         description: `<div>
           <p>
-            Leads Library’s B2B contact lists offer several data fields to
-            help you build a highly targeted campaign. These data fields
-            include:
-          </p>
-          <ul>
-            <li>Physical postal address</li>
-            <li>Fax number</li>
-            <li>LinkedIn profile</li>
-            <li>Industry</li>
-            <li>SIC </li>
-            <li>NAICS</li>
-            <li>Company name</li>
-            <li>Phone number</li>
-            <li>Email address</li>
-            <li>Contact names </li>
-          </ul>
-          <p>
-            With all these numerous data fields, you can design different
-            types of marketing campaigns suitable to your requirements. Use
-            our list of postal addresses for your direct mail advertisement
-            and get customer response fast.
-          </p>
-          <p>
-            For your email marketing, we have prepared credible listings to
-            help you target past purchasers as well as potential customers. It
-            can help you advertise new products to those who are already
-            interested in your productstelemarketing, email marketing, SMS
-            marketing, and fax marketing.
-          </p>
-          <p>
-            Our list of phone numbers for telemarketing, on the other hand,
-            will allow you to talk directly with your prospects. Use it to
-            build customer trust and get direct feedback at every stage of the
-            buyer’s cycle
+          B2B contact lists with numerous data fields, including physical address, phone, email, LinkedIn profile, SIC/NAICS, and industry, to design targeted campaigns.
           </p>
         </div>`,
       },
       {
-        title: "Over 96% Deliverability Guarantee",
+        title: "96% Deliverability Guarantee",
         description: `<div>
           <p>
-            We update your list every month to remove errant entries and
-            replace them with new ones. That way, you are assured of a high
-            response rate when launching your campaign. With such a high
-            degree of accuracy, we can maintain a validity of 96% or more for
-            all our listings.
-          </p>
-          <p>
-            Today, most data providers brag that their data is current and
-            accurate. To test their claim, request a sample database from them
-            and proceed to verify its accuracy.
-          </p>
-          <p>
-            Request a sample from Leads Library before you commit. Check
-            whether your future database from us will meet your business
-            criteria and marketing demands by requesting a sample list, which
-            we will provide.
+          Get a high response rate with our monthly updated list. Request a sample database before committing to ensure it meets your criteria. 96% Deliverability Guaranteed.
           </p>
         </div>`,
       },
       {
-        title: "100% Database Ownership",
+        title: "Competitive Pricing for Accurate Contact Lists",
         description: `<div>
           <p>
-            We offer one-time payment for the list that we will deliver to
-            you, and you will have unlimited access to that database wherever
-            you may be at any time you need such access.
-          </p>
-          <p>
-            Additionally, you maintain 100% ownership of the data after buying
-            it from us, which means we do not have control over that, and you
-            can use it as you please. Your database will be updated and
-            cleaned regularly, although you can only have free updates until
-            one year from the purchase date.
-          </p>
-          <p>
-            Leads Library is a frontrunner in the mailing list industry
-            because we maintain honest business transactions. As such, you pay
-            only one time for the service and will not be troubled by hidden
-            fees.
+          Get affordable and quality listings with competitive prices and bulk order discounts. Our permission-based, accurate B2B contacts ensure long-term success in approaching prospects.
           </p>
         </div>`,
       },
       {
-        title: "Affordable and Competitive Pricing ",
+        title: "No Duplicates in Our Database",
         description: `<div>
-          <p>
-            Leads Library also maintains competitive and affordable pricing
-            for all our lists. We also offer discounts for bulk orders, so
-            check that out with our customer assistance service.
-          </p>
-          <p>
-            Despite the competitive prices that we offer for our products, we
-            guarantee that you will have a dependable, quality listing. For
-            one, we have only accurate and valid contacts in our listings.
-          </p>
-          <p>
-            Also, B2B contacts in our database are permission-based, so you
-            expect not to run afoul with any of your prospects included in the
-            list. That will help you a lot in the long run.
-          </p>
-          <p>
-            For approaching the right prospects, the deal-breaker is a
-            reliable contact database you can trust.
-          </p>
-        </div>`,
-      },
-      {
-        title: "Zero Duplicates",
-        description: `<div>
-          <p>Duplicate entries create a mess in B2B contact databases.</p>
-          <p>
-            It can cause you to unintentionally send the same email to the
-            same prospects several times, which can annoy them. Also, you can
-            end up with mismatched data for the same business in different
-            places.
-          </p>
-          <p>
-            Here at Leads Library, we maintain zero duplicate contacts with
-            our database by using a tool that eliminates duplicates
-            automatically. Thus, our customers get 100% unique contacts all
-            the time.
-          </p>
+          <p>Our tool automatically removes duplicate contacts in our B2B database to ensure 100% unique contacts for our customers, avoiding the hassle of sending multiple emails to the same prospects and mismatched data.</p>
         </div>`,
       },
     ],

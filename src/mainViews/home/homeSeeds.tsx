@@ -93,25 +93,25 @@ const HomeSeed = {
     {
       title: "Direct Contacts Only",
       description:
-        "We are providing only direct email  of real contact person . you don’t need to worry about contacting generic (such as contact@ ,sales@ ) ",
+        "We provide direct email addresses for real contacts, avoiding generic addresses like contact@ or sales@.",
       icon: <Copyright size={48} />,
     },
     {
       title: "CRM Ready Files",
       description:
-        "Our lists can be downloaded as .csv/excel files, ready to be integrated into your CRM so that you can start networking ASAP.",
+        "Download our lists as .csv/excel files for easy integration into your CRM and quick networking.",
       icon: <Wallet size={48} />,
     },
     {
       title: "Highest Accuracy",
       description:
-        "Our databases are validated and updated every three months. As a result, Our List is more than 96% accurate. It outperforms all of our competitors.",
+        "Our databases are updated every three months for 96% accuracy, outperforming our competitors.",
       icon: <IdentificationCard size={48} />,
     },
     {
-      title: "96 % Email Deliverability Guarantee",
+      title: "96% Email Delivery Guarantee",
       description:
-        "2022 updated ,fresh & verified. If More than 4% bounce back We will provide credits for more contacts.",
+        "2023 updated, fresh, and verified. Get free credits for bounced back contacts exceeding 4%.",
       icon: <Target size={48} />,
     },
 
@@ -124,13 +124,13 @@ const HomeSeed = {
     {
       title: "Unlimited Usage Rights",
       description:
-        "Our clients enjoy instant ownership of our data and lists upon purchase. We don’t charge extra fees or limit your usage.",
+        "Instantly own our data and lists upon purchase, with no extra fees or usage limits.",
       icon: <ShieldCheck size={48} />,
     },
     {
       title: "Free Updates for a Year",
       description:
-        "You will receive one year of free updates from the date of purchase, so you will not have to pay extra money .",
+        "Get one year of free updates from the purchase date, with no extra fees.",
       icon: <AddressBook size={48} />,
     },
   ],

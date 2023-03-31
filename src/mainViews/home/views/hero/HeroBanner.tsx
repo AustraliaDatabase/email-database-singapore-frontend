@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Buildings } from "phosphor-react";
+import { Buildings, List, ListPlus } from "phosphor-react";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link as ScrollLink } from "react-scroll";
@@ -71,9 +71,9 @@ const HeroBanner = (props: IHeroBanner) => {
                         className={styles.bannerBtn}
                         size="large"
                         variant={BUTTON_VARIANT_ENUM.Primary}
-                        icon={<Buildings weight="fill" size={24} />}
+                        icon={<ListPlus weight="fill" size={24} />}
                       >
-                        Explore the Products
+                        Pre-Made Lists
                       </Button>
                     </ScrollLink>
                   </Col>
@@ -81,21 +81,6 @@ const HeroBanner = (props: IHeroBanner) => {
               </Col>
             </Row>
           </Col>
-          {/* <Col
-            md={12}
-            lg={6}
-            className={classNames(styles.banner, "mt-5 mt-lg-0")}
-          >
-            <Image
-              width={650}
-              height={400}
-              objectFit="scale-down"
-              layout="fixed"
-              objectPosition="center"
-              src="/dashboard.png"
-              alt="dashboard"
-            />
-          </Col> */}
         </Row>
       </Container>
     </section>
