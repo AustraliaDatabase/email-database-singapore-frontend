@@ -9,7 +9,11 @@ import MainView404 from "../../mainViews/404MainView";
 import ProductMainViewV2 from "../../mainViews/productMainViewV2/ProductMainViewV2";
 import instance from "../../services/baseServices";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
-import { IReviewItem, IReviewObject, ISeedObject } from "../../shared/interface";
+import {
+  IReviewItem,
+  IReviewObject,
+  ISeedObject,
+} from "../../shared/interface";
 import { routeToLowerCase, trimAllSpaces } from "../../shared/InternalService";
 import {
   DATA_TYPE_TO_BREADCRUMB_NAME,
@@ -122,9 +126,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
   let finalResponse;
   // @ts-ignore
-  if (params?.productId?.toLowerCase() !== "list-of-all-email-lists") {
+  if (params?.productId?.toLowerCase()) {
     const productResponse = instance.post(
-      // @ts-ignore
       `/searchProduct/alaska-business-list`
     );
 

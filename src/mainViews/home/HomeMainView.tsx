@@ -14,6 +14,7 @@ import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/Why
 import BottomBanner from "./views/bottomBanner/BottomBanner";
 import HeroBanner from "./views/hero/HeroBanner";
 import styles from "./homeMainView.module.scss";
+import BeneifitView from "../../shared/components/beneifit/Beneifit";
 
 const HomeMainView = () => {
   return (
