@@ -17,7 +17,7 @@ import WhyListDetailCardView from "./views/whyListDetailCard/WhyListDetailCard";
 // import { WHY_DETAIL_CARD } from "./dummyText";
 import MainWhyDetailCard from "./views/mainWhyDetailCard/MainWhyDetailCard";
 import OtherStates from "./views/otherStates/OtherStates";
-import BeneifitView from "./views/beneifit/Beneifit";
+import BeneifitView from "../../shared/components/beneifit/Beneifit";
 import { IMainProductInfo } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import Table from "../../shared/components/table/Table";

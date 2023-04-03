@@ -13,7 +13,7 @@ import SourceView from "./views/source/Source";
 import FaqsView from "./views/faqs/Faqs";
 import WhyListDetailCardView from "./views/whyListDetailCard/WhyListDetailCard";
 import OtherStates from "./views/otherStates/OtherStates";
-import BeneifitView from "./views/beneifit/Beneifit";
+import BeneifitView from "../../shared/components/beneifit/Beneifit";
 import { IMainProductInfo, IReviewObject } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import OwnReviews from "./views/ownReviews/OwnReviews";
