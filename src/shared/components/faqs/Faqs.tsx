@@ -17,7 +17,10 @@ interface IFaqsView {
 
 const Faqs = (props: IFaqsView) => {
   const { faqsList, title, description, hideContactUs } = props;
-  const [faqsList1, faqsList2] = divideEqually(faqsList, 2);
+
+  const faqsLength = faqsList ? faqsList.length : 0;
+  const [faqsList1, faqsList2] =
+    faqsLength > 0 ? divideEqually(faqsList, 2) : [[], []];
 
   const router = useRouter();
 
