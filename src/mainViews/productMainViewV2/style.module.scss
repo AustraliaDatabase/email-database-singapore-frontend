@@ -1,0 +1,54 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+%sharedBgGradient {
+  background: linear-gradient(
+    145.72deg,
+    #212529 18.91%,
+    #000000 56.3%,
+    #005779 89.55%
+  );
+}
+
+%sharedBgGradient2 {
+  background: linear-gradient(
+    235.5deg,
+    #212529 18.91%,
+    #000000 56.3%,
+    #005779 89.55%
+  );
+}
+
+.hero {
+  padding-bottom: 200px;
+  // margin-bottom: -100px;
+  @extend %sharedBgGradient;
+  h1,
+  h2,
+  p,
+  span,
+  button {
+    z-index: 2;
+    position: relative;
+  }
+
+  h1,
+  h2,
+  p {
+    color: $white;
+  }
+
+  h1,
+  h2 {
+    text-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+  }
+  button {
+    @include breakpoint(mobile) {
+      max-width: 50%;
+    }
+  }
+}
+
+.beneifits {
+  background-color: $background-fill-lighter;
+}
