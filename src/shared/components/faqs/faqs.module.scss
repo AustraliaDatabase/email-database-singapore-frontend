@@ -61,3 +61,16 @@
     font-size: 1.5rem;
   }
 }
+
+.faqsCol {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    color: red !important;
+    z-index: 4;
+  }
+}

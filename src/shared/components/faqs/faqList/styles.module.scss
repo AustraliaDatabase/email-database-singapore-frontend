@@ -1,0 +1,17 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.faqItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .title {
+    font-size: 20px;
+  }
+  .icon {
+    svg {
+      color: $primary;
+    }
+  }
+}

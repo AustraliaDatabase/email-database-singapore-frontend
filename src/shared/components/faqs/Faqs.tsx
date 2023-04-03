@@ -1,13 +1,14 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { PhoneCall } from "phosphor-react";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 import CollapsibleList from "../collapsibleList/CollapsibleList";
 import styles from "./faqs.module.scss";
 import Button from "../button/Button";
 import { IFAQs } from "../../interface";
 import { ICollapsibleItem } from "../collapsibleList/interface";
+import FaqList from "./faqList/FaqList";
 
 interface IFaqsView {
   faqsList: ICollapsibleItem[];
@@ -18,7 +19,25 @@ interface IFaqsView {
 
 const Faqs = (props: IFaqsView) => {
   const { faqsList, title, description, hideContactUs } = props;
+  const [faqsList1, faqsList2] = divideEqually(faqsList, 2);
+
   const router = useRouter();
+
+  function divideEqually(array: any, numParts: number) {
+    const numItems = array.length;
+    const quotient = Math.floor(numItems / numParts);
+    const remainder = numItems % numParts;
+    const parts = new Array(numParts).fill(quotient);
+    for (let i = 0; i < remainder; i++) {
+      parts[i] += 1;
+    }
+    let index = 0;
+    return parts.map((part) => {
+      const slice = array.slice(index, index + part);
+      index += part;
+      return slice;
+    });
+  }
 
   const pressMoreQuestion = () => {
     router.push("/contact-us");
@@ -41,7 +60,19 @@ const Faqs = (props: IFaqsView) => {
         )}
         <br />
       </Col>
-      <CollapsibleList collapsibleList={faqsList} />
+      {/* <CollapsibleList collapsibleList={faqsList} /> */}
+      <Row>
+        <Col xs={12} lg={6}>
+          <div className={styles.faqsCol}>
+            <FaqList list={faqsList1} />
+          </div>
+        </Col>
+        <Col xs={12} lg={6}>
+          <div className={styles.faqsCol}>
+            <FaqList list={faqsList2} />
+          </div>
+        </Col>
+      </Row>
       {!hideContactUs && (
         <div
           className="text-center mt-5 d-block d-md-flex  align-items-center justify-content-center"
