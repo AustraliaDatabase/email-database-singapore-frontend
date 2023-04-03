@@ -3,12 +3,10 @@ import { useRouter } from "next/router";
 import { PhoneCall } from "phosphor-react";
 import { Col, Row } from "react-bootstrap";
 
-import CollapsibleList from "../collapsibleList/CollapsibleList";
-import styles from "./faqs.module.scss";
-import Button from "../button/Button";
-import { IFAQs } from "../../interface";
-import { ICollapsibleItem } from "../collapsibleList/interface";
 import FaqList from "./faqList/FaqList";
+import Button from "../button/Button";
+import { ICollapsibleItem } from "../collapsibleList/interface";
+import styles from "./faqs.module.scss";
 
 interface IFaqsView {
   faqsList: ICollapsibleItem[];
@@ -60,7 +58,6 @@ const Faqs = (props: IFaqsView) => {
         )}
         <br />
       </Col>
-      {/* <CollapsibleList collapsibleList={faqsList} /> */}
       <Row>
         <Col xs={12} lg={6}>
           <div className={styles.faqsCol}>

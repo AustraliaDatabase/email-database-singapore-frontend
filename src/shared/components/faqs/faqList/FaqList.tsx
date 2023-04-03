@@ -16,7 +16,7 @@ const FaqList = (props: IFaqList) => {
         return (
           <div key={index} className={styles.faqItem}>
             <div className={styles.icon}>
-              <Target size={32} weight="bold" />
+              <Target size={32} />
             </div>
             <div>
               {element.asTag ? (
