@@ -32,8 +32,12 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
       {(currentObject.banner || currentObject.price) && (
         <section className={styles.hero}>
           <ProductBanner
+            bannerInfo={currentObject.banner}
             breadCrumb={currentObject.breadCrumb}
             databaseMainType={databaseMainType}
+            screenshotInfo={currentObject?.screenshot}
+            name={currentObject?.name}
+            url={currentObject?.url}
           />
         </section>
       )}

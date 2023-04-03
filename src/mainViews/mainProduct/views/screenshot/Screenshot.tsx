@@ -138,86 +138,88 @@ const ScreenshotView = (props: IScreenshotView) => {
     [DATABASE_MAIN_TYPES.JOB_TITLE]: "/screenshot-for-b2b-emails.webp",
     [DATABASE_MAIN_TYPES.INDUSTRY]: getIndustryUrl(),
   };
-
+  console.log(screenshot[databaseMainType]);
   return (
-    <Container>
-      <div className={styles.screenshotWrapper}>
-        <Row>
-          <Col xs={12} lg={9} className="mx-auto">
-            <Image
-              src="/data-files.png"
-              width={197}
-              height={194}
-              alt="databse files"
-              objectFit="scale-down"
-            />
-            <div
-              className={classNames("mb-4 text-center", styles.screenshotTitle)}
-              dangerouslySetInnerHTML={{ __html: screenshotInfo?.title }}
-            />
-            <div
-              className={classNames(
-                "text-center",
-                styles.screenshotDescription
-              )}
-              dangerouslySetInnerHTML={{
-                __html: screenshotInfo?.description,
-              }}
-            />
-            <div className={styles.buttonWrappre}>
-              {downloadUrl && (
-                <>
-                  <Button
-                    size="large"
-                    variant="tertiary"
-                    block
-                    onClick={() => {
-                      setScreenshotModalEnable(true);
-                      setScreenshotInfo({
-                        title: modalScreenshotTitle || name,
-                        attachmentUrl: screenshot[databaseMainType],
-                      });
-                    }}
-                  >
-                    Show Free Sample
-                  </Button>
-                  <Button
-                    size="large"
-                    block
-                    onClick={() => {
-                      setDownloadLoadModalEnable(true);
-                      setDownloadInfo({
-                        title: modalScreenshotTitle || name,
-                        description: (
-                          <>
-                            <p>
-                              Download the free sample to test the quality and
-                              accuracy of our {modalScreenshotTitle || name}{" "}
-                              list.
-                            </p>
-
-                            <p>
-                              Entire {modalScreenshotTitle || name} List Quality
-                              is same as this sample. 95% Email Deliverability
-                              Guarantee Available with this list.
-                            </p>
-                          </>
-                        ),
-                        links:
-                          databaseMainType && generateLink[databaseMainType],
-                        attachmentUrl: downloadUrl,
-                      });
-                    }}
-                  >
-                    Download the sample
-                  </Button>
-                </>
-              )}
-            </div>
-          </Col>
-        </Row>
+    <div className={styles.screenshotWrapper}>
+      <div >
+        <Image
+          src={screenshot[databaseMainType]}
+          alt=""
+          objectFit="scale-down"
+          width={1200}
+          height={800}
+        />
       </div>
-    </Container>
+      <Row>
+        <Col xs={12} lg={9} className="mx-auto">
+          {/* <Image
+            src="/data-files.png"
+            width={197}
+            height={194}
+            alt="databse files"
+            objectFit="scale-down"
+          />
+          <div
+            className={classNames("mb-4 text-center", styles.screenshotTitle)}
+            dangerouslySetInnerHTML={{ __html: screenshotInfo?.title }}
+          />
+          <div
+            className={classNames("text-center", styles.screenshotDescription)}
+            dangerouslySetInnerHTML={{
+              __html: screenshotInfo?.description,
+            }}
+          /> */}
+          <div className={styles.buttonWrappre}>
+            {downloadUrl && (
+              <>
+                <Button
+                  size="large"
+                  variant="tertiary"
+                  block
+                  onClick={() => {
+                    setScreenshotModalEnable(true);
+                    setScreenshotInfo({
+                      title: modalScreenshotTitle || name,
+                      attachmentUrl: screenshot[databaseMainType],
+                    });
+                  }}
+                >
+                  Preview Sample
+                </Button>
+                <Button
+                  size="large"
+                  block
+                  onClick={() => {
+                    setDownloadLoadModalEnable(true);
+                    setDownloadInfo({
+                      title: modalScreenshotTitle || name,
+                      description: (
+                        <>
+                          <p>
+                            Download the free sample to test the quality and
+                            accuracy of our {modalScreenshotTitle || name} list.
+                          </p>
+
+                          <p>
+                            Entire {modalScreenshotTitle || name} List Quality
+                            is same as this sample. 95% Email Deliverability
+                            Guarantee Available with this list.
+                          </p>
+                        </>
+                      ),
+                      links: databaseMainType && generateLink[databaseMainType],
+                      attachmentUrl: downloadUrl,
+                    });
+                  }}
+                >
+                  Request List
+                </Button>
+              </>
+            )}
+          </div>
+        </Col>
+      </Row>
+    </div>
   );
 };
 
