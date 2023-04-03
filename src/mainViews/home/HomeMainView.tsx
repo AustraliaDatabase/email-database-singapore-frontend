@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import HomeSeed from "./homeSeeds";
 import Faqs from "../../shared/components/faqs/Faqs";
 import { CURRENT_OBJECT_HOME } from "./constants";
-import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
+// import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import { DATABASE_MAIN_TYPES, FEATURE_CARD_VARIANT } from "../../shared/enums";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
@@ -16,6 +16,7 @@ import HeroBanner from "./views/hero/HeroBanner";
 import styles from "./homeMainView.module.scss";
 import FeatureCard from "../../shared/components/featureCard/FeatureCard";
 import classNames from "classnames";
+import BeneifitView from "../../shared/components/beneifit/Beneifit";
 
 const HomeMainView = () => {
   return (

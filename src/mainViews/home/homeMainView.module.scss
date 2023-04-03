@@ -253,7 +253,7 @@
 }
 
 .benefits {
-  @extend %leftToRightGradient;
+  background-color: $background-fill-lighter;
 }
 
 .target {
