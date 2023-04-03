@@ -6,7 +6,10 @@ import Image from "next/image";
 import classNames from "classnames";
 
 import Button from "../../../../shared/components/button/Button";
-import { DATABASE_MAIN_TYPES } from "../../../../shared/enums";
+import {
+  BUTTON_VARIANT_ENUM,
+  DATABASE_MAIN_TYPES,
+} from "../../../../shared/enums";
 import { useRoot } from "../../../../shared/contexts/RootProvider";
 import { getRealtorDownloadUrl } from "../../../../database/storage";
 import styles from "./style.module.scss";
@@ -141,13 +144,13 @@ const ScreenshotView = (props: IScreenshotView) => {
   console.log(screenshot[databaseMainType]);
   return (
     <div className={styles.screenshotWrapper}>
-      <div >
+      <div>
         <Image
           src={screenshot[databaseMainType]}
           alt=""
           objectFit="scale-down"
           width={1200}
-          height={800}
+          height={700}
         />
       </div>
       <Row>
@@ -174,7 +177,7 @@ const ScreenshotView = (props: IScreenshotView) => {
               <>
                 <Button
                   size="large"
-                  variant="tertiary"
+                  variant={BUTTON_VARIANT_ENUM.Primary}
                   block
                   onClick={() => {
                     setScreenshotModalEnable(true);
@@ -188,6 +191,7 @@ const ScreenshotView = (props: IScreenshotView) => {
                 </Button>
                 <Button
                   size="large"
+                  variant={BUTTON_VARIANT_ENUM.Tertiary}
                   block
                   onClick={() => {
                     setDownloadLoadModalEnable(true);
