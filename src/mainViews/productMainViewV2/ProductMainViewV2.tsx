@@ -39,7 +39,7 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
           <BeneifitView beneifitInfo={currentObject?.beneifits} />
         </section>
       )}
-      <section id="#faq" className="ghost">
+      <section id="#faq">
         {/* @ts-ignore */}
         <FaqsView
           faqsList={FaqsSeed[databaseMainType] || []}
