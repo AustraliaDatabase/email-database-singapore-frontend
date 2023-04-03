@@ -1,0 +1,17 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.bannerWrapper {
+  padding-top: 150px;
+
+  .breadCrumbWrapper {
+    width: max-content;
+    padding: .5rem 1rem;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.13) -16.58%,
+      rgba(255, 255, 255, 0) 87.76%
+    );
+    border-radius: 3px;
+  }
+}

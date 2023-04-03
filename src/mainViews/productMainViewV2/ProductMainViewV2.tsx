@@ -7,6 +7,7 @@ import BeneifitView from "../../shared/components/beneifit/Beneifit";
 import { IMainProductInfo, IReviewObject } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import styles from "./style.module.scss";
+import ProductBanner from "../../shared/components/productBanner/ProductBanner";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -30,6 +31,10 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
     <>
       {(currentObject.banner || currentObject.price) && (
         <section className={styles.hero}>
+          <ProductBanner
+            breadCrumb={currentObject.breadCrumb}
+            databaseMainType={databaseMainType}
+          />
         </section>
       )}
       {(currentObject?.beneifits?.title ||
