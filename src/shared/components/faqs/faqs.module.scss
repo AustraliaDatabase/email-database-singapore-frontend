@@ -67,10 +67,12 @@
   &::before {
     content: "";
     display: block;
-    width: 10px;
-    height: 100%;
+    width: 2px;
+    height: 88%;
     position: absolute;
-    color: red !important;
-    z-index: 4;
+    background: $primary;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

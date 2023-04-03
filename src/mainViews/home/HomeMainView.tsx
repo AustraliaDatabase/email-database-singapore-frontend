@@ -88,7 +88,7 @@ const HomeMainView = () => {
         <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
       </section>
 
-      <section className="ghost" id="#faqs">
+      <section id="#faqs">
         <Container>
           <Row>
             <Col xs={12}>

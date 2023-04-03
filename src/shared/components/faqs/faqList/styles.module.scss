@@ -10,6 +10,9 @@
     font-size: 20px;
   }
   .icon {
+    background-color: $white;
+    padding: 5px 0;
+    z-index: 1;
     svg {
       color: $primary;
     }
