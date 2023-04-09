@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import HomeSeed from "./homeSeeds";
 import Faqs from "../../shared/components/faqs/Faqs";
 import { CURRENT_OBJECT_HOME } from "./constants";
-// import BeneifitView from "../mainProduct/views/beneifit/Beneifit";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
@@ -15,6 +14,7 @@ import BottomBanner from "./views/bottomBanner/BottomBanner";
 import HeroBanner from "./views/hero/HeroBanner";
 import styles from "./homeMainView.module.scss";
 import BeneifitView from "../../shared/components/beneifit/Beneifit";
+import classNames from "classnames";
 
 const HomeMainView = () => {
   return (
@@ -25,8 +25,8 @@ const HomeMainView = () => {
         description={CURRENT_OBJECT_HOME.banner.description}
       />
 
-      <section id="#why-us">
-        <Container className={styles.facts}>
+      <section id="#why-us" className={styles.facts}>
+        <Container>
           <Row>
             {HomeSeed.solutionFactList.map((option: any, index: number) => (
               <GenericFactCard
@@ -40,7 +40,7 @@ const HomeMainView = () => {
         </Container>
       </section>
 
-      <section className="mt-5 mb-5">
+      <section className={classNames("mt-5 mb-5")} >
         <WhyCardsWithContent
           title={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.title}
           description={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.description}

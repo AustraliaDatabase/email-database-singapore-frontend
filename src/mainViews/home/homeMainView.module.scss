@@ -259,3 +259,7 @@
 .target {
   @extend %leftToRightGradient;
 }
+
+.facts {
+  background-color: $background-fill-lighter;
+}

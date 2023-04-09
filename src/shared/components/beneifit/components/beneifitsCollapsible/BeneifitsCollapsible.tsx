@@ -33,7 +33,7 @@ const BeneifitsCollapsible = (props: IBeneifitsCollapsible) => {
           eventKey={`${index}`}
         >
           <Accordion.Header
-            as="span"
+            as="h3"
             onClick={() => {
               setActiveKey(`${index}`);
             }}
