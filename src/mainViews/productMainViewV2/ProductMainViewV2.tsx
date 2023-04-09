@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import Scroll from "react-scroll";
+import React from "react";
 
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import FaqsView from "../mainProduct/views/faqs/Faqs";
@@ -8,6 +7,13 @@ import { IMainProductInfo, IReviewObject } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import styles from "./style.module.scss";
 import ProductBanner from "../../shared/components/productBanner/ProductBanner";
+import ProductDescription from "./views/productDescription/ProductDescription";
+import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
+import { CURRENT_OBJECT_HOME } from "../home/constants";
+import OtherStates from "../mainProduct/views/otherStates/OtherStates";
+import { DATA_TYPE_TO_TITLE } from "../../shared/constants";
+import { Container } from "react-bootstrap";
+import OtherProductFeature from "./views/otherProductFeature/OtherProductFeature";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -16,38 +22,45 @@ interface IMainProductMainView {
   isScrollToPrice?: boolean;
 }
 
-const scroller = Scroll.scroller;
-
 const ProductMainViewV2 = (props: IMainProductMainView) => {
-  const { databaseMainType, currentObject, reviewObject, isScrollToPrice } =
-    props;
+  const { databaseMainType, currentObject } = props;
 
-  useEffect(() => {
-    if (isScrollToPrice) {
-      scroller.scrollTo("#buy-now", {});
-    }
-  }, []);
   return (
     <>
       {(currentObject.banner || currentObject.price) && (
         <section className={styles.hero}>
-          <ProductBanner
-            bannerInfo={currentObject.banner}
-            breadCrumb={currentObject.breadCrumb}
-            databaseMainType={databaseMainType}
-            screenshotInfo={currentObject?.screenshot}
-            name={currentObject?.name}
-            url={currentObject?.url}
+          <ProductBanner currentObject={currentObject} />
+        </section>
+      )}
+
+      <section>
+        <ProductDescription currentObject={currentObject} />
+      </section>
+
+      {currentObject?.why && (
+        <section id="#why-us">
+          <WhyCardsWithContent
+            title={`Why Choose EmailDatas for Your ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists Over Other Providers?`}
+            description={`EmailDatas stands out as the ideal solution for ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists, offering exceptional email lists at a more budget-friendly price than competing providers.`}
+            lists={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.lists}
           />
         </section>
       )}
-      {(currentObject?.beneifits?.title ||
-        currentObject?.beneifits?.description ||
-        currentObject?.beneifits?.list?.length) && (
-        <section className={styles.beneifits}>
-          <BeneifitView beneifitInfo={currentObject?.beneifits} />
-        </section>
-      )}
+
+      <section>
+        <Container>
+          <OtherProductFeature currentObject={currentObject} />
+        </Container>
+      </section>
+
+      <section>
+        <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
+      </section>
+
+      <section id="#other-states">
+        <OtherStates currentObject={currentObject} />
+      </section>
+
       <section id="#faq">
         {/* @ts-ignore */}
         <FaqsView

@@ -1,40 +1,27 @@
 import React, { useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import classNames from "classnames";
 
 import styles from "./styles.module.scss";
 import BreadCrumb from "../breadCrumb/BreadCrumb";
-import { DATABASE_MAIN_TYPES } from "../../enums";
 import ScreenshotView from "../../../mainViews/mainProduct/views/screenshot/Screenshot";
-import { IBanner, IScreenshot } from "../../interface";
-import classNames from "classnames";
+import { IMainProductInfo } from "../../interface";
+import PriceList from "./views/priceList/PriceList";
 
 interface IProductBanner {
-  databaseMainType: DATABASE_MAIN_TYPES;
-  bannerInfo: IBanner;
-  breadCrumb: string;
-  modalScreenshotTitle?: string;
-  screenshotInfo: IScreenshot;
-  name: string;
-  url: string;
+  currentObject: IMainProductInfo;
 }
 
 const ProductBanner = (props: IProductBanner) => {
-  const {
-    breadCrumb,
-    bannerInfo,
-    databaseMainType,
-    screenshotInfo,
-    name,
-    url,
-  } = props;
+  const { currentObject } = props;
   const bannerTitleRef: any = useRef();
   return (
     <div className={styles.bannerWrapper}>
       <Container>
         <div className={styles.breadCrumbWrapper}>
           <BreadCrumb
-            databaseMainType={databaseMainType}
-            breadCrumb={breadCrumb}
+            databaseMainType={currentObject?.type}
+            breadCrumb={currentObject?.breadCrumb}
           />
         </div>
 
@@ -45,10 +32,12 @@ const ProductBanner = (props: IProductBanner) => {
               styles.bannerFont
             )}
             ref={bannerTitleRef}
-            dangerouslySetInnerHTML={{ __html: bannerInfo?.title }}
+            dangerouslySetInnerHTML={{ __html: currentObject?.banner?.title }}
           />
           <div
-            dangerouslySetInnerHTML={{ __html: bannerInfo?.description }}
+            dangerouslySetInnerHTML={{
+              __html: currentObject?.banner?.description,
+            }}
             className={classNames(
               "d-flex text-center text-md-start flex-column mt-4",
               styles.description
@@ -58,11 +47,12 @@ const ProductBanner = (props: IProductBanner) => {
         <Row>
           <Col xs={12} lg={6}>
             <ScreenshotView
-              databaseMainType={databaseMainType}
-              screenshotInfo={screenshotInfo}
-              name={name}
-              url={url}
+              screenshotInfo={currentObject?.screenshot}
+              currentObject={currentObject}
             />
+          </Col>
+          <Col>
+            <PriceList currentObject={currentObject} />
           </Col>
         </Row>
       </Container>

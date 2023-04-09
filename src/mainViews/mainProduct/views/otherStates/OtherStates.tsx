@@ -5,26 +5,22 @@ import { Container } from "react-bootstrap";
 import { Lightning } from "phosphor-react";
 
 import {
-  IAllList,
+  IMainProductInfo,
   IOtherStateList,
-  IOtherStates,
 } from "../../../../shared/interface";
-import { DATABASE_MAIN_TYPES } from "../../../../shared/enums";
 import styles from "./style.module.scss";
-import { CATEGORIES_TO_URLS } from "../../../../shared/constants";
+import { DATA_TYPE_TO_TITLE } from "../../../../shared/constants";
 
 interface IOtherStatesView {
-  otherStatesInfo: IOtherStates;
-  allList: IAllList[];
-  databaseMainType: DATABASE_MAIN_TYPES;
+  currentObject: IMainProductInfo;
 }
 
 const OtherStates = (props: IOtherStatesView) => {
-  const { otherStatesInfo, allList, databaseMainType } = props;
+  const { currentObject } = props;
   const [otherStateList, setOtherStateList] = useState<any>([]);
 
   useEffect(() => {
-    const sortedList = allList
+    const sortedList = currentObject?.allList
       ?.filter((filterElement: any) => {
         return (
           filterElement.id !== "real-estate-agent-email-list" ||
@@ -60,7 +56,11 @@ const OtherStates = (props: IOtherStatesView) => {
               <div>
                 <Lightning color="#00A2E2" />
               </div>
-              <a href={`${process.env.NEXT_PUBLIC_BASE_URL}${element.url?.replaceAll('+', '/')}`}>
+              <a
+                href={`${
+                  process.env.NEXT_PUBLIC_BASE_URL
+                }${element.url?.replaceAll("+", "/")}`}
+              >
                 {element.name}
               </a>
             </div>
@@ -72,14 +72,15 @@ const OtherStates = (props: IOtherStatesView) => {
   return (
     <Container>
       <Col xs={10} className="mb-5 mx-auto text-center">
-        <div
-          className={styles.otherStateTitle}
-          dangerouslySetInnerHTML={{ __html: otherStatesInfo?.title }}
-        ></div>
-        <div
-          className={styles.otherStateDescription}
-          dangerouslySetInnerHTML={{ __html: otherStatesInfo?.description }}
-        ></div>
+        <h2 className={styles.otherStateTitle}>
+          Explore Lists for US States Beyond the {currentObject.name}{" "}
+          {DATA_TYPE_TO_TITLE[currentObject?.type]} List
+        </h2>
+        <div className={styles.otherStateDescription}>
+          Our services extend to acquiring {DATA_TYPE_TO_TITLE[currentObject?.type]} lists for states other than
+          {currentObject.name}, allowing you to save on costs while still obtaining the
+          vital data your business needs.
+        </div>
       </Col>
       <Row>
         <Col>{renderState(0, 10)}</Col>
