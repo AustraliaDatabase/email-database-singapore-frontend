@@ -1,19 +1,10 @@
-import { JOB_INDUSTRIES } from "../shared/seeds/jobIndustry";
-import { JOB_TITLES } from "../shared/seeds/jobTitles";
-import { TARGETS } from "../shared/seeds/targets";
 import { IHeaderLinks } from "./interface";
-// import { COUNTRIES_DATABASE } from "../shared/seeds/countries";
-// import { CONSUMER_EMAIL_DATABASE } from "../shared/seeds/consumers";
 
 export const HEADER_LINKS: IHeaderLinks[] = [
   {
     name: "Home",
     route: "/",
   },
-  // {
-  //   name: "Price plans",
-  //   route: "/price-plans",
-  // },
   {
     name: "Pre-Made Lists",
     route: "/pre-made-list",
@@ -30,21 +21,6 @@ export const HEADER_LINKS: IHeaderLinks[] = [
       {
         name: "Target",
         route: "/target",
-        // subMenu: [
-        //   {
-        //     name: "General Contractors and Home Builders",
-        //     route: "/general-contractors-and-home-builders",
-        //   },
-        //   { name: "Cryptocurrency Users", route: "/cryptocurrency" },
-        //   {
-        //     name: "Super Backers Database",
-        //     route: "/super-backers-email-database",
-        //   },
-        //   {
-        //     name: "Crowd Funding  Backer Database",
-        //     route: "/crowdfunding-backer-database",
-        //   },
-        // ],
       },
       { name: "International", route: "/international" },
       { name: "Zip Code", route: "/by-zip-code" },
@@ -53,86 +29,6 @@ export const HEADER_LINKS: IHeaderLinks[] = [
   { name: "Contact Us", route: "/contact-us" },
 ];
 
-export const MENU_SET = [
-  {
-    name: "Home",
-    url: "/",
-  },
-  {
-    name: "B2B Email Database",
-    child: [
-      {
-        name: "Complete Email Database",
-        url: "/list-of-all-us-companies",
-      },
-      {
-        name: "By State",
-        url: "/us-company-database-by-state",
-      },
-    ],
-  },
-  {
-    name: "Realtors",
-    child: [
-      {
-        name: "All Realtors",
-        url: "/real-estate-agent-email-list",
-      },
-      {
-        name: "By State",
-        url: "/realtors-by-state",
-      },
-    ],
-  },
-  {
-    name: "Job Titles",
-    url: "/usa-job-titles",
-    width: 75,
-    child: JOB_TITLES.map((element) => {
-      return {
-        name: element.mainTitle,
-        url: element.url,
-      };
-    }),
-  },
-  {
-    name: "Target",
-    width: 70,
-    child: TARGETS.map((element) => {
-      return {
-        name: element.mainTitle,
-        url: element.url,
-      };
-    }),
-  },
-  // {
-  //   name: "Other Countries",
-  //   url: "/other-countries",
-  //   width: 125,
-  //   child: COUNTRIES_DATABASE.map((element) => {
-  //     return {
-  //       name: element.mainTitle,
-  //       url: element.url,
-  //     };
-  //   }),
-  // },
-  // {
-  //   name: "Consumer Emails",
-  //   url: "/consumer-emails",
-  //   width: 135,
-  //   child: CONSUMER_EMAIL_DATABASE.map((element) => {
-  //     return {
-  //       name: element.mainTitle,
-  //       url: element.url,
-  //     };
-  //   }),
-  // },
-  {
-    name: "Contact Us",
-    url: "/contact-us",
-    width: 83,
-  },
-];
 export const DASHBOARD_MENU_SET_PUBLIC = [
   {
     name: "Dashboard",

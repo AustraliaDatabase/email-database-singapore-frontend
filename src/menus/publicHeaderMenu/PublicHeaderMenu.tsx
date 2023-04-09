@@ -57,14 +57,14 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
         { [styles.bar]: HEADER_LINKS.length - 1 === index && !isDisabled }
       )}
     >
-      <Link href={route} passHref>
+      <a href={route}>
         <a>
           {name} {subMenu && <CaretDown size={20} />}
           {subMenu && subMenu.length && (
             <ul className={styles.sub}>
               {subMenu.map((link, index) => {
                 return (
-                  <Link passHref key={index} href={link.route}>
+                  <a key={index} href={link.route}>
                     <li
                       className={classNames({
                         [styles.active]: router.pathname === link.route,
@@ -78,7 +78,7 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
                           <ul>
                             {link.subMenu.map((link, index) => {
                               return (
-                                <Link passHref key={index} href={link.route}>
+                                <a key={index} href={link.route}>
                                   <li
                                     className={classNames({
                                       [styles.active]:
@@ -87,7 +87,7 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
                                   >
                                     {link.name}
                                   </li>
-                                </Link>
+                                </a>
                               );
                             })}
                           </ul>
@@ -108,13 +108,13 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
                         </div>
                       )}
                     </li>
-                  </Link>
+                  </a>
                 );
               })}
             </ul>
           )}
         </a>
-      </Link>
+      </a>
     </li>
   );
 };

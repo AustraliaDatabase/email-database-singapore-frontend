@@ -4,12 +4,9 @@ import React from "react";
 import { Container } from "react-bootstrap";
 
 import PublicLayout from "../../layouts/public/PublicLayout";
-import { CURRENT_OBJECT_HOME } from "../../mainViews/home/constants";
 import MainWhyDetailCard from "../../mainViews/mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
-import FloatingMenu from "../../menus/floatingMenu/FloatingMenu";
 import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
-import TrustPilot from "../../shared/components/trustPilot/TrustPilot";
 import { HEADER_COLUMNS_REALTORS } from "../../shared/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { IMainProductInfo } from "../../shared/interface";
