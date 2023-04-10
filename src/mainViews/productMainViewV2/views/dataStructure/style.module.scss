@@ -1,10 +1,13 @@
+@import "styles/mixins";
+@import "styles/variables";
+
 .mainTitle {
   font-size: 22px;
   padding-top: 45px;
 }
 
 .structureWrapper {
-  border: 0.5px solid rgba(0, 0, 0, 0.27);
+  border: 0.5px solid $border-light;
   border-radius: 0.5rem;
   margin-top: 30px;
   padding: 2.5rem;
