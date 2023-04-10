@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Container } from "react-bootstrap";
-import { Lightning } from "phosphor-react";
+import { ArrowSquareOut, Lightning } from "phosphor-react";
 
 import {
   IMainProductInfo,
@@ -47,29 +47,33 @@ const OtherStates = (props: IOtherStatesView) => {
   }, []);
 
   const renderState = (first: number, last: number) => {
-    return otherStateList
-      ?.slice(first, last)
-      .map((element: IOtherStateList, index: number) => {
-        return (
-          <Col key={index} className={styles.statesRow}>
-            <div
-              className="d-flex align-items-center"
-              style={{ fontWeight: "bold", marginBottom: 10, gap: 5 }}
-            >
-              <div>
-                <Lightning color="#00A2E2" />
-              </div>
-              <a
-                href={`${
-                  process.env.NEXT_PUBLIC_BASE_URL
-                }${element.url?.replaceAll("+", "/")}`}
-              >
-                {element.name}
-              </a>
-            </div>
-          </Col>
-        );
-      });
+    return (
+      <>
+        <div className={styles.rowWrapper}>
+          {otherStateList
+            ?.slice(first, last)
+            .map((element: IOtherStateList, index: number) => {
+              return (
+                <Col key={index}>
+                  <a
+                    href={`${
+                      process.env.NEXT_PUBLIC_BASE_URL
+                    }${element.url?.replaceAll("+", "/")}`}
+                  >
+                    <Row className={styles.statesRow}>
+                      <Col xs={6}>{element.name}</Col>
+                      <Col xs={4}>721,480</Col>
+                      <Col xs={2}>
+                        <ArrowSquareOut size={22} />
+                      </Col>
+                    </Row>
+                  </a>
+                </Col>
+              );
+            })}
+        </div>
+      </>
+    );
   };
 
   return (
