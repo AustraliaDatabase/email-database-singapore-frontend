@@ -6,6 +6,7 @@ import { IMainProductInfo } from "../../../../shared/interface";
 import StatsCard from "../../../mainProduct/views/priceList/views/stats/StatsCard";
 import DataStructure from "../dataStructure/DataStructure";
 import styles from "./style.module.scss";
+import classNames from "classnames";
 
 interface IProductDescription {
   currentObject: IMainProductInfo;
@@ -23,35 +24,41 @@ const ProductDescription = (props: IProductDescription) => {
 
   return (
     <Container>
-      <Tabs defaultActiveKey="0" id="uncontrolled-tab-example" className="mb-3">
-        <Tab eventKey="0" title={defaultHeaderName}>
-          <Col md={6} lg={8}>
-            <Col>
-              <div className={styles.dbInfo}>
-                <div>
-                  Access a high-quality, affordable Alaska email list with
-                  complete contact details for different professionals and
-                  industries. Our database is sourced from reliable and
-                  up-to-date sources.
+      <div className={styles.tabContainer}>
+        <Tabs
+          defaultActiveKey="0"
+          id="uncontrolled-tab-example"
+          className={classNames("mb-3", styles.tabs)}
+        >
+          <Tab eventKey="0" title={defaultHeaderName}>
+            <Col md={6} lg={8}>
+              <Col>
+                <div className={styles.dbInfo}>
+                  <div>
+                    Access a high-quality, affordable Alaska email list with
+                    complete contact details for different professionals and
+                    industries. Our database is sourced from reliable and
+                    up-to-date sources.
+                  </div>
+                  <StatsCard
+                    name={currentObject.name || ""}
+                    databaseMainType={currentObject?.type}
+                    statsInfo={currentObject?.stats}
+                    displayPriceLink={false}
+                  />
                 </div>
-                <StatsCard
-                  name={currentObject.name || ""}
-                  databaseMainType={currentObject?.type}
-                  statsInfo={currentObject?.stats}
-                  displayPriceLink={false}
-                />
-              </div>
+              </Col>
             </Col>
-          </Col>
-          <Col className={styles.dataStructureWrapper}>
-            <DataStructure currentObject={currentObject} />
-          </Col>
-        </Tab>
-        <Tab
-          eventKey="1"
-          title={<div className={styles.tabElement}>Reviews</div>}
-        ></Tab>
-      </Tabs>
+            <Col className={styles.dataStructureWrapper}>
+              <DataStructure currentObject={currentObject} />
+            </Col>
+          </Tab>
+          <Tab
+            eventKey="1"
+            title={<div className={styles.tabElement}>Reviews</div>}
+          ></Tab>
+        </Tabs>
+      </div>
     </Container>
   );
 };
