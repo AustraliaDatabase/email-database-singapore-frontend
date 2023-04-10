@@ -38,7 +38,7 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
       </section>
 
       {currentObject?.why && (
-        <section id="#why-us" className="ghost">
+        <section id="#why-us" className="ghost" style={{ zIndex: "-1" }}>
           <WhyCardsWithContent
             title={`Why Choose EmailDatas for Your ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists Over Other Providers?`}
             description={`EmailDatas stands out as the ideal solution for ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists, offering exceptional email lists at a more budget-friendly price than competing providers.`}
