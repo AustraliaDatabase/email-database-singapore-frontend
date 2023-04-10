@@ -48,7 +48,7 @@ const HomeMainView = () => {
         />
       </section>
 
-      <section className={styles.benefits}>
+      <section className="dark">
         <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
       </section>
 

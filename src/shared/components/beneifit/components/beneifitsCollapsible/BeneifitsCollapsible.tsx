@@ -44,6 +44,7 @@ const BeneifitsCollapsible = (props: IBeneifitsCollapsible) => {
             {element.title}
           </Accordion.Header>
           <Accordion.Body
+            className={styles.description}
             dangerouslySetInnerHTML={{ __html: element.description }}
           />
         </Accordion.Item>
