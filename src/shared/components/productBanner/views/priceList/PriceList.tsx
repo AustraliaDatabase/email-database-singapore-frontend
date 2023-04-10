@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Check } from "phosphor-react";
+import { Check, CheckCircle, ShoppingCartSimple } from "phosphor-react";
 import React, { useState } from "react";
 
 import { AddToCart } from "../../../../../services/internalServices";
@@ -76,39 +76,48 @@ const PriceListView = (props: IPriceListView) => {
   };
 
   return (
-    <div>
-      <div className={styles.title}>Select Package</div>
-      <div className={classNames("d-flex", styles.wrapper)}>
-        {currentObject?.price?.list.map(
-          (singlePriceItem: IPriceList, index: number) => {
-            return (
-              <PriceButton
-                key={index}
-                onClick={pressButton}
-                index={index}
-                contactCounts={statsInfo?.uniqueDirectB2BEmails}
-                isActive={currentIndex === index}
-              >
-                ${singlePriceItem.price}
-              </PriceButton>
-            );
-          }
-        )}
+    <div className={styles.mainWrapper}>
+      <div>
+        <div className={styles.title}>Select Package</div>
+        <div className={classNames("d-flex", styles.wrapper)}>
+          {currentObject?.price?.list.map(
+            (singlePriceItem: IPriceList, index: number) => {
+              return (
+                <PriceButton
+                  key={index}
+                  onClick={pressButton}
+                  index={index}
+                  contactCounts={statsInfo?.uniqueDirectB2BEmails}
+                  isActive={currentIndex === index}
+                >
+                  ${singlePriceItem.price}
+                </PriceButton>
+              );
+            }
+          )}
+        </div>
       </div>
 
-      <div className={classNames(styles.secondaryWrapper)}>
-        {currentObject?.price?.list[currentIndex]?.includes
-          ?.split(";")
-          ?.map((item, index) => (
-            <div key={index} className={styles.detailsWrapper}>
-              <span className={styles.cardIcon}>
-                <Check size={20} />
-              </span>{" "}
-              {item}
-            </div>
-          ))}
+      <div>
+        <div className={styles.title}>Data Fields</div>
+        <div className={classNames(styles.secondaryWrapper)}>
+          {currentObject?.price?.list[currentIndex]?.includes
+            ?.split(";")
+            ?.map((item, index) => (
+              <div key={index} className={styles.detailsWrapper}>
+                <span className={styles.cardIcon}>
+                  <CheckCircle size={22} />
+                </span>{" "}
+                {item}
+              </div>
+            ))}
+        </div>
       </div>
-      <Button onClick={addToCart}>Add To Cart</Button>
+
+      <Button className={styles.addToCart} onClick={addToCart}>
+        <ShoppingCartSimple size={24} />
+        Add To Cart
+      </Button>
     </div>
   );
 };
