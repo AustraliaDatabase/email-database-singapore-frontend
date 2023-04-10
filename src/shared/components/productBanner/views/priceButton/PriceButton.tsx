@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 
 import { numberWithCommas } from "../../../../InternalService";
 import styles from "./style.module.scss";
+import { CheckCircle, UserList } from "phosphor-react";
 
 interface IPriceButton {
   children: ReactNode;
@@ -17,7 +18,9 @@ const PriceButton = (props: IPriceButton) => {
 
   return (
     <div
-      className={styles.wrapper}
+      className={classNames(styles.wrapper, {
+        [styles.cardActive]: isActive,
+      })}
       onClick={() => {
         onClick(index);
       }}
@@ -26,10 +29,13 @@ const PriceButton = (props: IPriceButton) => {
         className={classNames(styles.circle, {
           [styles.activeCircle]: isActive,
         })}
-      ></div>
+      >
+        <CheckCircle weight="fill" size={28} />
+      </div>
       <div className={styles.price}>{children}</div>
       <div className={styles.packageType}>Email Database Package</div>
       <div className={styles.contactCounts}>
+        <UserList size={22} />{" "}
         {contactCounts && numberWithCommas(contactCounts?.toString())} Direct
         Email Contacts
       </div>

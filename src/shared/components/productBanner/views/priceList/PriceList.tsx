@@ -77,6 +77,7 @@ const PriceListView = (props: IPriceListView) => {
 
   return (
     <div>
+      <div className={styles.title}>Select Package</div>
       <div className={classNames("d-flex", styles.wrapper)}>
         {currentObject?.price?.list.map(
           (singlePriceItem: IPriceList, index: number) => {
