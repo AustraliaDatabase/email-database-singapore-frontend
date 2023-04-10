@@ -25,7 +25,7 @@ const ProductBanner = (props: IProductBanner) => {
           />
         </div>
 
-        <Col xs={12} lg={12} className="mt-5">
+        <Col xs={12} lg={12} className="my-5">
           <div
             className={classNames(
               "text-center text-md-start",
