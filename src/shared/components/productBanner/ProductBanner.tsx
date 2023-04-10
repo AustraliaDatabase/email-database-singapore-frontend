@@ -51,7 +51,7 @@ const ProductBanner = (props: IProductBanner) => {
               currentObject={currentObject}
             />
           </Col>
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} className="p-lg-0">
             <PriceList currentObject={currentObject} />
           </Col>
         </Row>

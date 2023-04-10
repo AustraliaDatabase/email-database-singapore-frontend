@@ -13,8 +13,17 @@ interface IPriceButton {
   contactCounts?: number;
 }
 
+interface Packages {
+  [key: number]: string;
+}
+
 const PriceButton = (props: IPriceButton) => {
   const { children, isActive, onClick, index, contactCounts } = props;
+
+  const packages: Packages = {
+    0: "Email Database Package",
+    1: "Complete Database Package",
+  };
 
   return (
     <div
@@ -33,9 +42,9 @@ const PriceButton = (props: IPriceButton) => {
         <CheckCircle weight="fill" size={28} />
       </div>
       <div className={styles.price}>{children}</div>
-      <div className={styles.packageType}>Email Database Package</div>
+      <div className={styles.packageType}>{packages[index]}</div>
       <div className={styles.contactCounts}>
-        <UserList size={22} />{" "}
+        <UserList size={22} />
         {contactCounts && numberWithCommas(contactCounts?.toString())} Direct
         Email Contacts
       </div>
