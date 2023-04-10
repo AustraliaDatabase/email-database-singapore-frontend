@@ -13,13 +13,13 @@ const DataStructure = (props: IDataStructure) => {
   return (
     <div>
       <h2 className={styles.mainTitle}>
-        Data Structure of {currentObject.name} {' '}
+        Data Structure of {currentObject.name}{" "}
         {DATA_TYPE_TO_TITLE[currentObject?.type]} Database{" "}
       </h2>
-
-      <h3>Personal Info</h3>
-
-      <h3>Office Info</h3>
+      <div className={styles.structureWrapper}>
+        <h3>Personal Info</h3>
+        <h3>Office Info</h3>
+      </div>
     </div>
   );
 };

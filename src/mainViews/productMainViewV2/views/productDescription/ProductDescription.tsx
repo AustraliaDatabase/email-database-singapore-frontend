@@ -24,14 +24,14 @@ const ProductDescription = (props: IProductDescription) => {
 
   return (
     <Container>
-      <div className={styles.tabContainer}>
+      <div className="db-details-tabs">
         <Tabs
           defaultActiveKey="0"
           id="uncontrolled-tab-example"
           className={classNames("mb-3", styles.tabs)}
         >
           <Tab eventKey="0" title={defaultHeaderName}>
-            <Col md={6} lg={8}>
+            <Col md={6} lg={11} className="mx-auto">
               <Col>
                 <div className={styles.dbInfo}>
                   <div>
@@ -49,7 +49,7 @@ const ProductDescription = (props: IProductDescription) => {
                 </div>
               </Col>
             </Col>
-            <Col className={styles.dataStructureWrapper}>
+            <Col lg={11} className="mx-auto">
               <DataStructure currentObject={currentObject} />
             </Col>
           </Tab>
