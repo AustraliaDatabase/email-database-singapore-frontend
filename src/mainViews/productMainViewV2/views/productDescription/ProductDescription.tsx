@@ -15,12 +15,7 @@ interface IProductDescription {
 const ProductDescription = (props: IProductDescription) => {
   const { currentObject } = props;
 
-  const defaultHeaderName = (
-    <h2 className={styles.tabElement}>
-      Complete Stats of {currentObject?.name}{" "}
-      {DATA_TYPE_TO_TITLE[currentObject?.type]} Database
-    </h2>
-  );
+  const defaultHeaderName = <div className={styles.tabElement}>Database Datails</div>;
 
   return (
     <Container>
@@ -32,6 +27,10 @@ const ProductDescription = (props: IProductDescription) => {
         >
           <Tab eventKey="0" title={defaultHeaderName}>
             <Col md={6} lg={11} className="mx-auto">
+              <h2 className={styles.statsHeader}>
+                Complete Stats of {currentObject?.name}{" "}
+                {DATA_TYPE_TO_TITLE[currentObject?.type]} Database
+              </h2>
               <Col>
                 <div className={styles.dbInfo}>
                   <div>
@@ -53,10 +52,6 @@ const ProductDescription = (props: IProductDescription) => {
               <DataStructure currentObject={currentObject} />
             </Col>
           </Tab>
-          <Tab
-            eventKey="1"
-            title={<div className={styles.tabElement}>Reviews</div>}
-          ></Tab>
         </Tabs>
       </div>
     </Container>
