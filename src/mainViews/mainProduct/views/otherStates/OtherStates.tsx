@@ -19,6 +19,9 @@ const OtherStates = (props: IOtherStatesView) => {
   const { currentObject } = props;
   const [otherStateList, setOtherStateList] = useState<any>([]);
 
+  const numColumns = 4;
+  const columnSize = Math.ceil(otherStateList.length / numColumns);
+
   useEffect(() => {
     const sortedList = currentObject?.allList
       ?.filter((filterElement: any) => {
@@ -48,7 +51,7 @@ const OtherStates = (props: IOtherStatesView) => {
       ?.slice(first, last)
       .map((element: IOtherStateList, index: number) => {
         return (
-          <Col key={index}>
+          <Col key={index} className={styles.statesRow}>
             <div
               className="d-flex align-items-center"
               style={{ fontWeight: "bold", marginBottom: 10, gap: 5 }}
@@ -77,18 +80,29 @@ const OtherStates = (props: IOtherStatesView) => {
           {DATA_TYPE_TO_TITLE[currentObject?.type]} List
         </h2>
         <div className={styles.otherStateDescription}>
-          Our services extend to acquiring {DATA_TYPE_TO_TITLE[currentObject?.type]} lists for states other than
-          {currentObject.name}, allowing you to save on costs while still obtaining the
-          vital data your business needs.
+          Our services extend to acquiring{" "}
+          {DATA_TYPE_TO_TITLE[currentObject?.type]} lists for states other than
+          {currentObject.name}, allowing you to save on costs while still
+          obtaining the vital data your business needs.
         </div>
       </Col>
-      <Row>
+      {/* <Row>
         <Col>{renderState(0, 10)}</Col>
         <Col>{renderState(10, 20)}</Col>
         <Col>{renderState(20, 30)}</Col>
         <Col>{renderState(30, 40)}</Col>
         <Col>{renderState(40, 50)}</Col>
         <Col>{renderState(50, 60)}</Col>
+      </Row> */}
+      <Row>
+        {Array.from({ length: numColumns }, (_, i) => i).map((columnIndex) => (
+          <Col key={columnIndex}>
+            {renderState(
+              columnIndex * columnSize,
+              (columnIndex + 1) * columnSize
+            )}
+          </Col>
+        ))}
       </Row>
     </Container>
   );
