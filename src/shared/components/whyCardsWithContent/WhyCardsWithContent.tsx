@@ -40,12 +40,6 @@ const WhyCardsWithContent = (props: IWhyCards) => {
                 <div className={styles.cardsWrapper}>
                   <div className={styles.titleCard}>
                     <div className={styles.titleInnerContainer}>
-                      <div
-                        className={styles.titleCount}
-                        dangerouslySetInnerHTML={{
-                          __html: `${index < 10 && "0"}` + (index + 1),
-                        }}
-                      />
                       <h3
                         className={styles.title}
                       >

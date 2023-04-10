@@ -61,3 +61,18 @@
     font-size: 1.5rem;
   }
 }
+
+.faqsCol {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 88%;
+    position: absolute;
+    background: rgba(33, 37, 41, 0.22);
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

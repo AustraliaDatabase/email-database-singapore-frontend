@@ -1,4 +1,6 @@
 @import "styles/mixins";
+@import "styles/variables";
+
 .otherStateTitle {
   font-size: 2rem;
 
@@ -15,22 +17,21 @@
     font-size: 2rem;
   }
 
-  @include breakpoint(mobile){
-  font-size: 1.5rem;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h5,
-  h6,
-  p,
-  b,
-  span {
+  @include breakpoint(mobile) {
     font-size: 1.5rem;
-  }
-    
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    h6,
+    p,
+    b,
+    span {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -46,5 +47,23 @@
   b,
   span {
     font-size: 1rem;
+  }
+}
+.rowWrapper {
+  @include box-shadow(level-2);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  .statesRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem 0.65rem;
+  }
+  & > div {
+    &:nth-child(even) {
+      .statesRow {
+        background-color: $background-fill-lighter;
+      }
+    }
   }
 }

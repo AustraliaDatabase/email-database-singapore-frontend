@@ -69,5 +69,10 @@ export enum PRODUCT_MAIN_TYPE_ENUM {
 
 export enum EMAIL_VERIFICATION_TYPE {
   EMAIL_MARKETTING_FREE_SAMPLE = "email_marketting_free_sample",
-  FREE_SAMPLE_ON_EVERY_PRODUCT = "free_sample_on_every_product"
+  FREE_SAMPLE_ON_EVERY_PRODUCT = "free_sample_on_every_product",
+}
+
+export enum MAIN_DATABASE_CATEGORIES {
+  EMAIL_DATABASE = "EMAIL_DATABASE",
+  COMPLETE_DATABASE = "COMPLETE_DATABASE",
 }

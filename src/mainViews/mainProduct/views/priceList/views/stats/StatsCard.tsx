@@ -38,7 +38,7 @@ const StatsCard = (props: IStatsCard) => {
   return (
     <div className={styles.structure} id="#stats">
       <div className={styles.structureWrapper}>
-        <div>
+        <div className={styles.statsWrapper}>
           <div className={styles.structureTitle}>
             {GET_TITLE_VALUE[databaseMainType]}
           </div>
@@ -54,7 +54,7 @@ const StatsCard = (props: IStatsCard) => {
           }
 
           return (
-            <div key={index}>
+            <div key={index} className={styles.statsWrapper}>
               <div className={styles.structureTitle}>{item?.title}</div>
               <div className={styles.structureValue}>
                 {!isNaN(currentValue)

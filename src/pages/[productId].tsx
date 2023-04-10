@@ -6,10 +6,9 @@ import { ProductJsonLd, BreadcrumbJsonLd } from "next-seo";
 
 import PublicLayout from "../layouts/public/PublicLayout";
 import MainView404 from "../mainViews/404MainView";
-import MainProductMainView from "../mainViews/mainProduct/MainProductView";
 import instance from "../services/baseServices";
 import { DATABASE_MAIN_TYPES } from "../shared/enums";
-import { IReviewItem, IReviewObject, ISeedObject } from "../shared/interface";
+import { IReviewObject, ISeedObject } from "../shared/interface";
 import { routeToLowerCase, trimAllSpaces } from "../shared/InternalService";
 import {
   DATA_TYPE_TO_BREADCRUMB_NAME,
@@ -17,6 +16,7 @@ import {
   RELEASED_DATE,
 } from "../shared/constants";
 import { calculateReviews } from "../services/internalServices";
+import ProductMainViewV2 from "../mainViews/productMainViewV2/ProductMainViewV2";
 
 interface ICompanyDatabaseByState {
   realtorObject: {
@@ -102,7 +102,7 @@ const CompanyDatabaseByState = (props: ICompanyDatabaseByState) => {
             ?.split("/")
             .join("")}`}
         />
-        <MainProductMainView
+        <ProductMainViewV2
           databaseMainType={databaseMainType}
           currentObject={currentObject}
           reviewObject={reviewObject}

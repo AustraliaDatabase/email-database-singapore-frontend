@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { DATABASE_MAIN_TYPES } from "./enums";
 
 export interface ICartItem {
   id: string;
@@ -33,6 +34,7 @@ export interface ISeedObject {
   completeDatabasePrice?: number;
   breadCrumb: string;
   sampleFileName?: string;
+  name: string;
 }
 
 export interface IJobTitleObject {
@@ -286,6 +288,7 @@ export interface IMainProductInfo {
   faq: IFAQs;
   allList: IAllList[];
   review: IReview;
+  type: DATABASE_MAIN_TYPES;
 }
 
 export interface IPromoItem {

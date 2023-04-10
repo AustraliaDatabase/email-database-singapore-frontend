@@ -57,64 +57,66 @@ const NavigationLink: React.FC<IHeaderLinks> = ({
         { [styles.bar]: HEADER_LINKS.length - 1 === index && !isDisabled }
       )}
     >
-      <Link href={route} passHref>
-        <a>
-          {name} {subMenu && <CaretDown size={20} />}
-          {subMenu && subMenu.length && (
-            <ul className={styles.sub}>
-              {subMenu.map((link, index) => {
-                return (
-                  <Link passHref key={index} href={link.route}>
-                    <li
-                      className={classNames({
-                        [styles.active]: router.pathname === link.route,
-                      })}
-                    >
-                      {link.subMenu ? (
-                        <div className={styles.subMenu}>
-                          <span>
-                            {link.name} <CaretRight size={20} />
-                          </span>
-                          <ul>
-                            {link.subMenu.map((link, index) => {
-                              return (
-                                <Link passHref key={index} href={link.route}>
-                                  <li
-                                    className={classNames({
-                                      [styles.active]:
-                                        router.pathname === link.route,
-                                    })}
-                                  >
-                                    {link.name}
-                                  </li>
-                                </Link>
-                              );
-                            })}
-                          </ul>
-                        </div>
-                      ) : (
-                        <div>
-                          <span className={styles.menuIcon}>
-                            <Image
-                              // @ts-ignore
-                              src={icons[link.route]}
-                              width={35}
-                              height={35}
-                              objectFit="scale-down"
-                              alt={link.name}
-                            />
-                          </span>
-                          {link.name}
-                        </div>
-                      )}
-                    </li>
-                  </Link>
-                );
-              })}
-            </ul>
-          )}
-        </a>
-      </Link>
+      <a href={route}>
+        <Link href={route} passHref>
+          <>
+            {name} {subMenu && <CaretDown size={20} />}
+            {subMenu && subMenu.length && (
+              <ul className={styles.sub}>
+                {subMenu.map((link, index) => {
+                  return (
+                    <Link legacyBehavior prefetch key={index} href={link.route} passHref>
+                      <li
+                        className={classNames({
+                          [styles.active]: router.pathname === link.route,
+                        })}
+                      >
+                        {link.subMenu ? (
+                          <div className={styles.subMenu}>
+                            <span>
+                              {link.name} <CaretRight size={20} />
+                            </span>
+                            <ul>
+                              {link.subMenu.map((link, index) => {
+                                return (
+                                  <Link key={index} href={link.route} passHref>
+                                    <li
+                                      className={classNames({
+                                        [styles.active]:
+                                          router.pathname === link.route,
+                                      })}
+                                    >
+                                      {link.name}
+                                    </li>
+                                  </Link>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        ) : (
+                          <div>
+                            <span className={styles.menuIcon}>
+                              <Image
+                                // @ts-ignore
+                                src={icons[link.route]}
+                                width={35}
+                                height={35}
+                                objectFit="scale-down"
+                                alt={link.name}
+                              />
+                            </span>
+                            {link.name}
+                          </div>
+                        )}
+                      </li>
+                    </Link>
+                  );
+                })}
+              </ul>
+            )}
+          </>
+        </Link>
+      </a>
     </li>
   );
 };

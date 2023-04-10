@@ -1,0 +1,8 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.tabElement {
+  font-size: 22px;
+  color: $secondary;
+  line-height: 1.15;
+}

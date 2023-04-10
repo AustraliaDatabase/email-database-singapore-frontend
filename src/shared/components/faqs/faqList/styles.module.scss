@@ -1,0 +1,21 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.faqItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 80px;
+
+  .title {
+    font-size: 20px;
+  }
+  .icon {
+    background-color: $white;
+    padding: 5px 0;
+    z-index: 1;
+    svg {
+      color: $primary;
+    }
+  }
+}

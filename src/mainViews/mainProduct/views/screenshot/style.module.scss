@@ -2,8 +2,8 @@
 @import "styles/mixins";
 
 .screenshotWrapper {
-  background-color: $white;
   padding: 2.5rem 1rem;
+  padding-top: 0;
   text-align: center;
   border-radius: 0.5rem;
   .screenshotTitle {
@@ -79,7 +79,7 @@
     }
   }
   .buttonWrappre {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +87,16 @@
     @include breakpoint(mobile) {
       flex-direction: column;
       gap: 20px;
+    }
+    & button:last-child {
+      background: none;
+      color: $white;
+      border-color: $white;
+      &:hover {
+        color: $primary;
+        border-color: $primary;
+        background-color: $white;
+      }
     }
   }
 }

@@ -12,11 +12,8 @@ import UCDModal from "../UCDModal/UCDModal";
 import styles from "./cartModal.module.scss";
 import { numberWithCommas } from "../../InternalService";
 import { addToCartLocal } from "../../../services/helpers/tokenService";
-import { REALTORS_OBJECT } from "../../seeds/realtorsObject";
 import { BUTTON_VARIANT_ENUM } from "../../enums";
 import CartModalEmpty from "./views/cartModalEmpty/CartModalEmpty";
-// import { CURRENT_OBJECT as REAL_ESTATE_CURRENT_OBJECT } from "../../../pageContents/real-estate-agent-list/strings";
-// import { CURRENT_OBJECT as ALL_COMPANIES_CURRENT_OBJECT } from "../../../pages/list-of-all-us-companies";
 
 const CartModal = () => {
   const {
@@ -27,7 +24,6 @@ const CartModal = () => {
     totalCartAmount,
   } = useRoot();
 
-  // const [totalAmount, setTotalAmount] = useState(0);
   const [isEmptyCart, setIsEmptyCart] = useState(true);
 
   useEffect(() => {
