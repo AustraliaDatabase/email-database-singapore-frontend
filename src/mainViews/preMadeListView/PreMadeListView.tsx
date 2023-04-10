@@ -36,7 +36,7 @@ const PreMadeListView = () => {
                     AsTag={card.asTag}
                     type="action"
                     {...card}
-                    variant={FEATURE_CARD_VARIANT.Dark}
+                    variant={FEATURE_CARD_VARIANT.Light}
                   />
                 </Col>
               );
