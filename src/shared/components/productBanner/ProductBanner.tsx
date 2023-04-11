@@ -25,11 +25,11 @@ const ProductBanner = (props: IProductBanner) => {
           />
         </div>
 
-        <Col xs={12} lg={12} className="my-5">
+        <Col xs={12} lg={12} className="mt-5 mb-4 mb-lg-5">
           <div
             className={classNames(
               "text-center text-lg-start",
-              styles.bannerFont
+              styles.bannerTitle
             )}
             ref={bannerTitleRef}
             dangerouslySetInnerHTML={{ __html: currentObject?.banner?.title }}
