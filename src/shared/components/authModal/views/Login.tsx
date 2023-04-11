@@ -119,9 +119,9 @@ const Login = (props: ILogin) => {
                   onClick={pressSignUp}
                   size="large"
                   className="w-100 mb-3"
-                  variant="tertiary"
+                  variant="text"
                 >
-                  Don’t have any account?
+                  Don’t have an account? Sign Up
                 </Button>
                 <Button
                   loading={loading}

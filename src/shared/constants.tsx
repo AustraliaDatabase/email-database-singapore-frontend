@@ -116,9 +116,9 @@ export const LAST_UPDATE_DATE_WITHOUT_TEXT = "November 11,2022";
 export const LAST_UPDATE_DATE = `Last Update Date - ${LAST_UPDATE_DATE_WITHOUT_TEXT}`;
 export const RELEASED_DATE = "2022-11-11";
 
-export const ADMIN_EMAILS = ["support@uscompanydata.com"];
+export const ADMIN_EMAILS = ["support@emaildatas.com"];
 
-export const ADMIN_EMAIL = "support@uscompanydata.com";
+export const ADMIN_EMAIL = "support@emaildatas.com";
 
 export const USDC_NETWORK = [
   { value: "BSC", description: "BNB Smart Chain (BEP20)" },

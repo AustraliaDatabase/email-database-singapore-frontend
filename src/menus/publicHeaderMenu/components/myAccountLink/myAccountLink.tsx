@@ -61,30 +61,6 @@ const MyAccountLink = () => {
 
       {logoutVisible && (
         <div className={styles.wrapper}>
-          <Link passHref={true} href="/dashboard">
-            <div className={styles.listItem}>
-              <Desktop size={iconSize} />
-              Dashboard
-            </div>
-          </Link>
-          <Link passHref={true} href="/orders">
-            <div className={styles.listItem}>
-              <ListPlus size={iconSize} />
-              My Orders
-            </div>
-          </Link>
-          <Link passHref={true} href="/downloads">
-            <div className={styles.listItem}>
-              <CloudArrowDown size={iconSize} />
-              Downloads
-            </div>
-          </Link>
-          <Link passHref={true} href="/my-account">
-            <div className={styles.listItem}>
-              <User size={iconSize} />
-              Account
-            </div>
-          </Link>
           <div className={styles.listItem} onClick={pressLogout}>
             <SignOut size={iconSize} />
             Logout

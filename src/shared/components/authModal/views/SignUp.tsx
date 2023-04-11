@@ -155,9 +155,9 @@ const SignUp = (props: ISignup) => {
                 onClick={pressLogin}
                 className="w-100 mb-3"
                 size="large"
-                variant="tertiary"
+                variant="text"
               >
-                already have an account?
+                Already have an account? Log In
               </Button>
               <Button
                 className="w-100"
