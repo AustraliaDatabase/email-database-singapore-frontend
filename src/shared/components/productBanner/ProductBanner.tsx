@@ -28,7 +28,7 @@ const ProductBanner = (props: IProductBanner) => {
         <Col xs={12} lg={12} className="my-5">
           <div
             className={classNames(
-              "text-center text-md-start",
+              "text-center text-lg-start",
               styles.bannerFont
             )}
             ref={bannerTitleRef}
@@ -39,7 +39,7 @@ const ProductBanner = (props: IProductBanner) => {
               __html: currentObject?.banner?.description,
             }}
             className={classNames(
-              "d-flex text-center text-md-start flex-column mt-4",
+              "d-flex text-center text-lg-start flex-column mt-4",
               styles.description
             )}
           />
