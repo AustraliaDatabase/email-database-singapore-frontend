@@ -31,7 +31,7 @@ const ProductDescription = (props: IProductDescription) => {
           className={classNames("mb-3", styles.tabs)}
         >
           <Tab eventKey="0" title={defaultHeaderName}>
-            <Col md={6} lg={11} className="mx-auto">
+            <Col xs={12} lg={11} className="mx-auto">
               <Col>
                 <div className={styles.dbInfo}>
                   <div>
@@ -49,13 +49,17 @@ const ProductDescription = (props: IProductDescription) => {
                 </div>
               </Col>
             </Col>
-            <Col lg={11} className="mx-auto">
+            <Col xs={12} lg={11} className="mx-auto">
               <DataStructure currentObject={currentObject} />
             </Col>
           </Tab>
           <Tab
             eventKey="1"
-            title={<div className={styles.tabElement}>Reviews</div>}
+            title={
+              <div className={styles.tabElement}>
+                <span>Reviews</span>
+              </div>
+            }
           ></Tab>
         </Tabs>
       </div>
