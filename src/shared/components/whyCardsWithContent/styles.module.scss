@@ -38,9 +38,14 @@
     .titleCard {
       width: 650px;
       height: 130px;
+      @include breakpoint(mobile) {
+        // height: calc(max-content() + 20px);
+        height: 100%;
+        padding-bottom: 2rem;
+      }
       background: linear-gradient(
         102.25deg,
-        #00A2E2 -23.38%,
+        #00a2e2 -23.38%,
         #040505 39.21%,
         #040505 76.31%,
         #22262a 110.96%
@@ -91,7 +96,7 @@
         margin-top: -100px;
       }
       @include breakpoint(mobile) {
-        margin-top: -80px;
+        margin-top: -30px;
       }
     }
   }
