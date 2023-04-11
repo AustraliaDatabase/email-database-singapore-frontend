@@ -37,8 +37,22 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
         <ProductDescription currentObject={currentObject} />
       </section>
 
+      <section>
+        <Container>
+          <OtherProductFeature currentObject={currentObject} />
+        </Container>
+      </section>
+
+      <section className="dark">
+        <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
+      </section>
+
+      <section id="#other-states">
+        <OtherStates currentObject={currentObject} />
+      </section>
+
       {currentObject?.why && (
-        <section id="#why-us" className="ghost" style={{ zIndex: "-1" }}>
+        <section id="#why-us" className="dark" style={{ zIndex: "-1" }}>
           <WhyCardsWithContent
             title={`Why Choose EmailDatas for Your ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists Over Other Providers?`}
             description={`EmailDatas stands out as the ideal solution for ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists, offering exceptional email lists at a more budget-friendly price than competing providers.`}
@@ -46,20 +60,6 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
           />
         </section>
       )}
-
-      <section>
-        <Container>
-          <OtherProductFeature currentObject={currentObject} />
-        </Container>
-      </section>
-
-      <section className="ghost">
-        <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
-      </section>
-
-      <section id="#other-states">
-        <OtherStates currentObject={currentObject} />
-      </section>
 
       <section id="#faq">
         {/* @ts-ignore */}

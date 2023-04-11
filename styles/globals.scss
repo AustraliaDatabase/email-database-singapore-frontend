@@ -240,9 +240,9 @@ label {
   font-weight: 500;
 }
 
-// .text-highlight {
-//   color: var(--primary);
-// }
+.text-highlight {
+  color: var(--primary);
+}
 
 .cursor {
   cursor: pointer;
@@ -523,4 +523,16 @@ blockquote:after {
 
 .rangeslider-horizontal .rangeslider__fill {
   background-color: var(--primary) !important;
+}
+
+.db-details-tabs > div:nth-child(2) {
+  border: 0.5px solid $border-light;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border: 0.5px 0.5px 0 0.5px solid $border-light;
+}
+
+.nav-tabs {
+  border-bottom: none;
 }
