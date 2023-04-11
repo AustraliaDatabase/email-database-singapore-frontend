@@ -1,19 +1,19 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
+import { CURRENT_OBJECT_HOME } from "../home/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
-import FaqsView from "../mainProduct/views/faqs/Faqs";
 import BeneifitView from "../../shared/components/beneifit/Beneifit";
 import { IMainProductInfo, IReviewObject } from "../../shared/interface";
 import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
-import styles from "./style.module.scss";
 import ProductBanner from "../../shared/components/productBanner/ProductBanner";
 import ProductDescription from "./views/productDescription/ProductDescription";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
-import { CURRENT_OBJECT_HOME } from "../home/constants";
 import OtherStates from "../mainProduct/views/otherStates/OtherStates";
 import { DATA_TYPE_TO_TITLE } from "../../shared/constants";
-import { Container } from "react-bootstrap";
 import OtherProductFeature from "./views/otherProductFeature/OtherProductFeature";
+import FaqsView from "../mainProduct/views/faqs/Faqs";
+import styles from "./style.module.scss";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;

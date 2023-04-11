@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Container } from "react-bootstrap";
-import { ArrowSquareOut, Lightning } from "phosphor-react";
+import { ArrowSquareOut } from "phosphor-react";
 
 import {
   IMainProductInfo,
   IOtherStateList,
 } from "../../../../shared/interface";
-import styles from "./style.module.scss";
 import { DATA_TYPE_TO_TITLE } from "../../../../shared/constants";
+import styles from "./style.module.scss";
 
 interface IOtherStatesView {
   currentObject: IMainProductInfo;
@@ -21,7 +21,7 @@ const OtherStates = (props: IOtherStatesView) => {
 
   const numColumns = 4;
   const columnSize = Math.ceil(otherStateList.length / numColumns);
-
+console.log(otherStateList)
   useEffect(() => {
     const sortedList = currentObject?.allList
       ?.filter((filterElement: any) => {
@@ -78,7 +78,7 @@ const OtherStates = (props: IOtherStatesView) => {
 
   return (
     <Container>
-      <Col xs={10} className="mb-5 mx-auto text-center">
+      <Col xs={12} lg={10} className="mb-5 mx-auto text-center">
         <h2 className={styles.otherStateTitle}>
           Explore Lists for US States Beyond the {currentObject.name}{" "}
           {DATA_TYPE_TO_TITLE[currentObject?.type]} List
@@ -90,17 +90,9 @@ const OtherStates = (props: IOtherStatesView) => {
           obtaining the vital data your business needs.
         </div>
       </Col>
-      {/* <Row>
-        <Col>{renderState(0, 10)}</Col>
-        <Col>{renderState(10, 20)}</Col>
-        <Col>{renderState(20, 30)}</Col>
-        <Col>{renderState(30, 40)}</Col>
-        <Col>{renderState(40, 50)}</Col>
-        <Col>{renderState(50, 60)}</Col>
-      </Row> */}
       <Row>
         {Array.from({ length: numColumns }, (_, i) => i).map((columnIndex) => (
-          <Col key={columnIndex}>
+          <Col key={columnIndex} xs={12} md={6} lg={3} className="mb-4 mb-lg-0">
             {renderState(
               columnIndex * columnSize,
               (columnIndex + 1) * columnSize

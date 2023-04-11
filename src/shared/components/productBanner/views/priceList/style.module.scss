@@ -1,3 +1,4 @@
+@import "styles/mixins";
 .mainWrapper {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,9 @@
 }
 .wrapper {
   gap: 20px;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
 }
 
 .secondaryWrapper {
@@ -39,4 +43,7 @@
 .addToCart {
   width: 244px;
   min-height: 56px;
+  @include breakpoint(mobile) {
+    margin: 0 auto;
+  }
 }
