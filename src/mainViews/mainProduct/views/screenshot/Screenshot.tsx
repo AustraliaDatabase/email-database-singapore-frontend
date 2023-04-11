@@ -41,27 +41,13 @@ const ScreenshotView = (props: IScreenshotView) => {
 
   const { setScreenshotModalEnable, setScreenshotInfo } = useRoot();
 
-  const getIndustryUrl = () => {
-    if (url === "/general-contractors-and-home-builders") {
-      return "/Builders-and-Contractors.png";
-    } else if (url === "/cryptocurrency") {
-      return null;
-    } else if (url === "/super-backers-email-database") {
-      return "/Super-Backers-Database.png";
-    } else if (url === "/crowdfunding-backer-database") {
-      return "/CrowdFunding-Email-List.png";
-    }
-
-    return "/screenshot-for-b2b-emails.webp";
-  };
-
   const screenshot: any = {
-    [DATABASE_MAIN_TYPES.REALTOR]: "/Realtor-Email-List.webp",
-    [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: "/screenshot-for-b2b-emails.webp",
-    [DATABASE_MAIN_TYPES.JOB_TITLE]: "/screenshot-for-b2b-emails.webp",
-    [DATABASE_MAIN_TYPES.INDUSTRY]: getIndustryUrl(),
+    [DATABASE_MAIN_TYPES.REALTOR]: "/screenshot.png",
+    [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: "/screenshot.png",
+    [DATABASE_MAIN_TYPES.JOB_TITLE]: "/screenshot.png",
+    [DATABASE_MAIN_TYPES.INDUSTRY]: "/screenshot.png",
   };
-  console.log(screenshot[databaseMainType]);
+
   return (
     <div className={styles.screenshotWrapper}>
       <div>
