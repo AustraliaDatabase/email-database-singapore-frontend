@@ -1,13 +1,13 @@
-import classNames from "classnames";
-import { Check, CheckCircle, ShoppingCartSimple } from "phosphor-react";
 import React, { useState } from "react";
+import classNames from "classnames";
+import { CheckCircle, ShoppingCartSimple } from "phosphor-react";
 
-import { AddToCart } from "../../../../../services/internalServices";
 import { useRoot } from "../../../../contexts/RootProvider";
+import { AddToCart } from "../../../../../services/internalServices";
 import { DATABASE_MAIN_TYPES } from "../../../../enums";
 import { IMainProductInfo, IPriceList } from "../../../../interface";
-import Button from "../../../button/Button";
 import PriceButton from "../priceButton/PriceButton";
+import Button from "../../../button/Button";
 import styles from "./style.module.scss";
 
 interface IPriceListView {

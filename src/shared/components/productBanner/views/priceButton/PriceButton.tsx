@@ -1,9 +1,9 @@
-import classNames from "classnames";
 import React, { ReactNode } from "react";
+import { CheckCircle, UserList } from "phosphor-react";
+import classNames from "classnames";
 
 import { numberWithCommas } from "../../../../InternalService";
 import styles from "./style.module.scss";
-import { CheckCircle, UserList } from "phosphor-react";
 
 interface IPriceButton {
   children: ReactNode;

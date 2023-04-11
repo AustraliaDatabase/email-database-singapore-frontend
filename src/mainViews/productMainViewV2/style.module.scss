@@ -23,6 +23,9 @@
   padding-bottom: 200px;
   // margin-bottom: -100px;
   @extend %sharedBgGradient;
+  @include breakpoint(tablet) {
+    padding-bottom: 90px;
+  }
   h1,
   h2,
   p,

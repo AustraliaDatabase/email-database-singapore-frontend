@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import classNames from "classnames";
 
-import styles from "./styles.module.scss";
 import BreadCrumb from "../breadCrumb/BreadCrumb";
 import ScreenshotView from "../../../mainViews/mainProduct/views/screenshot/Screenshot";
 import { IMainProductInfo } from "../../interface";
 import PriceList from "./views/priceList/PriceList";
+import styles from "./styles.module.scss";
 
 interface IProductBanner {
   currentObject: IMainProductInfo;
@@ -25,11 +25,11 @@ const ProductBanner = (props: IProductBanner) => {
           />
         </div>
 
-        <Col xs={12} lg={12} className="my-5">
+        <Col xs={12} lg={12} className="mt-5 mb-4 mb-lg-5">
           <div
             className={classNames(
-              "text-center text-md-start",
-              styles.bannerFont
+              "text-center text-lg-start",
+              styles.bannerTitle
             )}
             ref={bannerTitleRef}
             dangerouslySetInnerHTML={{ __html: currentObject?.banner?.title }}
@@ -39,7 +39,7 @@ const ProductBanner = (props: IProductBanner) => {
               __html: currentObject?.banner?.description,
             }}
             className={classNames(
-              "d-flex text-center text-md-start flex-column mt-4",
+              "d-flex text-center text-lg-start flex-column mt-4",
               styles.description
             )}
           />

@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import Image from "next/image";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { useRouter } from "next/router";
 
-import Button from "../../../../shared/components/button/Button";
 import {
   BUTTON_VARIANT_ENUM,
   DATABASE_MAIN_TYPES,
 } from "../../../../shared/enums";
 import { useRoot } from "../../../../shared/contexts/RootProvider";
 import { getRealtorDownloadUrl } from "../../../../database/storage";
-import styles from "./style.module.scss";
 import { IMainProductInfo, IScreenshot } from "../../../../shared/interface";
-import { useRouter } from "next/router";
+import Button from "../../../../shared/components/button/Button";
+import styles from "./style.module.scss";
 
 interface IScreenshotView {
   modalScreenshotTitle?: string;
