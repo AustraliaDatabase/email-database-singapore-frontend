@@ -21,7 +21,7 @@ const OtherStates = (props: IOtherStatesView) => {
 
   const numColumns = 4;
   const columnSize = Math.ceil(otherStateList.length / numColumns);
-
+console.log(otherStateList)
   useEffect(() => {
     const sortedList = currentObject?.allList
       ?.filter((filterElement: any) => {
@@ -78,7 +78,7 @@ const OtherStates = (props: IOtherStatesView) => {
 
   return (
     <Container>
-      <Col xs={10} className="mb-5 mx-auto text-center">
+      <Col xs={12} lg={10} className="mb-5 mx-auto text-center">
         <h2 className={styles.otherStateTitle}>
           Explore Lists for US States Beyond the {currentObject.name}{" "}
           {DATA_TYPE_TO_TITLE[currentObject?.type]} List
