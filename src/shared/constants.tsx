@@ -112,7 +112,7 @@ export const FLOATING_MENU_OLD = [
   { link: "#reviews", label: "Reviews", icon: <ShieldStar size={24} /> },
 ];
 
-export const LAST_UPDATE_DATE_WITHOUT_TEXT = "November 11,2022";
+export const LAST_UPDATE_DATE_WITHOUT_TEXT = "Jan 11,2023";
 export const LAST_UPDATE_DATE = `Last Update Date - ${LAST_UPDATE_DATE_WITHOUT_TEXT}`;
 export const RELEASED_DATE = "2022-11-11";
 
