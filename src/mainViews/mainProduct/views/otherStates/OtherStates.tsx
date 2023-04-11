@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Container } from "react-bootstrap";
-import { ArrowSquareOut, Lightning } from "phosphor-react";
+import { ArrowSquareOut } from "phosphor-react";
 
 import {
   IMainProductInfo,
@@ -100,7 +100,7 @@ const OtherStates = (props: IOtherStatesView) => {
       </Row> */}
       <Row>
         {Array.from({ length: numColumns }, (_, i) => i).map((columnIndex) => (
-          <Col key={columnIndex}>
+          <Col key={columnIndex} xs={12} md={6} lg={3} className="mb-4 mb-lg-0">
             {renderState(
               columnIndex * columnSize,
               (columnIndex + 1) * columnSize
