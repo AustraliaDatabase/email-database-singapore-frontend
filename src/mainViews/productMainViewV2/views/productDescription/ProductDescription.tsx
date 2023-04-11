@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Container, Tab, Tabs } from "react-bootstrap";
-import { DATA_TYPE_TO_TITLE } from "../../../../shared/constants";
+import classNames from "classnames";
 
+import { DATA_TYPE_TO_TITLE } from "../../../../shared/constants";
 import { IMainProductInfo } from "../../../../shared/interface";
 import StatsCard from "../../../mainProduct/views/priceList/views/stats/StatsCard";
 import DataStructure from "../dataStructure/DataStructure";
 import styles from "./style.module.scss";
-import classNames from "classnames";
 
 interface IProductDescription {
   currentObject: IMainProductInfo;

@@ -1,13 +1,12 @@
 import React from "react";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import classNames from "classnames";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
 import Card from "../card/Card";
-import { IBeneifitList, IBeneifits } from "../../interface";
-import styles from "./style.module.scss";
+import {  IBeneifits } from "../../interface";
 import BeneifitsCollapsible from "./components/beneifitsCollapsible/BeneifitsCollapsible";
+import styles from "./style.module.scss";
 
 const BeneifitCard = ({ title, description }: any) => {
   return (

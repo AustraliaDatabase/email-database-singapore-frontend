@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import classNames from "classnames";
 
-import styles from "./styles.module.scss";
 import BreadCrumb from "../breadCrumb/BreadCrumb";
 import ScreenshotView from "../../../mainViews/mainProduct/views/screenshot/Screenshot";
 import { IMainProductInfo } from "../../interface";
 import PriceList from "./views/priceList/PriceList";
+import styles from "./styles.module.scss";
 
 interface IProductBanner {
   currentObject: IMainProductInfo;

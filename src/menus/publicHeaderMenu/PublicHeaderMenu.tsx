@@ -3,13 +3,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
-import { useRouter } from "next/router";
-import {
-  CaretDown,
-  CaretRight,
-  List,
-  ShoppingCartSimple,
-} from "phosphor-react";
+import { List, ShoppingCartSimple } from "phosphor-react";
 
 import { IHeaderLinks } from "../interface";
 import { HEADER_LINKS } from "../constants";
@@ -24,107 +18,6 @@ const NavigationLink = dynamic(
   }
 );
 import styles from "./publicHeaderMenu.module.scss";
-
-// const NavigationLink: React.FC<IHeaderLinks> = ({
-//   name,
-//   route,
-//   index,
-//   subMenu,
-// }) => {
-//   const router = useRouter();
-
-//   let active =
-//     router.pathname === route ||
-//     (router.pathname === "/pre-made-list" && name === "Pre-Made Lists") ||
-//     (router.pathname === "/by-us-states" && name === "Pre-Made Lists") ||
-//     (router.pathname === "/job-titles" && name === "Pre-Made Lists") ||
-//     (router.pathname === "/industries" && name === "Pre-Made Lists") ||
-//     (router.pathname === "/target" && name === "Pre-Made Lists") ||
-//     (router.pathname === "/by-zip-code" && name === "Pre-Made Lists") ||
-//     (router.pathname === "/international" && name === "Pre-Made Lists") ||
-//     (router.pathname === "/[readyMadeDetail]" && name === "Pre-Made Lists");
-
-//   const isDisabled =
-//     router.pathname === "/blogs/[blogDetail]" || router.pathname === "/blogs";
-
-//   const icons = {
-//     "/by-us-states": "/menu-icons/by-states.png",
-//     "/job-titles": "/menu-icons/job-title.png",
-//     "/industries": "/menu-icons/industries.png",
-//     "/target": "/menu-icons/target.png",
-//     "/international": "/menu-icons/international.png",
-//     "/by-zip-code": "/menu-icons/zip-code.png",
-//   };
-
-//   return (
-//     <li
-//       className={classNames(
-//         styles.elm,
-//         { [styles.selected]: active },
-//         { [styles.bar]: HEADER_LINKS.length - 1 === index && !isDisabled }
-//       )}
-//     >
-//       <a href={route}>
-//         <a>
-//           {name} {subMenu && <CaretDown size={20} />}
-//           {subMenu && subMenu.length && (
-//             <ul className={styles.sub}>
-//               {subMenu.map((link, index) => {
-//                 return (
-//                   <a key={index} href={link.route}>
-//                     <li
-//                       className={classNames({
-//                         [styles.active]: router.pathname === link.route,
-//                       })}
-//                     >
-//                       {link.subMenu ? (
-//                         <div className={styles.subMenu}>
-//                           <span>
-//                             {link.name} <CaretRight size={20} />
-//                           </span>
-//                           <ul>
-//                             {link.subMenu.map((link, index) => {
-//                               return (
-//                                 <a key={index} href={link.route}>
-//                                   <li
-//                                     className={classNames({
-//                                       [styles.active]:
-//                                         router.pathname === link.route,
-//                                     })}
-//                                   >
-//                                     {link.name}
-//                                   </li>
-//                                 </a>
-//                               );
-//                             })}
-//                           </ul>
-//                         </div>
-//                       ) : (
-//                         <div>
-//                           <span className={styles.menuIcon}>
-//                             <Image
-//                               // @ts-ignore
-//                               src={icons[link.route]}
-//                               width={35}
-//                               height={35}
-//                               objectFit="scale-down"
-//                               alt={link.name}
-//                             />
-//                           </span>
-//                           {link.name}
-//                         </div>
-//                       )}
-//                     </li>
-//                   </a>
-//                 );
-//               })}
-//             </ul>
-//           )}
-//         </a>
-//       </a>
-//     </li>
-//   );
-// };
 
 const PublicHeaderMenu = () => {
   const [toTop, setToTop] = useState(false);

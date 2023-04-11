@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Container } from "react-bootstrap";
 import { ArrowSquareOut } from "phosphor-react";
 
 import {
   IMainProductInfo,
   IOtherStateList,
 } from "../../../../shared/interface";
-import styles from "./style.module.scss";
 import { DATA_TYPE_TO_TITLE } from "../../../../shared/constants";
+import styles from "./style.module.scss";
 
 interface IOtherStatesView {
   currentObject: IMainProductInfo;
@@ -90,14 +90,6 @@ console.log(otherStateList)
           obtaining the vital data your business needs.
         </div>
       </Col>
-      {/* <Row>
-        <Col>{renderState(0, 10)}</Col>
-        <Col>{renderState(10, 20)}</Col>
-        <Col>{renderState(20, 30)}</Col>
-        <Col>{renderState(30, 40)}</Col>
-        <Col>{renderState(40, 50)}</Col>
-        <Col>{renderState(50, 60)}</Col>
-      </Row> */}
       <Row>
         {Array.from({ length: numColumns }, (_, i) => i).map((columnIndex) => (
           <Col key={columnIndex} xs={12} md={6} lg={3} className="mb-4 mb-lg-0">
