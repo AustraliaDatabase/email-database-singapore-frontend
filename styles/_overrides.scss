@@ -309,7 +309,7 @@ button:focus:not(:focus-visible) {
 .db-details-tabs {
   box-shadow: 0px -9px 53px rgba(0, 0, 0, 0.11);
   padding: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   & > div {
     &:nth-child(2) {
       border: 1px solid rgba(0, 0, 0, 0.17);
