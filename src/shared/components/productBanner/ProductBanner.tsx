@@ -7,6 +7,7 @@ import ScreenshotView from "../../../mainViews/mainProduct/views/screenshot/Scre
 import { IMainProductInfo } from "../../interface";
 import PriceList from "./views/priceList/PriceList";
 import styles from "./styles.module.scss";
+import { numberWithCommas } from "../../InternalService";
 
 interface IProductBanner {
   currentObject: IMainProductInfo;
@@ -32,7 +33,14 @@ const ProductBanner = (props: IProductBanner) => {
               styles.bannerTitle
             )}
             ref={bannerTitleRef}
-            dangerouslySetInnerHTML={{ __html: currentObject?.banner?.title }}
+            dangerouslySetInnerHTML={{
+              __html: currentObject?.banner?.title?.replaceAll(
+                "{{DIRECT_CONTACTS}}",
+                numberWithCommas(
+                  currentObject?.stats?.directContacts?.toString() || ""
+                )
+              ),
+            }}
           />
           <div
             dangerouslySetInnerHTML={{
