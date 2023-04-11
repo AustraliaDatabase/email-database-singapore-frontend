@@ -38,6 +38,7 @@ const NavigationLink = (props: IHeaderLinks) => {
   return (
     <li
       className={classNames(
+        styles.navigationlink,
         styles.elm,
         { [styles.selected]: active },
         { [styles.bar]: HEADER_LINKS.length - 1 === index && !isDisabled }
