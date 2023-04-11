@@ -15,7 +15,9 @@ interface IProductDescription {
 const ProductDescription = (props: IProductDescription) => {
   const { currentObject } = props;
 
-  const defaultHeaderName = <div className={styles.tabElement}>Database Datails</div>;
+  const defaultHeaderName = (
+    <div className={styles.tabElement}>Database Datails</div>
+  );
 
   return (
     <Container>
@@ -28,7 +30,7 @@ const ProductDescription = (props: IProductDescription) => {
           <Tab eventKey="0" title={defaultHeaderName}>
             <Col md={6} lg={11} className="mx-auto">
               <h2 className={styles.statsHeader}>
-                Complete Stats of {currentObject?.name}{" "}
+                Stats of {currentObject?.name}{" "}
                 {DATA_TYPE_TO_TITLE[currentObject?.type]} Database
               </h2>
               <Col>

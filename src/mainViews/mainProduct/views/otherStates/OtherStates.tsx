@@ -80,8 +80,7 @@ const OtherStates = (props: IOtherStatesView) => {
     <Container>
       <Col xs={10} className="mb-5 mx-auto text-center">
         <h2 className={styles.otherStateTitle}>
-          Explore Lists for US States Beyond the {currentObject.name}{" "}
-          {DATA_TYPE_TO_TITLE[currentObject?.type]} List
+          Explore Lists for US States Beyond the {currentObject.name} List
         </h2>
         <div className={styles.otherStateDescription}>
           Our services extend to acquiring{" "}
