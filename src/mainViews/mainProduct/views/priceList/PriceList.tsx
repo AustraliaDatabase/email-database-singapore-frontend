@@ -30,18 +30,6 @@ const PriceListView = (props: IPriceListView) => {
     name,
   } = props;
 
-  const numOfContacts: any = {
-    [DATABASE_MAIN_TYPES.REALTOR]: statsInfo?.numberOfRealtors,
-    [DATABASE_MAIN_TYPES.REALTOR_OLD]: statsInfo?.numberOfRealtors,
-    [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: statsInfo?.uniqueDirectB2BEmails,
-    [DATABASE_MAIN_TYPES.COMPANY_DATABASE_OLD]:
-      statsInfo?.uniqueDirectB2BEmails,
-    [DATABASE_MAIN_TYPES.JOB_TITLE]: statsInfo?.uniqueDirectContacts,
-    [DATABASE_MAIN_TYPES.CONSUMER]: statsInfo?.uniqueDirectContacts,
-    [DATABASE_MAIN_TYPES.COUNTRY]: statsInfo?.uniqueDirectContacts,
-    [DATABASE_MAIN_TYPES.INDUSTRY]: statsInfo?.uniqueDirectContacts,
-    [DATABASE_MAIN_TYPES.TARGET]: statsInfo?.uniqueDirectContacts,
-  };
 
   return (
     <Container className="mt-5">
@@ -70,11 +58,7 @@ const PriceListView = (props: IPriceListView) => {
                 amount={element.price}
                 caption={element.caption}
                 url={url}
-                directContacts={
-                  priceInfo?.list?.length > 2 && index == 0
-                    ? statsInfo?.starterPackage
-                    : numOfContacts[databaseMainType]
-                }
+                directContacts={statsInfo?.emailAddress || 0}
                 bannerPlainTitle={bannerPlainTitle} // TODO:
                 databaseMainType={databaseMainType}
                 AsTag={element?.asTag}

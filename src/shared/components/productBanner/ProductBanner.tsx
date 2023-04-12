@@ -37,7 +37,7 @@ const ProductBanner = (props: IProductBanner) => {
               __html: currentObject?.banner?.title?.replaceAll(
                 "{{DIRECT_CONTACTS}}",
                 numberWithCommas(
-                  currentObject?.stats?.directContacts?.toString() || ""
+                  currentObject?.stats?.emailAddress?.toString() || ""
                 )
               ),
             }}
