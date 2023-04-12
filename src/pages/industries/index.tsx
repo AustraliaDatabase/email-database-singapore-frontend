@@ -19,8 +19,8 @@ const CompanyByStatePage = (props: any) => {
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/us-company-database-by-state`}
       /> */}
       <PublicLayout>
-        {/* <section className="sectiontopfix pb-3">
-          <Container>
+        <section className="sectiontopfix pb-3">
+          {/* <Container>
             <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
             <div
               className="text-center"
@@ -28,8 +28,8 @@ const CompanyByStatePage = (props: any) => {
                 __html: Seeds.mainDescription,
               }}
             />
-          </Container>
-        </section> */}
+          </Container> */}
+        </section>
 
         <section>
           <Container>
