@@ -38,10 +38,6 @@ const StatsCard = (props: IStatsCard) => {
           // @ts-ignore
           const currentValue = statsInfo?.[item.id];
 
-          if (!currentValue?.trim()) {
-            return;
-          }
-
           return (
             <div key={index} className={styles.statsWrapper}>
               <div className={styles.structureTitle}>{item?.title}</div>
