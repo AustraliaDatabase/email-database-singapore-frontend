@@ -10,7 +10,7 @@ import Table from "../../shared/components/table/Table";
 import { HEADER_COLUMNS_REALTORS } from "../../shared/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { IMainProductInfo } from "../../shared/interface";
-import Seeds from "../../shared/seeds/realtorBy";
+// import Seeds from "../../shared/seeds/realtorBy";
 
 const REALTOR_SET_ATTRIBUTES = {
   numberOfRealtors: "numberOfRealtors",
@@ -31,13 +31,13 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
 
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title="Realtor Email List by State with over 95% Email Deliverability"
         description="Get A Usa Real Estate Database With A 95% Email Deliverability Guaranteed To Connect With All Real Estate Agents And Realtors."
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/realtors-by-state`}
-      />
+      /> */}
       <PublicLayout>
-        <section className="sectiontopfix pb-3">
+        {/* <section className="sectiontopfix pb-3">
           <Container>
             <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
             <div
@@ -47,7 +47,7 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
               }}
             />
           </Container>
-        </section>
+        </section> */}
         {/* <section className="py-0">
           <FloatingMenu menuList={Seeds.floatingMenu} />
         </section> */}
@@ -62,9 +62,9 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
             />
           </Container>
         </section>
-        <section id="#why-us" className="ghost">
+        {/* <section id="#why-us" className="ghost">
           <MainWhyDetailCard whyInfo={Seeds.why} />
-        </section>
+        </section> */}
         {/* <section id="#review">
           <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />
         </section> */}

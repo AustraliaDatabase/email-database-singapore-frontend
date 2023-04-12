@@ -9,7 +9,6 @@ import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
 import { HEADER_COLUMNS_COMPLETE_DATABASE } from "../../shared/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
-import Seeds from "../../shared/seeds/usCompanyby";
 
 export const COMPANY_SET_ATTRIBUTES = {
   contactNames: "contactNames",
@@ -27,13 +26,13 @@ const CompanyByStatePage = (props: any) => {
 
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={Seeds.metaTitle}
         description={Seeds.metaDescription}
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/us-company-database-by-state`}
-      />
+      /> */}
       <PublicLayout>
-        <section className="sectiontopfix pb-3">
+        {/* <section className="sectiontopfix pb-3">
           <Container>
             <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
             <div
@@ -43,7 +42,7 @@ const CompanyByStatePage = (props: any) => {
               }}
             />
           </Container>
-        </section>
+        </section> */}
 
         <section>
           <Container>
@@ -55,9 +54,9 @@ const CompanyByStatePage = (props: any) => {
             />
           </Container>
         </section>
-        <section id="#why-us" className="ghost">
+        {/* <section id="#why-us" className="ghost">
           <MainWhyDetailCard whyInfo={Seeds.why} />
-        </section>
+        </section> */}
       </PublicLayout>
     </>
   );
