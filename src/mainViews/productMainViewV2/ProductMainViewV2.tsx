@@ -62,7 +62,7 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
           style={{ zIndex: "-1" }}
         >
           <WhyCardsWithContent
-            title={`Why Choose EmailDatas for ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists Over Other Providers?`}
+            title={`EmailDatas is the best choice for your ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists`}
             description={`EmailDatas stands out as the ideal solution for ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists, offering exceptional email lists at a more budget-friendly price than competing providers.`}
             lists={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.lists}
           />

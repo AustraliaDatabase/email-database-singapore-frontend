@@ -179,7 +179,7 @@ export const CURRENT_OBJECT_HOME = {
     ],
   },
   whyLeadLibraryTopic: {
-    title: "<h2>Why choose EmailDatas for your B2B Email List?</h2>",
+    title: "<h2>EmailDatas is the best choice for your B2B Email List</h2>",
     description: `
       <p>Choose EmailDatas for updated, valid B2B contacts from reliable sources. Enjoy a 96% deliverability rate and protection of your IP reputation with regular database updates and cleaning.</p>
    `,
