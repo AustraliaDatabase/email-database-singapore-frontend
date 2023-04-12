@@ -152,7 +152,7 @@ export const CURRENT_OBJECT_HOME = {
   beneifits: {
     title: `Benefits of Our Business Database Lists`,
     description:
-      "<p>Our B2B Business List is rich with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively.</p>",
+      "Our B2B Business List is rich with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively",
     list: [
       {
         title: `Email Marketing`,
@@ -179,9 +179,9 @@ export const CURRENT_OBJECT_HOME = {
     ],
   },
   whyLeadLibraryTopic: {
-    title: "<h2>Why choose EmailDatas?</h2>",
+    title: "<h2>Why choose EmailDatas for your B2B Email List?</h2>",
     description: `
-      <p>Choose EmailDatas for updated, valid B2B contacts from reliable sources. Enjoy a 96% deliverability rate and protection of your IP reputation with regular database updates and cleaning. Use our data for various marketing methods, including direct mail, telemarketing, email, SMS, and fax.</p>
+      <p>Choose EmailDatas for updated, valid B2B contacts from reliable sources. Enjoy a 96% deliverability rate and protection of your IP reputation with regular database updates and cleaning.</p>
    `,
     lists: [
       {

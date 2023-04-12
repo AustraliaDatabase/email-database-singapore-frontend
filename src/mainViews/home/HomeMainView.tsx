@@ -45,6 +45,7 @@ const HomeMainView = () => {
           title={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.title}
           description={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.description}
           lists={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.lists}
+          isHome
         />
       </section>
 
