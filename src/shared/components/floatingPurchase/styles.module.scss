@@ -1,0 +1,67 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: $white;
+  z-index: 3;
+  padding: 1rem 0;
+  box-shadow: 0px -4px 13px 5px rgba(0, 0, 0, 0.03);
+  .innerWrapper {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .dbTitle {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .iconText {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+      svg {
+        color: $primary;
+      }
+    }
+    .scrollLink {
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.selectPackage {
+  .selectTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .radioGroup {
+    display: flex;
+    gap: 30px;
+    label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
+
+.addToCart {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+  .dbPrice {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary;
+  }
+}
