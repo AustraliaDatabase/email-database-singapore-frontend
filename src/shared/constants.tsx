@@ -1,117 +1,27 @@
-import {
-  CircleWavyQuestion,
-  Gift,
-  ListDashes,
-  MapPinLine,
-  ShieldStar,
-  ShoppingCartSimple,
-  TreeStructure,
-} from "phosphor-react";
 import { DATABASE_MAIN_TYPES } from "./enums";
 import { IPackages } from "./interface";
 
-export const HEADER_COLUMNS_COMPLETE_DATABASE = [
+export const COLUMNS_REALTORS = [
   "Contact Names",
-  "Unique Direct B2B Emails",
-  "Unique Companies",
-  "Unique Phones",
-  "Unique Fax Numbers",
-  "Unique Cells",
-  "Unique Addresses",
-  "No of Industries",
-  "Email Datbase Price",
-  "Full Database Price",
-];
-
-export const HEADER_COLUMNS_REALTORS = [
-  "Number of Realtors",
   "Direct Email Address",
-  "Office Address",
+  "Fax numbers",
   "Office Phone Numbers",
-  "Office Fax Numbers",
-  "Cell Phone",
-  "License Type",
+  "Companies",
+  "Addresses",
+  "Linkedin Profiles",
   "Email Database Price",
   "Complete Database Price",
 ];
 
-export const HEADER_COLUMNS_USA_JOB_TITLES_DATABASE = [
-  "# of Records",
-  "Email List Price Price",
-  "Database Price",
-];
-
-export const HEADER_COLUMNS_USA_INDUSTRY_DATABASE = [
-  "# of Records",
-  "Database Price",
-];
-
-export const HEADER_COLUMNS_USA_OTHER_COUNTRIES_DATABASE = [
-  "# of Records",
-  "Database Price",
-];
-
-export const HEADER_COLUMNS_USA_CONSUMER_DATABASE = [
-  "# of Records",
-  "Database Price",
-];
-
-export const FLOATING_MENU_LIST_OF_US_COMPANIES = [
-  {
-    link: "#buy-now",
-    label: "Buy Now",
-    icon: <ShoppingCartSimple size={24} />,
-  },
-  { link: "#free-sample", label: "Free Sample", icon: <Gift size={24} /> },
-  {
-    link: "#why-us",
-    label: "Why Us?",
-    icon: <CircleWavyQuestion size={24} />,
-  },
-  {
-    link: "#source",
-    label: "Source",
-    icon: <TreeStructure size={24} />,
-  },
-  { link: "#faq", label: "F.A.Qs", icon: <ListDashes size={24} /> },
-  { link: "#reviews", label: "Reviews", icon: <ShieldStar size={24} /> },
-];
-
-export const FLOATING_MENU = [
-  {
-    link: "#buy-now",
-    label: "Buy Now",
-    icon: <ShoppingCartSimple size={24} />,
-  },
-  { link: "#free-sample", label: "Free Sample", icon: <Gift size={24} /> },
-  {
-    link: "#why-us",
-    label: "Why Us?",
-    icon: <CircleWavyQuestion size={24} />,
-  },
-  {
-    link: "#other-states",
-    label: "Other States",
-    icon: <MapPinLine size={24} />,
-  },
-  {
-    link: "#source",
-    label: "Source",
-    icon: <TreeStructure size={24} />,
-  },
-  { link: "#faq", label: "F.A.Qs", icon: <ListDashes size={24} /> },
-  { link: "#reviews", label: "Reviews", icon: <ShieldStar size={24} /> },
-];
-
-export const FLOATING_MENU_OLD = [
-  {
-    link: "#why-us",
-    label: "Why Us?",
-    icon: <CircleWavyQuestion size={24} />,
-  },
-  { link: "#faq", label: "F.A.Qs", icon: <ListDashes size={24} /> },
-  { link: "#reviews", label: "Reviews", icon: <ShieldStar size={24} /> },
-];
+export const TABLE_ATTRIBUTES = {
+  firstName: "firstName",
+  emailAddress: "emailAddress",
+  cellNumbers: "cellNumbers",
+  faxNumber: "faxNumber",
+  company: "company",
+  address: "address",
+  linkedinProfile: "linkedinProfile",
+};
 
 export const LAST_UPDATE_DATE_WITHOUT_TEXT = "Jan 11,2023";
 export const LAST_UPDATE_DATE = `Last Update Date - ${LAST_UPDATE_DATE_WITHOUT_TEXT}`;
@@ -121,27 +31,7 @@ export const ADMIN_EMAILS = ["support@emaildatas.com"];
 
 export const ADMIN_EMAIL = "support@emaildatas.com";
 
-export const USDC_NETWORK = [
-  { value: "BSC", description: "BNB Smart Chain (BEP20)" },
-  { value: "ETH", description: "Ethereum (ERC20)" },
-  { value: "MATIC", description: "Polygon" },
-  { value: "TRX", description: "Tron(TRC20)" },
-];
-
-export const USDT_NETWORK = [
-  { value: "BSC", description: "BNB Smart Chain (BEP20)" },
-  { value: "ETH", description: "Ethereum (ERC20)" },
-  { value: "MATIC", description: "Polygon" },
-  { value: "TRX", description: "Tron(TRC20)" },
-];
-
-export const BITCOIN_NETWORK = [
-  { value: "BSC", description: "BNB Smart Chain (BEP20)" },
-  { value: "BTC", description: "Bitcoin" },
-  { value: "ETH", description: "Ethereum (ERC20)" },
-];
-
-export const REVIEW_DROP_LINK = "https://reviewdrop.io/review/joz-data";
+export const REVIEW_DROP_LINK = "https://reviewdrop.io";
 
 export const CATEGORIES_TO_URLS = {
   [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: "email",

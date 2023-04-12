@@ -7,19 +7,11 @@ import PublicLayout from "../../layouts/public/PublicLayout";
 import MainWhyDetailCard from "../../mainViews/mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
 import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
-import { HEADER_COLUMNS_REALTORS } from "../../shared/constants";
+import { COLUMNS_REALTORS, TABLE_ATTRIBUTES } from "../../shared/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { IMainProductInfo } from "../../shared/interface";
 // import Seeds from "../../shared/seeds/realtorBy";
 
-const REALTOR_SET_ATTRIBUTES = {
-  uniqueEmailAddresses: "uniqueEmailAddresses",
-  officeAddresses: "officeAddresses",
-  officePhoneNumbers: "officePhoneNumbers",
-  officeFaxNumbers: "officeFaxNumbers",
-  cellPhones: "cellPhones",
-  licenseTypes: "licenseTypes",
-};
 
 interface IRealtorsByStatePage {
   tableDataSet: IMainProductInfo[];
@@ -53,11 +45,11 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
         <section>
           <Container>
             <Table
-              columns={HEADER_COLUMNS_REALTORS}
+              columns={COLUMNS_REALTORS}
               data={tableDataSet}
               isProductPage={false}
               type={DATABASE_MAIN_TYPES.REALTOR}
-              attributesSet={REALTOR_SET_ATTRIBUTES}
+              attributesSet={TABLE_ATTRIBUTES}
             />
           </Container>
         </section>

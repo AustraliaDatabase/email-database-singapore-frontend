@@ -36,9 +36,6 @@ const ForgotPasswordModal = dynamic(
   () =>
     import("../../shared/components/forgotPasswordModal/ForgotPasswordModal")
 );
-const CryptoModal = dynamic(
-  () => import("../../shared/components/cryptoModal/CryptoModal")
-);
 
 interface ICommmonLayout {
   children: ReactNode;
@@ -109,7 +106,6 @@ const CommmonLayout = (props: ICommmonLayout) => {
       <CartModal />
       <DownloadModal />
       <ForgotPasswordModal />
-      <CryptoModal />
       <CryptoInfoModal />
       <ScreenshotModal />
     </>
