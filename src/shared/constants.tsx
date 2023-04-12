@@ -262,7 +262,7 @@ export const MAIN_CATEGORY_PAGE_URLS: any = {
 };
 
 export const DATA_FIELDS = [
-  "First Name;Last Name;Job Title;Email Address;State;Country",
+  "First Name;Last Name;Job Title;Email Address;City;State;Country",
   "First Name;Last Name;Job Title;Email Address;Cell Number;Linkedin Profile;Company;Website;Phone Number;Fax Number;Address;City;State;Postal Code;Country;No of Employees;Revenue;Industry;SIC Code",
 ];
 
