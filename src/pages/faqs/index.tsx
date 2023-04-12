@@ -3,10 +3,9 @@ import classNames from "classnames";
 import { Col, Container, Row } from "react-bootstrap";
 
 import PublicLayout from "../../layouts/public/PublicLayout";
-import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import Faqs from "../../shared/components/faqs/Faqs";
-import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import styles from "./styles.module.scss";
+import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
 
 const index = () => {
   return (
@@ -17,7 +16,7 @@ const index = () => {
             <Col xs={12}>
               <Faqs
                 title="Frequently Asked Questions"
-                faqsList={FaqsSeed[DATABASE_MAIN_TYPES.COMPANY_DATABASE]}
+                faqsList={FaqsSeed}
               />
             </Col>
           </Row>
