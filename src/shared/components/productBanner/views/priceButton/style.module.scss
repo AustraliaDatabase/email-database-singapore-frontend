@@ -11,12 +11,19 @@
   border: 2px solid transparent;
   transition: 0.25s all ease;
   width: 100%;
+
+  &:hover {
+  background: rgba(255, 255, 255, 0.14);
+    
+  }
+
   @include breakpoint(mobile) {
     padding: 1.25rem 1rem;
   }
   &.cardActive {
     border: 2px solid $white;
   }
+
   .circle {
     width: 22px;
     height: 22px;

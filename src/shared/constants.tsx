@@ -8,6 +8,7 @@ import {
   TreeStructure,
 } from "phosphor-react";
 import { DATABASE_MAIN_TYPES } from "./enums";
+import { IPackages } from "./interface";
 
 export const HEADER_COLUMNS_COMPLETE_DATABASE = [
   "Contact Names",
@@ -249,4 +250,15 @@ export const MAIN_CATEGORY_PAGE_URLS: any = {
     url: "/all-targeted-lists",
     name: "All Targeted Email List",
   },
+};
+
+export const DATA_FIELDS = [
+  "First Name;Last Name;Job Title;Email Address;State;Country",
+  "First Name;Last Name;Job Title;Email Address;Cell Number;Linkedin Profile;Company;Website;Phone Number;Fax Number;Address;City;State;Postal Code;Country;No of Employees;Revenue;Industry;SIC Code",
+];
+
+
+export const PRICE_PACKAGE_TYPES: IPackages = {
+  0: "Email Database Package",
+  1: "Complete Database Package",
 };

@@ -59,7 +59,6 @@ const HomeMainView = () => {
               <Faqs
                 title="Frequently Asked Questions"
                 faqsList={FaqsSeed[DATABASE_MAIN_TYPES.COMPANY_DATABASE]}
-                hideContactUs
               />
             </Col>
           </Row>

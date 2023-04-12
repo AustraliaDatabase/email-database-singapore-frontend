@@ -289,6 +289,16 @@ export interface IMainProductInfo {
   allList: IAllList[];
   review: IReview;
   type: DATABASE_MAIN_TYPES;
+  productInfo: {
+    description: string;
+    list: IProductListItem[];
+    title: string;
+  };
+}
+
+export interface IProductListItem {
+  description: string;
+  title: string;
 }
 
 export interface IPromoItem {
@@ -305,15 +315,15 @@ export interface IReviewItem {
   name: string;
   reviewBody: string;
   ratingValue: number;
-  enable: boolean
+  enable: boolean;
 }
 
 export interface IReviewObject {
   id: string;
   product?: {
     fileUrl: string;
-  }
-  reviews?: IReviewItem[]
+  };
+  reviews?: IReviewItem[];
 }
 
 export interface IFreeSampleItem {
@@ -337,4 +347,8 @@ export interface ISelectObject {
   label: string;
   value: string;
   assignedUrl: string;
+}
+
+export interface IPackages {
+  [key: number]: string;
 }

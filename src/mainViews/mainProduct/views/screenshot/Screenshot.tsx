@@ -54,7 +54,6 @@ const ScreenshotView = (props: IScreenshotView) => {
         <Image
           src={screenshot[databaseMainType]}
           alt=""
-          objectFit="scale-down"
           width={1200}
           height={700}
         />

@@ -52,7 +52,7 @@ const ProductBanner = (props: IProductBanner) => {
             )}
           />
         </Col>
-        <Row>
+        <Row className="pt-5">
           <Col xs={12} lg={6}>
             <ScreenshotView
               screenshotInfo={currentObject?.screenshot}

@@ -16,7 +16,7 @@ const DataStructure = (props: IDataStructure) => {
     <div>
       <h2 className={styles.mainTitle}>
         Data Structure of {currentObject.name}{" "}
-        {DATA_TYPE_TO_TITLE[currentObject?.type]} Database{" "}
+        {DATA_TYPE_TO_TITLE[currentObject?.type]} List{" "}
       </h2>
       <div className={styles.structureWrapper}>
         <h3 className="mb-3 text-highlight">Personal Info</h3>

@@ -1,6 +1,6 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 
-import { DATA_TYPE_TO_TITLE } from "../../../../shared/constants";
 import { IMainProductInfo } from "../../../../shared/interface";
 import OtherProductItem from "../otherProductItem/OtherProductItem";
 import styles from "./styles.module.scss";
@@ -14,12 +14,17 @@ const OtherProductFeature = (props: IOtherProductFeature) => {
 
   return (
     <div>
-      <h2 className={styles.title}>
-        Delve into the Distinctive Features of EmailDatas {currentObject.name}{" "}
-        {DATA_TYPE_TO_TITLE[currentObject?.type]} List
-      </h2>
+      <h2 className={styles.title}>{currentObject?.productInfo?.title}</h2>
 
-      <OtherProductItem />
+      <Row>
+        {currentObject?.productInfo?.list?.map((productInfo, index: number) => {
+          return (
+            <Col key={index} md={6}>
+              <OtherProductItem productInfo={productInfo} />
+            </Col>
+          );
+        })}
+      </Row>
     </div>
   );
 };

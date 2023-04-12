@@ -14,6 +14,7 @@ import { DATA_TYPE_TO_TITLE } from "../../shared/constants";
 import OtherProductFeature from "./views/otherProductFeature/OtherProductFeature";
 import FaqsView from "../mainProduct/views/faqs/Faqs";
 import styles from "./style.module.scss";
+import classNames from "classnames";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -37,22 +38,22 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
         <ProductDescription currentObject={currentObject} />
       </section>
 
+      <section className={classNames(styles.beneifits, 'dark')}>
+        <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
+      </section>
+
       <section>
         <Container>
           <OtherProductFeature currentObject={currentObject} />
         </Container>
       </section>
 
-      <section className="dark">
-        <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
-      </section>
-
-      <section id="#other-states">
+      <section id="#other-states" className="ghost">
         <OtherStates currentObject={currentObject} />
       </section>
 
       {currentObject?.why && (
-        <section id="#why-us" className="dark" style={{ zIndex: "-1" }}>
+        <section id="#why-us" className={classNames(styles.whySection, 'dark')} style={{ zIndex: "-1" }}>
           <WhyCardsWithContent
             title={`Why Choose EmailDatas for Your ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists Over Other Providers?`}
             description={`EmailDatas stands out as the ideal solution for ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists, offering exceptional email lists at a more budget-friendly price than competing providers.`}

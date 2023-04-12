@@ -4,11 +4,14 @@ import { CheckCircle, ShoppingCartSimple } from "phosphor-react";
 
 import { useRoot } from "../../../../contexts/RootProvider";
 import { AddToCart } from "../../../../../services/internalServices";
-import { DATABASE_MAIN_TYPES } from "../../../../enums";
-import { IMainProductInfo, IPriceList } from "../../../../interface";
+import { BUTTON_VARIANT_ENUM, DATABASE_MAIN_TYPES } from "../../../../enums";
+import { ICartItem, IMainProductInfo, IPriceList } from "../../../../interface";
 import PriceButton from "../priceButton/PriceButton";
 import Button from "../../../button/Button";
 import styles from "./style.module.scss";
+import { numberWithCommas } from "../../../../InternalService";
+import { DATA_FIELDS, PRICE_PACKAGE_TYPES } from "../../../../constants";
+import { addToCartLocal } from "../../../../../services/helpers/tokenService";
 
 interface IPriceListView {
   currentObject: IMainProductInfo;
@@ -28,8 +31,6 @@ const PriceListView = (props: IPriceListView) => {
   const pressButton = (index: number) => {
     setCurrentIndex(index);
   };
-
-  console.log("priceInfo?.list", currentObject?.price?.list?.[currentIndex]);
 
   const numOfContacts: any = {
     [DATABASE_MAIN_TYPES.REALTOR]: statsInfo?.numberOfRealtors,
@@ -75,10 +76,25 @@ const PriceListView = (props: IPriceListView) => {
     setCartEnable(true);
   };
 
+  const removeCartItem = () => {
+    const currentFilters = currentCartItem.filter((element: ICartItem) => {
+      return element.id !== currentObject.url;
+    });
+
+    setCurrentCartItem(currentFilters);
+    addToCartLocal(currentFilters);
+  };
+
+  const selectedCartItem = currentCartItem?.filter((element: ICartItem) => {
+    return (
+      element.id?.replace(/\//g, "") === currentObject?.url?.replace(/\//g, "")
+    );
+  });
+
   return (
     <div className={styles.mainWrapper}>
       <div>
-        <div className={styles.title}>Select Package</div>
+        <h3 className={styles.title}>Select Package</h3>
         <div className={classNames("d-flex", styles.wrapper)}>
           {currentObject?.price?.list.map(
             (singlePriceItem: IPriceList, index: number) => {
@@ -90,7 +106,7 @@ const PriceListView = (props: IPriceListView) => {
                   contactCounts={statsInfo?.uniqueDirectB2BEmails}
                   isActive={currentIndex === index}
                 >
-                  ${singlePriceItem.price}
+                  ${numberWithCommas(singlePriceItem.price?.toString())}
                 </PriceButton>
               );
             }
@@ -99,24 +115,32 @@ const PriceListView = (props: IPriceListView) => {
       </div>
 
       <div>
-        <div className={styles.title}>Data Fields</div>
+        <h3 className={classNames(styles.title, "mt-5")}>
+          Data Fields of {PRICE_PACKAGE_TYPES[currentIndex]}
+        </h3>
         <div className={classNames(styles.secondaryWrapper)}>
-          {currentObject?.price?.list[currentIndex]?.includes
-            ?.split(";")
-            ?.map((item, index) => (
-              <div key={index} className={styles.detailsWrapper}>
-                <span className={styles.cardIcon}>
-                  <CheckCircle size={22} />
-                </span>{" "}
-                {item}
-              </div>
-            ))}
+          {DATA_FIELDS[currentIndex]?.split(";")?.map((item, index) => (
+            <div key={index} className={styles.detailsWrapper}>
+              <span className={styles.cardIcon}>
+                <CheckCircle size={22} />
+              </span>{" "}
+              {item}
+            </div>
+          ))}
         </div>
       </div>
 
-      <Button className={styles.addToCart} onClick={addToCart}>
+      <Button
+        variant={
+          selectedCartItem?.length
+            ? BUTTON_VARIANT_ENUM.Secondary
+            : BUTTON_VARIANT_ENUM.Primary
+        }
+        className={styles.addToCart}
+        onClick={selectedCartItem?.length ? removeCartItem : addToCart}
+      >
         <ShoppingCartSimple size={24} />
-        Add To Cart
+        {selectedCartItem?.length ? "Remove from Cart" : "Add To Cart"}
       </Button>
     </div>
   );

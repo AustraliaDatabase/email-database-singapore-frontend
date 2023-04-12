@@ -3,6 +3,7 @@
 
 .title {
   font-size: 2rem;
+  text-align: center;
   @include breakpoint(mobile) {
     font-size: 1.5rem;
   }

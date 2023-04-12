@@ -16,11 +16,11 @@ const ProductDescription = (props: IProductDescription) => {
   const { currentObject } = props;
 
   const defaultHeaderName = (
-    <div className={styles.tabElement}>Database Datails</div>
+    <div className={styles.tabElement}>Product Information</div>
   );
 
   return (
-    <Container>
+    <Container className="mt-5">
       <div className="db-details-tabs">
         <Tabs
           defaultActiveKey="0"
@@ -31,7 +31,7 @@ const ProductDescription = (props: IProductDescription) => {
             <Col md={6} lg={11} className="mx-auto">
               <h2 className={styles.statsHeader}>
                 Stats of {currentObject?.name}{" "}
-                {DATA_TYPE_TO_TITLE[currentObject?.type]} Database
+                {DATA_TYPE_TO_TITLE[currentObject?.type]} List
               </h2>
               <Col>
                 <div className={styles.dbInfo}>
