@@ -152,7 +152,7 @@ export const CURRENT_OBJECT_HOME = {
   beneifits: {
     title: `Benefits of Our Business Database Lists`,
     description:
-      "<p>Our USA Business directory is user-friendly, with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively.</p>",
+      "<p>Our B2B Business List is rich with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively.</p>",
     list: [
       {
         title: `Email Marketing`,

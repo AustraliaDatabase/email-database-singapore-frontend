@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,7 +9,6 @@ import {
   DATABASE_MAIN_TYPES,
 } from "../../../../shared/enums";
 import { useRoot } from "../../../../shared/contexts/RootProvider";
-import { getRealtorDownloadUrl } from "../../../../database/storage";
 import { IMainProductInfo, IScreenshot } from "../../../../shared/interface";
 import Button from "../../../../shared/components/button/Button";
 import styles from "./style.module.scss";
@@ -22,22 +21,10 @@ interface IScreenshotView {
 
 const ScreenshotView = (props: IScreenshotView) => {
   const router = useRouter();
-  const { modalScreenshotTitle, screenshotInfo, currentObject } = props;
-  const [downloadUrl, setDownloadUrl] = useState("");
+  const { modalScreenshotTitle, currentObject } = props;
 
   const databaseMainType = currentObject?.type;
   const name = currentObject?.name;
-  const url = currentObject?.url;
-
-  const getDownloadUrl = (url: string) => {
-    setDownloadUrl(url);
-  };
-
-  useEffect(() => {
-    if (screenshotInfo?.sampleFileName) {
-      getRealtorDownloadUrl(screenshotInfo?.sampleFileName, getDownloadUrl);
-    }
-  }, [screenshotInfo]);
 
   const { setScreenshotModalEnable, setScreenshotInfo } = useRoot();
 
@@ -61,34 +48,30 @@ const ScreenshotView = (props: IScreenshotView) => {
       <Row>
         <Col xs={12} lg={9} className="mx-auto">
           <div className={styles.buttonWrappre}>
-            {downloadUrl && (
-              <>
-                <Button
-                  size="large"
-                  variant={BUTTON_VARIANT_ENUM.Primary}
-                  block
-                  onClick={() => {
-                    setScreenshotModalEnable(true);
-                    setScreenshotInfo({
-                      title: modalScreenshotTitle || name,
-                      attachmentUrl: screenshot[databaseMainType],
-                    });
-                  }}
-                >
-                  Preview Sample
-                </Button>
-                <Button
-                  size="large"
-                  variant={BUTTON_VARIANT_ENUM.Tertiary}
-                  block
-                  onClick={() => {
-                    router.push("/free-sample");
-                  }}
-                >
-                  Download
-                </Button>
-              </>
-            )}
+            <Button
+              size="large"
+              variant={BUTTON_VARIANT_ENUM.Primary}
+              block
+              onClick={() => {
+                setScreenshotModalEnable(true);
+                setScreenshotInfo({
+                  title: modalScreenshotTitle || name,
+                  attachmentUrl: screenshot[databaseMainType],
+                });
+              }}
+            >
+              Preview Sample
+            </Button>
+            <Button
+              size="large"
+              variant={BUTTON_VARIANT_ENUM.Tertiary}
+              block
+              onClick={() => {
+                router.push("/free-sample");
+              }}
+            >
+              Download
+            </Button>
           </div>
         </Col>
       </Row>

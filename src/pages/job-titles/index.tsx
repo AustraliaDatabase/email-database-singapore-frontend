@@ -13,8 +13,7 @@ import { IMainProductInfo } from "../../shared/interface";
 // import Seeds from "../../shared/seeds/realtorBy";
 
 const REALTOR_SET_ATTRIBUTES = {
-  numberOfRealtors: "numberOfRealtors",
-  directEmailAddresses: "directEmailAddresses",
+  uniqueEmailAddresses: "uniqueEmailAddresses",
   officeAddresses: "officeAddresses",
   officePhoneNumbers: "officePhoneNumbers",
   officeFaxNumbers: "officeFaxNumbers",
@@ -37,17 +36,17 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/realtors-by-state`}
       /> */}
       <PublicLayout>
-        {/* <section className="sectiontopfix pb-3">
+        <section className="sectiontopfix pb-3">
           <Container>
-            <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
+            {/* <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
             <div
               className="text-center"
               dangerouslySetInnerHTML={{
                 __html: Seeds.mainDescription,
               }}
-            />
+            /> */}
           </Container>
-        </section> */}
+        </section>
         {/* <section className="py-0">
           <FloatingMenu menuList={Seeds.floatingMenu} />
         </section> */}
@@ -76,18 +75,12 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
 export default RealtorsByStatePage;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  let response = await instance.post(`/jobTitleProduct`);
-
-  response =
-    response.data?.length &&
-    response.data.filter((element: any) => {
-      return element.id !== "real-estate-agent-email-list";
-    });
+  const response = await instance.post(`/jobTitleProduct`);
 
   return {
     props: {
-      tableDataSet: response || null,
-      databaseMainTypes: DATABASE_MAIN_TYPES.REALTOR,
+      tableDataSet: response?.data || null,
+      databaseMainTypes: DATABASE_MAIN_TYPES.JOB_TITLE,
     },
   };
 }

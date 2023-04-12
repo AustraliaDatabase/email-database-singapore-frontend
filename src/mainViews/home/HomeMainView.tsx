@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import HomeSeed from "./homeSeeds";
 import Faqs from "../../shared/components/faqs/Faqs";
 import { CURRENT_OBJECT_HOME } from "./constants";
-import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
@@ -15,6 +14,7 @@ import HeroBanner from "./views/hero/HeroBanner";
 import styles from "./homeMainView.module.scss";
 import BeneifitView from "../../shared/components/beneifit/Beneifit";
 import classNames from "classnames";
+import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
 
 const HomeMainView = () => {
   return (
@@ -58,7 +58,7 @@ const HomeMainView = () => {
             <Col xs={12}>
               <Faqs
                 title="Frequently Asked Questions"
-                faqsList={FaqsSeed[DATABASE_MAIN_TYPES.COMPANY_DATABASE]}
+                faqsList={FaqsSeed}
               />
             </Col>
           </Row>

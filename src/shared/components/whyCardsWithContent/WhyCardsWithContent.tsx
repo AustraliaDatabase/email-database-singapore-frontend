@@ -21,7 +21,10 @@ const WhyCardsWithContent = (props: IWhyCards) => {
   return (
     <div className={styles.wrapper}>
       <Container>
-        <Row xs={12} lg={8}>
+        <Row
+          xs={10}
+          className="d-flex flex-column mb-5 mx-auto align-items-center justify-content-center"
+        >
           <div
             className={styles.title}
             dangerouslySetInnerHTML={{ __html: title }}
@@ -40,11 +43,7 @@ const WhyCardsWithContent = (props: IWhyCards) => {
                 <div className={styles.cardsWrapper}>
                   <div className={styles.titleCard}>
                     <div className={styles.titleInnerContainer}>
-                      <h3
-                        className={styles.title}
-                      >
-                        {element?.title}
-                      </h3>
+                      <h3 className={styles.title}>{element?.title}</h3>
                     </div>
                   </div>
                   <Card className={styles.contentCard}>

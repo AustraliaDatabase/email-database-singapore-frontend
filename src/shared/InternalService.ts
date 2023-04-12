@@ -445,3 +445,13 @@ export const getB2BPricingByContacts = (value: number, percentValue: number) => 
 
   return Number(price?.toFixed(0));
 };
+
+
+export  const hideMiddleChars = (value: string, numStars: number) => {
+  const length = value.length;
+  const halfLength = Math.floor(length / 2);
+  const startChars = value.slice(0, halfLength - Math.floor(numStars / 2));
+  const endChars = value.slice(halfLength + Math.ceil(numStars / 2));
+  const middleChars = "*".repeat(numStars);
+  return startChars + middleChars + endChars;
+}
