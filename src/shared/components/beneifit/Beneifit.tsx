@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import { IBeneifits, IMainProductInfo } from "../../interface";
 import BeneifitsCollapsible from "./components/beneifitsCollapsible/BeneifitsCollapsible";
 import styles from "./style.module.scss";
-import { DATA_TYPE_TO_TITLE, DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../constants";
+import { DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../constants";
 import { numberWithCommas } from "../../InternalService";
 
 interface IBeneifitView {
