@@ -1,7 +1,7 @@
 import { DATABASE_MAIN_TYPES } from "./enums";
 import { IPackages } from "./interface";
 
-export const COLUMNS_REALTORS = [
+export const COLUMNS_TABLE = [
   "Contact Names",
   "Direct Email Address",
   "Fax numbers",

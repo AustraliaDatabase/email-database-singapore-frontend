@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 import PublicLayout from "../../layouts/public/PublicLayout";
 import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
-import { HEADER_COLUMNS_USA_CONSUMER_DATABASE } from "../../shared/constants";
+import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { IMainProductInfo } from "../../shared/interface";
 import { routeToLowerCase } from "../../shared/InternalService";
@@ -43,9 +43,9 @@ const SpecialDatabasePage = (props: ISpecialDatabasePage) => {
         <section style={{ marginTop: -30 }}>
           <Container>
             <Table
-              columns={HEADER_COLUMNS_USA_CONSUMER_DATABASE}
+              columns={COLUMNS_TABLE}
               data={tableDataSet}
-              attributesSet={INDUSTRY_SET_ATTRIBUTES}
+              attributesSet={TABLE_ATTRIBUTES}
               isProductPage={false}
               type={DATABASE_MAIN_TYPES.INDUSTRY}
             />

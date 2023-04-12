@@ -1,14 +1,12 @@
 import React from "react";
-import { NextSeo } from "next-seo";
 import { GetServerSidePropsContext } from "next";
 import { Container } from "react-bootstrap";
 
 import PublicLayout from "../../layouts/public/PublicLayout";
-import MainWhyDetailCard from "../../mainViews/mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
 import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
-import { HEADER_COLUMNS_COMPLETE_DATABASE } from "../../shared/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
+import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
 
 export const COMPANY_SET_ATTRIBUTES = {
   contactNames: "contactNames",
@@ -47,10 +45,10 @@ const CompanyByStatePage = (props: any) => {
         <section>
           <Container>
             <Table
-              columns={HEADER_COLUMNS_COMPLETE_DATABASE}
+              columns={COLUMNS_TABLE}
               data={tableDataSet}
               isProductPage={false}
-              attributesSet={COMPANY_SET_ATTRIBUTES}
+              attributesSet={TABLE_ATTRIBUTES}
             />
           </Container>
         </section>

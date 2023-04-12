@@ -1,13 +1,11 @@
 import { GetServerSidePropsContext } from "next";
-import { NextSeo } from "next-seo";
 import React from "react";
 import { Container } from "react-bootstrap";
 
 import PublicLayout from "../../layouts/public/PublicLayout";
-import MainWhyDetailCard from "../../mainViews/mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
 import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
-import { COLUMNS_REALTORS, TABLE_ATTRIBUTES } from "../../shared/constants";
+import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { IMainProductInfo } from "../../shared/interface";
 // import Seeds from "../../shared/seeds/realtorBy";
@@ -45,7 +43,7 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
         <section>
           <Container>
             <Table
-              columns={COLUMNS_REALTORS}
+              columns={COLUMNS_TABLE}
               data={tableDataSet}
               isProductPage={false}
               type={DATABASE_MAIN_TYPES.REALTOR}
