@@ -30,7 +30,7 @@ const ProductDescription = (props: IProductDescription) => {
           <Tab eventKey="0" title={defaultHeaderName}>
             <Col md={6} lg={11} className="mx-auto">
               <h2 className={styles.statsHeader}>
-                Stats of {currentObject?.name}{" "}
+                Stats of Our {currentObject?.name}{" "}
                 {DATA_TYPE_TO_TITLE[currentObject?.type]} List
               </h2>
               <Col>

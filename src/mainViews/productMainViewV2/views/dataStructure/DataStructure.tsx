@@ -32,7 +32,11 @@ const DataStructure = (props: IDataStructure) => {
     { column: "Phone Number", value: "907-929-2739", starCount: 3 },
     { column: "Fax Number", value: "907-929-2734", starCount: 4 },
 
-    { column: "Address", value: "903 W. Northern Lights Blvd. Ste. 200", starCount: 10 },
+    {
+      column: "Address",
+      value: "903 W. Northern Lights Blvd. Ste. 200",
+      starCount: 10,
+    },
     { column: "City", value: "Anchorage" },
     { column: "State", value: "AK" },
     { column: "Postal Code", value: "99503" },
@@ -47,8 +51,7 @@ const DataStructure = (props: IDataStructure) => {
     <div>
       <h2 className={styles.mainTitle}>
         {/* Data Structure of single  Contact */}
-        Data Structure of Single {currentObject.name}{" "}
-        {DATA_TYPE_TO_TITLE[currentObject?.type]} Contact
+        Data Structure of Single {currentObject.name} Contact
       </h2>
       <div className={styles.structureWrapper}>
         <Row>

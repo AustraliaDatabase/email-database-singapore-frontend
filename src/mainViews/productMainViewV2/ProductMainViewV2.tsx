@@ -70,10 +70,10 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
       )}
 
       <section id="#faq">
-        {/* @ts-ignore */}
         <FaqsView
           faqsList={FaqsSeed}
           title={currentObject?.faq?.title}
+          currentObject={currentObject}
         />
       </section>
     </>

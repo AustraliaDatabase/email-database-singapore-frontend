@@ -38,8 +38,8 @@ const UsaJobTitlesPage = (props: IUsaJobTitlesPage) => {
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/usa-job-titles`}
       />
       <PublicLayout>
-        <h1 className="text-center mb-5" style={{ fontSize: 31 }}>
-          DATABASE<span className="text-highlight"> BY PROFESSIONS</span>
+        <h1 className="text-center mb-5 sectiontopfix" style={{ fontSize: 31 }}>
+          B2B Email List By Job Titles
         </h1>
         <section style={{ marginTop: -30 }}>
           <Container>

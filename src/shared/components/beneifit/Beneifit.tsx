@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import { IBeneifits, IMainProductInfo } from "../../interface";
 import BeneifitsCollapsible from "./components/beneifitsCollapsible/BeneifitsCollapsible";
 import styles from "./style.module.scss";
-import { DATA_TYPE_TO_TITLE } from "../../constants";
+import { DATA_TYPE_TO_TITLE, DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../constants";
 import { numberWithCommas } from "../../InternalService";
 
 interface IBeneifitView {
@@ -54,13 +54,13 @@ const BeneifitView = (props: IBeneifitView) => {
         <h2 className={styles.beneifitTitle}>
           {currentObject
             ? `Benefits of Our ${currentObject?.name}
-                ${DATA_TYPE_TO_TITLE[currentObject?.type]} List`
+                ${DATA_TYPE_TO_TITLE_FOR_CONTENT[currentObject?.type]} List`
             : beneifitInfo?.title}
         </h2>
         <div className={styles.beneifitDescription}>
           {currentObject
             ? `Discover the full potential of our ${currentObject?.name}
-          ${DATA_TYPE_TO_TITLE[currentObject?.type]} List! Our comprehensive
+          ${DATA_TYPE_TO_TITLE_FOR_CONTENT[currentObject?.type]} List! Our comprehensive
           directory includes verified email IDs, phone numbers, company names,
           office addresses, and other key details.`
             : beneifitInfo?.description}

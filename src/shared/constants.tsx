@@ -221,6 +221,15 @@ export const DATA_TYPE_TO_TITLE: any = {
   [DATABASE_MAIN_TYPES.TARGET]: "Targetted Email",
 };
 
+export const DATA_TYPE_TO_TITLE_FOR_CONTENT: any = {
+  [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: "B2B Email",
+  [DATABASE_MAIN_TYPES.JOB_TITLE]: "",
+  [DATABASE_MAIN_TYPES.CONSUMER]: "Consumer",
+  [DATABASE_MAIN_TYPES.COUNTRY]: "",
+  [DATABASE_MAIN_TYPES.INDUSTRY]: "",
+  [DATABASE_MAIN_TYPES.TARGET]: "Targetted Email",
+};
+
 export const MAIN_CATEGORY_PAGE_URLS: any = {
   [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: {
     url: "/list-of-all-us-companies",
