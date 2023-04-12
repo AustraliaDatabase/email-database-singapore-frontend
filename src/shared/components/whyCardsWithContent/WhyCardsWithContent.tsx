@@ -14,7 +14,7 @@ interface IWhyCards {
   title: string;
   description: string;
   lists: lists[];
-  isHome: boolean;
+  isHome?: boolean;
 }
 
 const WhyCardsWithContent = (props: IWhyCards) => {
