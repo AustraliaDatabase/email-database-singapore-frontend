@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Formik, Field, Form } from "formik";
+import { Form } from "react-bootstrap";
 import { Link } from "react-scroll";
 import classNames from "classnames";
 import { ArrowUp, ShoppingCartSimple, UserList } from "phosphor-react";
@@ -111,33 +111,30 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
         </div>
         <div className={styles.selectPackage}>
           <div className={styles.selectTitle}>Select Package</div>
-          <Formik
-            initialValues={{
-              database: 1,
-            }}
-            onSubmit={async (values) => {
-              console.log(values);
-            }}
-          >
-            {({ values }) => (
-              <Form>
-                <div
-                  className={styles.radioGroup}
-                  role="group"
-                  aria-labelledby="my-radio-group"
-                >
-                  <label>
-                    <Field type="radio" name="database" value={1} />
-                    <span>Email Database Package</span>
-                  </label>
-                  <label>
-                    <Field type="radio" name="database" value={3} />
-                    <span>Complete Database Package</span>
-                  </label>
-                </div>
-              </Form>
-            )}
-          </Formik>
+          <Form.Group controlId="myRadio">
+            <div className="d-flex align-items-center" style={{ gap: "20px" }}>
+              <Form.Check
+                type="radio"
+                label="Email Database Package"
+                name="package"
+                id="basic"
+                value={0}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                  setCurrentIndex(Number(event.target.value))
+                }
+              />
+              <Form.Check
+                type="radio"
+                label="Complete Database Package"
+                name="package"
+                id="complete"
+                value={1}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                  setCurrentIndex(Number(event.target.value))
+                }
+              />
+            </div>
+          </Form.Group>
         </div>
         <div className={styles.addToCart}>
           <div className={styles.dbPrice}>${selectedPackage.price}</div>
