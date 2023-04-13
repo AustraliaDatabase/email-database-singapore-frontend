@@ -3,12 +3,16 @@
 
 .wrapper {
   position: fixed;
-  bottom: 0;
+  bottom: -200px;
   width: 100vw;
   background-color: $white;
   z-index: 3;
   padding: 1rem 0;
   box-shadow: 0px -4px 13px 5px rgba(0, 0, 0, 0.03);
+  transition: bottom 0.22s ease;
+  &.visible {
+    bottom: 0;
+  }
   .innerWrapper {
     width: 92%;
     margin: 0 auto;

@@ -33,7 +33,7 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
   const handlePurchaseVisible = (value: boolean) => {
     setPurchaseVisible(value);
   };
-  
+
   return (
     <>
       <SectionIntersect onChange={handlePurchaseVisible}>
@@ -44,7 +44,7 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
         )}
       </SectionIntersect>
 
-      <FloatingPurchase id={bannerId} />
+      <FloatingPurchase id={bannerId} visiblity={purchaseVisible} />
 
       <section>
         <ProductDescription currentObject={currentObject} />

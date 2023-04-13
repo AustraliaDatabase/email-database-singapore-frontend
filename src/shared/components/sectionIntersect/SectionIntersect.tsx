@@ -13,14 +13,14 @@ const SectionIntersecting = ({ children, onChange }: ISectionIntersect) => {
         const isIntersecting =
           ref.current.getBoundingClientRect().top < window.innerHeight &&
           ref.current.getBoundingClientRect().bottom > 0;
-        onChange(isIntersecting);
+        onChange(!isIntersecting);
       }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [onChange]);
 
-  return <div ref={ref}>{children}</div>;
+  return <span ref={ref}>{children}</span>;
 };
 
 export default SectionIntersecting;

@@ -6,15 +6,19 @@ import { Link } from "react-scroll";
 import { BUTTON_SIZE_ENUM, BUTTON_VARIANT_ENUM } from "../../enums";
 import Button from "../button/Button";
 import styles from "./styles.module.scss";
+import classNames from "classnames";
 
 interface IFloatingPurchase {
+  visiblity?: boolean;
   id?: string;
 }
 
 const FloatingPurchase = (props: IFloatingPurchase) => {
-  const { id } = props;
+  const { id, visiblity } = props;
   return (
-    <div className={styles.wrapper}>
+    <div
+      className={classNames(styles.wrapper, { [styles.visible]: visiblity })}
+    >
       <div className={styles.innerWrapper}>
         <div>
           <div className={styles.dbTitle}>Complete Database Package</div>
