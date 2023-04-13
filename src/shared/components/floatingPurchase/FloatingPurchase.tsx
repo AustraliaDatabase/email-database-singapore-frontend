@@ -88,15 +88,12 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
       className={classNames(styles.wrapper, { [styles.visible]: visiblity })}
     >
       <Row className={styles.innerWrapper}>
-        <Col xs={4}>
+        <Col xs={12} md={7} lg={4}>
           <div
             className={styles.dbTitle}
             dangerouslySetInnerHTML={{ __html: selectedPackage?.title }}
           />
-          <div
-            className="d-flex align-items-center justify-content-start"
-            style={{ gap: "30px" }}
-          >
+          <div className={styles.iconTextWrapper}>
             <div className={styles.iconText}>
               <UserList size={24} />
               <span>10,355 Direct Email Contacts</span>
@@ -108,14 +105,11 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
             </div>
           </div>
         </Col>
-        <Col xs={4} className={styles.selectPackage}>
+        <Col xs={12} md={5} lg={4} className={styles.selectPackage}>
           <div>
             <div className={styles.selectTitle}>Select Package</div>
             <Form.Group controlId="myRadio">
-              <div
-                className="d-flex align-items-center"
-                style={{ gap: "20px" }}
-              >
+              <div className={styles.radioGroup}>
                 <Form.Check
                   checked={currentIndex == 0}
                   type="radio"
@@ -142,7 +136,7 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
             </Form.Group>
           </div>
         </Col>
-        <Col xs={4} className={styles.addToCart}>
+        <Col xs={12} md={12} lg={4} className={styles.addToCart}>
           <div className={styles.dbPrice}>${selectedPackage.price}</div>
           <Button
             variant={
