@@ -10,9 +10,10 @@ const SectionIntersecting = ({ children, onChange }: ISectionIntersect) => {
   useEffect(() => {
     const handleScroll = () => {
       if (ref.current) {
+        const windowHeight = window.innerHeight * 0.9;
         const isIntersecting =
           ref.current.getBoundingClientRect().top < window.innerHeight &&
-          ref.current.getBoundingClientRect().bottom > 0;
+          ref.current.getBoundingClientRect().bottom > windowHeight;
         onChange(!isIntersecting);
       }
     };
