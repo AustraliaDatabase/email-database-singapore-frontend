@@ -5,7 +5,7 @@ interface ISectionIntersect {
   children?: React.ReactNode;
 }
 
-const SectionIntersecting = ({ children, onChange }: ISectionIntersect) => {
+const SectionIntersect = ({ children, onChange }: ISectionIntersect) => {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handleScroll = () => {
@@ -24,4 +24,4 @@ const SectionIntersecting = ({ children, onChange }: ISectionIntersect) => {
   return <span ref={ref}>{children}</span>;
 };
 
-export default SectionIntersecting;
+export default SectionIntersect;

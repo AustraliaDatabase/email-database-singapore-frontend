@@ -44,7 +44,11 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
         )}
       </SectionIntersect>
 
-      <FloatingPurchase id={bannerId} visiblity={purchaseVisible}  currentObject={currentObject}/>
+      <FloatingPurchase
+        id={bannerId}
+        visiblity={purchaseVisible}
+        currentObject={currentObject}
+      />
 
       <section>
         <ProductDescription currentObject={currentObject} />
