@@ -166,17 +166,15 @@ export interface IBlogComment {
 }
 
 export interface IStats {
-  uniqueDirectContacts?: number;
-  uniqueDirectB2BEmails?: number;
-  numberOfRealtors?: number;
-  directContacts: number;
-  directEmailAddresses: number;
-  officeAddresses: number;
-  officePhoneNumbers: number;
-  officeFaxNumbers: number;
-  cellPhones: number;
-  licenseType: number;
-  starterPackage?: number;
+  firstName?: number;
+  emailAddress?: number;
+  cellNumbers?: number;
+  linkedinProfile: number;
+  company: number;
+  website: number;
+  phoneNumber: number;
+  faxNumber: number;
+  address: number;
 }
 
 export interface IMeta {

@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Tab, Tabs } from "react-bootstrap";
 import classNames from "classnames";
 
-import { DATA_TYPE_TO_TITLE } from "../../../../shared/constants";
+import { DATA_TYPE_TO_TITLE, DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../../../shared/constants";
 import { IMainProductInfo } from "../../../../shared/interface";
 import StatsCard from "../../../mainProduct/views/priceList/views/stats/StatsCard";
 import DataStructure from "../dataStructure/DataStructure";
@@ -30,13 +30,13 @@ const ProductDescription = (props: IProductDescription) => {
           <Tab eventKey="0" title={defaultHeaderName}>
             <Col md={6} lg={11} className="mx-auto">
               <h2 className={styles.statsHeader}>
-                Stats of {currentObject?.name}{" "}
-                {DATA_TYPE_TO_TITLE[currentObject?.type]} List
+                Stats of Our {currentObject?.name}{" "}
+                {DATA_TYPE_TO_TITLE_FOR_CONTENT[currentObject?.type]} List
               </h2>
               <Col>
                 <div className={styles.dbInfo}>
                   <div>
-                    Access a high-quality, affordable Alaska email list with
+                    Access a high-quality, affordable {currentObject?.name} email list with
                     complete contact details for different professionals and
                     industries. Our database is sourced from reliable and
                     up-to-date sources.

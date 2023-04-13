@@ -5,7 +5,6 @@ import { CURRENT_OBJECT_HOME } from "../home/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import BeneifitView from "../../shared/components/beneifit/Beneifit";
 import { IMainProductInfo, IReviewObject } from "../../shared/interface";
-import FaqsSeed from "../../shared/components/faqs/faqsSeeds";
 import ProductBanner from "../../shared/components/productBanner/ProductBanner";
 import ProductDescription from "./views/productDescription/ProductDescription";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
@@ -16,6 +15,7 @@ import FaqsView from "../mainProduct/views/faqs/Faqs";
 import styles from "./style.module.scss";
 import classNames from "classnames";
 import FloatingPurchase from "../../shared/components/floatingPurchase/FloatingPurchase";
+import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -44,7 +44,10 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
       </section>
 
       <section className={classNames(styles.beneifits, "dark")}>
-        <BeneifitView beneifitInfo={CURRENT_OBJECT_HOME?.beneifits} />
+        <BeneifitView
+          beneifitInfo={CURRENT_OBJECT_HOME?.beneifits}
+          currentObject={currentObject}
+        />
       </section>
 
       <section>
@@ -64,7 +67,7 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
           style={{ zIndex: "-1" }}
         >
           <WhyCardsWithContent
-            title={`Why Choose EmailDatas for Your ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists Over Other Providers?`}
+            title={`EmailDatas is the best choice for your ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists`}
             description={`EmailDatas stands out as the ideal solution for ${currentObject.name} ${DATA_TYPE_TO_TITLE[databaseMainType]} Lists, offering exceptional email lists at a more budget-friendly price than competing providers.`}
             lists={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.lists}
           />
@@ -72,10 +75,10 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
       )}
 
       <section id="#faq">
-        {/* @ts-ignore */}
         <FaqsView
-          faqsList={FaqsSeed[databaseMainType] || []}
+          faqsList={FaqsSeed}
           title={currentObject?.faq?.title}
+          currentObject={currentObject}
         />
       </section>
     </>

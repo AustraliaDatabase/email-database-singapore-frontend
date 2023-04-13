@@ -1,26 +1,15 @@
 import { GetServerSidePropsContext } from "next";
-import { NextSeo } from "next-seo";
 import React from "react";
 import { Container } from "react-bootstrap";
 
 import PublicLayout from "../../layouts/public/PublicLayout";
-import MainWhyDetailCard from "../../mainViews/mainProduct/views/mainWhyDetailCard/MainWhyDetailCard";
 import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
-import { HEADER_COLUMNS_REALTORS } from "../../shared/constants";
+import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { IMainProductInfo } from "../../shared/interface";
-import Seeds from "../../shared/seeds/realtorBy";
+// import Seeds from "../../shared/seeds/realtorBy";
 
-const REALTOR_SET_ATTRIBUTES = {
-  numberOfRealtors: "numberOfRealtors",
-  directEmailAddresses: "directEmailAddresses",
-  officeAddresses: "officeAddresses",
-  officePhoneNumbers: "officePhoneNumbers",
-  officeFaxNumbers: "officeFaxNumbers",
-  cellPhones: "cellPhones",
-  licenseTypes: "licenseTypes",
-};
 
 interface IRealtorsByStatePage {
   tableDataSet: IMainProductInfo[];
@@ -31,21 +20,21 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
 
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title="Realtor Email List by State with over 95% Email Deliverability"
         description="Get A Usa Real Estate Database With A 95% Email Deliverability Guaranteed To Connect With All Real Estate Agents And Realtors."
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/realtors-by-state`}
-      />
+      /> */}
       <PublicLayout>
         <section className="sectiontopfix pb-3">
           <Container>
-            <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
+            {/* <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
             <div
               className="text-center"
               dangerouslySetInnerHTML={{
                 __html: Seeds.mainDescription,
               }}
-            />
+            /> */}
           </Container>
         </section>
         {/* <section className="py-0">
@@ -54,17 +43,17 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
         <section>
           <Container>
             <Table
-              columns={HEADER_COLUMNS_REALTORS}
+              columns={COLUMNS_TABLE}
               data={tableDataSet}
               isProductPage={false}
               type={DATABASE_MAIN_TYPES.REALTOR}
-              attributesSet={REALTOR_SET_ATTRIBUTES}
+              attributesSet={TABLE_ATTRIBUTES}
             />
           </Container>
         </section>
-        <section id="#why-us" className="ghost">
+        {/* <section id="#why-us" className="ghost">
           <MainWhyDetailCard whyInfo={Seeds.why} />
-        </section>
+        </section> */}
         {/* <section id="#review">
           <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />
         </section> */}
@@ -76,18 +65,12 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
 export default RealtorsByStatePage;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  let response = await instance.post(`/jobTitleProduct`);
-
-  response =
-    response.data?.length &&
-    response.data.filter((element: any) => {
-      return element.id !== "real-estate-agent-email-list";
-    });
+  const response = await instance.post(`/jobTitleProduct`);
 
   return {
     props: {
-      tableDataSet: response || null,
-      databaseMainTypes: DATABASE_MAIN_TYPES.REALTOR,
+      tableDataSet: response?.data || null,
+      databaseMainTypes: DATABASE_MAIN_TYPES.JOB_TITLE,
     },
   };
 }

@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
@@ -13,21 +14,30 @@ interface IWhyCards {
   title: string;
   description: string;
   lists: lists[];
+  isHome?: boolean;
 }
 
 const WhyCardsWithContent = (props: IWhyCards) => {
-  const { title, description, lists } = props;
+  const { title, description, lists, isHome } = props;
 
   return (
     <div className={styles.wrapper}>
       <Container>
-        <Row xs={12} lg={8}>
+        <Row
+          xs={10}
+          className={classNames(
+            "d-flex flex-column mb-5 mx-auto align-items-center justify-content-center",
+            { [styles.isHome]: isHome }
+          )}
+        >
           <div
             className={styles.title}
             dangerouslySetInnerHTML={{ __html: title }}
           />
           <div
-            className={styles.description}
+            className={classNames(styles.description, {
+              [styles.isHome]: isHome,
+            })}
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </Row>
@@ -40,11 +50,7 @@ const WhyCardsWithContent = (props: IWhyCards) => {
                 <div className={styles.cardsWrapper}>
                   <div className={styles.titleCard}>
                     <div className={styles.titleInnerContainer}>
-                      <h3
-                        className={styles.title}
-                      >
-                        {element?.title}
-                      </h3>
+                      <h3 className={styles.title}>{element?.title}</h3>
                     </div>
                   </div>
                   <Card className={styles.contentCard}>

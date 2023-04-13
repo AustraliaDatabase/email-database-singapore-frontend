@@ -5,32 +5,22 @@ import { FaqItems } from "./interface";
 import styles from "./styles.module.scss";
 
 interface IFaqList {
-  list: FaqItems[];
+  faqItem: FaqItems;
 }
 const FaqList = (props: IFaqList) => {
-  const { list } = props;
+  const { faqItem } = props;
 
   return (
     <>
-      {list.map((element, index) => {
-        return (
-          <div key={index} className={styles.faqItem}>
-            <div className={styles.icon}>
-              <Target size={32} />
-            </div>
-            <div>
-              {element.asTag ? (
-                <element.asTag className={styles.title}>
-                  {element.element}
-                </element.asTag>
-              ) : (
-                <h3 className={styles.title}>{element.title}</h3>
-              )}
-              <div>{element.element}</div>
-            </div>
-          </div>
-        );
-      })}
+      <div className={styles.faqItem}>
+        <div className={styles.icon}>
+          <Target size={32} />
+        </div>
+        <div>
+        <h3 className={styles.title}>{faqItem.title}</h3>
+          <div>{faqItem.element}</div>
+        </div>
+      </div>
     </>
   );
 };

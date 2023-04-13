@@ -32,26 +32,8 @@ const PriceListView = (props: IPriceListView) => {
     setCurrentIndex(index);
   };
 
-  const numOfContacts: any = {
-    [DATABASE_MAIN_TYPES.REALTOR]: statsInfo?.numberOfRealtors,
-    [DATABASE_MAIN_TYPES.REALTOR_OLD]: statsInfo?.numberOfRealtors,
-    [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: statsInfo?.uniqueDirectB2BEmails,
-    [DATABASE_MAIN_TYPES.COMPANY_DATABASE_OLD]:
-      statsInfo?.uniqueDirectB2BEmails,
-    [DATABASE_MAIN_TYPES.JOB_TITLE]: statsInfo?.uniqueDirectContacts,
-    [DATABASE_MAIN_TYPES.CONSUMER]: statsInfo?.uniqueDirectContacts,
-    [DATABASE_MAIN_TYPES.COUNTRY]: statsInfo?.uniqueDirectContacts,
-    [DATABASE_MAIN_TYPES.INDUSTRY]: statsInfo?.uniqueDirectContacts,
-    [DATABASE_MAIN_TYPES.TARGET]: statsInfo?.uniqueDirectContacts,
-  };
-
   const addToCart = () => {
     const element = currentObject?.price?.list?.[currentIndex];
-
-    const directContacts =
-      currentObject?.price?.list?.length > 2 && currentIndex == 0
-        ? statsInfo?.starterPackage
-        : numOfContacts[databaseMainType];
 
     const isCompleteDatabase =
       databaseMainType === DATABASE_MAIN_TYPES.REALTOR
@@ -66,7 +48,7 @@ const PriceListView = (props: IPriceListView) => {
       currentCartItem,
       setCurrentCartItem,
       url,
-      directContacts,
+      statsInfo?.emailAddress,
       Number(element.price),
       bannerPlainTitle,
       databaseMainType,
@@ -103,7 +85,7 @@ const PriceListView = (props: IPriceListView) => {
                   key={index}
                   onClick={pressButton}
                   index={index}
-                  contactCounts={statsInfo?.uniqueDirectB2BEmails}
+                  contactCounts={statsInfo?.emailAddress}
                   isActive={currentIndex === index}
                 >
                   ${numberWithCommas(singlePriceItem.price?.toString())}

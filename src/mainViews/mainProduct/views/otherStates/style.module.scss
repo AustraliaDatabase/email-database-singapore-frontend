@@ -36,6 +36,9 @@
 }
 
 .otherStateDescription {
+
+  width: 60%;
+
   h1,
   h2,
   h3,
@@ -47,6 +50,7 @@
   b,
   span {
     font-size: 1rem;
+    width: 100%;
   }
 }
 .rowWrapper {

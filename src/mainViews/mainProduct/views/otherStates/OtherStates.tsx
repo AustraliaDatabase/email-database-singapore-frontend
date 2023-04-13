@@ -21,7 +21,7 @@ const OtherStates = (props: IOtherStatesView) => {
 
   const numColumns = 4;
   const columnSize = Math.ceil(otherStateList.length / numColumns);
-console.log(otherStateList)
+  console.log(otherStateList);
   useEffect(() => {
     const sortedList = currentObject?.allList
       ?.filter((filterElement: any) => {
@@ -78,13 +78,16 @@ console.log(otherStateList)
 
   return (
     <Container>
-      <Col xs={12} lg={10} className="mb-5 mx-auto text-center">
+      <Col
+        xs={10}
+        className="d-flex flex-column mb-5 mx-auto align-items-center justify-content-center"
+      >
         <h2 className={styles.otherStateTitle}>
           Explore Lists for US States Beyond the {currentObject.name} List
         </h2>
         <div className={styles.otherStateDescription}>
           Our services extend to acquiring{" "}
-          {DATA_TYPE_TO_TITLE[currentObject?.type]} lists for states other than
+          {DATA_TYPE_TO_TITLE[currentObject?.type]} lists for states other than{" "}
           {currentObject.name}, allowing you to save on costs while still
           obtaining the vital data your business needs.
         </div>

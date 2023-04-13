@@ -22,6 +22,8 @@
   .description {
     color: $white;
     text-align: center;
+    width: 60%;
+
     a {
       color: $primary;
       font-weight: 700;
@@ -99,6 +101,20 @@
       @include breakpoint(mobile) {
         margin-top: -30px;
       }
+    }
+  }
+
+  .isHome {
+    color: black;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
+      color: black;
     }
   }
 }

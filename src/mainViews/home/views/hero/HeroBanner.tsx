@@ -1,8 +1,9 @@
 import classNames from "classnames";
+import Link from "next/link";
 import { Buildings, List, ListPlus } from "phosphor-react";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Link as ScrollLink } from "react-scroll";
+
 import Button from "../../../../shared/components/button/Button";
 import { BUTTON_VARIANT_ENUM } from "../../../../shared/enums";
 
@@ -66,7 +67,7 @@ const HeroBanner = (props: IHeroBanner) => {
               >
                 <Row>
                   <Col>
-                    <ScrollLink to="#productType" offset={-200}>
+                    <a href="/pre-made-list">
                       <Button
                         className={styles.bannerBtn}
                         size="large"
@@ -75,7 +76,7 @@ const HeroBanner = (props: IHeroBanner) => {
                       >
                         Pre-Made Lists
                       </Button>
-                    </ScrollLink>
+                    </a>
                   </Col>
                 </Row>
               </Col>

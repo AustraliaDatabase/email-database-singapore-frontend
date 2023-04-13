@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useWindowWidth } from "@react-hook/window-size";
+import classNames from "classnames";
 
 import { IMainProductInfo } from "../../../shared/interface";
 import styles from "./table.module.scss";
 import { numberWithCommas } from "../../InternalService";
 import { DATABASE_MAIN_TYPES } from "../../enums";
-import Link from "next/link";
 import TableMobileView from "./components/tableMobileView/TableMobileView";
-import { useWindowWidth } from "@react-hook/window-size";
-import { ArrowRight } from "phosphor-react";
-import classNames from "classnames";
-// import PaginationButtons from "../paginationButtons/PaginationButtons";
 
 interface ITable {
   columns: string[];
@@ -23,8 +20,6 @@ interface ITable {
 const Table = (props: ITable) => {
   const { columns, data, type, attributesSet, isProductPage, middleFix } =
     props;
-  // const [offSet, setOffSet] = useState(0);
-  // const [currentDataSet, setCurrentDataSet] = useState(data.slice(0, 10));
   const [mobileViewport, setMobileViewport] = useState(false);
   const [dynamicFullDataSet, setDynamicFullDataSet] = useState(data);
   const [searchText, setSearchText] = useState("");
@@ -35,17 +30,6 @@ const Table = (props: ITable) => {
     setLoading(true);
     setCurrentNumber(number);
   };
-
-  // useEffect(() => {
-  //   if (isProductPage) {
-  //     setCurrentDataSet(dynamicFullDataSet?.slice(offSet, 10 + offSet));
-  //     setLimit(10);
-  //   } else {
-  //     setCurrentDataSet(dynamicFullDataSet?.slice(offSet, 100 + offSet));
-  //     setLimit(100);
-  //   }
-  // }, [offSet, dynamicFullDataSet]);
-
   useEffect(() => {
     setDynamicFullDataSet(
       data?.filter((element: IMainProductInfo) =>
@@ -101,21 +85,7 @@ const Table = (props: ITable) => {
   }, [windowWidth]);
 
   return (
-    <div
-      className={classNames(styles.tableViewWrapper, {
-        [styles.tableViewWrapRealtor]: type != DATABASE_MAIN_TYPES.COMPANY_DATABASE,
-      })}
-    >
-      {type === DATABASE_MAIN_TYPES.COMPANY_DATABASE && (
-        <div className={styles.realtorsMainLink}>
-          <Link href="https://www.EmailDatas.com/real-estate-agent-email-list">
-            <a>
-              View Complete 2.28 million Email List of Realtors{" "}
-              <ArrowRight className="me-2" />
-            </a>
-          </Link>
-        </div>
-      )}
+    <div className={classNames(styles.tableViewWrapper)}>
       {mobileViewport ? (
         <>
           <TableMobileView
