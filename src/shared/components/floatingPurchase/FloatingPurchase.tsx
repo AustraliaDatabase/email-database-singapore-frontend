@@ -137,7 +137,7 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
                 </div>
               </Form.Group>
             </div>
-            <div className={styles.dbPrice}>${selectedPackage.price}</div>
+            <div className={styles.dbPrice}>${selectedPackage?.price}</div>
             <Button
               variant={
                 selectedCartItem?.length
