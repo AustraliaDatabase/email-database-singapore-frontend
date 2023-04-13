@@ -32,8 +32,6 @@ const PriceListView = (props: IPriceListView) => {
     setCartEnable,
   } = useRoot();
 
-  // const [currentIndex, setCurrentIndex] = useState(0);
-
   const pressButton = (index: number) => {
     setCurrentIndex(index);
   };

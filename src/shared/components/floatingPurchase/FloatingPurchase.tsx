@@ -83,6 +83,8 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
     );
   });
 
+  const packages = ["Email Database Package", "Complete Database Package"];
+
   return (
     <div
       className={classNames(styles.wrapper, { [styles.visible]: visiblity })}
@@ -105,38 +107,32 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
             </div>
           </div>
         </Col>
-        <Col xs={12} md={5} lg={4} className={styles.selectPackage}>
+        <Col xs={12} md={5} lg={5} className={styles.selectPackage}>
           <div>
             <div className={styles.selectTitle}>Select Package</div>
             <Form.Group controlId="myRadio">
               <div className={styles.radioGroup}>
-                <Form.Check
-                  checked={currentIndex == 0}
-                  type="radio"
-                  label="Email Database Package"
-                  name="package"
-                  id="basic"
-                  value={0}
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                    pressButton(Number(event.target.value))
-                  }
-                />
-                <Form.Check
-                  checked={currentIndex == 1}
-                  type="radio"
-                  label="Complete Database Package"
-                  name="package"
-                  id="complete"
-                  value={1}
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                    pressButton(Number(event.target.value))
-                  }
-                />
+                {packages.map((element, index) => {
+                  return (
+                    <Form.Check
+                      key={index}
+                      checked={currentIndex == index}
+                      type="radio"
+                      label={element}
+                      name="package"
+                      value={index}
+                      id={index == 0 ? "basic" : "complete"}
+                      onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                        pressButton(Number(event.target.value))
+                      }
+                    />
+                  );
+                })}
               </div>
             </Form.Group>
           </div>
         </Col>
-        <Col xs={12} md={12} lg={4} className={styles.addToCart}>
+        <Col xs={12} md={12} lg={3} className={styles.addToCart}>
           <div className={styles.dbPrice}>${selectedPackage.price}</div>
           <Button
             variant={
