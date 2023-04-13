@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import classNames from "classnames";
 
 import { CURRENT_OBJECT_HOME } from "../home/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
@@ -11,11 +12,11 @@ import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/Why
 import OtherStates from "../mainProduct/views/otherStates/OtherStates";
 import { DATA_TYPE_TO_TITLE } from "../../shared/constants";
 import OtherProductFeature from "./views/otherProductFeature/OtherProductFeature";
-import FaqsView from "../mainProduct/views/faqs/Faqs";
-import styles from "./style.module.scss";
-import classNames from "classnames";
-import FloatingPurchase from "../../shared/components/floatingPurchase/FloatingPurchase";
 import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
+import FaqsView from "../mainProduct/views/faqs/Faqs";
+import FloatingPurchase from "../../shared/components/floatingPurchase/FloatingPurchase";
+import styles from "./style.module.scss";
+import InterSectionObserver from "../../shared/components/interSectionObserver/IntersectionObserver";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -26,19 +27,26 @@ interface IMainProductMainView {
 
 const ProductMainViewV2 = (props: IMainProductMainView) => {
   const { databaseMainType, currentObject } = props;
+  const [isFloatingPurchaseVisible, setIsFloatingPurchaseVisible] =
+    useState(false);
 
   const bannerId = "product-banner";
-
+  console.log(isFloatingPurchaseVisible);
+  const handleIntersectionChange = (entry: IntersectionObserverEntry) => {
+    setIsFloatingPurchaseVisible(entry.isIntersecting);
+  };
   return (
     <>
-      {(currentObject.banner || currentObject.price) && (
-        <section className={styles.hero} id={bannerId}>
-          <ProductBanner currentObject={currentObject} />
-        </section>
-      )}
+      <InterSectionObserver onChange={handleIntersectionChange}>
+        {(currentObject.banner || currentObject.price) && (
+          <section className={styles.hero} id={bannerId}>
+            <ProductBanner currentObject={currentObject} />
+          </section>
+        )}
+      </InterSectionObserver>
 
       <FloatingPurchase id={bannerId} />
-      
+
       <section>
         <ProductDescription currentObject={currentObject} />
       </section>
