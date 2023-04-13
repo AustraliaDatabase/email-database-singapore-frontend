@@ -9,10 +9,18 @@ import DatabasePricing from "./views/databasePricing/DatabasePricing";
 import FooterLogo from "./views/footerLogo/FooterLogo";
 import MenuLinkList from "./views/menuLinkList/MenuLinkList";
 import SocialIcons from "./views/socialIcons/SocialIcons";
+import classNames from "classnames";
+import { useRouter } from "next/router";
 
 const PublicFooterMenu = () => {
+  const router = useRouter();
+  const productPath = "/[productId]";
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={classNames(styles.footer, {
+        [styles.gapFix]: productPath == router.pathname,
+      })}
+    >
       <Row>
         <Col lg md={12}>
           <Row className={styles.firstRows}>
