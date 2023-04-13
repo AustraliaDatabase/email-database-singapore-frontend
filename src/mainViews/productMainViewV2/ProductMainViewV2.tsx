@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import classNames from "classnames";
 
 import { CURRENT_OBJECT_HOME } from "../home/constants";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
@@ -11,10 +12,11 @@ import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/Why
 import OtherStates from "../mainProduct/views/otherStates/OtherStates";
 import { DATA_TYPE_TO_TITLE } from "../../shared/constants";
 import OtherProductFeature from "./views/otherProductFeature/OtherProductFeature";
-import FaqsView from "../mainProduct/views/faqs/Faqs";
-import styles from "./style.module.scss";
-import classNames from "classnames";
 import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
+import FaqsView from "../mainProduct/views/faqs/Faqs";
+import FloatingPurchase from "../../shared/components/floatingPurchase/FloatingPurchase";
+import styles from "./style.module.scss";
+import SectionIntersect from "../../shared/components/sectionIntersect/SectionIntersect";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -25,14 +27,28 @@ interface IMainProductMainView {
 
 const ProductMainViewV2 = (props: IMainProductMainView) => {
   const { databaseMainType, currentObject } = props;
+  const [purchaseVisible, setPurchaseVisible] = useState(false);
+
+  const bannerId = "product-banner";
+  const handlePurchaseVisible = (value: boolean) => {
+    setPurchaseVisible(value);
+  };
 
   return (
     <>
-      {(currentObject.banner || currentObject.price) && (
-        <section className={styles.hero}>
-          <ProductBanner currentObject={currentObject} />
-        </section>
-      )}
+      <SectionIntersect onChange={handlePurchaseVisible}>
+        {(currentObject.banner || currentObject.price) && (
+          <section className={styles.hero} id={bannerId}>
+            <ProductBanner currentObject={currentObject} />
+          </section>
+        )}
+      </SectionIntersect>
+
+      <FloatingPurchase
+        id={bannerId}
+        visiblity={purchaseVisible}
+        currentObject={currentObject}
+      />
 
       <section>
         <ProductDescription currentObject={currentObject} />

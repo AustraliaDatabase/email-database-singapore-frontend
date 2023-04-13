@@ -1,0 +1,125 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: fixed;
+  bottom: -200px;
+  width: 100vw;
+  background-color: $white;
+  z-index: 3;
+  padding: 1rem 0;
+  box-shadow: 0px -4px 13px 5px rgba(0, 0, 0, 0.03);
+  transition: bottom 0.22s ease;
+
+  &.visible {
+    bottom: 0;
+  }
+
+  @include breakpoint(tablet) {
+    bottom: -400px;
+  }
+
+  @include breakpoint(mobile) {
+  }
+
+  .innerWrapper {
+    width: 92%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      width: 98%;
+      align-items: start;
+    }
+
+    .dbTitle {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      @include breakpoint(tablet) {
+        font-size: 1.75rem;
+      }
+      @include breakpoint(tablet) {
+        font-size: 1.5rem;
+      }
+    }
+    .iconTextWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      @include breakpoint(tablet) {
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+      }
+    }
+    .iconText {
+      @include breakpoint(mobile) {
+        display: none;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+      svg {
+        color: $primary;
+      }
+    }
+    .scrollLink {
+      color: $primary;
+      cursor: pointer;
+      @include breakpoint(mobile) {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.selectPackage {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .selectTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .radioGroup {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: start;
+      gap: 15px;
+    }
+  }
+}
+
+.addToCart {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 50px;
+  @include breakpoint(tablet) {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  @include breakpoint(mobile) {
+    margin-top: 10px;
+    gap: 30px;
+  }
+  .dbPrice {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary;
+    @include breakpoint(mobile) {
+      font-size: 1.5rem;
+    }
+  }
+}

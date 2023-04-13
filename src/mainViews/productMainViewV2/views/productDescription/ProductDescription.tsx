@@ -2,7 +2,10 @@ import React from "react";
 import { Col, Container, Tab, Tabs } from "react-bootstrap";
 import classNames from "classnames";
 
-import { DATA_TYPE_TO_TITLE, DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../../../shared/constants";
+import {
+  DATA_TYPE_TO_TITLE,
+  DATA_TYPE_TO_TITLE_FOR_CONTENT,
+} from "../../../../shared/constants";
 import { IMainProductInfo } from "../../../../shared/interface";
 import StatsCard from "../../../mainProduct/views/priceList/views/stats/StatsCard";
 import DataStructure from "../dataStructure/DataStructure";
@@ -28,7 +31,7 @@ const ProductDescription = (props: IProductDescription) => {
           className={classNames("mb-3", styles.tabs)}
         >
           <Tab eventKey="0" title={defaultHeaderName}>
-            <Col md={6} lg={11} className="mx-auto">
+            <Col xs={12} lg={11} className="mx-auto">
               <h2 className={styles.statsHeader}>
                 Stats of Our {currentObject?.name}{" "}
                 {DATA_TYPE_TO_TITLE_FOR_CONTENT[currentObject?.type]} List
@@ -36,10 +39,10 @@ const ProductDescription = (props: IProductDescription) => {
               <Col>
                 <div className={styles.dbInfo}>
                   <div>
-                    Access a high-quality, affordable {currentObject?.name} email list with
-                    complete contact details for different professionals and
-                    industries. Our database is sourced from reliable and
-                    up-to-date sources.
+                    Access a high-quality, affordable {currentObject?.name}{" "}
+                    email list with complete contact details for different
+                    professionals and industries. Our database is sourced from
+                    reliable and up-to-date sources.
                   </div>
                   <StatsCard
                     name={currentObject.name || ""}

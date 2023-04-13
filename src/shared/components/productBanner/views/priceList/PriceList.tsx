@@ -24,9 +24,13 @@ const PriceListView = (props: IPriceListView) => {
 
   const statsInfo = currentObject?.stats;
 
-  const { currentCartItem, setCurrentCartItem, setCartEnable } = useRoot();
-
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const {
+    currentIndex,
+    setCurrentIndex,
+    currentCartItem,
+    setCurrentCartItem,
+    setCartEnable,
+  } = useRoot();
 
   const pressButton = (index: number) => {
     setCurrentIndex(index);
