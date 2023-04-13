@@ -117,6 +117,7 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
                 style={{ gap: "20px" }}
               >
                 <Form.Check
+                  checked={currentIndex == 0}
                   type="radio"
                   label="Email Database Package"
                   name="package"
@@ -127,6 +128,7 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
                   }
                 />
                 <Form.Check
+                  checked={currentIndex == 1}
                   type="radio"
                   label="Complete Database Package"
                   name="package"
