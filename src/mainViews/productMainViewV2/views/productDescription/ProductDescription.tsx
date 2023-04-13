@@ -16,7 +16,7 @@ const ProductDescription = (props: IProductDescription) => {
   const { currentObject } = props;
 
   const defaultHeaderName = (
-    <div className={styles.tabElement}>Product Information</div>
+    <div className={styles.tabElement}>Product Description</div>
   );
 
   return (
@@ -51,7 +51,6 @@ const ProductDescription = (props: IProductDescription) => {
               </Col>
             </Col>
             <Col xs={12} lg={11} className="mx-auto">
-              <DataStructure currentObject={currentObject} />
             </Col>
           </Tab>
         </Tabs>

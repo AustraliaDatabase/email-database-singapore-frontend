@@ -8,6 +8,7 @@ import { IMainProductInfo } from "../../interface";
 import PriceList from "./views/priceList/PriceList";
 import styles from "./styles.module.scss";
 import { numberWithCommas } from "../../InternalService";
+import DataStructure from "../../../mainViews/productMainViewV2/views/dataStructure/DataStructure";
 
 interface IProductBanner {
   currentObject: IMainProductInfo;
@@ -54,10 +55,12 @@ const ProductBanner = (props: IProductBanner) => {
         </Col>
         <Row className="pt-5">
           <Col xs={12} lg={6}>
+          <DataStructure currentObject={currentObject} />
+{/* 
             <ScreenshotView
               screenshotInfo={currentObject?.screenshot}
               currentObject={currentObject}
-            />
+            /> */}
           </Col>
           <Col xs={12} lg={6} className="p-lg-0">
             <PriceList currentObject={currentObject} />
