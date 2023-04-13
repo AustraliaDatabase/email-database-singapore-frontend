@@ -19,7 +19,7 @@ const OtherProductFeature = (props: IOtherProductFeature) => {
       <Row>
         {currentObject?.productInfo?.list?.map((productInfo, index: number) => {
           return (
-            <Col key={index} md={6}>
+            <Col key={index} xs={12} lg={6}>
               <OtherProductItem productInfo={productInfo} />
             </Col>
           );
