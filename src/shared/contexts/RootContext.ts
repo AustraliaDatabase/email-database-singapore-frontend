@@ -47,6 +47,8 @@ export type RootType = {
   setCoinPaymentInfo: Dispatch<SetStateAction<any>>;
   setCryptoInfoModalEnable: Dispatch<SetStateAction<boolean>>;
   cryptoInfoModalEnable: boolean;
+  currentIndex: number;
+  setCurrentIndex: Dispatch<SetStateAction<number>>;
 };
 
 // @ts-ignore

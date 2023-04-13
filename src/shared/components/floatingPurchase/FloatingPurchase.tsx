@@ -15,6 +15,7 @@ import styles from "./styles.module.scss";
 import { useRoot } from "../../contexts/RootProvider";
 import { AddToCart } from "../../../services/internalServices";
 import { addToCartLocal } from "../../../services/helpers/tokenService";
+import { PRICE_PACKAGE_TYPES } from "../../constants";
 
 interface IFloatingPurchase {
   visiblity?: boolean;
@@ -31,17 +32,22 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
 
   const statsInfo = currentObject?.stats;
 
-  const { currentCartItem, setCurrentCartItem, setCartEnable } = useRoot();
+  const {
+    currentIndex,
+    setCurrentIndex,
+    currentCartItem,
+    setCurrentCartItem,
+    setCartEnable,
+  } = useRoot();
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
   const pressButton = (index: number) => {
     setCurrentIndex(index);
   };
 
+  const selectedPackage = currentObject?.price?.list?.[currentIndex];
   const addToCart = () => {
-    const element = currentObject?.price?.list?.[currentIndex];
-
     const isCompleteDatabase =
       databaseMainType === DATABASE_MAIN_TYPES.REALTOR
         ? currentIndex == 2
@@ -56,7 +62,7 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
       setCurrentCartItem,
       url,
       statsInfo?.emailAddress,
-      Number(element.price),
+      Number(selectedPackage.price),
       bannerPlainTitle,
       databaseMainType,
       isCompleteDatabase
@@ -79,14 +85,18 @@ const FloatingPurchase = (props: IFloatingPurchase) => {
       element.id?.replace(/\//g, "") === currentObject?.url?.replace(/\//g, "")
     );
   });
-console.log(selectedCartItem, "selected")
+
+  console.log(selectedPackage);
   return (
     <div
       className={classNames(styles.wrapper, { [styles.visible]: visiblity })}
     >
       <div className={styles.innerWrapper}>
         <div>
-          <div className={styles.dbTitle}>Complete Database Package</div>
+          <div
+            className={styles.dbTitle}
+            dangerouslySetInnerHTML={{ __html: selectedPackage?.title }}
+          />
           <div className="d-flex align-items-center justify-content-between">
             <div className={styles.iconText}>
               <UserList size={24} />
@@ -103,7 +113,7 @@ console.log(selectedCartItem, "selected")
           <div className={styles.selectTitle}>Select Package</div>
           <Formik
             initialValues={{
-              database: "Email Database Package",
+              database: 1,
             }}
             onSubmit={async (values) => {
               console.log(values);
@@ -117,19 +127,11 @@ console.log(selectedCartItem, "selected")
                   aria-labelledby="my-radio-group"
                 >
                   <label>
-                    <Field
-                      type="radio"
-                      name="database"
-                      value="Email Database Package"
-                    />
+                    <Field type="radio" name="database" value={1} />
                     <span>Email Database Package</span>
                   </label>
                   <label>
-                    <Field
-                      type="radio"
-                      name="database"
-                      value="Complete Database Package"
-                    />
+                    <Field type="radio" name="database" value={3} />
                     <span>Complete Database Package</span>
                   </label>
                 </div>
@@ -138,7 +140,7 @@ console.log(selectedCartItem, "selected")
           </Formik>
         </div>
         <div className={styles.addToCart}>
-          <div className={styles.dbPrice}>$1200</div>
+          <div className={styles.dbPrice}>${selectedPackage.price}</div>
           <Button
             variant={
               selectedCartItem?.length
