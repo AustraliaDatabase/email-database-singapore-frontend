@@ -14,7 +14,7 @@ const DataStructure = (props: IDataStructure) => {
   const { currentObject } = props;
 
   const SAMPLE_SINGLE_CONTACT_STRUCTURE = [
-    { column: "First Name", value: "Patty", starCount: 3 },
+    { column: "First Name", value: "Patty", starCount: 2 },
     { column: "Last Name", value: "Linduska" },
     {
       column: "Job Title",
@@ -57,9 +57,9 @@ const DataStructure = (props: IDataStructure) => {
         <Row>
           {SAMPLE_SINGLE_CONTACT_STRUCTURE.map((element, index) => {
             return (
-              <Col md={10} key={index}>
+              <Col md={8} key={index}>
                 <Row className="mb-3">
-                  <Col>{element.column}</Col>
+                  <Col md={3}>{element.column}</Col>
                   <Col>
                     <b>
                       {element.starCount
