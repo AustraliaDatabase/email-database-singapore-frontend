@@ -42,6 +42,9 @@
 }
 
 .selectPackage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .selectTitle {
     font-size: 1.5rem;
     font-weight: 700;
@@ -61,7 +64,7 @@
 .addToCart {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: end;
   gap: 50px;
   .dbPrice {
     font-size: 2rem;
