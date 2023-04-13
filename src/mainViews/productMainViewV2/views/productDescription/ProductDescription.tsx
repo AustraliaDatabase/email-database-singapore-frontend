@@ -2,13 +2,9 @@ import React from "react";
 import { Col, Container, Tab, Tabs } from "react-bootstrap";
 import classNames from "classnames";
 
-import {
-  DATA_TYPE_TO_TITLE,
-  DATA_TYPE_TO_TITLE_FOR_CONTENT,
-} from "../../../../shared/constants";
+import { DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../../../shared/constants";
 import { IMainProductInfo } from "../../../../shared/interface";
 import StatsCard from "../../../mainProduct/views/priceList/views/stats/StatsCard";
-import DataStructure from "../dataStructure/DataStructure";
 import styles from "./style.module.scss";
 
 interface IProductDescription {
@@ -53,8 +49,7 @@ const ProductDescription = (props: IProductDescription) => {
                 </div>
               </Col>
             </Col>
-            <Col xs={12} lg={11} className="mx-auto">
-            </Col>
+            <Col xs={12} lg={11} className="mx-auto"></Col>
           </Tab>
         </Tabs>
       </div>
