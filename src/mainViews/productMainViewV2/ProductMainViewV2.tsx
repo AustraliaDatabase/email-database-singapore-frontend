@@ -16,7 +16,7 @@ import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
 import FaqsView from "../mainProduct/views/faqs/Faqs";
 import FloatingPurchase from "../../shared/components/floatingPurchase/FloatingPurchase";
 import styles from "./style.module.scss";
-import InterSectionObserver from "../../shared/components/interSectionObserver/IntersectionObserver";
+import SectionIntersect from "../../shared/components/sectionIntersect/SectionIntersect";
 
 interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
@@ -27,23 +27,22 @@ interface IMainProductMainView {
 
 const ProductMainViewV2 = (props: IMainProductMainView) => {
   const { databaseMainType, currentObject } = props;
-  const [isFloatingPurchaseVisible, setIsFloatingPurchaseVisible] =
-    useState(false);
+  const [purchaseVisible, setPurchaseVisible] = useState(false);
 
   const bannerId = "product-banner";
-  console.log(isFloatingPurchaseVisible);
-  const handleIntersectionChange = (entry: IntersectionObserverEntry) => {
-    setIsFloatingPurchaseVisible(entry.isIntersecting);
+  const handlePurchaseVisible = (value: boolean) => {
+    setPurchaseVisible(value);
   };
+  
   return (
     <>
-      <InterSectionObserver onChange={handleIntersectionChange}>
+      <SectionIntersect onChange={handlePurchaseVisible}>
         {(currentObject.banner || currentObject.price) && (
           <section className={styles.hero} id={bannerId}>
             <ProductBanner currentObject={currentObject} />
           </section>
         )}
-      </InterSectionObserver>
+      </SectionIntersect>
 
       <FloatingPurchase id={bannerId} />
 
