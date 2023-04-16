@@ -36,7 +36,7 @@ const ProductBanner = (props: IProductBanner) => {
             ref={bannerTitleRef}
             dangerouslySetInnerHTML={{
               __html: currentObject?.banner?.title?.replaceAll(
-                "{{DIRECT_CONTACTS}}",
+                "DIRECT_CONTACTS",
                 numberWithCommas(
                   currentObject?.stats?.emailAddress?.toString() || ""
                 )
