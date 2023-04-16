@@ -22,7 +22,6 @@ interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
   currentObject: IMainProductInfo;
   reviewObject?: IReviewObject;
-  isScrollToPrice?: boolean;
 }
 
 const ProductMainViewV2 = (props: IMainProductMainView) => {

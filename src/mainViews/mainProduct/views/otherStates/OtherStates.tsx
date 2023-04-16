@@ -19,18 +19,11 @@ const OtherStates = (props: IOtherStatesView) => {
   const { currentObject } = props;
   const [otherStateList, setOtherStateList] = useState<any>([]);
 
-  const numColumns = 4;
-  const columnSize = Math.ceil(otherStateList.length / numColumns);
+  const numColumns = 3;
+  const columnSize = Math.ceil(otherStateList?.length / numColumns);
   console.log(otherStateList);
   useEffect(() => {
-    const sortedList = currentObject?.allList
-      ?.filter((filterElement: any) => {
-        return (
-          filterElement.id !== "real-estate-agent-email-list" ||
-          filterElement.id !== "list-of-all-email-lists"
-        );
-      })
-      ?.sort((a, b) => {
+    const sortedList = currentObject?.allList?.sort((a, b) => {
         let fa = a.name.toLowerCase(),
           fb = b.name.toLowerCase();
 
@@ -83,7 +76,7 @@ const OtherStates = (props: IOtherStatesView) => {
         className="d-flex flex-column mb-5 mx-auto align-items-center justify-content-center"
       >
         <h2 className={styles.otherStateTitle}>
-          Explore Lists for US States Beyond the {currentObject.name} List
+          Explore Lists for {DATA_TYPE_TO_TITLE[currentObject?.type]} Beyond the {currentObject.name} List
         </h2>
         <div className={styles.otherStateDescription}>
           Our services extend to acquiring{" "}
@@ -94,7 +87,7 @@ const OtherStates = (props: IOtherStatesView) => {
       </Col>
       <Row>
         {Array.from({ length: numColumns }, (_, i) => i).map((columnIndex) => (
-          <Col key={columnIndex} xs={12} md={6} lg={3} className="mb-4 mb-lg-0">
+          <Col key={columnIndex} xs={12} md={6} lg={4} className="mb-4 mb-lg-0">
             {renderState(
               columnIndex * columnSize,
               (columnIndex + 1) * columnSize

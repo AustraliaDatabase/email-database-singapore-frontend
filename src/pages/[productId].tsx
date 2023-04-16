@@ -24,11 +24,10 @@ interface ICompanyDatabaseByState {
     databaseMainTypes: DATABASE_MAIN_TYPES;
   };
   reviewObject: IReviewObject;
-  isScrollToPrice?: boolean;
 }
 
 const CompanyDatabaseByState = (props: ICompanyDatabaseByState) => {
-  const { realtorObject, reviewObject, isScrollToPrice } = props;
+  const { realtorObject, reviewObject } = props;
   const router = useRouter();
 
   const currentObject: any = realtorObject?.currentObject;
@@ -106,7 +105,6 @@ const CompanyDatabaseByState = (props: ICompanyDatabaseByState) => {
           databaseMainType={databaseMainType}
           currentObject={currentObject}
           reviewObject={reviewObject}
-          isScrollToPrice={isScrollToPrice}
         />
       </PublicLayout>
     </>
@@ -120,27 +118,17 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
   const referer = context.req.headers.referer;
 
-  let finalResponse;
-  // @ts-ignore
-  if (params?.productId?.toLowerCase() !== "list-of-all-email-lists") {
-    const productResponse = instance.post(
-      // @ts-ignore
-      `/searchProduct/${params?.productId?.toLowerCase()}`
-    );
+  const productResponse = instance.post(
+    // @ts-ignore
+    `/searchProduct/${params?.productId?.toLowerCase()}`
+  );
 
-    const reviewResponse = instance.post(
-      // @ts-ignore
-      `/searchReview/${params?.productId?.toLowerCase()}`
-    );
+  const reviewResponse = instance.post(
+    // @ts-ignore
+    `/searchReview/${params?.productId?.toLowerCase()}`
+  );
 
-    finalResponse = await Promise.all([productResponse, reviewResponse]);
-  }
-
-  const isScrollToPrice = referer
-    ? referer?.indexOf(`${process.env.NEXT_PUBLIC_BASE_URL}/email/`) !== -1 ||
-      referer?.indexOf(`${process.env.NEXT_PUBLIC_BASE_URL}/realtor/`) !== -1
-    : false;
-
+  const finalResponse = await Promise.all([productResponse, reviewResponse]);
   return {
     props: {
       realtorObject: {
@@ -148,7 +136,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         databaseMainTypes: finalResponse?.[0].data?.type || null,
       },
       reviewObject: finalResponse?.[1].data || null,
-      isScrollToPrice,
     },
   };
 }

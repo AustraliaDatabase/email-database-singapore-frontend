@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </title>
       </Head>
       <DefaultSeo
-        titleTemplate="%s - Email Datas"
+        titleTemplate="%s"
         title="Email Datas"
         additionalMetaTags={[
           {
