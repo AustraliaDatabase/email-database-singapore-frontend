@@ -50,4 +50,18 @@
       color: $primary;
     }
   }
+  .featuresTitle {
+    font-family: $primary-font;
+    padding-bottom: 0;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
+      padding-bottom: 0;
+      font-family: $primary-font;
+    }
+  }
 }
