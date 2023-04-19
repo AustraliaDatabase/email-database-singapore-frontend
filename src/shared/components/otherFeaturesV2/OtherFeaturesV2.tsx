@@ -40,7 +40,7 @@ const OtherFeaturesV2 = (props: IOtherFeaturesV2) => {
               xs={12}
               lg={columnNum ? (columnNum == 1 ? 8 : 6) : 12}
               key={index}
-              className={styles.featuresColumn}
+              className="mx-auto"
             >
               <Card className={styles.featuresColumn}>
                 <div className={styles.iconWrapper}>{element.icon}</div>
