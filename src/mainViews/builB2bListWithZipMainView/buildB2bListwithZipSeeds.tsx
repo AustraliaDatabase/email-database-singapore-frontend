@@ -1,6 +1,6 @@
 const buildB2bListWithZipSeeds = (
   <>
-    <div className="text-center text-lg-start">
+    <section className="text-center text-lg-start py-0">
       <h1 className="mt-0">
         Target Your Ideal Audience with Mailing Lists by Zip Code
       </h1>
@@ -21,8 +21,8 @@ const buildB2bListWithZipSeeds = (
         up-to-date leads. With our targeted email lists by zip code, you can
         easily customize your message and connect with the right people.
       </p>
-    </div>
-    <div className="text-center text-lg-start">
+    </section>
+    <section className="text-center text-lg-start  pb-0">
       <h2>
         Boost Your Marketing Campaigns with Cost-Effective Email List by Zip
         Code
@@ -42,8 +42,8 @@ const buildB2bListWithZipSeeds = (
         product, announcing a special deal, or simply building your brand, our
         email lists can help you get the word out and attract more customers.
       </p>
-    </div>
-    <div className="text-center text-lg-start">
+    </section>
+    <section className="text-center text-lg-start  pb-0">
       <h2>Get Reliable and Verified Leads for Your B2B Marketing</h2>
       <p>
         If you&#39;re running a B2B business, you know how important it is to
@@ -62,9 +62,9 @@ const buildB2bListWithZipSeeds = (
         our premium email lists by zip code, you can stay ahead of your
         competition and grow your business.
       </p>
-    </div>
+    </section>
 
-    <div className="text-center text-lg-start">
+    <section className="text-center text-lg-start  pb-0">
       <h2>Master Local Marketing with Free Email Lists by Zip Code</h2>
       <p>
         At EmailDatas, we&#39;re committed to helping you succeed in your
@@ -80,8 +80,8 @@ const buildB2bListWithZipSeeds = (
         reach over time. With our help, mastering local marketing has never been
         easier.
       </p>
-    </div>
-    <div className="text-center text-lg-start">
+    </section>
+    <section className="text-center text-lg-start  pb-0">
       <h2>Conclusion:</h2>
       <p>
         No matter what type of business you&#39;re running, having access to
@@ -93,7 +93,7 @@ const buildB2bListWithZipSeeds = (
         increase your revenues. Contact us today to learn more about our
         services and start growing your business!
       </p>
-    </div>
+    </section>
   </>
 );
 
