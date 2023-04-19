@@ -1,0 +1,11 @@
+
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+    h1, h2 {
+        font-size: 1.5rem !important;
+        padding-bottom: 2rem;
+        line-height: 2.25rem;
+    }
+}
