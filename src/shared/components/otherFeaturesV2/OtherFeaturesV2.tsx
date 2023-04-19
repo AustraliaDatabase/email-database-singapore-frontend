@@ -22,15 +22,12 @@ const OtherFeaturesV2 = (props: IOtherFeaturesV2) => {
     <Container>
       <Row>
         <Col xs={12} lg={10} className="mx-auto text-center">
-          {title && (
-            <div
-              className={styles.title}
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
-          )}
-          {description && (
-            <div dangerouslySetInnerHTML={{ __html: description }} />
-          )}
+          {title && <h1 className={styles.title}>{title}</h1>}
+          <div className="d-flex flex-column align-items-center">
+            {description && (
+              <div dangerouslySetInnerHTML={{ __html: description }} className={styles.mainDescription} />
+            )}
+          </div>
         </Col>
       </Row>
       <Row>
@@ -45,7 +42,7 @@ const OtherFeaturesV2 = (props: IOtherFeaturesV2) => {
               <Card className={styles.featuresColumn}>
                 <div className={styles.iconWrapper}>{element.icon}</div>
                 <div>
-                  <div
+                  <h2
                     className={styles.featuresTitle}
                     dangerouslySetInnerHTML={{ __html: element.title }}
                   />
