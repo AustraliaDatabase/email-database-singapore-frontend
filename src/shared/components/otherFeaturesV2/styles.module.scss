@@ -1,0 +1,53 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.title {
+  font-size: 2rem;
+  @include breakpoint(tablet) {
+    font-size: 1.5rem;
+  }
+  @include breakpoint(mobile) {
+    font-size: 1.5rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    font-size: 2rem;
+    @include breakpoint(tablet) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.featuresColumn {
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
+  .iconWrapper {
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    display: block;
+    background-color: $fill;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      color: $primary;
+    }
+  }
+}
