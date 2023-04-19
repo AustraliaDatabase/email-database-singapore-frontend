@@ -73,25 +73,25 @@ export const DATA_TYPE_TO_BREADCRUMB_NAME = {
 export const GTM_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID;
 
 const JOB_LIST = [
-  { name: "CEO", url: "/ceo" },
-  { name: "CFO", url: "/cfo" },
-  { name: "Accounts Payable", url: "/Accounts-Payable" },
-  { name: "Accounts Receivable", url: "/accounts-receivable" },
+  { name: "CEO", url: "/ceo-email-lists" },
+  { name: "CFO", url: "/cfo-email-lists" },
+  { name: "Accounts Payable", url: "/accounts-payable-email-lists" },
+  { name: "Accounts Receivable", url: "/account-receivable-email-list" },
 ];
 
 const INDUSTRY_LIST = [{ name: "Architects", url: "/architects" }];
 
 const BY_STATES = [
-  { name: "California", url: "/california" },
-  { name: "Florida", url: "/florida" },
-  { name: "New York", url: "/new-york" },
-  { name: "Texas", url: "/texas" },
+  { name: "California", url: "/california-email-list" },
+  { name: "Florida", url: "/florida-email-list" },
+  { name: "New York", url: "/new-york-email-list" },
+  { name: "Texas", url: "/texas-email-list" },
 ];
 
 const INTERNATIONAL_LIST = [
-  { name: "Canada", url: "/canada" },
-  { name: "UAE", url: "/uae" },
-  { name: "Europe", url: "/europe" },
+  { name: "Canada", url: "/canada-email-list" },
+  { name: "UAE", url: "/list-of-companies-in-uae-with-email-address" },
+  // { name: "Europe", url: "/europe" },
 ];
 
 export const FOOTER_MENUS = {

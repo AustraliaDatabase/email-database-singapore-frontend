@@ -52,7 +52,7 @@ const CompanyByStatePage = (props: any) => {
 export default CompanyByStatePage;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const response = await instance.post(`/companyProduct`);
+  const response = await instance.post(`/industryProduct`);
 
   return {
     props: {

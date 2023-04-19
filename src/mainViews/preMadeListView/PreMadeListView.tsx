@@ -18,9 +18,9 @@ const PreMadeListView = () => {
               md={12}
               className="sectiontopfix d-flex flex-column justify-content-center mb-5"
             >
-              <h2 className={styles.whatTypeOfProduct}>
+              <h1 className={styles.whatTypeOfProduct}>
                 EmailDatas Pre-Made Lists
-              </h2>
+              </h1>
             </Col>
           </Row>
           <Row className="justify-content-center">
