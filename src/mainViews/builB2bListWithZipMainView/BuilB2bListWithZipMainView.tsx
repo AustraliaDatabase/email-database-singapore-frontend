@@ -11,10 +11,14 @@ const BuilB2bListWithZipMainView = () => {
     <section className={styles.wrapper}>
       <Container>
         <Row>
-          <Col xs={12} lg={4}>
+          <Col
+            xs={{ order: 2, span: 12 }}
+            lg={{ order: 1, span: 4 }}
+            className="mt-5 mt-lg-0"
+          >
             <FormView />
           </Col>
-          <Col xs={12} lg={8}>
+          <Col xs={{ order: 1, span: 12 }} lg={{ order: 2, span: 8 }}>
             <ContentView content={buildB2bListWithZipSeeds} />
           </Col>
         </Row>
