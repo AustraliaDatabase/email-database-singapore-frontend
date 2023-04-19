@@ -12,21 +12,23 @@ const BOOK_YOUR_DATA_ALTERNATES = {
     {
       icon: <PresentationChart size={32} />,
       title: "Why Consider Bookyourdata.com ?",
-      description: `BookYourData is one of the leading email list providers out there. It has been proven that they provide lists of actual email addresses, not bot-generated ones. <br /> <br /> In addition, generic email addresses such as sales@ and contact@ are filtered out of their lists. Many BookYourData reviews also confirm that a portion of the owners behind the contact information they provide are responsive.`,
+      description: `<br />BookYourData is one of the leading email list providers out there. It has been proven that they provide lists of actual email addresses, not bot-generated ones. <br /> <br /> In addition, generic email addresses such as sales@ and contact@ are filtered out of their lists. Many BookYourData reviews also confirm that a portion of the owners behind the contact information they provide are responsive.`,
     },
     {
       icon: <ChartLineUp size={32} />,
       title: `Why Look for an Alternative ?`,
-      description: `The mentioned provider does not shy away from mentioning the major brands they have worked with. Therefore, don't be shocked when you discover their fees. If you are running a small company, particularly a startup, you may get more sales in a short time thanks to their email leads. However, the relatively high fees make BookYourData.com less cost-effective.
+      description: `<br />The mentioned provider does not shy away from mentioning the major brands they have worked with. Therefore, don't be shocked when you discover their fees. If you are running a small company, particularly a startup, you may get more sales in a short time thanks to their email leads. However, the relatively high fees make BookYourData.com less cost-effective.
       <br /> <br />
       Fortunately, there are many <b>alternatives to BookYourData.com</b>, the most notable being EmailDatas.com.`,
     },
     {
       icon: <RocketLaunch size={32} />,
       title: "Why Choose EmailDatas.com ?",
-      description: `Both BookYourData.com and EmailDatas.com supply email lists quickly, with both ensuring 90% delivery rates. However, EmailDatas.com surpasses the other in several other aspects.
+      description: `<br />Both BookYourData.com and EmailDatas.com supply email lists quickly, with both ensuring 90% delivery rates. However, EmailDatas.com surpasses the other in several other aspects.
       <br /> <br />
-      EmailDatas.com does not just provide legitimate email addresses; they also offer the names, phone numbers, job titles, and employers of the people behind the email addresses. This additional information helps you filter based on location, employment status, and industry. With this provider, you can choose between US and international email lists, with the latter highly recommended if you are targeting prospects overseas.
+      EmailDatas.com does not just provide legitimate email addresses; they also offer the names, phone numbers, job titles, and employers of the people behind the email addresses.
+      <br /><br />
+      This additional information helps you filter based on location, employment status, and industry. With this provider, you can choose between US and international email lists, with the latter highly recommended if you are targeting prospects overseas.
       <br /> <br />
       Compared to BookYourData.com, EmailDatas.com boasts a higher accuracy rate for their email lists and charges less. You can expect a higher return on investment from EmailDatas.com as well.
       <br /> <br />
@@ -48,7 +50,9 @@ const LEAD_GENIUS_ALTERNATES = {
     {
       icon: <PresentationChart size={32} />,
       title: "Why EmailDatas is the Best Alternative to LeadGenius?",
-      description: `EmailDatas provides an excellent alternative to Lead Genius, offering the same high-quality leads to effectively reach your target audience. The best part? EmailDatas' rates are up to 20x lower, with over 500 job titles available at a friendlier price. <br /> <br /> The database is regularly updated, ensuring greater accuracy and lower email bounce rates for a higher ROI. Additionally, EmailDatas only delivers the specific email and mailing lists you require, saving you time and resources. <br /> <br /> With top-tier corporate personalities in their lists, you can expect faster response times to your communications. If you want efficient services at a more affordable rate, EmailDatas is the clear alternative to Lead Genius.
+      description: `
+      <br />
+      EmailDatas provides an excellent alternative to Lead Genius, offering the same high-quality leads to effectively reach your target audience. The best part? EmailDatas' rates are up to 20x lower, with over 500 job titles available at a friendlier price. <br /> <br /> The database is regularly updated, ensuring greater accuracy and lower email bounce rates for a higher ROI. Additionally, EmailDatas only delivers the specific email and mailing lists you require, saving you time and resources. <br /> <br /> With top-tier corporate personalities in their lists, you can expect faster response times to your communications. If you want efficient services at a more affordable rate, EmailDatas is the clear alternative to Lead Genius.
       <ol>
       <br />
       <li>You can accelerate your business growth with minimal investment and enjoy significant returns by partnering with EmailDatas.</li>
@@ -72,6 +76,7 @@ const LEAD_GENIUS_ALTERNATES = {
       icon: <RocketLaunch size={32} />,
       title: "Conclusion",
       description: `
+      <br />
       If you are ready to connect with your target customers now but have second thoughts about using LeadGenius due to high costs and unwanted inclusions, EmailDatas is the clear alternative. <br /> You receive the same efficient services at a much more affordable rate.      `,
     },
   ],
@@ -90,6 +95,7 @@ const DATA_COM_ALTERNATES = {
       icon: <PresentationChart size={32} />,
       title: "Data.com Pricing",
       description: `
+      <br />
       This solution automatically cleans your account and enhances it by providing contacts and leads within Salesforce. You can also schedule updates for profiles, contacts, and leads.
       <br /><br />
       Plus, it gives you access to company data such as classification codes, linkages, and trade styles. The rate is €25/month with annual billing.
@@ -99,6 +105,7 @@ const DATA_COM_ALTERNATES = {
       icon: <ChartLineUp size={32} />,
       title: `Data.com Prospector`,
       description: `
+      <br />
       This tool adds trusted contact data to your database, supporting users in gaining a deeper understanding of their accounts right within Salesforce. You can search for a contact by industry, revenue, description, and location, and view their phone number and email as well.
       <br /><br />
       Using Prospector, you can export contacts and manually update your accounts. It can also help narrow down your search by displaying companies in a hierarchy, resulting in more accurate lead records. Users will pay €150 per month in annual billing.
@@ -133,10 +140,8 @@ If you're looking to improve your sales, EmailDatas.com may be the perfect alter
   ],
 };
 
-
 const EXACT_DATA_ALTERNATES = {
-  seoTitle:
-    "EmailDatas vs ExactData Review: Which is the Best Alternative?",
+  seoTitle: "EmailDatas vs ExactData Review: Which is the Best Alternative?",
   seoDescription:
     "In this review, we compare EmailDatas and ExactData to help you decide which is the best alternative for your business needs.",
   title: "Is EmailDatas a Good Alternative to ExactData?",
@@ -147,6 +152,7 @@ const EXACT_DATA_ALTERNATES = {
       icon: <PresentationChart size={32} />,
       title: "What is ExactData?",
       description: `
+      <br />
       ExactData, founded in 2001 under several names, settled on its current name in 2013. The company is currently headed by CEO Lawrence Organ and operates a database platform with 210 million listings.
       <br /><br />
       ExactData's services include business mailing, modeling, deployment, and consultation.
@@ -156,7 +162,8 @@ const EXACT_DATA_ALTERNATES = {
       icon: <ChartLineUp size={32} />,
       title: `So what is the best alternative to ExactData? `,
       description: `
-      EmailDatas.com is a great option, offering a B2B email list that provides an accurate and easy searching experience. <br /> <br /> EmailDatas' lists include job details, industry, location, revenue, and more. Why choose EmailDatas to expand your business?
+      <br />
+      EmailDatas.com is a great option, offering a B2B email list that provides an accurate and easy searching experience. EmailDatas' lists include job details, industry, location, revenue, and more. Why choose EmailDatas to expand your business?
       
       <br /><br />
       <ul>
@@ -188,7 +195,6 @@ EmailDatas can be a cost-effective and accurate alternative to ExactData. It not
   ],
 };
 
-
 const LEAD_11_ALTERNATES = {
   seoTitle:
     "EmailDatas vs Lead411 Review: Which B2B Email List Provider is Better?",
@@ -202,6 +208,7 @@ const LEAD_11_ALTERNATES = {
       icon: <PresentationChart size={32} />,
       title: "Lead411 Pricing",
       description: `
+      <br />
       Upon registration, Lead411 offers a free trial for starters, and their pricing depends on the plan you choose. Most plans have monthly fees that need to be paid to continue using their service.
       <br /><br />
       <ul>
@@ -256,10 +263,8 @@ const LEAD_11_ALTERNATES = {
   ],
 };
 
-
 const LIST_GIANT_ALTERNATES = {
-  seoTitle:
-    "Which B2B Email List Provider is Right for You?",
+  seoTitle: "Which B2B Email List Provider is Right for You?",
   seoDescription:
     "Looking for a reliable B2B email list provider? Read our comparison between Listgiant and EmailDatas to find out which one suits your business needs and budget.",
   title: "Find the Perfect B2B Email List Provider for Your Business",
@@ -270,6 +275,7 @@ const LIST_GIANT_ALTERNATES = {
       icon: <PresentationChart size={32} />,
       title: "List Giant Review",
       description: `
+      <br />
       The Listgiant system utilizes a self-service portal for instant list downloads, and they offer excellent customer service and phone support. <br /> <br /> However, Listgiant has a history of delivering incomplete or unusable lists, including outdated company names and unpaid-for lists containing wrong numbers or incorrect addresses under the wrong name.
       `,
     },
@@ -277,6 +283,7 @@ const LIST_GIANT_ALTERNATES = {
       icon: <ChartLineUp size={32} />,
       title: `An Alternative for List Giant Review`,
       description: `
+      <br />
       If you are looking for a more accurate source of data, you may want to consider EmailDatas.com instead. EmailDatas’ leads are more specific than Listgiant's, which can help you save money. What other perks does EmailDatas offer?
 <br /><br />
 <ul>
@@ -305,8 +312,7 @@ Not only does EmailDatas provide the accurate service you need, but it also ensu
 };
 
 const INFO_USA_ALTERNATES = {
-  seoTitle:
-    "Discover Why EmailDatas.com is a Superior Alternative to InfoUSA",
+  seoTitle: "Discover Why EmailDatas.com is a Superior Alternative to InfoUSA",
   seoDescription:
     "Discover why EmailDatas.com is a better alternative to InfoUSA for your business needs. More accurate data, affordable pricing, and no hidden charges",
   title: "Discover Why EmailDatas.com is the Ideal Alternative to InfoUSA",
@@ -317,6 +323,7 @@ const INFO_USA_ALTERNATES = {
       icon: <PresentationChart size={32} />,
       title: "Why Choose EmailDatas Over InfoUSA",
       description: `
+      <br />
       InfoUSA is known to charge higher rates compared to EmailDatas. It's important to note that EmailDatas.com aims to provide an affordable alternative for businesses and companies seeking to improve their contact list.
       <br />
       <br />
@@ -353,10 +360,11 @@ Having an up-to-date mailing list can significantly improve your conversion rate
       icon: <ChartLineUp size={32} />,
       title: `Creating Valuable Connections with EmailDatas`,
       description: `
-      You may have read some InfoUSA reviews online and learned how much it costs to use the web-based tool. If you’re on a budget, you can explore other alternatives that meet your requirements. For instance, you can purchase a high-quality email list from EmailDatas and take advantage of organic leads that have better possibilities of converting to sales.
+      <br />
+      You may have read some InfoUSA reviews online and learned how much it costs to use the web-based tool. If you’re on a budget, you can explore other alternatives that meet your requirements. <br /><br /> For instance, you can purchase a high-quality email list from EmailDatas and take advantage of organic leads that have better possibilities of converting to sales.
       <br /> <br /> 
 
-These verified mailing details will help you provide better customer experiences for your target market. Additionally, they can help build long-term connections through retained customers. With pre-made lists, you can get a customized list of contacts you want to reach out to based on job titles, job levels, locations, ZIP codes, departments, SIC/NAICS codes, industries, revenues, and employees.
+These verified mailing details will help you provide better customer experiences for your target market. Additionally, they can help build long-term connections through retained customers. <br /><br /> With pre-made lists, you can get a customized list of contacts you want to reach out to based on job titles, job levels, locations, ZIP codes, departments, SIC/NAICS codes, industries, revenues, and employees.
 <br /> <br /> 
 
 Using EmailDatas’ email leads offers several advantages for building email lists and marketing campaigns, including:
@@ -383,7 +391,8 @@ When it comes to pricing, InfoUSA isn't exactly transparent about their rates. B
       icon: <RocketLaunch size={32} />,
       title: "Why USA Business Database?",
       description: `
-      Perhaps you're wondering why you should choose the USA business database over others. First and foremost, the significant benefits of this kind of sales platform cannot be ignored. The majority of highly successful e-commerce companies today started by building their email marketing database before anything else.
+      <br />
+      Perhaps you're wondering why you should choose the USA business database over others. First and foremost, the significant benefits of this kind of sales platform cannot be ignored. <br /><br /> The majority of highly successful e-commerce companies today started by building their email marketing database before anything else.
 <br />
 <br />
 Only after you have established an email list can you focus on mastering your product or service offerings. This is because you begin to generate up to 90% of web traffic when you first develop an actual email contact list. Here's how EmailDatas builds their email marketing database:
@@ -420,6 +429,7 @@ EmailDatas provides an effective tracking tool for mailing whereabouts, unlike I
       icon: <RocketLaunch size={32} />,
       title: "How to Build an Effective Email Marketing List",
       description: `
+      <br />
       Marketing has become even more challenging for business owners in today's fast-paced industries. The good news is that you can efficiently manage your email marketing campaigns with EmailDatas without spending a lot of time building your mailing list.<br /><br /> By hiring expert email list builders, you can focus on attending to other important concerns. Ensure that you choose experts in building email lists that include the most important details in B2B marketing, such as full names, phone numbers, job titles, email addresses, locations, and other related details.
       <br /><br />
 With EmailDatas' mailing list, you can take advantage of essential information such as job types: Staff, Supervisor, Manager, Director, VP, CFO, and CEO. You will also receive other details like the work departments, namely Technical Support, Operations, Engineering, Research, Human Resource, Marketing, Finance, and IT.<br /><br /> With all this information, you can determine the best leads that will benefit from your business. Moreover, they will help you build your marketing campaigns to achieve higher sales and revenues per week, month, or year.
@@ -450,7 +460,6 @@ So that’s everything you need to know about this email list provider in the US
     },
   ],
 };
-
 
 export {
   BOOK_YOUR_DATA_ALTERNATES,
