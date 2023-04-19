@@ -1,0 +1,17 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  padding-top: 180px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 2rem;
+    @include breakpoint(mobile) {
+      font-size: 1.5rem;
+    }
+  }
+}
