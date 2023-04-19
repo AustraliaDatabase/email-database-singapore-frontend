@@ -15,6 +15,7 @@ import styles from "./homeMainView.module.scss";
 import BeneifitView from "../../shared/components/beneifit/Beneifit";
 import classNames from "classnames";
 import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
+import SiteReviews from "./views/siteReviews/SiteReviews";
 
 const HomeMainView = () => {
   return (
@@ -40,7 +41,7 @@ const HomeMainView = () => {
         </Container>
       </section>
 
-      <section className={classNames("mt-5 mb-5")} >
+      <section className={classNames("mt-5 mb-5")}>
         <WhyCardsWithContent
           title={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.title}
           description={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.description}
@@ -57,15 +58,16 @@ const HomeMainView = () => {
         <Container>
           <Row>
             <Col xs={12}>
-              <Faqs
-                title="Frequently Asked Questions"
-                faqsList={FaqsSeed}
-              />
+              <Faqs title="Frequently Asked Questions" faqsList={FaqsSeed} />
             </Col>
           </Row>
         </Container>
       </section>
-      <BottomBanner />
+      <section>
+        <Container>
+          <SiteReviews />
+        </Container>
+      </section>
     </>
   );
 };

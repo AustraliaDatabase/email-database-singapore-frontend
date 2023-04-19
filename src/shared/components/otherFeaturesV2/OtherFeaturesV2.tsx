@@ -32,6 +32,11 @@ const OtherFeaturesV2 = (props: IOtherFeaturesV2) => {
       </Row>
       <Row>
         {featuresList.map((element: IfeaturesList, index: number) => {
+
+          if (!element.title) {
+            return;
+          }
+          
           return (
             <Col
               xs={12}

@@ -156,8 +156,22 @@ export const DATA_FIELDS = [
   "First Name;Last Name;Job Title;Email Address;Cell Number;Linkedin Profile;Company;Website;Phone Number;Fax Number;Address;City;State;Postal Code;Country;No of Employees;Revenue;Industry;SIC Code",
 ];
 
-
 export const PRICE_PACKAGE_TYPES: IPackages = {
   0: "Email Database Package",
   1: "Complete Database Package",
 };
+
+export const SITE_REVIEW_LIST = [
+  { title: "EmailDatas VS BookYourData", url: "/alternative-for-bookyourdata" },
+  { title: "EmailDatas VS InfoUSA", url: "/alternative-for-infousa" },
+  { title: "EmailDatas VS LeadGenius", url: "/alternative-for-leadgenius-com" },
+  { title: "EmailDatas VS DatabaseUSA", url: "" },
+  { title: "EmailDatas VS Data.com", url: "/data-com" },
+  { title: "EmailDatas VS Experian", url: "" },
+  { title: "EmailDatas VS ExactData", url: "/exactdata-review" },
+  { title: "EmailDatas VS InsideView", url: "" },
+  { title: "EmailDatas VS Lead411", url: "/lead411-review" },
+  { title: "EmailDatas VS SalesGenie", url: "" },
+  { title: "EmailDatas VS ListGiant", url: "/listgiant-review" },
+  { title: "EmailDatas VS ZoomInfo", url: "" },
+];
