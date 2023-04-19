@@ -8,7 +8,59 @@
   }
   th {
     background: #fe772840 !important;
+    &.tableTitle {
+      background-color: $secondary !important;
+      color: $white;
+      padding: 40px 24px;
+      font-size: 2rem;
+      border-radius: 3px;
+      border: none !important;
+    }
+
+    &.tableFillter {
+      background-color: $white !important;
+      border: none !important;
+    }
+
+    &.leftFillter {
+      z-index: 10 !important;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        button {
+          background-color: $white;
+          color: $secondary;
+          border: 1px solid rgba($color: $secondary, $alpha: .15);
+        }
+      }
+    }
+
+    .searchWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      justify-content: end;
+    }
+    .searchInput {
+      width: 300px;
+      input {
+        &[type="text"] {
+          border-radius: 4px !important;
+        }
+      }
+    }
+    .searchButton {
+      min-width: 50px !important;
+    }
   }
+}
+
+.tableTitle {
+  background-color: $secondary;
+  width: 100%;
 }
 
 .paginationWrapper {

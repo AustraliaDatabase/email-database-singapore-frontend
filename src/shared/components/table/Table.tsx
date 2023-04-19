@@ -7,6 +7,9 @@ import styles from "./table.module.scss";
 import { numberWithCommas } from "../../InternalService";
 import { DATABASE_MAIN_TYPES } from "../../enums";
 import TableMobileView from "./components/tableMobileView/TableMobileView";
+import Button from "../button/Button";
+import { MagnifyingGlass } from "phosphor-react";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 interface ITable {
   columns: string[];
@@ -101,6 +104,68 @@ const Table = (props: ITable) => {
           <div className={styles.wrap}>
             <table className="table table-striped">
               <thead>
+                {!isProductPage && (
+                  <>
+                    <tr className={styles.rowStyles}>
+                      <th
+                        className={styles.tableTitle}
+                        colSpan={columns.length + 1}
+                      >
+                        Job Title
+                      </th>
+                    </tr>
+                    <tr className={styles.rowStyles}>
+                      <th
+                        colSpan={(columns.length + 1) / 2}
+                        className={classNames(
+                          styles.tableFillter,
+                          styles.leftFillter
+                        )}
+                      >
+                        <div>
+                          <span>Job Level</span>
+                          <DropdownButton
+                            id="dropdownlabel"
+                            title="Dropdown button"
+                          >
+                            <Dropdown.Item href="#/action-1">
+                              Marketing
+                            </Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">
+                              List one
+                            </Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">
+                              List two
+                            </Dropdown.Item>
+                          </DropdownButton>
+                        </div>
+                      </th>
+                      <th
+                        colSpan={(columns.length + 1) / 2}
+                        className={styles.tableFillter}
+                      >
+                        <div className={styles.searchWrapper}>
+                          Name
+                          <div className={styles.searchInput}>
+                            <input
+                              type="text"
+                              placeholder={
+                                // @ts-ignore
+                                getPlaceHoderText?.[type] || "Search State"
+                              }
+                              onChange={(event) => {
+                                setSearchText(event.target.value);
+                              }}
+                            />
+                          </div>
+                          <Button className={styles.searchButton}>
+                            <MagnifyingGlass size={20} />
+                          </Button>
+                        </div>
+                      </th>
+                    </tr>
+                  </>
+                )}
                 <tr>
                   <th>
                     <input
