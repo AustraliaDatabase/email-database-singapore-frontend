@@ -1,26 +1,28 @@
 const buildB2bListWithZipSeeds = (
   <>
-    <h1 className="mt-0">
-      Target Your Ideal Audience with Mailing Lists by Zip Code
-    </h1>
-    <p>
-      If you&#39;re looking to promote your business to a specific demographic,
-      using zip code mailing list can be a smart strategy. By targeting people
-      who share the same zip code, you can reach prospects who have things in
-      common, such as their interests, needs, and purchasing habits. Plus, if
-      you&#39;re running a local business, you can use zip code mailing lists to
-      focus your marketing efforts on nearby customers.
-    </p>
-    <p>
-      At EmailDatas, we offer accurate and complete email lists by zip code that
-      can help you maximize your resources, save time, and increase your ROI.
-      Whether you need business or consumer data, our mailing lists are
-      carefully verified to ensure that you get the most relevant and up-to-date
-      leads. With our targeted email lists by zip code, you can easily customize
-      your message and connect with the right people.
-    </p>
-
-    <div>
+    <div className="text-center text-lg-start">
+      <h1 className="mt-0">
+        Target Your Ideal Audience with Mailing Lists by Zip Code
+      </h1>
+      <p>
+        If you&#39;re looking to promote your business to a specific
+        demographic, using zip code mailing list can be a smart strategy. By
+        targeting people who share the same zip code, you can reach prospects
+        who have things in common, such as their interests, needs, and
+        purchasing habits. Plus, if you&#39;re running a local business, you can
+        use zip code mailing lists to focus your marketing efforts on nearby
+        customers.
+      </p>
+      <p>
+        At EmailDatas, we offer accurate and complete email lists by zip code
+        that can help you maximize your resources, save time, and increase your
+        ROI. Whether you need business or consumer data, our mailing lists are
+        carefully verified to ensure that you get the most relevant and
+        up-to-date leads. With our targeted email lists by zip code, you can
+        easily customize your message and connect with the right people.
+      </p>
+    </div>
+    <div className="text-center text-lg-start">
       <h2>
         Boost Your Marketing Campaigns with Cost-Effective Email List by Zip
         Code
@@ -41,7 +43,7 @@ const buildB2bListWithZipSeeds = (
         email lists can help you get the word out and attract more customers.
       </p>
     </div>
-    <div>
+    <div className="text-center text-lg-start">
       <h2>Get Reliable and Verified Leads for Your B2B Marketing</h2>
       <p>
         If you&#39;re running a B2B business, you know how important it is to
@@ -62,7 +64,7 @@ const buildB2bListWithZipSeeds = (
       </p>
     </div>
 
-    <div>
+    <div className="text-center text-lg-start">
       <h2>Master Local Marketing with Free Email Lists by Zip Code</h2>
       <p>
         At EmailDatas, we&#39;re committed to helping you succeed in your
@@ -79,7 +81,7 @@ const buildB2bListWithZipSeeds = (
         easier.
       </p>
     </div>
-    <div>
+    <div className="text-center text-lg-start">
       <h2>Conclusion:</h2>
       <p>
         No matter what type of business you&#39;re running, having access to

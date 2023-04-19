@@ -3,6 +3,13 @@
 
 .wrapper {
   padding-top: 180px;
+  @include breakpoint(tablet) {
+    padding-top: 100px;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 90px;
+  }
+
   h1,
   h2,
   h3,

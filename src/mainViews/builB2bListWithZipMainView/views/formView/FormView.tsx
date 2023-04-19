@@ -1,10 +1,11 @@
 import React from "react";
-import { Formik, Field, Form as FormikForm } from "formik";
 import { Col, Form, Row } from "react-bootstrap";
-import Card from "../../../../shared/components/card/Card";
+import { Formik, Field, Form as FormikForm } from "formik";
+
 import { validateRequired } from "../../../../shared/InternalService";
+import Card from "../../../../shared/components/card/Card";
 import Button from "../../../../shared/components/button/Button";
-import styles from "./styles.module.scss"
+import styles from "./styles.module.scss";
 
 const FormView = () => {
   const CustomInputComponent = (props: any) => (

@@ -12,7 +12,7 @@ const BuilB2bListWithZipMainView = () => {
       <Container>
         <Row>
           <Col xs={12} lg={4}>
-              <FormView />
+            <FormView />
           </Col>
           <Col xs={12} lg={8}>
             <ContentView content={buildB2bListWithZipSeeds} />
