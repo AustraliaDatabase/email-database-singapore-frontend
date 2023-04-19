@@ -1,0 +1,11 @@
+@import "styles/mixins";
+
+.topFix {
+  padding-top: 180px;
+  @include breakpoint(tablet) {
+    padding-top: 100px;
+  }
+  @include breakpoint(tablet) {
+    padding-top: 90px;
+  }
+}
