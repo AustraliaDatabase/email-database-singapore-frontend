@@ -105,16 +105,18 @@
   }
 
   .isHome {
-    color: black;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    span {
-      color: black;
+    color: $secondary;
+    .title {
+      color: $secondary;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      span {
+        color: $secondary;
+      }
     }
   }
 }
