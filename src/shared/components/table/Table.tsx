@@ -232,7 +232,16 @@ const Table = (props: ITable) => {
                             {element.name}
                           </b>
                         </a>
-                        <div className={styles.category}>Finance</div>
+                        <div
+                          // dynamic badge color
+                          style={{
+                            background: `#00a2e226`,
+                            color: `#00A2E2`
+                          }}
+                          className={styles.category}
+                        >
+                          Finance
+                        </div>
                       </td>
 
                       {Object.keys(attributesSet).map((value, columnIndex) => {
