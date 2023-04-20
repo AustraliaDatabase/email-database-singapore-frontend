@@ -162,16 +162,16 @@ export const PRICE_PACKAGE_TYPES: IPackages = {
 };
 
 export const SITE_REVIEW_LIST = [
-  { title: "EmailDatas VS BookYourData", url: "/alternative-for-bookyourdata" },
-  { title: "EmailDatas VS InfoUSA", url: "/alternative-for-infousa" },
-  { title: "EmailDatas VS LeadGenius", url: "/alternative-for-leadgenius-com" },
-  { title: "EmailDatas VS DatabaseUSA", url: "/databaseusa" },
-  { title: "EmailDatas VS Data.com", url: "/data-com" },
-  { title: "EmailDatas VS Experian", url: "/emaildatas-vs-experian" },
-  { title: "EmailDatas VS ExactData", url: "/exactdata-review" },
-  { title: "EmailDatas VS InsideView", url: "/insideview-review" },
-  { title: "EmailDatas VS Lead411", url: "/lead411-review" },
-  { title: "EmailDatas VS SalesGenie", url: "/salesgenie-review" },
-  { title: "EmailDatas VS ListGiant", url: "/listgiant-review" },
-  { title: "EmailDatas VS ZoomInfo", url: "/zoominfo-review" },
+  { title: "EmailDatas vs BookYourData", url: "/alternative-for-bookyourdata" },
+  { title: "EmailDatas vs InfoUSA", url: "/alternative-for-infousa" },
+  { title: "EmailDatas vs LeadGenius", url: "/alternative-for-leadgenius-com" },
+  { title: "EmailDatas vs DatabaseUSA", url: "/databaseusa" },
+  { title: "EmailDatas vs Data.com", url: "/data-com" },
+  { title: "EmailDatas vs Experian", url: "/emaildatas-vs-experian" },
+  { title: "EmailDatas vs ExactData", url: "/exactdata-review" },
+  { title: "EmailDatas vs InsideView", url: "/insideview-review" },
+  { title: "EmailDatas vs Lead411", url: "/lead411-review" },
+  { title: "EmailDatas vs SalesGenie", url: "/salesgenie-review" },
+  { title: "EmailDatas vs ListGiant", url: "/listgiant-review" },
+  { title: "EmailDatas vs ZoomInfo", url: "/zoominfo-review" },
 ];

@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 const SiteReviews = () => {
   return (
     <Container>
-      <h2 className="text-center mb-5">Competitor Sites Review</h2>
+      <h2 className="text-center mb-5">Competitor Sites Reviews</h2>
       <div className={styles.listsWrapper}>
         {SITE_REVIEW_LIST.map((site, index: number) => {
           return (
