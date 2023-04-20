@@ -7,6 +7,8 @@ import BeneifitsCollapsible from "./components/beneifitsCollapsible/BeneifitsCol
 import styles from "./style.module.scss";
 import { DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../constants";
 import { numberWithCommas } from "../../InternalService";
+import { Col } from "react-bootstrap";
+import Card from "../card/Card";
 
 interface IBeneifitView {
   beneifitInfo: IBeneifits;
@@ -84,7 +86,22 @@ const BeneifitView = (props: IBeneifitView) => {
         </div>
       </div>
       <Row>
-        <BeneifitsCollapsible BeneifitList={benefitList} />
+        {benefitList.map((benefit, index) => {
+          return (
+            <Col key={index} xs={12} lg={6} className="mt-4">
+              <Card>
+                <div
+                  className={styles.title}
+                  dangerouslySetInnerHTML={{ __html: benefit.title }}
+                />
+                <div
+                  className={styles.description}
+                  dangerouslySetInnerHTML={{ __html: benefit.description }}
+                />
+              </Card>
+            </Col>
+          );
+        })}
       </Row>
     </Container>
   );
