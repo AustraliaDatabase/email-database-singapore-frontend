@@ -120,6 +120,9 @@ const Table = (props: ITable) => {
       ) : (
         <>
           <div className={styles.wrap}>
+            <div className={styles.tableTitle}>
+              <div>Job Title</div>
+            </div>
             <table className="table productlist-table">
               <thead
                 className={classNames({
@@ -128,14 +131,6 @@ const Table = (props: ITable) => {
               >
                 {!isProductPage && (
                   <>
-                    <tr className={styles.rowStyles}>
-                      <th
-                        className={styles.tableTitle}
-                        colSpan={columns.length + 1}
-                      >
-                        <div>Job Title</div>
-                      </th>
-                    </tr>
                     <tr className={styles.rowStyles}>
                       <th
                         colSpan={(columns.length + 1) / 2}

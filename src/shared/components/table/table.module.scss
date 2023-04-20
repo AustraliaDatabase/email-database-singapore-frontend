@@ -56,6 +56,7 @@
           display: flex;
           align-items: center;
           gap: 10px;
+          padding-left: 1rem;
           span {
             color: #535353;
           }
@@ -126,14 +127,14 @@
   width: 100%;
 }
 
-.paginationWrapper {
-  position: sticky;
-  bottom: 0;
-  background-color: $white;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
+// .paginationWrapper {
+//   position: sticky;
+//   bottom: 0;
+//   background-color: $white;
+//   width: 100%;
+//   display: flex;
+//   justify-content: flex-end;
+// }
 
 .normalLink {
   color: $secondary;
@@ -167,24 +168,20 @@
   }
 }
 
-.realtorsMainLink {
-  z-index: 11;
-  width: 100%;
-  background-color: $fill;
-  color: $secondary;
-  position: sticky;
-  top: 95px;
-  padding: 0.5rem 0 0.5rem 1rem;
-  margin-bottom: 2rem;
-  border-radius: 0.3rem;
-  font-weight: 600;
-
-  @include breakpoint(mobile) {
-    padding: 1rem;
-    top: 110;
-  }
-
-  @include breakpoint(tab-landscape-up) {
-    top: 143px;
+.tableTitle {
+  position: static;
+  background-color: #4d5364 !important;
+  color: $white;
+  font-size: 2rem;
+  border-radius: 3px;
+  border: none !important;
+  height: 80px;
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 1rem;
   }
 }
