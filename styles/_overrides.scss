@@ -82,6 +82,25 @@ button:focus:not(:focus-visible) {
     padding: 0.5rem 1rem;
   }
 
+  &.productlist-table {
+    thead {
+      th {
+        &.bg-fix {
+          background: #fff !important;
+          border: none;
+          border-top: 0.4px solid #c0bfbf !important;
+          border-bottom: 0.4px solid #c0bfbf !important;
+          &:first-child {
+            border-left: 0.4px solid #c0bfbf !important;
+          }
+          &:last-child {
+            border-right: 0.4px solid #c0bfbf !important;
+          }
+        }
+      }
+    }
+  }
+
   thead {
     user-select: none;
     position: sticky;

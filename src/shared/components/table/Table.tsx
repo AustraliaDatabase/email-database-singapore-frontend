@@ -102,7 +102,7 @@ const Table = (props: ITable) => {
       ) : (
         <>
           <div className={styles.wrap}>
-            <table className="table table-striped">
+            <table className="table table-striped productlist-table">
               <thead>
                 {!isProductPage && (
                   <>
@@ -161,8 +161,8 @@ const Table = (props: ITable) => {
                     </tr>
                   </>
                 )}
-                <tr>
-                  <th>
+                <tr className={styles.tableField}>
+                  {/* <th>
                     <input
                       type="text"
                       // @ts-ignore
@@ -171,9 +171,9 @@ const Table = (props: ITable) => {
                         setSearchText(event.target.value);
                       }}
                     />
-                  </th>
+                  </th> */}
                   {columns.map((element: string, index: number) => {
-                    return <th key={`col_${index}`}>{element}</th>;
+                    return <th className="bg-fix" key={`col_${index}`}>{element}</th>;
                   })}
                 </tr>
               </thead>
