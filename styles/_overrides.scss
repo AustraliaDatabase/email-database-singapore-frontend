@@ -395,3 +395,15 @@ button:focus:not(:focus-visible) {
     }
   }
 }
+
+.faq-accordion {
+  .accordion-item {
+    button {
+      padding: 0;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+}
