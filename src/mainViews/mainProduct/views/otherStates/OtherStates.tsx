@@ -21,7 +21,7 @@ const OtherStates = (props: IOtherStatesView) => {
 
   const numColumns = 3;
   const columnSize = Math.ceil(otherStateList?.length / numColumns);
-  console.log(otherStateList);
+
   useEffect(() => {
     const sortedList = currentObject?.allList?.sort((a, b) => {
         let fa = a.name.toLowerCase(),

@@ -107,3 +107,24 @@
     text-align: center;
   }
 }
+
+.title {
+  color: $primary;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+}
+
+.description {
+  color: $secondary;
+}

@@ -16,7 +16,7 @@ const Faqs = (props: IFaqsView) => {
 
   return (
     <>
-      <div className={styles.questionTitle}>Frequently Asked Questions</div>
+      <h2 className={styles.questionTitle}>Frequently Asked Questions</h2>
       <div className={styles.faqs}>
         <Col xs={10} className="mx-auto">
           {description && (

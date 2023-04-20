@@ -437,8 +437,6 @@ export const getB2BPricingByContacts = (value: number, percentValue: number) => 
   const { firstRecord, lastRecord, fistPrice, lastPrice } =
     getFirstAndLastRow(value);
 
-  console.log("firstRecord", firstRecord);
-
   const percent = getPercent(firstRecord, lastRecord, value);
 
   const price = getPrice(fistPrice, lastPrice, percent) * percentValue;
