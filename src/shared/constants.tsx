@@ -3,24 +3,24 @@ import { IPackages } from "./interface";
 
 export const COLUMNS_TABLE = [
   "Contact Names",
-  "Direct Email Address",
-  "Fax numbers",
-  "Office Phone Numbers",
+  "Email Address",
+  "Fax",
+  "Office Phone",
   "Companies",
   "Addresses",
-  "Linkedin Profiles",
-  "Email Database Price",
-  "Complete Database Price",
+  // "Linkedin Profiles",
+  "Email Package",
+  "Complete Package",
 ];
 
 export const TABLE_ATTRIBUTES = {
-  firstName: "firstName",
+  // firstName: "firstName",
   emailAddress: "emailAddress",
   cellNumbers: "cellNumbers",
   faxNumber: "faxNumber",
   company: "company",
   address: "address",
-  linkedinProfile: "linkedinProfile",
+  // linkedinProfile: "linkedinProfile",
 };
 
 export const LAST_UPDATE_DATE_WITHOUT_TEXT = "Jan 11,2023";

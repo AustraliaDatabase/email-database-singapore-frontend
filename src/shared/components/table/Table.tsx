@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { MagnifyingGlass } from "phosphor-react";
+import { Form } from "react-bootstrap";
 import { useWindowWidth } from "@react-hook/window-size";
 import classNames from "classnames";
 
 import { IMainProductInfo } from "../../../shared/interface";
-import styles from "./table.module.scss";
 import { numberWithCommas } from "../../InternalService";
 import { DATABASE_MAIN_TYPES } from "../../enums";
 import TableMobileView from "./components/tableMobileView/TableMobileView";
+import Button from "../button/Button";
+import styles from "./table.module.scss";
 
 interface ITable {
   columns: string[];
@@ -25,6 +28,7 @@ const Table = (props: ITable) => {
   const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(false);
   const [currentNumber, setCurrentNumber] = useState(-1);
+  const [scrollYPosition, setScrollYPosition] = useState(0);
 
   const pressRow = (number: number) => {
     setLoading(true);
@@ -84,6 +88,23 @@ const Table = (props: ITable) => {
     }
   }, [windowWidth]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const y = window.scrollY;
+      setScrollYPosition(y);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollBarPosition = (scrollYPosition: number) => {
+    if (scrollYPosition > 0) {
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <div className={classNames(styles.tableViewWrapper)}>
       {mobileViewport ? (
@@ -99,21 +120,90 @@ const Table = (props: ITable) => {
       ) : (
         <>
           <div className={styles.wrap}>
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>
-                    <input
+            <table className="table productlist-table">
+              <thead
+                className={classNames({
+                  [styles.premadeTableHead]: isProductPage == false,
+                })}
+              >
+                {!isProductPage && (
+                  <>
+                    <tr className={styles.rowStyles}>
+                      <th
+                        className={styles.tableTitle}
+                        colSpan={columns.length + 1}
+                      >
+                        <div>Job Title</div>
+                      </th>
+                    </tr>
+                    <tr className={styles.rowStyles}>
+                      <th
+                        colSpan={(columns.length + 1) / 2}
+                        className={classNames(
+                          styles.tableFillter,
+                          styles.leftFillter
+                        )}
+                      >
+                        <div>
+                          <span>Job Level</span>
+                          <Form.Select
+                            className={styles.select}
+                            aria-label="category select"
+                          >
+                            <option>Select Category</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Engineering">Engineering</option>
+                          </Form.Select>
+                        </div>
+                      </th>
+                      <th
+                        colSpan={(columns.length + 1) / 2}
+                        className={styles.tableFillter}
+                      >
+                        <div className={styles.searchWrapper}>
+                          <span>Name</span>
+                          <div className={styles.searchInput}>
+                            <input
+                              type="text"
+                              placeholder={
+                                // @ts-ignore
+                                getPlaceHoderText?.[type] || "Search State"
+                              }
+                              onChange={(event) => {
+                                setSearchText(event.target.value);
+                                scrollBarPosition(scrollYPosition);
+                              }}
+                            />
+                          </div>
+                          <Button className={styles.searchButton}>
+                            <MagnifyingGlass size={20} />
+                          </Button>
+                        </div>
+                      </th>
+                    </tr>
+                  </>
+                )}
+                <tr className={styles.tableField}>
+                  {/*<th className={isProductPage ? "" : "bg-fix"}>
+                     <input
                       type="text"
                       // @ts-ignore
                       placeholder={getPlaceHoderText?.[type] || "Search State"}
                       onChange={(event) => {
                         setSearchText(event.target.value);
                       }}
-                    />
-                  </th>
+                    /> 
+                  </th>*/}
                   {columns.map((element: string, index: number) => {
-                    return <th key={`col_${index}`}>{element}</th>;
+                    return (
+                      <th
+                        className={isProductPage ? "" : "bg-fix"}
+                        key={`col_${index}`}
+                      >
+                        {element}
+                      </th>
+                    );
                   })}
                 </tr>
               </thead>
@@ -160,11 +250,24 @@ const Table = (props: ITable) => {
                             onClick={() => {
                               pressRow(index);
                             }}
-                            className={styles.linkCity}
+                            className={classNames({
+                              [styles.linkCity]: isProductPage == true,
+                              [styles.normalLink]: isProductPage == false,
+                            })}
                           >
                             {element.name}
                           </b>
                         </a>
+                        <div
+                          // dynamic badge color
+                          style={{
+                            background: `#00a2e226`,
+                            color: `#00A2E2`,
+                          }}
+                          className={styles.category}
+                        >
+                          Finance
+                        </div>
                       </td>
 
                       {Object.keys(attributesSet).map((value, columnIndex) => {
@@ -175,24 +278,28 @@ const Table = (props: ITable) => {
                         );
                       })}
                       <td>
-                        {element?.price?.list?.length > 2
-                          ? `$${numberWithCommas(
-                              element?.price?.list?.[1]?.price
-                            )}`
-                          : element?.price?.list?.[0]?.price &&
-                            `$${numberWithCommas(
-                              element?.price?.list?.[0]?.price
-                            )}`}
+                        <b>
+                          {element?.price?.list?.length > 2
+                            ? `$${numberWithCommas(
+                                element?.price?.list?.[1]?.price
+                              )}`
+                            : element?.price?.list?.[0]?.price &&
+                              `$${numberWithCommas(
+                                element?.price?.list?.[0]?.price
+                              )}`}
+                        </b>
                       </td>
                       <td>
-                        {element?.price?.list?.length > 2
-                          ? `$${numberWithCommas(
-                              element?.price?.list?.[2]?.price
-                            )}`
-                          : element?.price?.list?.[1]?.price &&
-                            `$${numberWithCommas(
-                              element?.price?.list?.[1]?.price
-                            )}`}
+                        <b>
+                          {element?.price?.list?.length > 2
+                            ? `$${numberWithCommas(
+                                element?.price?.list?.[2]?.price
+                              )}`
+                            : element?.price?.list?.[1]?.price &&
+                              `$${numberWithCommas(
+                                element?.price?.list?.[1]?.price
+                              )}`}
+                        </b>
                       </td>
                     </tr>
                   );
