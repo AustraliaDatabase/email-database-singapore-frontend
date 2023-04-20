@@ -28,6 +28,7 @@ const Table = (props: ITable) => {
   const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(false);
   const [currentNumber, setCurrentNumber] = useState(-1);
+  const [scrollYPosition, setScrollYPosition] = useState(0);
 
   const pressRow = (number: number) => {
     setLoading(true);
@@ -87,6 +88,23 @@ const Table = (props: ITable) => {
     }
   }, [windowWidth]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const y = window.scrollY;
+      setScrollYPosition(y);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollBarPosition = (scrollYPosition: number) => {
+    if (scrollYPosition > 0) {
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <div className={classNames(styles.tableViewWrapper)}>
       {mobileViewport ? (
@@ -103,7 +121,11 @@ const Table = (props: ITable) => {
         <>
           <div className={styles.wrap}>
             <table className="table productlist-table">
-              <thead>
+              <thead
+                className={classNames({
+                  [styles.premadeTableHead]: isProductPage == false,
+                })}
+              >
                 {!isProductPage && (
                   <>
                     <tr className={styles.rowStyles}>
@@ -150,6 +172,7 @@ const Table = (props: ITable) => {
                               }
                               onChange={(event) => {
                                 setSearchText(event.target.value);
+                                scrollBarPosition(scrollYPosition);
                               }}
                             />
                           </div>
@@ -236,7 +259,7 @@ const Table = (props: ITable) => {
                           // dynamic badge color
                           style={{
                             background: `#00a2e226`,
-                            color: `#00A2E2`
+                            color: `#00A2E2`,
                           }}
                           className={styles.category}
                         >

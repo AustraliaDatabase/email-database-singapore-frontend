@@ -7,7 +7,7 @@
     overflow: auto;
   }
   table {
-    thead {
+    .premadeTableHead {
       &::before {
         content: "";
         position: absolute;
