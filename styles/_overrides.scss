@@ -92,9 +92,11 @@ button:focus:not(:focus-visible) {
           border-bottom: 0.4px solid #c0bfbf !important;
           &:first-child {
             border-left: 0.4px solid #c0bfbf !important;
+            border-radius: 4px 0 0 4px;
           }
           &:last-child {
             border-right: 0.4px solid #c0bfbf !important;
+            border-radius: 0 4px 4px 0;
           }
         }
       }

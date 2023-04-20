@@ -60,7 +60,7 @@ const setupInterceptors = () => {
               "Bearer " + id_token;
 
             // Refresh page
-            // window.location.reload();
+            window.location.reload();
           }
 
           return axiosInstance(originalConfig);

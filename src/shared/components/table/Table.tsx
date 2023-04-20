@@ -86,7 +86,7 @@ const Table = (props: ITable) => {
       setMobileViewport(false);
     }
   }, [windowWidth]);
-  
+
   return (
     <div className={classNames(styles.tableViewWrapper)}>
       {mobileViewport ? (
@@ -162,19 +162,22 @@ const Table = (props: ITable) => {
                   </>
                 )}
                 <tr className={styles.tableField}>
-                  {/* <th>
-                    <input
+                  <th className={isProductPage ? "" : "bg-fix"}>
+                    {/* <input
                       type="text"
                       // @ts-ignore
                       placeholder={getPlaceHoderText?.[type] || "Search State"}
                       onChange={(event) => {
                         setSearchText(event.target.value);
                       }}
-                    />
-                  </th> */}
+                    /> */}
+                  </th>
                   {columns.map((element: string, index: number) => {
                     return (
-                      <th className="bg-fix" key={`col_${index}`}>
+                      <th
+                        className={isProductPage ? "" : "bg-fix"}
+                        key={`col_${index}`}
+                      >
                         {element}
                       </th>
                     );
