@@ -3,9 +3,9 @@ import { IPackages } from "./interface";
 
 export const COLUMNS_TABLE = [
   "Contact Names",
-  "Email Address",
-  "Fax",
-  "Office Phone",
+  "Email Addresses",
+  "Faxes",
+  "Office Phones",
   "Companies",
   "Addresses",
   // "Linkedin Profiles",
