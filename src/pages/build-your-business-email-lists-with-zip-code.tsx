@@ -8,8 +8,8 @@ const BuildBusinessListWithZipCode = () => {
   return (
     <PublicLayout>
       <NextSeo
-        title="Email Datas - Build your business email lists with zip code"
-        description=""
+        title="Generate Targeted Business Email Lists by Zip Code | Email Datas"
+        description="Email Datas provides a reliable solution to build your business email lists based on zip codes.Reach out to your potential customers"
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/build-your-business-email-lists-with-zip-code`}
       />
       <BuilB2bListWithZipMainView />

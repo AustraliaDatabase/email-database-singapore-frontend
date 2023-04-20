@@ -13,10 +13,10 @@ const DatabasePricing = (props: IDatabasePricing) => {
   const { title, list } = props;
 
   const getSeeMoreLinks: any = {
-    "By States": "/pre-made-list/job-titles",
-    "Job Titles": "/pre-made-list/job-titles",
-    Industries: "/pre-made-list/industries",
-    International: "/pre-made-list/states",
+    "By States": "/by-us-states",
+    "Job Titles": "/job-titles",
+    Industries: "/industries",
+    International: "/international",
   };
 
   return (

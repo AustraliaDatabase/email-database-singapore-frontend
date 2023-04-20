@@ -32,7 +32,7 @@ const NavigationLink = (props: IHeaderLinks) => {
     "/industries": "/menu-icons/industries.png",
     "/target": "/menu-icons/target.png",
     "/international": "/menu-icons/international.png",
-    "/by-zip-code": "/menu-icons/zip-code.png",
+    "/build-your-business-email-lists-with-zip-code": "/menu-icons/zip-code.png",
   };
 
   return (

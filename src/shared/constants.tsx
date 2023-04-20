@@ -73,25 +73,25 @@ export const DATA_TYPE_TO_BREADCRUMB_NAME = {
 export const GTM_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID;
 
 const JOB_LIST = [
-  { name: "CEO", url: "/ceo" },
-  { name: "CFO", url: "/cfo" },
-  { name: "Accounts Payable", url: "/Accounts-Payable" },
-  { name: "Accounts Receivable", url: "/accounts-receivable" },
+  { name: "CEO", url: "/ceo-email-lists" },
+  { name: "CFO", url: "/cfo-email-lists" },
+  { name: "Accounts Payable", url: "/accounts-payable-email-lists" },
+  { name: "Accounts Receivable", url: "/account-receivable-email-list" },
 ];
 
 const INDUSTRY_LIST = [{ name: "Architects", url: "/architects" }];
 
 const BY_STATES = [
-  { name: "California", url: "/california" },
-  { name: "Florida", url: "/florida" },
-  { name: "New York", url: "/new-york" },
-  { name: "Texas", url: "/texas" },
+  { name: "California", url: "/california-email-list" },
+  { name: "Florida", url: "/florida-email-list" },
+  { name: "New York", url: "/new-york-email-list" },
+  { name: "Texas", url: "/texas-email-list" },
 ];
 
 const INTERNATIONAL_LIST = [
-  { name: "Canada", url: "/canada" },
-  { name: "UAE", url: "/uae" },
-  { name: "Europe", url: "/europe" },
+  { name: "Canada", url: "/canada-email-list" },
+  { name: "UAE", url: "/list-of-companies-in-uae-with-email-address" },
+  // { name: "Europe", url: "/europe" },
 ];
 
 export const FOOTER_MENUS = {
@@ -156,8 +156,22 @@ export const DATA_FIELDS = [
   "First Name;Last Name;Job Title;Email Address;Cell Number;Linkedin Profile;Company;Website;Phone Number;Fax Number;Address;City;State;Postal Code;Country;No of Employees;Revenue;Industry;SIC Code",
 ];
 
-
 export const PRICE_PACKAGE_TYPES: IPackages = {
   0: "Email Database Package",
   1: "Complete Database Package",
 };
+
+export const SITE_REVIEW_LIST = [
+  { title: "EmailDatas VS BookYourData", url: "/alternative-for-bookyourdata" },
+  { title: "EmailDatas VS InfoUSA", url: "/alternative-for-infousa" },
+  { title: "EmailDatas VS LeadGenius", url: "/alternative-for-leadgenius-com" },
+  { title: "EmailDatas VS DatabaseUSA", url: "/databaseusa" },
+  { title: "EmailDatas VS Data.com", url: "/data-com" },
+  { title: "EmailDatas VS Experian", url: "/emaildatas-vs-experian" },
+  { title: "EmailDatas VS ExactData", url: "/exactdata-review" },
+  { title: "EmailDatas VS InsideView", url: "/insideview-review" },
+  { title: "EmailDatas VS Lead411", url: "/lead411-review" },
+  { title: "EmailDatas VS SalesGenie", url: "/salesgenie-review" },
+  { title: "EmailDatas VS ListGiant", url: "/listgiant-review" },
+  { title: "EmailDatas VS ZoomInfo", url: "/zoominfo-review" },
+];

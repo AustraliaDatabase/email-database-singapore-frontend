@@ -80,8 +80,8 @@ export const CURRENT_OBJECT_HOME = {
       description:
         "Find the right decision-makers for your B2B marketing campaign with the accurate job title and level information provided by EmailDatas",
       label: "B2B Pricing starting at $98",
-      link: "/job-title",
-      asTag: "h3",
+      link: "/job-titles",
+      asTag: "h2",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_B2B_EMAILS,
     },
     {
@@ -89,8 +89,8 @@ export const CURRENT_OBJECT_HOME = {
       description:
         "Our email lists can be easily sorted by US City, State, Zip code, and other criteria to ensure that you reach the right audience in the right place. ",
       label: "Realtor Pricing Starts at $89",
-      link: "/location",
-      asTag: "h3",
+      link: "/by-us-states",
+      asTag: "h2",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_REALTORS,
     },
     {
@@ -99,7 +99,7 @@ export const CURRENT_OBJECT_HOME = {
         "Buy verified industry-specific mailing lists to reach relevant contacts and market to businesses in your field. ",
       label: "Pricing of Professions Starts at $116",
       link: "/industries",
-      asTag: "h3",
+      asTag: "h2",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_PROFESSION,
     },
     {
@@ -108,7 +108,7 @@ export const CURRENT_OBJECT_HOME = {
         "Buy targeted email lists with country-specific contact data to connect with decision-makers and find leads based on job level.",
       label: "Pricing of Professions Starts at $116",
       link: "/international",
-      asTag: "h3",
+      asTag: "h2",
       cardType: PRODUCT_MAIN_TYPE_ENUM.BY_PROFESSION,
     },
     // {

@@ -23,7 +23,7 @@ export const HEADER_LINKS: IHeaderLinks[] = [
         route: "/target",
       },
       { name: "International", route: "/international" },
-      { name: "Zip Code", route: "/by-zip-code" },
+      { name: "Zip Code", route: "/build-your-business-email-lists-with-zip-code" },
     ],
   },
   { name: "Contact Us", route: "/contact-us" },

@@ -16,28 +16,43 @@ interface IBeneifitView {
 const dynamicBenefitList = (currentObject: IMainProductInfo) => [
   {
     title: `Email Marketing`,
-    description: `Email marketing is crucial for better brand marketing, with 90% of sales coming from it. Our accurate ${currentObject?.name} email marketing lists offer 95% deliverability, ensuring a successful campaign. Target a broad range of customers and improve your brand's value instantly.`,
+    description: `Are you looking to enhance your brand marketing strategy? Look no further than email marketing, which drives up to 90% of sales for many businesses. With our ${
+      currentObject?.name
+    } email marketing lists, boasting a count of ${numberWithCommas(
+      currentObject?.stats?.emailAddress?.toString() || ""
+    )}, we offer a deliverability rate of 95%, ensuring a successful campaign. `,
   },
   {
     title: `Telemarketing`,
-    description: `EmailDatas offers high-quality ${numberWithCommas(
+    description: `
+    We offer high-quality telemarketing lists, including ${numberWithCommas(
       currentObject?.stats?.phoneNumber?.toString() || "0"
-    )} of telemarketing lists at an affordable rate for companies in the USA. By utilizing our ${
+    )} mobile numbers for potential customers, all at an affordable rate for businesses in the USA. Our ${
       currentObject?.name
-    } lists, you can easily obtain the mobile numbers of potential customers and directly contact them for a fast response. Simplify your marketing efforts and enhance your business with our services.`,
+    } lists provide a straightforward and effective approach, allowing you to directly contact prospects for a fast response. 
+    `,
   },
   {
     title: `Fax Marketing`,
-    description: `With our reliable and accurate list of names, addresses, and fax numbers, you can quickly send information to your target audience without waiting for a response. Our list is affordable and easy to use, helping to streamline your marketing efforts and achieve success.
+    description: `
+    If you're specifically targeting ${currentObject?.name}, our list of names, addresses, and fax numbers is the perfect solution. With a count of ${currentObject?.stats?.faxNumber} fax numbers for ${currentObject?.name}, you can quickly and easily send information to key decision-makers without waiting for a response. 
     `,
   },
   {
     title: `SMS Marketing`,
-    description: `With our email lists, you can easily target a broad range of potential customers, increasing the chances of a successful marketing campaign. Our lists include essential data fields such as name, email ID, phone number, company name, and office address.`,
+    description: `Looking for a comprehensive approach to reach potential customers? Look no further than our email lists, featuring a count of ${numberWithCommas(
+      currentObject?.stats?.phoneNumber?.toString() || "0"
+    )} phone numbers to help you connect with a diverse range of prospects. `,
   },
   {
     title: `Direct Mailing Lists`,
-    description: ` Our Direct Mailing Lists offer a convenient way to reach a vast audience of potential customers. By using our email lists, you can increase the chances of having a successful marketing campaign.`,
+    description: `If you're looking to specifically target ${
+      currentObject?.name
+    }, our Direct Mailing Lists can help. With a count of ${numberWithCommas(
+      currentObject?.stats?.address?.toString() || "0"
+    )}  addresses for ${
+      currentObject?.name
+    }, you can conveniently reach top-level executives and increase your chances of a successful marketing campaign.`,
   },
 ];
 
@@ -60,7 +75,9 @@ const BeneifitView = (props: IBeneifitView) => {
         <div className={styles.beneifitDescription}>
           {currentObject
             ? `Discover the full potential of our ${currentObject?.name}
-          ${DATA_TYPE_TO_TITLE_FOR_CONTENT[currentObject?.type]} List! Our comprehensive
+          ${
+            DATA_TYPE_TO_TITLE_FOR_CONTENT[currentObject?.type]
+          } List! Our comprehensive
           directory includes verified email IDs, phone numbers, company names,
           office addresses, and other key details.`
             : beneifitInfo?.description}

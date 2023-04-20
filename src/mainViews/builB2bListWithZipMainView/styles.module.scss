@@ -3,6 +3,7 @@
 
 .wrapper {
   padding-top: 180px;
+  margin-top: 3rem;
   @include breakpoint(tablet) {
     padding-top: 100px;
   }
