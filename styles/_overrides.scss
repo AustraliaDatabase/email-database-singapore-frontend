@@ -86,6 +86,9 @@ button:focus:not(:focus-visible) {
     thead {
       th {
         &.bg-fix {
+          height: 57px;
+          vertical-align: middle;
+          text-align: center;
           background: #fff !important;
           border: none;
           border-top: 0.4px solid #c0bfbf !important;
@@ -93,6 +96,7 @@ button:focus:not(:focus-visible) {
           &:first-child {
             border-left: 0.4px solid #c0bfbf !important;
             border-radius: 4px 0 0 4px;
+            text-align: start;
           }
           &:last-child {
             border-right: 0.4px solid #c0bfbf !important;

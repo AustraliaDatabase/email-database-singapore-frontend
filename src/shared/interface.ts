@@ -169,7 +169,7 @@ export interface IStats {
   firstName?: number;
   emailAddress?: number;
   cellNumbers?: number;
-  linkedinProfile: number;
+  linkedinProfile?: number;
   company: number;
   website: number;
   phoneNumber: number;

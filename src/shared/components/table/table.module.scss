@@ -27,7 +27,7 @@
       background: #fe772840 !important;
       &.tableTitle {
         position: static;
-        background-color: $secondary !important;
+        background-color: #4d5364 !important;
         color: $white;
         font-size: 2rem;
         border-radius: 3px;
@@ -131,6 +131,10 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.normalLink {
+  color: $secondary;
 }
 
 .linkCity {

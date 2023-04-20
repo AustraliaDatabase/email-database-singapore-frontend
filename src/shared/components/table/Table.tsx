@@ -185,16 +185,16 @@ const Table = (props: ITable) => {
                   </>
                 )}
                 <tr className={styles.tableField}>
-                  <th className={isProductPage ? "" : "bg-fix"}>
-                    {/* <input
+                  {/*<th className={isProductPage ? "" : "bg-fix"}>
+                     <input
                       type="text"
                       // @ts-ignore
                       placeholder={getPlaceHoderText?.[type] || "Search State"}
                       onChange={(event) => {
                         setSearchText(event.target.value);
                       }}
-                    /> */}
-                  </th>
+                    /> 
+                  </th>*/}
                   {columns.map((element: string, index: number) => {
                     return (
                       <th
@@ -250,7 +250,10 @@ const Table = (props: ITable) => {
                             onClick={() => {
                               pressRow(index);
                             }}
-                            className={styles.linkCity}
+                            className={classNames({
+                              [styles.linkCity]: isProductPage == true,
+                              [styles.normalLink]: isProductPage == false,
+                            })}
                           >
                             {element.name}
                           </b>
