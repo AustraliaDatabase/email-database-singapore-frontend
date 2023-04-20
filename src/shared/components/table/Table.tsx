@@ -86,7 +86,7 @@ const Table = (props: ITable) => {
       setMobileViewport(false);
     }
   }, [windowWidth]);
-
+  
   return (
     <div className={classNames(styles.tableViewWrapper)}>
       {mobileViewport ? (
@@ -102,7 +102,7 @@ const Table = (props: ITable) => {
       ) : (
         <>
           <div className={styles.wrap}>
-            <table className="table table-striped productlist-table">
+            <table className="table productlist-table">
               <thead>
                 {!isProductPage && (
                   <>
@@ -173,7 +173,11 @@ const Table = (props: ITable) => {
                     />
                   </th> */}
                   {columns.map((element: string, index: number) => {
-                    return <th className="bg-fix" key={`col_${index}`}>{element}</th>;
+                    return (
+                      <th className="bg-fix" key={`col_${index}`}>
+                        {element}
+                      </th>
+                    );
                   })}
                 </tr>
               </thead>
@@ -225,6 +229,7 @@ const Table = (props: ITable) => {
                             {element.name}
                           </b>
                         </a>
+                        <div className={styles.category}>Finance</div>
                       </td>
 
                       {Object.keys(attributesSet).map((value, columnIndex) => {
