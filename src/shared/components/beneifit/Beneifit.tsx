@@ -90,10 +90,7 @@ const BeneifitView = (props: IBeneifitView) => {
           return (
             <Col key={index} xs={12} lg={6} className="mt-4">
               <Card>
-                <div
-                  className={styles.title}
-                  dangerouslySetInnerHTML={{ __html: benefit.title }}
-                />
+                <h3 className={styles.title}>{benefit.title}</h3>
                 <div
                   className={styles.description}
                   dangerouslySetInnerHTML={{ __html: benefit.description }}

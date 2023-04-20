@@ -22,7 +22,7 @@ const FaqList = (props: IFaqList) => {
           className="beneifit-accordion faq-accordion"
         >
           <Accordion.Item eventKey="" className="mb-0">
-            <Accordion.Header className="d-flex align-items-start">
+            <Accordion.Header as="h3" className="d-flex align-items-start">
               <h3 className={styles.title}>{faqItem.title}</h3>
               <div>
                 <CaretDown className="icon me-3" size={24} weight="bold" />
