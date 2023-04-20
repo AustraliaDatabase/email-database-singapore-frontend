@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { MagnifyingGlass } from "phosphor-react";
+import { Form } from "react-bootstrap";
 import { useWindowWidth } from "@react-hook/window-size";
 import classNames from "classnames";
 
 import { IMainProductInfo } from "../../../shared/interface";
-import styles from "./table.module.scss";
 import { numberWithCommas } from "../../InternalService";
 import { DATABASE_MAIN_TYPES } from "../../enums";
 import TableMobileView from "./components/tableMobileView/TableMobileView";
 import Button from "../button/Button";
-import { MagnifyingGlass } from "phosphor-react";
-import { Dropdown, DropdownButton } from "react-bootstrap";
+import styles from "./table.module.scss";
 
 interface ITable {
   columns: string[];
@@ -111,7 +111,7 @@ const Table = (props: ITable) => {
                         className={styles.tableTitle}
                         colSpan={columns.length + 1}
                       >
-                        Job Title
+                        <div>Job Title</div>
                       </th>
                     </tr>
                     <tr className={styles.rowStyles}>
@@ -124,20 +124,15 @@ const Table = (props: ITable) => {
                       >
                         <div>
                           <span>Job Level</span>
-                          <DropdownButton
-                            id="dropdownlabel"
-                            title="Dropdown button"
+                          <Form.Select
+                            className={styles.select}
+                            aria-label="category select"
                           >
-                            <Dropdown.Item href="#/action-1">
-                              Marketing
-                            </Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">
-                              List one
-                            </Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">
-                              List two
-                            </Dropdown.Item>
-                          </DropdownButton>
+                            <option>Select Category</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Engineering">Engineering</option>
+                          </Form.Select>
                         </div>
                       </th>
                       <th
@@ -145,7 +140,7 @@ const Table = (props: ITable) => {
                         className={styles.tableFillter}
                       >
                         <div className={styles.searchWrapper}>
-                          Name
+                          <span>Name</span>
                           <div className={styles.searchInput}>
                             <input
                               type="text"

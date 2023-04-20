@@ -11,10 +11,18 @@
     &.tableTitle {
       background-color: $secondary !important;
       color: $white;
-      padding: 40px 24px;
       font-size: 2rem;
       border-radius: 3px;
       border: none !important;
+      height: 80px;
+      div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 0 1rem;
+      }
     }
 
     &.tableFillter {
@@ -23,16 +31,15 @@
     }
 
     &.leftFillter {
-      z-index: 10 !important;
       div {
         display: flex;
         align-items: center;
-        justify-content: start;
         gap: 10px;
-        button {
-          background-color: $white;
-          color: $secondary;
-          border: 1px solid rgba($color: $secondary, $alpha: .15);
+        span {
+          color: #535353;
+        }
+        .select {
+          max-width: 180px;
         }
       }
     }
@@ -43,6 +50,9 @@
       justify-content: center;
       gap: 10px;
       justify-content: end;
+      span {
+        color: #535353;
+      }
     }
     .searchInput {
       width: 300px;
