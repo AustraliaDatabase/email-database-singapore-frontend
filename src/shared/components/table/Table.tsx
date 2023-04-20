@@ -121,7 +121,7 @@ const Table = (props: ITable) => {
         <>
           <div className={styles.wrap}>
             <div className={styles.tableTitle}>
-              <div>Job Title</div>
+              <div>Databases By Job Title</div>
             </div>
             <table className="table productlist-table">
               <thead
