@@ -1,0 +1,52 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.listsWrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  width: 75%;
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  a {
+    transition: 0.2s all ease;
+    &:hover {
+      transform: translateY(-1px);
+    }
+    .singleReviewList {
+      height: 90px;
+      background: #f4fcff;
+      border: 2px solid #00a2e2;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        font-size: 1.25rem;
+        font-weight: 600;
+        &:first-child {
+          width: 50px;
+          height: 50px;
+          background-color: $primary;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          svg {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

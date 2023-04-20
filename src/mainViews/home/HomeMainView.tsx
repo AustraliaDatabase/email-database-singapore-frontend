@@ -63,10 +63,8 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
-      <section>
-        <Container>
+      <section className="ghost">
           <SiteReviews />
-        </Container>
       </section>
     </>
   );
