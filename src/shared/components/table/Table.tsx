@@ -275,24 +275,28 @@ const Table = (props: ITable) => {
                         );
                       })}
                       <td>
-                        {element?.price?.list?.length > 2
-                          ? `$${numberWithCommas(
-                              element?.price?.list?.[1]?.price
-                            )}`
-                          : element?.price?.list?.[0]?.price &&
-                            `$${numberWithCommas(
-                              element?.price?.list?.[0]?.price
-                            )}`}
+                        <b>
+                          {element?.price?.list?.length > 2
+                            ? `$${numberWithCommas(
+                                element?.price?.list?.[1]?.price
+                              )}`
+                            : element?.price?.list?.[0]?.price &&
+                              `$${numberWithCommas(
+                                element?.price?.list?.[0]?.price
+                              )}`}
+                        </b>
                       </td>
                       <td>
-                        {element?.price?.list?.length > 2
-                          ? `$${numberWithCommas(
-                              element?.price?.list?.[2]?.price
-                            )}`
-                          : element?.price?.list?.[1]?.price &&
-                            `$${numberWithCommas(
-                              element?.price?.list?.[1]?.price
-                            )}`}
+                        <b>
+                          {element?.price?.list?.length > 2
+                            ? `$${numberWithCommas(
+                                element?.price?.list?.[2]?.price
+                              )}`
+                            : element?.price?.list?.[1]?.price &&
+                              `$${numberWithCommas(
+                                element?.price?.list?.[1]?.price
+                              )}`}
+                        </b>
                       </td>
                     </tr>
                   );
