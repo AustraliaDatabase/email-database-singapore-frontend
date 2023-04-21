@@ -4,6 +4,7 @@ import { CaretDown, Target } from "phosphor-react";
 import { FaqItems } from "./interface";
 import styles from "./styles.module.scss";
 import { Accordion } from "react-bootstrap";
+import classNames from "classnames";
 
 interface IFaqList {
   faqItem: FaqItems;
@@ -19,7 +20,7 @@ const FaqList = (props: IFaqList) => {
         </div>
         <Accordion
           defaultActiveKey="0"
-          className="beneifit-accordion faq-accordion"
+          className={classNames("beneifit-accordion faq-accordion", styles.accordion)}
         >
           <Accordion.Item eventKey="" className="mb-0">
             <Accordion.Header as="h3" className="d-flex align-items-start">
