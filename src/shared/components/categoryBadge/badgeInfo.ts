@@ -68,12 +68,6 @@ const getBadgeInfo: {
         background: "#EF3631",
         fill: true,
     },
-    [JOB_TITLE_TYPES.DIRECTOR_LEVEL_AND_FINANCE]: {
-        category: "Director Level & Finance",
-        color: "white",
-        background: "#F58A63",
-        fill: true,
-    },
     [JOB_TITLE_TYPES.DIRECTOR_LEVEL_AND_IT]: {
         category: "Director Level & IT",
         color: "white",

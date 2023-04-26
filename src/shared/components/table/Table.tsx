@@ -260,7 +260,11 @@ const Table = (props: ITable) => {
                           </b>
                         </a>
                         {!isProductPage && (
-                          <CategoryBadge category={COUNTRY_TYPES.AUSTRALIA_AND_NEW_ZEALAND} />
+                          <CategoryBadge
+                            category={
+                              JOB_TITLE_TYPES.DIRECTOR_LEVEL_AND_FINANCE
+                            }
+                          />
                         )}
                       </td>
 
