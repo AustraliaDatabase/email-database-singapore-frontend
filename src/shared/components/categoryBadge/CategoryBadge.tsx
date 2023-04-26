@@ -27,7 +27,7 @@ const CategoryBadge = (props: ICategoryBadge) => {
         style={{
           color: `${color}`,
           backgroundColor: `${fill ? background : ""}`,
-          borderColor: `${fill ? "" : color}`,
+          border: `${fill ? "" : `1px solid ${color}`}`,
         }}
       >
         {badgeValue}
