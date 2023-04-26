@@ -259,17 +259,9 @@ const Table = (props: ITable) => {
                             {element.name}
                           </b>
                         </a>
-                        <CategoryBadge category={JOB_TITLE_TYPES.C_LEVEL} />
-                        {/* <div
-                          // dynamic badge color
-                          style={{
-                            background: `#00a2e226`,
-                            color: `#00A2E2`,
-                          }}
-                          className={styles.category}
-                        >
-                          Finance
-                        </div> */}
+                        {!isProductPage && (
+                          <CategoryBadge category={JOB_TITLE_TYPES.C_LEVEL} />
+                        )}
                       </td>
 
                       {Object.keys(attributesSet).map((value, columnIndex) => {
