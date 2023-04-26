@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 
 import getBadgeInfo from "./badgeInfo";
 import styles from "./styles.module.scss";
@@ -21,9 +20,6 @@ const CategoryBadge = (props: ICategoryBadge) => {
   return (
     <div className={styles.badgeWrapper}>
       <span
-        className={classNames({
-          [styles.border]: fill,
-        })}
         style={{
           color: `${color}`,
           backgroundColor: `${fill ? background : ""}`,
