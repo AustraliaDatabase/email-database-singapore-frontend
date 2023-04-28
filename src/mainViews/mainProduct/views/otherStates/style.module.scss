@@ -67,6 +67,12 @@
       color: $primary;
     }
   }
+
+  .column {
+    border-bottom: 1px solid $border-light;
+    border-right: 1px solid $border-light;
+  }
+
   & > div {
     &:nth-child(even) {
       .statesRow {
