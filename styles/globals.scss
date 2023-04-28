@@ -536,3 +536,7 @@ blockquote:after {
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
   border: 0.5px 0.5px 0.5px 0px solid $border-light;
 }
+
+.faq-accordion .accordion-item button {
+  justify-content: flex-start;
+}
