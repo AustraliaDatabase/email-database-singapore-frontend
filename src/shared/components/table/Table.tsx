@@ -111,6 +111,26 @@ const Table = (props: ITable) => {
     }
   };
 
+  const typeInfo: any = {
+    [DATABASE_MAIN_TYPES.JOB_TITLE]: {
+      title: "Databases By Job Title",
+      categoryHeader: "Job Level",
+      list: JOB_TITLE_TYPES,
+    },
+    [DATABASE_MAIN_TYPES.COMPANY_DATABASE]: {
+      title: "B2B Emails By US States",
+      categoryHeader: "",
+      list: [],
+    },
+    [DATABASE_MAIN_TYPES.COUNTRY]: {
+      title: "Databases By Countries",
+      categoryHeader: "Filter By Continents",
+      list: COUNTRY_TYPES,
+    },
+  };
+
+  const typeInfoObject = type && typeInfo?.[type];
+
   return (
     <div className={classNames(styles.tableViewWrapper)}>
       {mobileViewport ? (
@@ -127,7 +147,7 @@ const Table = (props: ITable) => {
         <>
           <div className={styles.wrap}>
             <div className={styles.tableTitle}>
-              <div>Databases By Job Title</div>
+              <div>{typeInfoObject?.title}</div>
             </div>
             <table className="table productlist-table">
               <thead
@@ -145,18 +165,26 @@ const Table = (props: ITable) => {
                           styles.leftFillter
                         )}
                       >
-                        <div>
-                          <span>Job Level</span>
-                          <Form.Select
-                            className={styles.select}
-                            aria-label="category select"
-                          >
-                            <option>Select Category</option>
-                            <option value="Marketing">Marketing</option>
-                            <option value="Finance">Finance</option>
-                            <option value="Engineering">Engineering</option>
-                          </Form.Select>
-                        </div>
+                        {Object.values(typeInfoObject?.list)?.length ? (
+                          <div>
+                            <span>{typeInfoObject?.categoryHeader}</span>
+                            <Form.Select
+                              className={styles.select}
+                              aria-label="category select"
+                            >
+                              <option>Select Category</option>
+                              {Object.values(typeInfoObject?.list).map(
+                                (value: any, index: number) => {
+                                  return (
+                                    <option key={index} value={value}>
+                                      {value}
+                                    </option>
+                                  );
+                                }
+                              )}
+                            </Form.Select>
+                          </div>
+                        ) : null}
                       </th>
                       <th
                         colSpan={(columns.length + 1) / 2}
@@ -259,7 +287,9 @@ const Table = (props: ITable) => {
                             {element.name}
                           </b>
                         </a>
-                        {!isProductPage && <CategoryBadge category={element?.type?.value} />}
+                        {!isProductPage && (
+                          <CategoryBadge category={element?.type?.value} />
+                        )}
                       </td>
 
                       {Object.keys(attributesSet).map((value, columnIndex) => {

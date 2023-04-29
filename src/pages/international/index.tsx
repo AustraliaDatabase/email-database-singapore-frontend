@@ -47,7 +47,7 @@ const AllOtherCountriesPage = (props: ISpecialDatabasePage) => {
               data={tableDataSet}
               attributesSet={TABLE_ATTRIBUTES}
               isProductPage={false}
-              type={DATABASE_MAIN_TYPES.INDUSTRY}
+              type={DATABASE_MAIN_TYPES.COUNTRY}
             />
           </Container>
         </section>

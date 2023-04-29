@@ -49,6 +49,7 @@ const CompanyByStatePage = (props: any) => {
               data={tableDataSet}
               isProductPage={false}
               attributesSet={TABLE_ATTRIBUTES}
+              type={DATABASE_MAIN_TYPES.COMPANY_DATABASE}
             />
           </Container>
         </section>

@@ -46,7 +46,7 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
               columns={COLUMNS_TABLE}
               data={tableDataSet}
               isProductPage={false}
-              type={DATABASE_MAIN_TYPES.REALTOR}
+              type={DATABASE_MAIN_TYPES.JOB_TITLE}
               attributesSet={TABLE_ATTRIBUTES}
             />
           </Container>
