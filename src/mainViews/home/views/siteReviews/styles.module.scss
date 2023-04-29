@@ -23,7 +23,7 @@
     .singleReviewList {
       height: 60px;
       background: #f4fcff;
-      border: 2px solid #00a2e2;
+      border: 2px solid $primary;
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -34,9 +34,6 @@
       span {
         font-size: 1rem;
         font-weight: 600;
-        @include breakpoint(mobile) {
-          font-size: 1rem;
-        }
         &:first-child {
           width: 40px;
           height: 40px;

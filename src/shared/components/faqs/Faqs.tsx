@@ -14,6 +14,29 @@ interface IFaqsView {
 const Faqs = (props: IFaqsView) => {
   const { faqsList, title, description } = props;
 
+  const numColumns = 2;
+  const columnSize = Math.ceil(faqsList?.length / numColumns);
+
+  const renderFaqs = (start: number, end: number) => {
+    return (
+      <>
+        {faqsList?.slice(start, end).map((faqItem, index) => {
+          return (
+            <div key={index} className={styles.faqsCol}>
+              <FaqList faqItem={faqItem} />
+            </div>
+          );
+        })}
+      </>
+    );
+  };
+
+  const faqsColumns = Array.from({ length: numColumns }, (_, i) => {
+    const start = i * columnSize;
+    const end = start + columnSize;
+    return renderFaqs(start, end);
+  });
+
   return (
     <>
       <h2 className={styles.questionTitle}>Frequently Asked Questions</h2>
@@ -28,15 +51,11 @@ const Faqs = (props: IFaqsView) => {
           <br />
         </Col>
         <Row>
-          {faqsList?.map((faqItem, index) => {
-            return (
-              <Col xs={12} lg={6} key={index}>
-                <div className={styles.faqsCol}>
-                  <FaqList faqItem={faqItem} />{" "}
-                </div>
-              </Col>
-            );
-          })}
+          {faqsColumns.map((column, index) => (
+            <Col xs={12} lg={6} key={index}>
+              {column}
+            </Col>
+          ))}
         </Row>
       </div>
     </>

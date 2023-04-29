@@ -1,0 +1,35 @@
+import React from "react";
+
+import getBadgeInfo from "./badgeInfo";
+import styles from "./styles.module.scss";
+
+interface ICategoryBadge {
+  category: string;
+}
+
+const CategoryBadge = (props: ICategoryBadge) => {
+  const { category } = props;
+
+  const {
+    color,
+    background,
+    fill,
+    category: badgeValue,
+  } = getBadgeInfo[category];
+
+  return (
+    <div className={styles.badgeWrapper}>
+      <span
+        style={{
+          color: `${color}`,
+          backgroundColor: `${fill ? background : ""}`,
+          border: `${fill ? "" : `1px solid ${color}`}`,
+        }}
+      >
+        {badgeValue}
+      </span>
+    </div>
+  );
+};
+
+export default CategoryBadge;

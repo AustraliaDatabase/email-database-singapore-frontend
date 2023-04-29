@@ -6,10 +6,16 @@ import classNames from "classnames";
 
 import { IMainProductInfo } from "../../../shared/interface";
 import { numberWithCommas } from "../../InternalService";
-import { DATABASE_MAIN_TYPES } from "../../enums";
+import {
+  DATABASE_MAIN_TYPES,
+  JOB_TITLE_TYPES,
+  COUNTRY_TYPES,
+} from "../../enums";
 import TableMobileView from "./components/tableMobileView/TableMobileView";
 import Button from "../button/Button";
 import styles from "./table.module.scss";
+import CategoryBadge from "../categoryBadge/CategoryBadge";
+import { Router } from "next/router";
 
 interface ITable {
   columns: string[];
@@ -253,16 +259,13 @@ const Table = (props: ITable) => {
                             {element.name}
                           </b>
                         </a>
-                        <div
-                          // dynamic badge color
-                          style={{
-                            background: `#00a2e226`,
-                            color: `#00A2E2`,
-                          }}
-                          className={styles.category}
-                        >
-                          Finance
-                        </div>
+                        {!isProductPage && (
+                          <CategoryBadge
+                            category={
+                              JOB_TITLE_TYPES.DIRECTOR_LEVEL_AND_FINANCE
+                            }
+                          />
+                        )}
                       </td>
 
                       {Object.keys(attributesSet).map((value, columnIndex) => {

@@ -1,0 +1,10 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.badgeWrapper {
+  font-size: 13px;
+  span {
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+  }
+}
