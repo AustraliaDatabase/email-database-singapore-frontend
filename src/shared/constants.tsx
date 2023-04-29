@@ -2,6 +2,7 @@ import { DATABASE_MAIN_TYPES } from "./enums";
 import { IPackages } from "./interface";
 
 export const COLUMNS_TABLE = [
+  "#",
   "Contact Names",
   "Email Addresses",
   "Faxes",
@@ -14,7 +15,7 @@ export const COLUMNS_TABLE = [
 ];
 
 export const TABLE_ATTRIBUTES = {
-  // firstName: "firstName",
+  firstName: "firstName",
   emailAddress: "emailAddress",
   cellNumbers: "cellNumbers",
   faxNumber: "faxNumber",

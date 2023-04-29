@@ -24,6 +24,7 @@
       }
     }
     th {
+      white-space: nowrap;
       background: #fe772840 !important;
       &.tableTitle {
         position: static;
@@ -95,12 +96,15 @@
           vertical-align: middle;
           overflow: hidden;
           &:first-child {
+            max-width: 900px !important;
             text-align: start;
             border-left: 5px solid $primary;
             border-radius: 4px 0 0 4px;
             display: flex;
             flex-direction: column;
             gap: 8px;
+            font-size: 18px;
+
             a {
               color: $secondary;
             }
