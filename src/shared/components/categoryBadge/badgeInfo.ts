@@ -15,7 +15,7 @@ const getBadgeInfo: {
         fill: true,
     },
     [JOB_TITLE_TYPES.MANAGER_LEVEL_AND_FINANCE]: {
-        category: "C-Level & Director Level & Manager Level",
+        category: "Manager Level & Finance",
         color: "white",
         background: "#5DC163",
         fill: true,
@@ -33,7 +33,7 @@ const getBadgeInfo: {
         fill: true,
     },
     [JOB_TITLE_TYPES.DIRECTOR_LEVEL]: {
-        category: "C-Level",
+        category: "Director Level",
         color: "white",
         background: "#56707C",
         fill: true,

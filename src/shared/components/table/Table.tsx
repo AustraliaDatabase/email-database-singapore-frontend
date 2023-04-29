@@ -259,13 +259,7 @@ const Table = (props: ITable) => {
                             {element.name}
                           </b>
                         </a>
-                        {!isProductPage && (
-                          <CategoryBadge
-                            category={
-                              JOB_TITLE_TYPES.DIRECTOR_LEVEL_AND_FINANCE
-                            }
-                          />
-                        )}
+                        {!isProductPage && <CategoryBadge category={element?.type?.value} />}
                       </td>
 
                       {Object.keys(attributesSet).map((value, columnIndex) => {

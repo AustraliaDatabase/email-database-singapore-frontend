@@ -10,23 +10,18 @@ interface ICategoryBadge {
 const CategoryBadge = (props: ICategoryBadge) => {
   const { category } = props;
 
-  const {
-    color,
-    background,
-    fill,
-    category: badgeValue,
-  } = getBadgeInfo[category];
+  const badgeInfo = getBadgeInfo[category];
 
   return (
     <div className={styles.badgeWrapper}>
       <span
         style={{
-          color: `${color}`,
-          backgroundColor: `${fill ? background : ""}`,
-          border: `${fill ? "" : `1px solid ${color}`}`,
+          color: `${badgeInfo?.color}`,
+          backgroundColor: `${badgeInfo?.fill ? badgeInfo?.background : ""}`,
+          border: `${badgeInfo?.fill ? "" : `1px solid ${badgeInfo?.color}`}`,
         }}
       >
-        {badgeValue}
+        {badgeInfo?.category}
       </span>
     </div>
   );
