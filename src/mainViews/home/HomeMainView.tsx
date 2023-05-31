@@ -63,9 +63,9 @@ const HomeMainView = () => {
           </Row>
         </Container>
       </section>
-      <section className="ghost">
+      {/* <section className="ghost">
           <SiteReviews />
-      </section>
+      </section> */}
     </>
   );
 };
