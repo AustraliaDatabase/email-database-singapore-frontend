@@ -66,9 +66,9 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
         </Container>
       </section>
 
-      <section id="#other-states" className="ghost">
+      {/* <section id="#other-states" className="ghost">
         <OtherStates currentObject={currentObject} />
-      </section>
+      </section> */}
 
       {currentObject?.why && (
         <section
