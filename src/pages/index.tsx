@@ -8,8 +8,8 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="B2B Email Marketing Lists and Sales Leads Database Provider"
-        description="Explore EmailDatas' diverse range of offerings, including US State-specific, Job Titles, Industries, Targeted, International, and Zip Code databases."
+        title="2023 USA Email List & B2B Email Marketing Database"
+        description="EmailDatas Provide Accurate and up to date valid US Business databases, Realtor emails & all type of B2B emails in USA and Internationally"
         canonical={process.env.NEXT_PUBLIC_BASE_URL}
       />
       <PublicLayout>
