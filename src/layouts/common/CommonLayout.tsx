@@ -43,7 +43,7 @@ interface ICommmonLayout {
 
 export const NEXT_PUBLIC_TAWKTO_PROPERTY =
   process.env.NEXT_PUBLIC_TAWKTO_PROPERTY;
-export const NEXT_PUBLIC_TAWKTO_ID = "default";
+export const NEXT_PUBLIC_TAWKTO_ID = process.env.NEXT_PUBLIC_TAWKTO_ID;
 
 const CommmonLayout = (props: ICommmonLayout) => {
   const {
