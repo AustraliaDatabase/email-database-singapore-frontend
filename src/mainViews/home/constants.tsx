@@ -4,7 +4,7 @@ import { PRODUCT_MAIN_TYPE_ENUM } from "../../shared/enums";
 export const CURRENT_OBJECT_HOME = {
   banner: {
     caption: `96% Email Accuracy guarantee`,
-    title: `<h1>Valid B2B Contacts to Reach Your Target Audience</h1>`,
+    title: `<h1>Valid USA B2B Email List to Reach Your Target Audience</h1>`,
     description: `<p>Find accurate B2B email lists in the USA with EmailDatas. Choose from over 500 ready-made job titles and B2B contacts based on SIC industry codes. Our targeted email lists include verified contact info, job titles, phone, email, postal addresses, industry, revenue, number of employees, LinkedIn profiles, and more. </p>`,
   },
   why: {
@@ -150,14 +150,14 @@ export const CURRENT_OBJECT_HOME = {
     // },
   ],
   beneifits: {
-    title: `Benefits of Our Business Database Lists`,
+    title: `Benefits of Our B2B Email Marketing Database`,
     description:
       "Our B2B Business List is rich with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively",
     list: [
       {
         title: `Email Marketing`,
         description: `<p>Email marketing is crucial for better brand marketing, with 90% of sales coming from it. Our accurate email marketing lists offer 95% deliverability, ensuring a successful campaign. Target a broad range of customers and improve your brand's value instantly.
-        </p>`
+        </p>`,
       },
       {
         title: `Telemarketing`,
