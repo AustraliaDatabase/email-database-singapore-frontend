@@ -25,12 +25,12 @@ const FaqList = (props: IFaqList) => {
           <Accordion.Item eventKey="" className="mb-0">
             <Accordion.Header as="h3" className="d-flex">
               <div>
-                <CaretDown className="icon me-3" size={16} weight="bold" />
+                <CaretDown className="icon me-2" size={16} weight="bold" />
               </div>
               <h3 className={styles.title}>{faqItem.title}</h3>
             </Accordion.Header>
             <Accordion.Body>
-              <div>{faqItem.element}</div>
+              <div className={styles.description}>{faqItem.element}</div>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
