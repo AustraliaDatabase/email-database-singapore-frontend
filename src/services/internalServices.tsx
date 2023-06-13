@@ -30,13 +30,6 @@ export const AddToCart = (
     return;
   }
 
-  triggerForm({
-    title: "",
-    text: "Added to the Cart!",
-    icon: "success",
-    confirmButtonText: "OK",
-  });
-
   setCurrentCartItem([
     ...currentCartItem,
     {
