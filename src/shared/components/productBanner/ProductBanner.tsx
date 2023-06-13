@@ -53,10 +53,11 @@ const ProductBanner = (props: IProductBanner) => {
             )}
           />
         </Col>
+        <hr className={styles.hr} />
         <Row className="pt-3 pt-lg-5">
           <Col xs={12} lg={6}>
-          <DataStructure currentObject={currentObject} />
-{/* 
+            <DataStructure currentObject={currentObject} />
+            {/* 
             <ScreenshotView
               screenshotInfo={currentObject?.screenshot}
               currentObject={currentObject}
