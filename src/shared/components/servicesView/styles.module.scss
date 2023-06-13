@@ -1,2 +1,98 @@
 @import "styles/variables";
 @import "styles/mixins";
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  @include breakpoint(mobile) {
+    font-size: 1.5rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    @include breakpoint(mobile) {
+      font-size: 1.5rem;
+    }
+  }
+}
+.cardsRow {
+  margin-top: 8rem;
+}
+.serviceCard {
+  background-color: $white;
+  padding: 1.5rem;
+  padding-top: 4rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  position: relative;
+  margin-bottom: 5rem;
+  .iconWrapper {
+    position: absolute;
+    background-color: $white;
+    box-shadow: 0px 4px 16px 8px rgba(0, 0, 0, 0.1);
+    width: 88px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    top: -40px;
+    left: 50px;
+  }
+
+  .cardTitle {
+    color: $secondary;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
+      color: $secondary;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.25rem;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      span {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .cardDescription {
+    color: $secondary;
+  }
+}
+
+.button {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
