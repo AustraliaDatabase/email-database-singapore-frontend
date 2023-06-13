@@ -14,11 +14,10 @@ const OtherProductFeature = (props: IOtherProductFeature) => {
 
   return (
     <div>
-      {currentObject?.productInfo?.title ? (
-        <h2 className={styles.title}>{currentObject?.productInfo?.title}</h2>
-      ) : (
-        <h2>More Details of {currentObject?.name} Email List</h2>
-      )}
+      <h2 className={styles.title}>
+        {currentObject?.productInfo?.title ||
+          `More Details of ${currentObject?.name} Email List`}
+      </h2>
 
       <Row>
         {currentObject?.productInfo?.list?.map((productInfo, index: number) => {
