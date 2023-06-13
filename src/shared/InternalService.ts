@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import { htmlToText } from "html-to-text";
 
 import { PAYMENT_METHOD, PAYMENT_STATUS } from "./enums";
-import { ICartItem } from "./interface";
+import { ICartItem, IMainProductInfo } from "./interface";
 import {
   getIpAddress,
   orderCreatedCryptoEmailSend,
@@ -38,19 +38,21 @@ export const validateRequired = (value: string) => {
 export const emailValidation = (value: string) => {
   let error;
   if (!value) {
-    error = "Email is required"
+    error = "Email is required";
   } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value)) {
-    error = "Invalid email address"
+    error = "Invalid email address";
   }
   return error;
-}
+};
 
 export const passwordValidation = (value: any) => {
   let error;
   if (!value) {
     error = "Password is required";
   } else if (
-    !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(value)
+    !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(
+      value
+    )
   ) {
     error =
       "Password must be least 6 characters & include 1 letter, 1 number, and 1 special char (@$!%*#?&)";
@@ -63,11 +65,11 @@ export const validURL = (str: string) => {
 
   var pattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
-    "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-    "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-    "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-    "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-    "(\\#[-a-z\\d_]*)?$",
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+      "(\\#[-a-z\\d_]*)?$",
     "i"
   ); // fragment locator
 
@@ -205,8 +207,8 @@ export const makeOrderAction = async (
       paymentMethod === PAYMENT_METHOD.CRYPTO
         ? PAYMENT_STATUS.REQUESTED
         : paymentMethod === PAYMENT_METHOD.CRYPTO_PLISIO_INITIALIZED
-          ? PAYMENT_STATUS.INITIALIZED
-          : PAYMENT_STATUS.PENDING,
+        ? PAYMENT_STATUS.INITIALIZED
+        : PAYMENT_STATUS.PENDING,
     userIpAddress: ipAddress || "",
     paymentMethod,
     orderId,
@@ -218,11 +220,11 @@ export const makeOrderAction = async (
     const cryptoValueObj: any =
       paymentMethod === PAYMENT_METHOD.CRYPTO
         ? [
-          {
-            coin: currentCoinSelection?.value,
-            network: selectedNetwork?.value,
-          },
-        ]
+            {
+              coin: currentCoinSelection?.value,
+              network: selectedNetwork?.value,
+            },
+          ]
         : [];
 
     // PaymentService.updateWithCustomIdAndAdd(loggedInUser.uid, totalOrder);
@@ -433,7 +435,10 @@ const getPercent = (
   return ((value - firstRecord) / (secondRecord - firstRecord)) * 100;
 };
 
-export const getB2BPricingByContacts = (value: number, percentValue: number) => {
+export const getB2BPricingByContacts = (
+  value: number,
+  percentValue: number
+) => {
   const { firstRecord, lastRecord, fistPrice, lastPrice } =
     getFirstAndLastRow(value);
 
@@ -444,12 +449,21 @@ export const getB2BPricingByContacts = (value: number, percentValue: number) => 
   return Number(price?.toFixed(0));
 };
 
-
-export  const hideMiddleChars = (value: string, numStars: number) => {
+export const hideMiddleChars = (value: string, numStars: number) => {
   const length = value.length;
   const halfLength = Math.floor(length / 2);
   const startChars = value.slice(0, halfLength - Math.floor(numStars / 2));
   const endChars = value.slice(halfLength + Math.ceil(numStars / 2));
   const middleChars = "*".repeat(numStars);
   return startChars + middleChars + endChars;
-}
+};
+
+export const replaceContacts = (
+  attribute: string,
+  currentObject: IMainProductInfo
+) => {
+  return attribute?.replaceAll(
+    "DIRECT_CONTACTS",
+    numberWithCommas(currentObject?.stats?.emailAddress?.toString() || "")
+  );
+};

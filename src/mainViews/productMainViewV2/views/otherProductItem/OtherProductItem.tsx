@@ -1,19 +1,26 @@
 import React from "react";
-import { IProductListItem } from "../../../../shared/interface";
+import {
+  IMainProductInfo,
+  IProductListItem,
+} from "../../../../shared/interface";
+import { replaceContacts } from "../../../../shared/InternalService";
 
 import styles from "./style.module.scss";
 
 interface IOtherProductItem {
   productInfo: IProductListItem;
+  currentObject: IMainProductInfo;
 }
 
 const OtherProductItem = (props: IOtherProductItem) => {
-  const { productInfo } = props;
+  const { productInfo, currentObject } = props;
 
   return (
     <div className={styles.wrapper}>
-      <b className={styles.title}>{productInfo?.title} - </b>
-      <span>{productInfo?.description}</span>
+      <b className={styles.title}>
+        {replaceContacts(productInfo?.title, currentObject)} -{" "}
+      </b>
+      <span>{replaceContacts(productInfo?.description, currentObject)} - </span>
     </div>
   );
 };

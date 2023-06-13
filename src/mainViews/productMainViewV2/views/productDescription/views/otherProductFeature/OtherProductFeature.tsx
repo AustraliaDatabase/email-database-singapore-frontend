@@ -14,13 +14,20 @@ const OtherProductFeature = (props: IOtherProductFeature) => {
 
   return (
     <div>
-      <h2 className={styles.title}>{currentObject?.productInfo?.title}</h2>
+      {currentObject?.productInfo?.title ? (
+        <h2 className={styles.title}>{currentObject?.productInfo?.title}</h2>
+      ) : (
+        <h2>More Details of {currentObject?.name} Email List</h2>
+      )}
 
       <Row>
         {currentObject?.productInfo?.list?.map((productInfo, index: number) => {
           return (
             <Col key={index} xs={12} lg={12}>
-              <OtherProductItem productInfo={productInfo} />
+              <OtherProductItem
+                productInfo={productInfo}
+                currentObject={currentObject}
+              />
             </Col>
           );
         })}
