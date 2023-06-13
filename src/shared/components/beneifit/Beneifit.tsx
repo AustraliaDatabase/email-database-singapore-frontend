@@ -84,7 +84,9 @@ const BeneifitView = (props: IBeneifitView) => {
         </div>
       </div>
       <Row>
-        {isProductPage ? <BeneifitsCollapsible BeneifitList={benefitList} /> :
+        {isProductPage ?
+          <BeneifitsCollapsible BeneifitList={benefitList} />
+          :
           <>
             {benefitList.map((benefit, index) => {
               return (
