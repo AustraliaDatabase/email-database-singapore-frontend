@@ -158,8 +158,8 @@ export const DATA_FIELDS = [
 ];
 
 export const PRICE_PACKAGE_TYPES: IPackages = {
-  0: "Email Database Package",
-  1: "Complete Database Package",
+  0: "Email Outreach Package",
+  1: "Complete Marketing Package",
 };
 
 export const SITE_REVIEW_LIST = [
