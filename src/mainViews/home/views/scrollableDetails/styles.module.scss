@@ -21,12 +21,12 @@
     }
   }
 }
-.grandShotTitlesWrapper {
+.grandShortTitlesWrapper {
   position: sticky;
   top: 120px;
 }
 
-.shotTitlesWrapper {
+.shortTitlesWrapper {
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -50,6 +50,10 @@
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+    @include breakpoint(tablet) {
+      bottom: -16px;
+      left: -16px;
+    }
   }
 
   .link {

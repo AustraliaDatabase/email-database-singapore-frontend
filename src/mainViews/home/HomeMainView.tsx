@@ -60,7 +60,7 @@ const HomeMainView = () => {
         />
       </section>
 
-      <section>
+      <section className="ghost">
         <ScrollableDetails explainDetails={CURRENT_OBJECT_HOME.productExplain} />
       </section>
 

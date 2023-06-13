@@ -1,10 +1,10 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from "react-scroll";
-
-import styles from "./styles.module.scss"
-import Card from '../../../../shared/components/card/Card';
 import classNames from 'classnames';
+import { Col, Container, Row } from 'react-bootstrap';
+
+import Card from '../../../../shared/components/card/Card';
+import styles from "./styles.module.scss"
 
 interface IDetails {
     shortTitle: string;
@@ -22,7 +22,7 @@ const ScrollableDetails = (props: IScrollableDetails) => {
     return (
         <Container>
             <Row>
-                <Col xs={12} lg={9}>
+                <Col xs={{ order: 2, span: 12 }} lg={{ order: 1, span: 9 }}>
                     <Card className={styles.detailsWrapper}>
                         {explainDetails.map((explain: IDetails, index: number) => {
                             return (
@@ -34,13 +34,16 @@ const ScrollableDetails = (props: IScrollableDetails) => {
                         })}
                     </Card>
                 </Col>
-                <Col xs={12} lg={3}>
-                    <div className={styles.grandShotTitlesWrapper}>
-
-                        <div className={styles.shotTitlesWrapper}>
+                <Col xs={{ order: 1, span: 12 }} lg={{ order: 2, span: 3 }} className='mb-5 mb-lg-0 d-none d-md-block'>
+                    <div className={styles.grandShortTitlesWrapper}>
+                        <div className={styles.shortTitlesWrapper}>
                             {explainDetails.map((explain: IDetails, index: number) => {
                                 return (
-                                    <Link offset={-120} className={classNames("explain-custom-scrollable", styles.link)} spy={true} to={explain.id ? explain.id : ""} key={index}>
+                                    <Link
+                                        offset={-120}
+                                        className={classNames("explain-custom-scrollable", styles.link)}
+                                        spy={true} to={explain.id ? explain.id : ""}
+                                        key={index}>
                                         <div>{explain.shortTitle}</div>
                                     </Link>
                                 )
