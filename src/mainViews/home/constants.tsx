@@ -14,7 +14,8 @@ export const CURRENT_OBJECT_HOME = {
       {
         image: "/job-title.png",
         title: `Buy Lead Lists by Profession`,
-        description: `Leads Library services allow users to access a business database containing thousands of entries. Our database covers hundreds of job-specific titles. Thus, you can have a successful marketing campaign because we can provide you with a highly targeted list. View All Job Titles`,
+        description: `Leads Library services allow users to access a business database containing thousands of entries. Our database covers hundreds of job-specific titles. Thus, you can have a successful marketing campaign because we can provide you with a highly targeted list.
+        `,
         buttonLabel: "View All Job Titles",
         buttonLink: "#"
       },
