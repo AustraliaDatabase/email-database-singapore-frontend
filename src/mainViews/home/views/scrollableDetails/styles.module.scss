@@ -23,7 +23,7 @@
 }
 .grandShotTitlesWrapper {
   position: sticky;
-  top: 150px;
+  top: 120px;
 }
 
 .shotTitlesWrapper {
@@ -52,7 +52,7 @@
     -o-border-radius: 1rem;
   }
 
-  a {
+  .link {
     cursor: pointer;
     color: $secondary;
     font-size: 1.15rem;
@@ -61,12 +61,6 @@
     div {
       margin-bottom: 1rem;
       &:hover {
-        color: $primary;
-      }
-    }
-
-    &.ative {
-      div {
         color: $primary;
       }
     }

@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 
 import styles from "./styles.module.scss"
 import Card from '../../../../shared/components/card/Card';
+import classNames from 'classnames';
 
 interface IDetails {
     shortTitle: string;
@@ -36,15 +37,15 @@ const ScrollableDetails = (props: IScrollableDetails) => {
                 <Col xs={12} lg={3}>
                     <div className={styles.grandShotTitlesWrapper}>
 
-                    <div className={styles.shotTitlesWrapper}>
-                        {explainDetails.map((explain: IDetails, index: number) => {
-                            return (
-                                <Link spy={true} to={explain.id ? explain.id : ""} key={index}>
-                                    <div>{explain.shortTitle}</div>
-                                </Link>
-                            )
-                        })}
-                    </div>
+                        <div className={styles.shotTitlesWrapper}>
+                            {explainDetails.map((explain: IDetails, index: number) => {
+                                return (
+                                    <Link offset={-120} className={classNames("explain-custom-scrollable", styles.link)} spy={true} to={explain.id ? explain.id : ""} key={index}>
+                                        <div>{explain.shortTitle}</div>
+                                    </Link>
+                                )
+                            })}
+                        </div>
                     </div>
                 </Col>
             </Row>
