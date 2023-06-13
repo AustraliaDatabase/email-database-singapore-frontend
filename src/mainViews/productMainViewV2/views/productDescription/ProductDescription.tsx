@@ -35,12 +35,6 @@ const ProductDescription = (props: IProductDescription) => {
               </h2>
               <Col>
                 <div className={styles.dbInfo}>
-                  <div>
-                    Access a high-quality, affordable {currentObject?.name}{" "}
-                    email list with complete contact details for different
-                    professionals and industries. Our database is sourced from
-                    reliable and up-to-date sources.
-                  </div>
                   <StatsCard
                     name={currentObject.name || ""}
                     databaseMainType={currentObject?.type}
@@ -49,9 +43,9 @@ const ProductDescription = (props: IProductDescription) => {
                   />
                 </div>
               </Col>
+              <OtherProductFeature currentObject={currentObject} />
             </Col>
             <Col xs={12} lg={11} className="mx-auto"></Col>
-            <OtherProductFeature currentObject={currentObject} />
           </Tab>
         </Tabs>
       </div>

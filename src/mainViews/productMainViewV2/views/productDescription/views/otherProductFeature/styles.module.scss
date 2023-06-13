@@ -2,9 +2,11 @@
 @import "styles/mixins";
 
 .title {
-  font-size: 2rem;
-  text-align: center;
+  font-size: 22px;
+  margin-top: 5rem;
+
   @include breakpoint(mobile) {
     font-size: 1.5rem;
+    margin-top: 2rem;
   }
 }
