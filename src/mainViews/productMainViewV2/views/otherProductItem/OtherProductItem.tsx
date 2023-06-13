@@ -12,8 +12,8 @@ const OtherProductItem = (props: IOtherProductItem) => {
 
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.title}>{productInfo?.title}</h3>
-      <p>{productInfo?.description}</p>
+      <b className={styles.title}>{productInfo?.title} - </b>
+      <span>{productInfo?.description}</span>
     </div>
   );
 };

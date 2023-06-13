@@ -80,7 +80,7 @@ const PriceListView = (props: IPriceListView) => {
   return (
     <div className={styles.mainWrapper}>
       <div>
-        <h3 className={styles.title}>Select Package</h3>
+        <div className={styles.title}>Select Package</div>
         <div className={classNames("d-flex", styles.wrapper)}>
           {currentObject?.price?.list.map(
             (singlePriceItem: IPriceList, index: number) => {
@@ -101,9 +101,9 @@ const PriceListView = (props: IPriceListView) => {
       </div>
 
       <div>
-        <h3 className={classNames(styles.title, "mt-5")}>
+        <h2 className={classNames(styles.title, "mt-5")}>
           Data Fields of {PRICE_PACKAGE_TYPES[currentIndex]}
-        </h3>
+        </h2>
         <div className={classNames(styles.secondaryWrapper)}>
           {DATA_FIELDS[currentIndex]?.split(";")?.map((item, index) => (
             <div key={index} className={styles.detailsWrapper}>

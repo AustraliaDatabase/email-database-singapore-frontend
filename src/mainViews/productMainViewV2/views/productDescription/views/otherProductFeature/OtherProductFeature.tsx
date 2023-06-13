@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 
-import { IMainProductInfo } from "../../../../shared/interface";
-import OtherProductItem from "../otherProductItem/OtherProductItem";
+import { IMainProductInfo } from "../../../../../../shared/interface";
+import OtherProductItem from "../../../otherProductItem/OtherProductItem";
 import styles from "./styles.module.scss";
 
 interface IOtherProductFeature {
@@ -19,7 +19,7 @@ const OtherProductFeature = (props: IOtherProductFeature) => {
       <Row>
         {currentObject?.productInfo?.list?.map((productInfo, index: number) => {
           return (
-            <Col key={index} xs={12} lg={6}>
+            <Col key={index} xs={12} lg={12}>
               <OtherProductItem productInfo={productInfo} />
             </Col>
           );

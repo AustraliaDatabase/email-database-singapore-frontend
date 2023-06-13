@@ -240,30 +240,6 @@ const Table = (props: ITable) => {
                 {dynamicFullDataSet?.map((element: any, index: number) => {
                   let url = element.url;
 
-                  if (currentNumber === index && loading) {
-                    return (
-                      <tr
-                        key={`c_${index}`}
-                        className="align-items-center justify-content-center"
-                      >
-                        <td>{isProductPage ? "Selected" : "Loading..."}</td>
-                        {(type && getEmptyRows?.[type]) || (
-                          <>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </>
-                        )}
-                      </tr>
-                    );
-                  }
-
                   return (
                     <tr key={`row_${index}`}>
                       <td>

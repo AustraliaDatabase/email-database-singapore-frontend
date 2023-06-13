@@ -2,18 +2,18 @@
 @import "styles/variables";
 
 .wrapper {
-  border-left: 8px solid $primary;
-  border-radius: 8px 0px 0px 8px;
-  padding: 20px 25px;
-  @include box-shadow(level-1-1);
-  margin-top: 2rem;
+  // border-left: 8px solid $primary;
+  // border-radius: 8px 0px 0px 8px;
+  padding: 10px 25px;
+  // @include box-shadow(level-1-1);
+  // margin-top: 2rem;
   @include breakpoint(mobile) {
     padding: 1rem;
     border-left: none;
     border-top: 8px solid $primary;
     border-radius: 8px;
   }
-  .title {
-    font-size: 1.5rem;
-  }
+  // .title {
+    // font-size: 1.5rem;
+  // }
 }
