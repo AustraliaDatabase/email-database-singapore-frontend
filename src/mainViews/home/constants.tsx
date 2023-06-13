@@ -257,6 +257,52 @@ export const CURRENT_OBJECT_HOME = {
       },
     ],
   },
+  productExplain: [
+    {
+      id: "fullcontacts",
+      shortTitle: `Accurate full contacts`,
+      title: `Real Estate Agents Email List with accurate full contacts`,
+      description: `<p>You can obtain a 95% email deliverability rate with our real estate database. We will provide you with access to an up-to-date, accurate, and human-verified database that belongs to a real estate agent. You will be able to get the outcomes you want with the assistance of the high-quality list that will be provided.</p>
+      <p>You will be able to promote your goods and services efficiently if you take advantage of our specialist realtor leads. The real estate agent database will have various contact information types, including names, fax numbers, email addresses, phone numbers, and types of licenses. You’ll be able to start networking and receive a better answer on that matter if you have our comprehensive real estate list.</p>
+      <p>Email Datas provides access to millions of lists of realtors in the United States. This means that you will not have to browse anyplace or hunt for information since we will offer you with everything you need, which will be continually updated. It will save your marketing team time in multiple ways.</p>
+      `,
+    },
+    {
+      id: "b2bdatabase",
+      shortTitle: `B2B email database`,
+      title: `Boost up your ROI with the B2B Email Database`,
+      description: `<p>The company data and information you offer are accurate and regularly verified. The regular verification of the contacts such as email address, fax number, name, current company, and everything else is verified. We keep a record of each thing and remove the outdated data, and will provide you with the latest information about the business.</p>
+      <p>With all the data, you can contact more customers and make better contact that will help improve sales. Therefore, it will enhance the ROI of the company and help in growing your business more.
+      Our dedicated team will be there, ensuring you get accurate and reliable information that is double verified manually. It means you will not have to worry about your marketing of products and services and make things so much better. The USA database offered to you will be available for various professionals, and all the contacts will be unique.</p>`,
+    },
+    {
+      id: "update",
+      shortTitle: `One year free update`,
+      title: `Get one year free updated with our Business Email Database`,
+      description: `<p>Another benefit you can experience from the business is that we will provide you with a one-year free update. Meanwhile, there is no other company that offers this benefit. You may get updated data, but they will not provide free updates on the list.</p>
+     <P> But from here, you can get free updates for one year. You will not even have to worry about anything or does not have to pay a single penny for the updated list. You will get the list validated every two-three months, and all the existing contacts will be updated. Your business will not have to go through any extra expenses, and that money will help you with better services.
+     The goals will be achievable, and you can get everything within your budget. They will even provide you with more contacts at the same price and generate higher sales.</P>`,
+    },
+    {
+      id: "target",
+      shortTitle: `Targeted USA emails`,
+      title: `Targeted USA Email Address List with accurate results`,
+      description: `<p>The business contacts we mine are from various sources, including New business fillings, Daily utility connections, press releases, corporate websites, and many other sources. The professionals will verify the data our team will provide, and only it will be offered to the customers. We are unlike other providers as we sell you updated, valuable and unique contacts at a lower price.
+      In fact, we even offered you the updated database for about two months. We have millions of contacts at an affordable price for small businesses database. You can generate more leads without an accurate database and even close the deal fasters. You can use different methods such as email lists, phone numbers, and fax numbers which you can use to reach the prospects faster.
+      We provide you the list of the person who is head and is liable to make decisions. So you can directly contact the main person and get better results.</p>
+      
+      `,
+    },
+    {
+      id: "deliverability",
+      shortTitle: `95% Deliverability`,
+      title: `Targeted B2B Email Lists with 95% Email Deliverability Guaranteed`,
+      description: `
+      <p>We are here to provide you 95% email deliverability guarantee for all email database lists. Our company provides you with a list of emails of high quality that will make it possible for the client to make more contacts. It will offer you an accurate contact list, which will be verified regularly, and the contacts will also include phone numbers, fax numbers, email addresses, and even the office address.</p>
+      <p>You will be delivered the best quality leads at cost-effective prices. There will be only three steps that you need to follow for success- identify your market, invest in the database, and get better results. We will offer you 95% deliverability, But If you encounter more than 5% , We will be replaced with new leads as our professionals update the list every few months.
+      The client will not even have to pay any extra expenses to get this list or to update that. It is a one-time investment, and you will get updated free for one year at low prices.</p>`,
+    },
+  ],
   leadsLibraryRecource: {
     title: `Lead Library’s Reliable Sources`,
     description: `Buy contact lists from Leads Library. We are a data provider of

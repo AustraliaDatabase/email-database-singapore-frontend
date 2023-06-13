@@ -17,6 +17,7 @@ import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
 import SiteReviews from "./views/siteReviews/SiteReviews";
 import ServicesView from "../../shared/components/servicesView/ServicesView";
 import styles from "./homeMainView.module.scss";
+import ScrollableDetails from "./views/scrollableDetails/ScrollableDetails";
 
 const HomeMainView = () => {
   return (
@@ -57,6 +58,10 @@ const HomeMainView = () => {
           lists={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.lists}
           isHome
         />
+      </section>
+
+      <section>
+        <ScrollableDetails explainDetails={CURRENT_OBJECT_HOME.productExplain} />
       </section>
 
       <section className="dark">
