@@ -2,7 +2,8 @@
 @import "styles/variables";
 
 .wrapper {
-  border-left: 8px solid $primary;
+  // border-bottom: 2px solid $primary;
+  // border-right: 2px solid $primary;
   border-radius: 8px 0px 0px 8px;
   padding: 10px 25px;
   @include box-shadow(level-1-1);
