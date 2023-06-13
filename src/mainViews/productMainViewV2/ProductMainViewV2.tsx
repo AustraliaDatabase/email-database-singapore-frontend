@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
 import classNames from "classnames";
 
 import { CURRENT_OBJECT_HOME } from "../home/constants";
@@ -9,9 +8,7 @@ import { IMainProductInfo, IReviewObject } from "../../shared/interface";
 import ProductBanner from "../../shared/components/productBanner/ProductBanner";
 import ProductDescription from "./views/productDescription/ProductDescription";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
-import OtherStates from "../mainProduct/views/otherStates/OtherStates";
 import { DATA_TYPE_TO_TITLE } from "../../shared/constants";
-import OtherProductFeature from "./views/otherProductFeature/OtherProductFeature";
 import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
 import FaqsView from "../mainProduct/views/faqs/Faqs";
 import FloatingPurchase from "../../shared/components/floatingPurchase/FloatingPurchase";
@@ -58,12 +55,6 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
           beneifitInfo={CURRENT_OBJECT_HOME?.beneifits}
           currentObject={currentObject}
         />
-      </section>
-
-      <section>
-        <Container>
-          <OtherProductFeature currentObject={currentObject} />
-        </Container>
       </section>
 
       {/* <section id="#other-states" className="ghost">

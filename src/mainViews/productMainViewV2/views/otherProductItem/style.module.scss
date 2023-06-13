@@ -2,9 +2,10 @@
 @import "styles/variables";
 
 .wrapper {
-  border-left: 8px solid $primary;
+  // border-bottom: 2px solid $primary;
+  // border-right: 2px solid $primary;
   border-radius: 8px 0px 0px 8px;
-  padding: 20px 25px;
+  padding: 10px 25px;
   @include box-shadow(level-1-1);
   margin-top: 2rem;
   @include breakpoint(mobile) {
@@ -13,7 +14,7 @@
     border-top: 8px solid $primary;
     border-radius: 8px;
   }
-  .title {
-    font-size: 1.5rem;
-  }
+  // .title {
+  //   color: $primary;
+  // }
 }

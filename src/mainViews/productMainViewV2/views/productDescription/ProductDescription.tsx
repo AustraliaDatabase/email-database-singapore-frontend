@@ -6,6 +6,7 @@ import { DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../../../shared/constants";
 import { IMainProductInfo } from "../../../../shared/interface";
 import StatsCard from "../../../mainProduct/views/priceList/views/stats/StatsCard";
 import styles from "./style.module.scss";
+import OtherProductFeature from "./views/otherProductFeature/OtherProductFeature";
 
 interface IProductDescription {
   currentObject: IMainProductInfo;
@@ -34,12 +35,6 @@ const ProductDescription = (props: IProductDescription) => {
               </h2>
               <Col>
                 <div className={styles.dbInfo}>
-                  <div>
-                    Access a high-quality, affordable {currentObject?.name}{" "}
-                    email list with complete contact details for different
-                    professionals and industries. Our database is sourced from
-                    reliable and up-to-date sources.
-                  </div>
                   <StatsCard
                     name={currentObject.name || ""}
                     databaseMainType={currentObject?.type}
@@ -48,6 +43,7 @@ const ProductDescription = (props: IProductDescription) => {
                   />
                 </div>
               </Col>
+              <OtherProductFeature currentObject={currentObject} />
             </Col>
             <Col xs={12} lg={11} className="mx-auto"></Col>
           </Tab>
