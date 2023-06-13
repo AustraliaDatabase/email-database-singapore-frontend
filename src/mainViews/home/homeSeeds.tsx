@@ -83,6 +83,42 @@ const HomeSeed = {
       </>
     ),
   },
+  servicesList: {
+    title: "Every Main Products you can get in Email Datas",
+    description: "Our website gives customers convenient access to several quality email list products through these main categories. Let us help you find the perfect one for your needs!",
+    serviceList: [
+      {
+        title: `Buy Lead Lists by Profession`,
+        description: `Leads Library services allow users to access a business database containing thousands of entries. Our database covers hundreds of job-specific titles. Thus, you can have a successful marketing campaign because we can provide you with a highly targeted list. View All Job Titles`,
+        buttonLabel: "View All Job Titles",
+        buttonLink: "#"
+      },
+      {
+        title: `Buy email lists by industry`,
+        description: `Leads Library covers all industry-specific B2B contacts. Connect with the right people through our verified and accurate mailing lists and market your products to relevant industries.
+      All industries are covered in construction, hospitality, marketing, education, finance, manufacturing, and more. When you buy a targeted email list from us, you are assured of a premium, industry-specified marketing, and sales leads. Our databases are very easy to use and do not require advanced computer skills and experience.`,
+        buttonLabel: "View All Industry",
+        buttonLink: "#"
+      },
+      {
+        title: `USA Quality Email List Based on Location`,
+        description: `Researching everything you need to know about your prospective clients will mean a lot of effort to exert and time to spend. It will be an endless combing of the web to get contact details.
+        Here at Leads Library, you can skip such a difficult task. Aside from the industry-specific listings, you may also opt to buy lead lists based on locations.
+        If a location-based list can help you better, we can provide you with USA listings by zip codes, cities, or states. Such a listing will allow you to connect with businesses in the same area in one marketing campaign.`,
+        buttonLabel: "View All Location",
+        buttonLink: "#"
+      },
+      {
+        title: `International Email List`,
+        description: `To sell in the US, you will need our comprehensive American listings that offer precise information for successful marketing on American soil. However, our services can help you market beyond the borders of America and reach prospects in different countries and continents.
+        Selling products and services across millions of miles is easier now than ever. With our downloadable listings, you can market your products abroad with contact details that you need – names, job titles, postal addresses, phone numbers, email addresses, and many more.
+        You can buy an email list of all professionals and B2B businesses operating in Canada if that is the country you are targeting. We can make it easy for you to communicate with business leaders in the True North with all the trusted information you need to boost your campaign.
+        Similarly, you can get all the information you need if your business is targeting Australian businesses, African businesses, and leading companies across Asia. Buy b2b email list that can help you reach out across seas to new prospects in other countries today! `,
+        buttonLabel: "View All countries",
+        buttonLink: "#"
+      },
+    ]
+  },
   solutionFactList: [
     {
       title: "Affordable Price",
@@ -687,7 +723,7 @@ const HomeSeed = {
             </p>
             <p>
               We can help you target these highly influential people and
-              establish a connection with them. Our VP 
+              establish a connection with them. Our VP
               <b>email marketing lists for sale</b> are the best resource that
               can help boost your data-driven campaigns with their relevant,
               accurate, and valid contact details.
