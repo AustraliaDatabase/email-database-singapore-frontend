@@ -588,7 +588,7 @@ const HomeSeed = {
     title: `Buy Lead Lists by Profession`,
     description: (
       <p>
-        Leads Library services allow users to access a business database
+        EmailDatas services allow users to access a business database
         containing thousands of entries. Our database covers hundreds of
         job-specific titles. Thus, you can have a successful marketing campaign
         because we can provide you with a highly targeted list.{" "}
@@ -610,7 +610,7 @@ const HomeSeed = {
               </a>{" "}
             </h5>
             <p>
-              We at Leads Library provide C-level executive data so that you
+              We at EmailDatas provide C-level executive data so that you
               have more information to use when emailing these people.
               Parameters in our C-level listing include:
             </p>
@@ -657,7 +657,7 @@ const HomeSeed = {
               information about organizational decision-makers.
             </p>
             <p>
-              Fortunately, Leads Library is here to provide the information you
+              Fortunately, EmailDatas is here to provide the information you
               need on a silver platter. Our expert researchers will collate,
               verify, and segment the data according to your business and
               campaign requirements.
@@ -680,7 +680,7 @@ const HomeSeed = {
               </a>{" "}
             </h5>
             <p>
-              With the help of robust data solutions from Leads Library, you can
+              With the help of robust data solutions from EmailDatas, you can
               network with most company vice presidents all over the US and
               across the world. Build connections with people who are second in
               command in leading companies across industries.
@@ -726,7 +726,7 @@ const HomeSeed = {
             </h5>
             <p>
               Purchase email lists of directors from top companies in different
-              industries and localities from Leads Library. We can make sure
+              industries and localities from EmailDatas. We can make sure
               that you will be sending emails to valid director email addresses
               using a cleaned list for optimal deliverability.
             </p>
@@ -742,7 +742,7 @@ const HomeSeed = {
               reviews of the companies you are considering.
             </p>
             <p>
-              At Leads Library, we will provide you with a sample listing of
+              At EmailDatas, we will provide you with a sample listing of
               company directors for free, so you can have a taste of our service
               and check how the system works before paying anything.
             </p>
@@ -753,7 +753,7 @@ const HomeSeed = {
             <p>
               Ensure that you read our service agreement and check the details
               about refund and replacement policies before buying a directors’
-              list from Leads Library. Our service includes free editing of the
+              list from EmailDatas. Our service includes free editing of the
               list we will provide you based on the performance of your email or
               phone marketing campaigns targeting company directors.
             </p>
@@ -769,7 +769,7 @@ const HomeSeed = {
             </h6>
             <p>
               Are you targeting company managers with your campaigns? Buy email
-              database from Leads Library to get manager details, such as
+              database from EmailDatas to get manager details, such as
               emails, phone numbers, office addresses, and departments.
             </p>
             <p>
@@ -788,7 +788,7 @@ const HomeSeed = {
               talking business with them.
             </p>
             <p>
-              Fortunately, Leads Library has quality pre-built manager listings
+              Fortunately, EmailDatas has quality pre-built manager listings
               that you can download and use right away. Whether it is a list of
               marketing managers, brand managers, or digital marketing managers,
               we can provide you with an accurate, updated, and reliable
@@ -802,7 +802,7 @@ const HomeSeed = {
             </p>
             <p>
               Surfing the internet or LinkedIn cannot give you fast information
-              about Leads Library listings<span>&#39;</span> general managers.
+              about EmailDatas listings<span>&#39;</span> general managers.
               The ideal way to do it is to acquire a permission-based manager
               list from us to get your products and solutions in front of your
               target audience fast.
@@ -823,7 +823,7 @@ const HomeSeed = {
               </a>{" "}
             </div>
             <p>
-              Leads Library also has a collection of contact information of
+              EmailDatas also has a collection of contact information of
               people at the staff level of companies in the US and abroad. We
               feel that these people are essential in influencing
               decision-makers who need to come up with effective solutions for
@@ -841,7 +841,7 @@ const HomeSeed = {
               relationships among staff members.
             </p>
             <p>
-              Thus, Leads Library offers <b>email lists for sales</b> containing
+              Thus, EmailDatas offers <b>email lists for sales</b> containing
               emails of staff working at the lower tiers of organizations.
               Together with our listing of CEOs, managers, vice presidents, use
               our staff listing to increase your influence in the companies you
@@ -869,7 +869,7 @@ const HomeSeed = {
     description: (
       <>
         <p>
-          Leads Library covers all industry-specific B2B contacts. Connect with
+          EmailDatas covers all industry-specific B2B contacts. Connect with
           the right people through our verified and accurate mailing lists and
           market your products to relevant industries.
         </p>
@@ -903,7 +903,7 @@ const HomeSeed = {
           endless combing of the web to get contact details.
         </p>
         <p>
-          Here at Leads Library, you can skip such a difficult task. Aside from
+          Here at EmailDatas, you can skip such a difficult task. Aside from
           the industry-specific listings, you may also opt to buy lead
           lists based on locations.
         </p>
@@ -935,7 +935,7 @@ const HomeSeed = {
             <p>
               Likewise, for businesses that target the state of Washington, our
               Washington listing will open new doors of business opportunities
-              for you. Leads Library verifies our Washington B2B listing
+              for you. EmailDatas verifies our Washington B2B listing
               regularly, so our customers can always have reliable contact
               details with a high level of deliverability and high accuracy of
               contact information.
@@ -989,7 +989,7 @@ const HomeSeed = {
             <p>
               Designing a direct mail campaign using a zip code listing will
               allow you to zero in on a group of businesses with one thing in
-              common: they are located near one another. Leads Library listings
+              common: they are located near one another. EmailDatas listings
               can help you get connected with every business in one zip code and
               can even customize your list using your target demographics.
             </p>
