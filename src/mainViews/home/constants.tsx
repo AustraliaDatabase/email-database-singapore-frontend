@@ -7,6 +7,49 @@ export const CURRENT_OBJECT_HOME = {
     title: `<h1>Valid USA B2B Email List to Reach Your Target Audience</h1>`,
     description: `<p>Find accurate B2B email lists in the USA with EmailDatas. Choose from over 500 ready-made job titles and B2B contacts based on SIC industry codes. Our targeted email lists include verified contact info, job titles, phone, email, postal addresses, industry, revenue, number of employees, LinkedIn profiles, and more. </p>`,
   },
+  services: {
+    title: "Every Main Products you can get in Email Datas",
+    description:
+      "Our website gives customers convenient access to several quality email list products through these main categories. Let us help you find the perfect one for your needs!",
+    serviceList: [
+      {
+        image: "/job-title.png",
+        title: `Buy Lead Lists by Profession`,
+        description: `EmailDatas services offer users the valuable opportunity to access a comprehensive and meticulously curated business database, housing thousands of entries that are constantly updated and maintained.<br /><br /> This expansive database encompasses a vast array of industries, enabling users to access information relevant to their specific business needs.
+        With EmailDatas, users gain access to a diverse range of job-specific titles, numbering in the hundreds. This ensures that our service caters to a wide variety of marketing campaigns, allowing for unparalleled customization and targeting precision. Whether you are seeking decision-makers, influencers, or professionals in specific roles within an organization, our database has you covered.
+        `,
+        buttonLabel: "View All Job Titles",
+        buttonLink: "/job-titles",
+      },
+      {
+        image: "/industries.png",
+        title: `Buy email lists by industry`,
+        description: `EmailDatas covers all industry-specific B2B contacts. Connect with the right people through our verified and accurate mailing lists and market your products to relevant industries.
+        <br /><br />All industries are covered in construction, hospitality, marketing, education, finance, manufacturing, and more. When you buy a targeted email list from us, you are assured of a premium, industry-specified marketing, and sales leads. Our databases are very easy to use and do not require advanced computer skills and experience.`,
+        buttonLabel: "View All Industry",
+        buttonLink: "/industries",
+      },
+      {
+        image: "/location.png",
+        title: `USA Quality Email List Based on Location`,
+        description: `Researching everything you need to know about your prospective clients will mean a lot of effort to exert and time to spend. It will be an endless combing of the web to get contact details.
+        <br /><br />Here at EmailDatas, you can skip such a difficult task. Aside from the industry-specific listings, you may also opt to buy lead lists based on locations.
+        If a location-based list can help you better, we can provide you with USA listings by zip codes, cities, or states. Such a listing will allow you to connect with businesses in the same area in one marketing campaign.`,
+        buttonLabel: "View All Location",
+        buttonLink: "/by-us-states",
+      },
+      {
+        image: "/international.png",
+        title: `International Email List`,
+        description: `To sell in the US, you will need our comprehensive American listings that offer precise information for successful marketing on American soil. However, our services can help you market beyond the borders of America and reach prospects in different countries and continents.
+        <br /><br />Selling products and services across millions of miles is easier now than ever. With our downloadable listings, you can market your products abroad with contact details that you need – names, job titles, postal addresses, phone numbers, email addresses, and many more.
+        <br /><br />You can buy an email list of all professionals and B2B businesses operating in Canada if that is the country you are targeting. We can make it easy for you to communicate with business leaders in the True North with all the trusted information you need to boost your campaign.
+        <br /><br />Similarly, you can get all the information you need if your business is targeting Australian businesses, African businesses, and leading companies across Asia. Buy b2b email list that can help you reach out across seas to new prospects in other countries today! `,
+        buttonLabel: "View All countries",
+        buttonLink: "/international",
+      },
+    ],
+  },
   why: {
     title: `<h2>Why should you <span class="text-highlight">Buy Database for Email Marketing </span> from EmailDatas.com over other providers?</h2>`,
     description: `<p>Our business email database will give you accurate information about various job titles. In addition, you can get premium information about the contact, such as phone, email, fax, office address, and other things, which our professionals will verify regularly.
@@ -17,10 +60,9 @@ export const CURRENT_OBJECT_HOME = {
         title: "Accurate premium contacts of leads",
         description:
           "<p>The contacts we provide come from every data field: Contact Name, email address, postal address, phone number, industry, and many more. You will get a complete list so that you can contact the leads just the way you want. The leads will be accurate and will be from the people who are interested in working with you.</p>",
-        contentTitle:
-          "<h2>Real Estate Agents Email List with accurate full contacts</h2>",
-        content: `<p>You can obtain a 95% email deliverability rate with our real estate database. We will provide you with access to an up-to-date, accurate, and human-verified database that belongs to a real estate agent. You will be able to get the outcomes you want with the assistance of the high-quality list that will be provided.
-        </p><p>You will be able to promote your goods and services efficiently if you take advantage of our specialist realtor leads. The real estate agent database will have various contact information types, including names, fax numbers, email addresses, phone numbers, and types of licenses. You'll be able to start networking and receive a better answer on that matter if you have our comprehensive real estate list.
+        contentTitle: "<h2>Email List with accurate full contacts</h2>",
+        content: `<p>You can obtain a 95% email deliverability rate with our email database. We will provide you with access to an up-to-date, accurate, and human-verified database that belongs to a agent. You will be able to get the outcomes you want with the assistance of the high-quality list that will be provided.
+        </p><p>You will be able to promote your goods and services efficiently if you take advantage of our specialist realtor leads. The agent database will have various contact information types, including names, fax numbers, email addresses, phone numbers, and types of licenses. You'll be able to start networking and receive a better answer on that matter if you have our comprehensive Email list.
         </p><p>Email Datas provides access to millions of lists of realtors in the United States. This means that you will not have to browse anyplace or hunt for information since we will offer you with everything you need, which will be continually updated. It will save your marketing team time in multiple ways.
         </p>`,
       },
@@ -216,9 +258,54 @@ export const CURRENT_OBJECT_HOME = {
       },
     ],
   },
+  productExplain: [
+    {
+      id: "target",
+      shortTitle: `Targeted USA emails`,
+      title: `Targeted USA Email Address List with accurate results`,
+      description: `<p>The business contacts we mine are from various sources, including New business fillings, Daily utility connections, press releases, corporate websites, and many other sources. The professionals will verify the data our team will provide, and only it will be offered to the customers. We are unlike other providers as we sell you updated, valuable and unique contacts at a lower price.
+      <br /><br />In fact, we even offered you the updated database for about two months. We have millions of contacts at an affordable price for small businesses database. You can generate more leads without an accurate database and even close the deal fasters. You can use different methods such as email lists, phone numbers, and fax numbers which you can use to reach the prospects faster.
+      <br /><br />We provide you the list of the person who is head and is liable to make decisions. So you can directly contact the main person and get better results.</p>
+      `,
+    },
+    {
+      id: "b2bdatabase",
+      shortTitle: `B2B email database`,
+      title: `Boost up your ROI with the B2B Email Database`,
+      description: `<p>The company data and information you offer are accurate and regularly verified. The regular verification of the contacts such as email address, fax number, name, current company, and everything else is verified. We keep a record of each thing and remove the outdated data, and will provide you with the latest information about the business.</p>
+      <p>With all the data, you can contact more customers and make better contact that will help improve sales. Therefore, it will enhance the ROI of the company and help in growing your business more.
+      <br /><br />Our dedicated team will be there, ensuring you get accurate and reliable information that is double verified manually. It means you will not have to worry about your marketing of products and services and make things so much better. The USA database offered to you will be available for various professionals, and all the contacts will be unique.</p>`,
+    },
+    {
+      id: "update",
+      shortTitle: `One year free update`,
+      title: `Get one year free updated with our Business Email Database`,
+      description: `<p>Another benefit you can experience from the business is that we will provide you with a one-year free update. Meanwhile, there is no other company that offers this benefit. You may get updated data, but they will not provide free updates on the list.</p>
+     <P> But from here, you can get free updates for one year. You will not even have to worry about anything or does not have to pay a single penny for the updated list. You will get the list validated every two-three months, and all the existing contacts will be updated. Your business will not have to go through any extra expenses, and that money will help you with better services.
+     <br />The goals will be achievable, and you can get everything within your budget. They will even provide you with more contacts at the same price and generate higher sales.</P>`,
+    },
+    {
+      id: "deliverability",
+      shortTitle: `95% Deliverability`,
+      title: `Targeted B2B Email Lists with 95% Email Deliverability Guaranteed`,
+      description: `
+      <p>We are here to provide you 95% email deliverability guarantee for all email database lists. Our company provides you with a list of emails of high quality that will make it possible for the client to make more contacts. It will offer you an accurate contact list, which will be verified regularly, and the contacts will also include phone numbers, fax numbers, email addresses, and even the office address.</p>
+      <p><br />You will be delivered the best quality leads at cost-effective prices. There will be only three steps that you need to follow for success- identify your market, invest in the database, and get better results. We will offer you 95% deliverability, But If you encounter more than 5% , We will be replaced with new leads as our professionals update the list every few months.
+      <br /><br />The client will not even have to pay any extra expenses to get this list or to update that. It is a one-time investment, and you will get updated free for one year at low prices.</p>`,
+    },
+    {
+      id: "fullcontacts",
+      shortTitle: `Accurate full contacts`,
+      title: `Email List with accurate full contacts`,
+      description: `<p>You can obtain a 95% email deliverability rate with our Email database. We will provide you with access to an up-to-date, accurate, and human-verified database that belongs to a agent. You will be able to get the outcomes you want with the assistance of the high-quality list that will be provided.</p>
+      <p>You will be able to promote your goods and services efficiently if you take advantage of our specialist realtor leads. The Email database will have various contact information types, including names, fax numbers, email addresses, phone numbers, and types of licenses. You’ll be able to start networking and receive a better answer on that matter if you have our comprehensive email list.</p>
+      <p>Email Datas provides access to millions of lists of realtors in the United States. This means that you will not have to browse anyplace or hunt for information since we will offer you with everything you need, which will be continually updated. It will save your marketing team time in multiple ways.</p>
+      `,
+    },
+  ],
   leadsLibraryRecource: {
     title: `Lead Library’s Reliable Sources`,
-    description: `Buy contact lists from Leads Library. We are a data provider of
+    description: `Buy contact lists from EmailDatas. We are a data provider of
     reliable, comprehensive, and accurate B2B data lists. We gather
     information only from reliable sources, including:`,
     source: `

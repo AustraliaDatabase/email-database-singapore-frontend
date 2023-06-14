@@ -23,3 +23,10 @@
     width: 100%;
   }
 }
+
+.description {
+  margin-left: 23px;
+  @include breakpoint(mobile) {
+    margin-left: 24px;
+  }
+}

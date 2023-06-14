@@ -2,6 +2,7 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import classNames from "classnames";
 
 import HomeSeed from "./homeSeeds";
 import Faqs from "../../shared/components/faqs/Faqs";
@@ -11,11 +12,12 @@ import GenericFactCard from "./views/genericFactCard/GenericFactCard";
 import WhyCardsWithContent from "../../shared/components/whyCardsWithContent/WhyCardsWithContent";
 import BottomBanner from "./views/bottomBanner/BottomBanner";
 import HeroBanner from "./views/hero/HeroBanner";
-import styles from "./homeMainView.module.scss";
 import BeneifitView from "../../shared/components/beneifit/Beneifit";
-import classNames from "classnames";
 import { FaqsSeed } from "../../shared/components/faqs/faqsSeeds";
 import SiteReviews from "./views/siteReviews/SiteReviews";
+import ServicesView from "../../shared/components/servicesView/ServicesView";
+import styles from "./homeMainView.module.scss";
+import ScrollableDetails from "./views/scrollableDetails/ScrollableDetails";
 
 const HomeMainView = () => {
   return (
@@ -41,6 +43,14 @@ const HomeMainView = () => {
         </Container>
       </section>
 
+      <section className="dark">
+        <ServicesView
+          title={CURRENT_OBJECT_HOME.services.title}
+          description={CURRENT_OBJECT_HOME.services.description}
+          services={CURRENT_OBJECT_HOME.services.serviceList}
+        />
+      </section>
+
       <section className={classNames("mt-5 mb-5")}>
         <WhyCardsWithContent
           title={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.title}
@@ -48,6 +58,10 @@ const HomeMainView = () => {
           lists={CURRENT_OBJECT_HOME?.whyLeadLibraryTopic.lists}
           isHome
         />
+      </section>
+
+      <section className="ghost">
+        <ScrollableDetails explainDetails={CURRENT_OBJECT_HOME.productExplain} />
       </section>
 
       <section className="dark">

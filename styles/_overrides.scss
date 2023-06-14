@@ -407,3 +407,11 @@ button:focus:not(:focus-visible) {
     }
   }
 }
+
+.explain-custom-scrollable{
+  &.active{
+    div{
+      color: $primary;
+    }
+  }
+}
