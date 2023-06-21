@@ -32,9 +32,9 @@ const SpecialDatabasePage = (props: ISpecialDatabasePage) => {
   return (
     <>
       <NextSeo
-        title="2023 Updated Mailing Lists and Email Lists by Industries"
-        description="Purchase an industry-specific email list from UsCompanyData. Our industry-specific Email lists are very accurate and verified up to date."
-        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/special-databases`}
+        title="Unlock Growth Opportunities with Targeted Email Lists"
+        description="Drive higher engagement rates with Targeted Email Lists. Maximize your marketing efforts by delivering personalized content to specific segments"
+        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/target`}
       />
       <PublicLayout>
         <h1 className="sectiontopfix text-center mb-5" style={{ fontSize: 31 }}>

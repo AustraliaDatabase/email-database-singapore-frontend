@@ -1,4 +1,5 @@
 import { GetServerSidePropsContext } from "next";
+import { NextSeo } from "next-seo";
 import React from "react";
 import { Container } from "react-bootstrap";
 
@@ -20,11 +21,11 @@ const RealtorsByStatePage = (props: IRealtorsByStatePage) => {
 
   return (
     <>
-      {/* <NextSeo
-        title="Realtor Email List by State with over 95% Email Deliverability"
-        description="Get A Usa Real Estate Database With A 95% Email Deliverability Guaranteed To Connect With All Real Estate Agents And Realtors."
-        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/realtors-by-state`}
-      /> */}
+      <NextSeo
+        title="Reach a Wide Audience with Our Job Seekers Email Address List"
+        description="Discover top talent effortlessly with Job Seekers Email Address List. Connect with qualified candidates and reach a wide audience for effective recruitment"
+        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/job-titles`}
+      />
       <PublicLayout>
         <section className="sectiontopfix pb-3">
           <Container>

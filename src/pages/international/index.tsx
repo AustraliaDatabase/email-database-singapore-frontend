@@ -32,9 +32,9 @@ const AllOtherCountriesPage = (props: ISpecialDatabasePage) => {
   return (
     <>
       <NextSeo
-        title="2023 Updated Mailing Lists and Email Lists by Industries"
-        description="Purchase an industry-specific email list from UsCompanyData. Our industry-specific Email lists are very accurate and verified up to date."
-        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/special-databases`}
+        title="International Email List for Global Market Access"
+        description="Go global effortlessly with our International Email List. Reach customers, businesses, and prospects worldwide, and explore new markets"
+        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/international`}
       />
       <PublicLayout>
         <h1 className="sectiontopfix text-center mb-5" style={{ fontSize: 31 }}>

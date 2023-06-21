@@ -7,17 +7,18 @@ import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
+import { NextSeo } from "next-seo";
 
 const CompanyByStatePage = (props: any) => {
   const { tableDataSet } = props;
 
   return (
     <>
-      {/* <NextSeo
-        title={Seeds.metaTitle}
-        description={Seeds.metaDescription}
-        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/us-company-database-by-state`}
-      /> */}
+      <NextSeo
+        title="Buy Email List by Industry for Targeted Outreach"
+        description="Gain a competitive edge with industry-specific Email Lists. Connect with key decision-makers, and unlock growth opportunities within niche"
+        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/industries`}
+      />
       <PublicLayout>
         <section className="sectiontopfix pb-3">
           {/* <Container>

@@ -7,6 +7,7 @@ import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
+import { NextSeo } from "next-seo";
 
 export const COMPANY_SET_ATTRIBUTES = {
   contactNames: "contactNames",
@@ -24,11 +25,11 @@ const CompanyByStatePage = (props: any) => {
 
   return (
     <>
-      {/* <NextSeo
-        title={Seeds.metaTitle}
-        description={Seeds.metaDescription}
-        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/us-company-database-by-state`}
-      /> */}
+      <NextSeo
+        title="Reach a Wide Audience with our US Email List"
+        description="Expand your marketing reach with our US Email List. Connect with a diverse audience across the United States and unlock new business opportunities"
+        canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/by-us-states`}
+      />
       <PublicLayout>
         <section className="sectiontopfix pb-3">
           {/* <Container>
@@ -41,7 +42,7 @@ const CompanyByStatePage = (props: any) => {
             />
           </Container> */}
         </section>
-  
+
         <section>
           <Container>
             <Table
