@@ -70,9 +70,13 @@ export default RealtorsByStatePage;
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const response = await instance.post(`/jobTitleProduct`);
 
+  const filteredData = response?.data?.filter((element: IMainProductInfo) => {
+    return element?.productInfo?.list?.length;
+  });
+
   return {
     props: {
-      tableDataSet: response?.data || null,
+      tableDataSet: filteredData || null,
       databaseMainTypes: DATABASE_MAIN_TYPES.JOB_TITLE,
     },
   };
