@@ -8,6 +8,7 @@ import Table from "../../shared/components/table/Table";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
 import { NextSeo } from "next-seo";
+import { BY_US_STATES_CONTENT } from "../../mainViews/alternativeForOthers/seeds";
 
 export const COMPANY_SET_ATTRIBUTES = {
   contactNames: "contactNames",
@@ -32,15 +33,11 @@ const CompanyByStatePage = (props: any) => {
       />
       <PublicLayout>
         <section className="sectiontopfix pb-3">
-          {/* <Container>
-            <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
-            <div
-              className="text-center"
-              dangerouslySetInnerHTML={{
-                __html: Seeds.mainDescription,
-              }}
-            />
-          </Container> */}
+          <Container>
+            <h1 style={{ fontSize: 31 }} className="text-center">
+              Expand Your Reach with US Email List
+            </h1>
+          </Container>
         </section>
 
         <section>
@@ -54,12 +51,11 @@ const CompanyByStatePage = (props: any) => {
             />
           </Container>
         </section>
-        <section id="#why-us" className="ghost">
-          {/* <MainWhyDetailCard whyInfo={Seeds.why} /> */}
+        <section>
+          <Container>
+            <div dangerouslySetInnerHTML={{ __html: BY_US_STATES_CONTENT }} />
+          </Container>
         </section>
-        {/* <section id="#review">
-          <TrustPilot title={CURRENT_OBJECT_HOME.review.title} />
-        </section> */}
       </PublicLayout>
     </>
   );

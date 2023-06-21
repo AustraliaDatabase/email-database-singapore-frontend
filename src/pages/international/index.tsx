@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 
 import PublicLayout from "../../layouts/public/PublicLayout";
+import { INTERNATIONAL_BY_CONTENT } from "../../mainViews/alternativeForOthers/seeds";
 import instance from "../../services/baseServices";
 import Table from "../../shared/components/table/Table";
 import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
@@ -37,9 +38,13 @@ const AllOtherCountriesPage = (props: ISpecialDatabasePage) => {
         canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/international`}
       />
       <PublicLayout>
-        <h1 className="sectiontopfix text-center mb-5" style={{ fontSize: 31 }}>
-          Email List of different Countries
-        </h1>
+        <section className="sectiontopfix pb-3">
+          <Container>
+            <h1 style={{ fontSize: 31 }} className="text-center">
+              Go Global with an International Email List
+            </h1>
+          </Container>
+        </section>
         <section style={{ marginTop: -30 }}>
           <Container>
             <Table
@@ -48,6 +53,13 @@ const AllOtherCountriesPage = (props: ISpecialDatabasePage) => {
               attributesSet={TABLE_ATTRIBUTES}
               isProductPage={false}
               type={DATABASE_MAIN_TYPES.COUNTRY}
+            />
+          </Container>
+        </section>
+        <section>
+          <Container>
+            <div
+              dangerouslySetInnerHTML={{ __html: INTERNATIONAL_BY_CONTENT }}
             />
           </Container>
         </section>

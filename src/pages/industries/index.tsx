@@ -8,6 +8,7 @@ import Table from "../../shared/components/table/Table";
 import { DATABASE_MAIN_TYPES } from "../../shared/enums";
 import { COLUMNS_TABLE, TABLE_ATTRIBUTES } from "../../shared/constants";
 import { NextSeo } from "next-seo";
+import { JOB_INDUSTRIES_CONTENT } from "../../mainViews/alternativeForOthers/seeds";
 
 const CompanyByStatePage = (props: any) => {
   const { tableDataSet } = props;
@@ -21,15 +22,11 @@ const CompanyByStatePage = (props: any) => {
       />
       <PublicLayout>
         <section className="sectiontopfix pb-3">
-          {/* <Container>
-            <div dangerouslySetInnerHTML={{ __html: Seeds.mainTitle }} />
-            <div
-              className="text-center"
-              dangerouslySetInnerHTML={{
-                __html: Seeds.mainDescription,
-              }}
-            />
-          </Container> */}
+          <Container>
+            <h1 style={{ fontSize: 31 }} className="text-center">
+              Buy Email List by Industry and Elevate your Marketing Strategy
+            </h1>
+          </Container>
         </section>
 
         <section>
@@ -42,9 +39,11 @@ const CompanyByStatePage = (props: any) => {
             />
           </Container>
         </section>
-        {/* <section id="#why-us" className="ghost">
-          <MainWhyDetailCard whyInfo={Seeds.why} />
-        </section> */}
+        <section>
+          <Container>
+            <div dangerouslySetInnerHTML={{ __html: JOB_INDUSTRIES_CONTENT }} />
+          </Container>
+        </section>
       </PublicLayout>
     </>
   );
