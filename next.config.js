@@ -80,6 +80,11 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/zoominfo-review",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
