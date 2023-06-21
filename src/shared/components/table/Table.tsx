@@ -165,7 +165,7 @@ const Table = (props: ITable) => {
                           styles.leftFillter
                         )}
                       >
-                        {Object.values(typeInfoObject?.list)?.length ? (
+                        {typeInfoObject?.list && Object.values(typeInfoObject?.list)?.length ? (
                           <div>
                             <span>{typeInfoObject?.categoryHeader}</span>
                             <Form.Select
