@@ -17,6 +17,71 @@ const nextConfig = {
       process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID,
     NEXT_PUBLIC_TAWKTO_ID: process.env.NEXT_PUBLIC_TAWKTO_ID,
   },
+
+  async redirects() {
+    return [
+      {
+        source: "/alternative-for-bookyourdata",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/alternative-for-infousa",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/alternative-for-leadgenius-com",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/data-com",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/databaseusa",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/emaildatas-vs-experian",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/exactdata-review",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/insideview-review",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/lead411-review",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/listgiant-review",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/salesgenie-review",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/uscompanydata-reviews",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = {
