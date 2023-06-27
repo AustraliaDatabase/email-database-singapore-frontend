@@ -70,7 +70,7 @@ const SignUp = (props: ISignup) => {
 
           registerUser(
             values.userName,
-            values.email,
+            `${process.env.SITE_PRE_FIX}${values.email}`,
             values.password,
             loginCallBack,
             loginCallBackFail

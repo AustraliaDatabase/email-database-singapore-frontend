@@ -51,7 +51,10 @@ const MyAccountLink = () => {
             styles.username
           )}
         >
-          {loggedInUser?.displayName || loggedInUser?.email?.split("@")[0]}
+          {loggedInUser?.displayName ||
+            loggedInUser?.email
+              ?.replace(process.env.SITE_PRE_FIX?.toLowerCase(), "")
+              ?.split("@")[0]}
         </span>
         <CaretDown
           className={classNames({ [styles.iconActive]: logoutVisible })}

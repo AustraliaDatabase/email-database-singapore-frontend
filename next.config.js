@@ -16,6 +16,7 @@ const nextConfig = {
     NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID:
       process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID,
     NEXT_PUBLIC_TAWKTO_ID: process.env.NEXT_PUBLIC_TAWKTO_ID,
+    SITE_PRE_FIX: process.env.SITE_PRE_FIX,
   },
 
   async redirects() {

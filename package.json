@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:australia": "env-cmd -f .env.australia.local next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

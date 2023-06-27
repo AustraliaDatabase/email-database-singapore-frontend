@@ -1,22 +1,129 @@
-import type { NextPage } from "next";
+import { GetServerSidePropsContext } from "next";
 import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
+import { ProductJsonLd, BreadcrumbJsonLd } from "next-seo";
 
 import PublicLayout from "../layouts/public/PublicLayout";
-import HomeMainView from "../mainViews/home/HomeMainView";
+import MainView404 from "../mainViews/404MainView";
+import instance from "../services/baseServices";
+import { DATABASE_MAIN_TYPES } from "../shared/enums";
+import { IReviewObject, ISeedObject } from "../shared/interface";
+import { routeToLowerCase, trimAllSpaces } from "../shared/InternalService";
+import {
+  DATA_TYPE_TO_BREADCRUMB_NAME,
+  DATA_TYPE_TO_BREADCRUMB_URL,
+  RELEASED_DATE,
+} from "../shared/constants";
+import { calculateReviews } from "../services/internalServices";
+import ProductMainViewV2 from "../mainViews/productMainViewV2/ProductMainViewV2";
 
-const Home: NextPage = () => {
+interface ICompanyDatabaseByState {
+  realtorObject: {
+    currentObject: ISeedObject;
+    databaseMainTypes: DATABASE_MAIN_TYPES;
+  };
+  reviewObject: IReviewObject;
+}
+
+const CompanyDatabaseByState = (props: ICompanyDatabaseByState) => {
+  const { realtorObject, reviewObject } = props;
+  const router = useRouter();
+
+  const currentObject: any = realtorObject?.currentObject;
+  const databaseMainType = realtorObject?.databaseMainTypes;
+
+  console.log("currentObject", currentObject);
+  useEffect(() => {
+    routeToLowerCase(router);
+  }, []);
+
+  if (!currentObject?.url) {
+    return (
+      <PublicLayout>
+        <MainView404 />
+      </PublicLayout>
+    );
+  }
+
+  const enabledReviews: any = reviewObject?.reviews?.filter((element) => {
+    return element.enable;
+  });
+
+  const extraObjectReview = enabledReviews?.length
+    ? {
+        aggregateRating: {
+          ratingValue: calculateReviews(enabledReviews),
+          reviewCount: enabledReviews?.length,
+        },
+      }
+    : {};
+
   return (
     <>
-      <NextSeo
-        title="2023 USA Email List & B2B Email Marketing Database"
-        description="EmailDatas Provide Accurate and up to date valid US Business databases, Realtor emails & all type of B2B emails in USA and Internationally"
-        canonical={process.env.NEXT_PUBLIC_BASE_URL}
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: "Home",
+            item: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+          },
+        ]}
+      />
+      <ProductJsonLd
+        {...extraObjectReview}
+        images={[reviewObject?.product?.fileUrl || ""]}
+        productName={currentObject?.banner?.plainTitle}
+        description={trimAllSpaces(currentObject?.banner?.description)}
+        releaseDate={RELEASED_DATE}
+        offers={{
+          lowPrice: currentObject?.price?.list[0]?.price,
+          price: currentObject?.price?.list[0]?.price,
+          priceCurrency: "USD",
+          description: trimAllSpaces(currentObject?.price?.list[0]?.title),
+          availability: "https://schema.org/InStock",
+        }}
       />
       <PublicLayout>
-        <HomeMainView />
+        <NextSeo
+          title={currentObject?.meta?.metaTitle}
+          description={currentObject?.meta?.metaDescription}
+          canonical={`${process.env.NEXT_PUBLIC_BASE_URL}/${currentObject.url
+            ?.split("/")
+            .join("")}`}
+        />
+        <ProductMainViewV2
+          databaseMainType={databaseMainType}
+          currentObject={currentObject}
+          reviewObject={reviewObject}
+        />
       </PublicLayout>
     </>
   );
 };
 
-export default Home;
+export default CompanyDatabaseByState;
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const { params } = context;
+
+  try {
+    const productResponse = await instance.post(`/home`);
+
+    console.log("productResponse11", productResponse);
+  } catch (error) {
+    console.log("error", error);
+  }
+
+  const productResponse = await instance.post(`/home`);
+
+  return {
+    props: {
+      realtorObject: {
+        currentObject: productResponse.data || null,
+        databaseMainTypes: productResponse.data?.type || null,
+      },
+      reviewObject: null,
+    },
+  };
+}

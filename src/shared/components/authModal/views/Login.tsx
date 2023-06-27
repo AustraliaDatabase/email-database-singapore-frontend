@@ -58,7 +58,7 @@ const Login = (props: ILogin) => {
           setLoading(true);
 
           loginUser(
-            values.email,
+            `${process.env.SITE_PRE_FIX}${values.email}`,
             values.password,
             loginCallBack,
             loginCallBackFail

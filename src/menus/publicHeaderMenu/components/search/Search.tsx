@@ -41,7 +41,7 @@ const Search = () => {
     <Select
       className="search-select"
       classNamePrefix="search-select"
-      placeholder="Search USA Databases"
+      placeholder={`Search ${process.env.SITE_PRE_FIX?.toUpperCase()} Databases`}
       options={allSearchList}
       isLoading={listLoading || loading}
       onFocus={onfocus}
