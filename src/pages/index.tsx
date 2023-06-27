@@ -33,18 +33,9 @@ const CompanyDatabaseByState = (props: ICompanyDatabaseByState) => {
   const currentObject: any = realtorObject?.currentObject;
   const databaseMainType = realtorObject?.databaseMainTypes;
 
-  console.log("currentObject", currentObject);
   useEffect(() => {
     routeToLowerCase(router);
   }, []);
-
-  if (!currentObject?.url) {
-    return (
-      <PublicLayout>
-        <MainView404 />
-      </PublicLayout>
-    );
-  }
 
   const enabledReviews: any = reviewObject?.reviews?.filter((element) => {
     return element.enable;
@@ -106,14 +97,6 @@ export default CompanyDatabaseByState;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const { params } = context;
-
-  try {
-    const productResponse = await instance.post(`/home`);
-
-    console.log("productResponse11", productResponse);
-  } catch (error) {
-    console.log("error", error);
-  }
 
   const productResponse = await instance.post(`/home`);
 
