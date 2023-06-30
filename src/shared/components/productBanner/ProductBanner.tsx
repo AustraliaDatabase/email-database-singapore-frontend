@@ -12,20 +12,23 @@ import DataStructure from "../../../mainViews/productMainViewV2/views/dataStruct
 
 interface IProductBanner {
   currentObject: IMainProductInfo;
+  isHome?: boolean;
 }
 
 const ProductBanner = (props: IProductBanner) => {
-  const { currentObject } = props;
+  const { currentObject, isHome } = props;
   const bannerTitleRef: any = useRef();
   return (
     <div className={styles.bannerWrapper}>
       <Container>
-        <div className={styles.breadCrumbWrapper}>
-          <BreadCrumb
-            databaseMainType={currentObject?.type}
-            breadCrumb={currentObject?.breadCrumb}
-          />
-        </div>
+        {!isHome && (
+          <div className={styles.breadCrumbWrapper}>
+            <BreadCrumb
+              databaseMainType={currentObject?.type}
+              breadCrumb={currentObject?.breadCrumb}
+            />
+          </div>
+        )}
 
         <Col xs={12} lg={12} className="mt-5 mb-4 mb-lg-5">
           <div

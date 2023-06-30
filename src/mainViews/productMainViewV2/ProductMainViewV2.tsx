@@ -36,7 +36,7 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
       <SectionIntersect onChange={handlePurchaseVisible}>
         {(currentObject.banner || currentObject.price) && (
           <section className={styles.hero} id={bannerId}>
-            <ProductBanner currentObject={currentObject} />
+            <ProductBanner currentObject={currentObject} isHome={isHome} />
           </section>
         )}
       </SectionIntersect>
