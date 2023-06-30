@@ -19,10 +19,11 @@ interface IMainProductMainView {
   databaseMainType: DATABASE_MAIN_TYPES;
   currentObject: IMainProductInfo;
   reviewObject?: IReviewObject;
+  isHome?: boolean;
 }
 
 const ProductMainViewV2 = (props: IMainProductMainView) => {
-  const { databaseMainType, currentObject } = props;
+  const { databaseMainType, currentObject, isHome } = props;
   const [purchaseVisible, setPurchaseVisible] = useState(false);
 
   const bannerId = "product-banner";
@@ -54,6 +55,7 @@ const ProductMainViewV2 = (props: IMainProductMainView) => {
         <BeneifitView
           beneifitInfo={CURRENT_OBJECT_HOME?.beneifits}
           currentObject={currentObject}
+          isHome={isHome}
         />
       </section>
 

@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import { IBeneifits, IMainProductInfo } from "../../interface";
 import BeneifitsCollapsible from "./components/beneifitsCollapsible/BeneifitsCollapsible";
 import styles from "./style.module.scss";
-import { DATA_TYPE_TO_TITLE_FOR_CONTENT } from "../../constants";
 import { numberWithCommas } from "../../InternalService";
 import { Col } from "react-bootstrap";
 import Card from "../card/Card";
@@ -14,23 +13,26 @@ import { useRouter } from "next/router";
 interface IBeneifitView {
   beneifitInfo: IBeneifits;
   currentObject?: IMainProductInfo;
+  isHome?: boolean;
 }
 
 const dynamicBenefitList = (currentObject: IMainProductInfo) => [
   {
     title: `Email Marketing`,
-    description: `Are you looking to enhance your brand marketing strategy? Look no further than email marketing, which drives up to 90% of sales for many businesses. With our ${currentObject?.name
-      } email marketing lists, boasting a count of ${numberWithCommas(
-        currentObject?.stats?.emailAddress?.toString() || ""
-      )}, we offer a deliverability rate of 95%, ensuring a successful campaign. `,
+    description: `Are you looking to enhance your brand marketing strategy? Look no further than email marketing, which drives up to 90% of sales for many businesses. With our ${
+      currentObject?.name
+    } email marketing lists, boasting a count of ${numberWithCommas(
+      currentObject?.stats?.emailAddress?.toString() || ""
+    )}, we offer a deliverability rate of 95%, ensuring a successful campaign. `,
   },
   {
     title: `Telemarketing`,
     description: `
     We offer high-quality telemarketing lists, including ${numberWithCommas(
       currentObject?.stats?.phoneNumber?.toString() || "0"
-    )} mobile numbers for potential customers, all at an affordable rate for businesses in the USA. Our ${currentObject?.name
-      } lists provide a straightforward and effective approach, allowing you to directly contact prospects for a fast response. 
+    )} mobile numbers for potential customers, all at an affordable rate for businesses in the USA. Our ${
+      currentObject?.name
+    } lists provide a straightforward and effective approach, allowing you to directly contact prospects for a fast response. 
     `,
   },
   {
@@ -47,46 +49,39 @@ const dynamicBenefitList = (currentObject: IMainProductInfo) => [
   },
   {
     title: `Direct Mailing Lists`,
-    description: `If you're looking to specifically target ${currentObject?.name
-      }, our Direct Mailing Lists can help. With a count of ${numberWithCommas(
-        currentObject?.stats?.address?.toString() || "0"
-      )}  addresses for ${currentObject?.name
-      }, you can conveniently reach top-level executives and increase your chances of a successful marketing campaign.`,
+    description: `If you're looking to specifically target ${
+      currentObject?.name
+    }, our Direct Mailing Lists can help. With a count of ${numberWithCommas(
+      currentObject?.stats?.address?.toString() || "0"
+    )}  addresses for ${
+      currentObject?.name
+    }, you can conveniently reach top-level executives and increase your chances of a successful marketing campaign.`,
   },
 ];
 
 const BeneifitView = (props: IBeneifitView) => {
-  const { beneifitInfo, currentObject } = props;
+  const { beneifitInfo, currentObject, isHome } = props;
   const router = useRouter();
   const isProductPage = router.pathname == "/[productId]";
 
   const benefitList = currentObject
-    ? dynamicBenefitList(currentObject)
+    ? isHome
+      ? beneifitInfo?.list
+      : dynamicBenefitList(currentObject)
     : beneifitInfo?.list;
 
   return (
     <Container>
       <div className="d-flex flex-column align-items-center">
-        <h2 className={styles.beneifitTitle}>
-          {currentObject
-            ? `Benefits of Our ${currentObject?.name}
-                ${DATA_TYPE_TO_TITLE_FOR_CONTENT[currentObject?.type]} List`
-            : beneifitInfo?.title}
-        </h2>
+        <h2 className={styles.beneifitTitle}>{beneifitInfo?.title}</h2>
         <div className={styles.beneifitDescription}>
-          {currentObject
-            ? `Discover the full potential of our ${currentObject?.name}
-          ${DATA_TYPE_TO_TITLE_FOR_CONTENT[currentObject?.type]
-            } List! Our comprehensive
-          directory includes verified email IDs, phone numbers, company names,
-          office addresses, and other key details.`
-            : beneifitInfo?.description}
+          {beneifitInfo?.description}
         </div>
       </div>
       <Row>
-        {isProductPage ?
+        {isProductPage ? (
           <BeneifitsCollapsible BeneifitList={benefitList} />
-          :
+        ) : (
           <>
             {benefitList.map((benefit, index) => {
               return (
@@ -102,7 +97,7 @@ const BeneifitView = (props: IBeneifitView) => {
               );
             })}
           </>
-        }
+        )}
       </Row>
     </Container>
   );

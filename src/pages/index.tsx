@@ -87,6 +87,7 @@ const CompanyDatabaseByState = (props: ICompanyDatabaseByState) => {
           databaseMainType={databaseMainType}
           currentObject={currentObject}
           reviewObject={reviewObject}
+          isHome
         />
       </PublicLayout>
     </>
