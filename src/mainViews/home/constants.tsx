@@ -192,9 +192,9 @@ export const CURRENT_OBJECT_HOME = {
     // },
   ],
   beneifits: {
-    title: `Benefits of Our B2B Email Marketing Database`,
+    title: `Targeted Marketing Solutions for Australia`,
     description:
-      "Our B2B Business List is rich with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively",
+      "Unlock your business potential in Australia with targeted marketing solutions. Expand reach, engage your audience, and drive growth through email, telemarketing, fax, SMS, and direct mailing strategies.",
     list: [
       {
         title: `Email Marketing`,
