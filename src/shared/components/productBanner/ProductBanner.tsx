@@ -56,7 +56,7 @@ const ProductBanner = (props: IProductBanner) => {
         </Col>
 
         <div className={styles.lastUpdate}>
-          Date of Last Update - <span>22nd of June 2023</span>
+          Date of Last Update - <span>30th of June 2023</span>
         </div>
         <hr className={styles.hr} />
         <Row className="pt-3 pt-lg-5">
