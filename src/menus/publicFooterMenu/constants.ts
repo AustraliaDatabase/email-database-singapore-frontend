@@ -5,10 +5,10 @@ export const FOOTER_LINKS: IFooterLinks[] = [
     name: "Home",
     route: "/",
   },
-  {
-    name: "Pre-Made Lists",
-    route: "/pre-made-list",
-  },
+  // {
+  //   name: "Pre-Made Lists",
+  //   route: "/pre-made-list",
+  // },
   {
     name: "Legal Notice",
     route: "/legal-notice",
