@@ -5,27 +5,27 @@ export const HEADER_LINKS: IHeaderLinks[] = [
     name: "Home",
     route: "/",
   },
-  {
-    name: "Pre-Made Lists",
-    route: "/pre-made-list",
-    subMenu: [
-      {
-        name: "By States",
-        route: "/by-us-states",
-      },
-      {
-        name: "Job Titles",
-        route: "/job-titles",
-      },
-      { name: "Industries", route: "/industries" },
-      {
-        name: "Target",
-        route: "/target",
-      },
-      { name: "International", route: "/international" },
-      { name: "Zip Code", route: "/build-your-business-email-lists-with-zip-code" },
-    ],
-  },
+  // {
+  //   name: "Pre-Made Lists",
+  //   route: "/pre-made-list",
+  //   subMenu: [
+  //     {
+  //       name: "By States",
+  //       route: "/by-us-states",
+  //     },
+  //     {
+  //       name: "Job Titles",
+  //       route: "/job-titles",
+  //     },
+  //     { name: "Industries", route: "/industries" },
+  //     {
+  //       name: "Target",
+  //       route: "/target",
+  //     },
+  //     { name: "International", route: "/international" },
+  //     { name: "Zip Code", route: "/build-your-business-email-lists-with-zip-code" },
+  //   ],
+  // },
   { name: "Contact Us", route: "/contact-us" },
 ];
 
