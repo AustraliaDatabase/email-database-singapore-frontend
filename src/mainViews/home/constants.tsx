@@ -192,33 +192,33 @@ export const CURRENT_OBJECT_HOME = {
     // },
   ],
   beneifits: {
-    title: `Targeted Marketing Solutions for Australia`,
+    title: `Singapore Marketing Database Services using our Email List`,
     description:
-      "Unlock your business potential in Australia with targeted marketing solutions. Expand reach, engage your audience, and drive growth through email, telemarketing, fax, SMS, and direct mailing strategies.",
+      "Discover marketing solutions with our Singapore Marketing Database Services. We provides a wide range of services designed to empower businesses in reaching target audience effectively",
     list: [
       {
         title: `Email Marketing`,
-        description: `<p>We offers a comprehensive platform for effective email marketing campaigns. Reach out to your target audience in Australia with precision and efficiency, utilizing our high-quality email lists and advanced email marketing tools.
+        description: `<p>We offers a comprehensive range of email marketing services to help businesses reach their target audience effectively. With our advanced tools and strategies, you can create personalized email campaigns, track their performance, and optimize your marketing efforts for maximum results.
         </p>`,
       },
       {
         title: `Telemarketing`,
-        description: `<p>Expand your customer base and boost sales through our telemarketing solutions. Access reliable and up-to-date contact information of potential customers in Australia, and connect with them directly via phone calls to promote your products or services.
+        description: `<p>Reach out to potential customers through our telemarketing services. Our website provides access to a Singapore-focused telemarketing database, enabling you to connect with prospects directly over the phone. Build relationships, generate leads, and drive sales with our efficient telemarketing solutions.
         </p>`,
       },
       {
         title: `Fax Marketing`,
-        description: `<p>Harness the power of fax marketing to reach a wide audience in Australia. Our website provides access to a vast database of fax numbers, allowing you to deliver targeted marketing messages and promotional offers directly to businesses and individuals through fax transmissions.
+        description: `<p>Utilize the power of fax marketing to engage with businesses and individuals in Singapore. Our website offers a vast collection of fax numbers, allowing you to send targeted promotional messages and important announcements directly to your desired audience. Maximize your reach and increase conversions with our fax marketing solutions
         </p>`,
       },
       {
         title: `SMS Marketing`,
-        description: `<p>Engage your audience instantly with SMS marketing. Utilize our website to access an extensive collection of mobile phone numbers in Australia, enabling you to send targeted text messages and updates about your business, promotions, or events directly to potential customers.
+        description: `<p>Connect with customers instantly using our SMS marketing services. Our website provides access to an extensive Singapore SMS database, enabling you to send personalized text messages to a wide audience. Drive customer engagement, promote your products or services, and boost your marketing campaign's effectiveness with our SMS marketing solutions.
         </p>`,
       },
       {
         title: `Direct Mailing Lists`,
-        description: `<p>Enhance your direct marketing efforts with our comprehensive direct mailing lists. Our website offers carefully curated and updated mailing lists for Australia, enabling you to reach your desired audience through personalized mailings, brochures, catalogs, or other promotional materials.
+        description: `<p>We offers a comprehensive selection of direct mailing lists tailored to the Singapore market. Reach your target audience through physical mail, utilizing our accurate and up-to-date mailing addresses. Enhance your marketing efforts by delivering personalized promotional materials, catalogs, and other direct mailings to potential customers.
         </p>`,
       },
     ],
