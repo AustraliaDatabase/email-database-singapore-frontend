@@ -22,25 +22,25 @@ const PublicFooterMenu = () => {
       })}
     >
       <Row>
-        <Col lg md={12}>
+        <Col lg md={4}>
           <Row className={styles.firstRows}>
             <FooterLogo />
-            <DatabasePricing title="By States" list={FOOTER_MENUS.BY_STATES} />
-            <DatabasePricing title="Job Titles" list={FOOTER_MENUS.JOB_LIST} />
-            <DatabasePricing
+            {/* <DatabasePricing title="By States" list={FOOTER_MENUS.BY_STATES} /> */}
+            {/* <DatabasePricing title="Job Titles" list={FOOTER_MENUS.JOB_LIST} /> */}
+            {/* <DatabasePricing
               title="Industries"
               list={FOOTER_MENUS.INDUSTRY_LIST}
             />
             <DatabasePricing
               title="International"
               list={FOOTER_MENUS.INTERNATIONAL_LIST}
-            />
+            /> */}
           </Row>
           <Row className={styles.lastRows}>
             <SocialIcons />
           </Row>
         </Col>
-        <Col lg={5} md={12}>
+        <Col lg={8} md={12}>
           <Row className={styles.firstRows}>
             <MenuLinkList />
           </Row>

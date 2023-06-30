@@ -192,31 +192,34 @@ export const CURRENT_OBJECT_HOME = {
     // },
   ],
   beneifits: {
-    title: `Benefits of Our B2B Email Marketing Database`,
+    title: `Targeted Marketing Solutions for Australia`,
     description:
-      "Our B2B Business List is rich with email IDs, phone numbers, company names, office addresses, and other details. Use our email marketing, fax, and phone number lists to contact businesses and promote your brand effectively",
+      "Unlock your business potential in Australia with targeted marketing solutions. Expand reach, engage your audience, and drive growth through email, telemarketing, fax, SMS, and direct mailing strategies.",
     list: [
       {
         title: `Email Marketing`,
-        description: `<p>Email marketing is crucial for better brand marketing, with 90% of sales coming from it. Our accurate email marketing lists offer 95% deliverability, ensuring a successful campaign. Target a broad range of customers and improve your brand's value instantly.
+        description: `<p>We offers a comprehensive platform for effective email marketing campaigns. Reach out to your target audience in Australia with precision and efficiency, utilizing our high-quality email lists and advanced email marketing tools.
         </p>`,
       },
       {
         title: `Telemarketing`,
-        description: `<p>Our company offers high-quality telemarketing lists at an affordable rate for companies in the USA. By utilizing our lists, you can easily obtain the mobile numbers of potential customers and directly contact them for a fast response. Simplify your marketing efforts and enhance your business with our services.</p>`,
+        description: `<p>Expand your customer base and boost sales through our telemarketing solutions. Access reliable and up-to-date contact information of potential customers in Australia, and connect with them directly via phone calls to promote your products or services.
+        </p>`,
       },
       {
         title: `Fax Marketing`,
-        description: `<p>With our reliable and accurate list of names, addresses, and fax numbers, you can quickly send information to your target audience without waiting for a response. Our list is affordable and easy to use, helping to streamline your marketing efforts and achieve success.
+        description: `<p>Harness the power of fax marketing to reach a wide audience in Australia. Our website provides access to a vast database of fax numbers, allowing you to deliver targeted marketing messages and promotional offers directly to businesses and individuals through fax transmissions.
         </p>`,
       },
       {
         title: `SMS Marketing`,
-        description: `<p>With our email lists, you can easily target a broad range of potential customers, increasing the chances of a successful marketing campaign. Our lists include essential data fields such as name, email ID, phone number, company name, and office address.</p>`,
+        description: `<p>Engage your audience instantly with SMS marketing. Utilize our website to access an extensive collection of mobile phone numbers in Australia, enabling you to send targeted text messages and updates about your business, promotions, or events directly to potential customers.
+        </p>`,
       },
       {
         title: `Direct Mailing Lists`,
-        description: `<p> Our Direct Mailing Lists offer a convenient way to reach a vast audience of potential customers. By using our email lists, you can increase the chances of having a successful marketing campaign.</p>`,
+        description: `<p>Enhance your direct marketing efforts with our comprehensive direct mailing lists. Our website offers carefully curated and updated mailing lists for Australia, enabling you to reach your desired audience through personalized mailings, brochures, catalogs, or other promotional materials.
+        </p>`,
       },
     ],
   },

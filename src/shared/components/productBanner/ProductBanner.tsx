@@ -12,20 +12,23 @@ import DataStructure from "../../../mainViews/productMainViewV2/views/dataStruct
 
 interface IProductBanner {
   currentObject: IMainProductInfo;
+  isHome?: boolean;
 }
 
 const ProductBanner = (props: IProductBanner) => {
-  const { currentObject } = props;
+  const { currentObject, isHome } = props;
   const bannerTitleRef: any = useRef();
   return (
     <div className={styles.bannerWrapper}>
       <Container>
-        <div className={styles.breadCrumbWrapper}>
-          <BreadCrumb
-            databaseMainType={currentObject?.type}
-            breadCrumb={currentObject?.breadCrumb}
-          />
-        </div>
+        {!isHome && (
+          <div className={styles.breadCrumbWrapper}>
+            <BreadCrumb
+              databaseMainType={currentObject?.type}
+              breadCrumb={currentObject?.breadCrumb}
+            />
+          </div>
+        )}
 
         <Col xs={12} lg={12} className="mt-5 mb-4 mb-lg-5">
           <div
@@ -53,7 +56,7 @@ const ProductBanner = (props: IProductBanner) => {
         </Col>
 
         <div className={styles.lastUpdate}>
-          Date of Last Update - <span>22nd of June 2023</span>
+          Date of Last Update - <span>30th of June 2023</span>
         </div>
         <hr className={styles.hr} />
         <Row className="pt-3 pt-lg-5">
