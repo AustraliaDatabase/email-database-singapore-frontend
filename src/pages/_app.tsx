@@ -24,8 +24,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         </title>
       </Head>
       <DefaultSeo
-        titleTemplate="%s - EmailDatas"
-        title="Email Datas"
+        titleTemplate="%s - AustraliaEmailDatabase"
+        title="Australia Email Database"
         additionalMetaTags={[
           {
             name: "theme-color",
