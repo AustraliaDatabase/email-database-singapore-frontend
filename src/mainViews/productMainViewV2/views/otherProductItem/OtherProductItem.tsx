@@ -20,7 +20,11 @@ const OtherProductItem = (props: IOtherProductItem) => {
       <b className={styles.title}>
         {replaceContacts(productInfo?.title, currentObject)} -{" "}
       </b>
-      <span>{replaceContacts(productInfo?.description, currentObject)}</span>
+      <span
+        dangerouslySetInnerHTML={{
+          __html: replaceContacts(productInfo?.description, currentObject),
+        }}
+      ></span>
     </div>
   );
 };
