@@ -92,10 +92,9 @@ const PublicHeaderMenu = () => {
           <Link href="/" passHref>
             <div className={styles.logo}>
               <Image
-                src="/leadLibraryLogo.png"
+                src="/email-db-singapore.png"
                 alt="Email Data"
-                objectFit="contain"
-                objectPosition="center"
+                objectFit="scale-down"
                 width={200}
                 height={68}
               />
@@ -104,10 +103,9 @@ const PublicHeaderMenu = () => {
           <Link href="/" passHref>
             <div className={classNames(styles.logo, styles.mobile)}>
               <Image
-                src="/lead-dashboard.png"
+                src="/email-db-singapore.png"
                 alt="Lead Finance"
-                objectFit="contain"
-                objectPosition="center"
+                objectFit="scale-down"
                 width={40}
                 height={40}
               />

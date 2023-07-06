@@ -71,7 +71,7 @@ const DashboardMenu = () => {
           <Image
             objectFit="scale-down"
             alt="Logo"
-            src="/lead-dashboard.png"
+            src="/email-db-singapore-white.png"
             width={144}
             height={92}
           />
