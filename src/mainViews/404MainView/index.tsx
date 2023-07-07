@@ -16,7 +16,7 @@ const MainView404 = () => {
           <Col xs={12} className="d-flex justify-content-center">
             <Image
               layout="fixed"
-              src="/email-datas-404.webp"
+              src="/email-datas-404.png"
               alt="404"
               width={480}
               height={300}
