@@ -54,11 +54,11 @@ $withFraction: 1 / $navMenuCount;
   
     &.selected {
       color: $primary;
-      background: #f0f7fe;
+      background: #fef4ed;
     }
   
     &:hover {
-      background: #f0f7fe;
+      background: #fef4ed;
       overflow: visible;
       .sub {
         @include breakpoint(tablet) {
