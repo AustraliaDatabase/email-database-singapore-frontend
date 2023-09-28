@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.EmailDatas.com/sitemap.xml
+Sitemap: https://www.emaildatabasesingapore.com/sitemap.xml
